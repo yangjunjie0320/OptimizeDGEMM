@@ -1,0 +1,9 @@
+channels:
+  - conda-forge
+dependencies:
+  - cmake
+  - anaconda
+  - python=3.10
+  - eigen
+  - openblas
+  - pybind11
