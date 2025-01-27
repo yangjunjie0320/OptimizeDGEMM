@@ -19,14 +19,16 @@ void sgemm(int m, int n, int l, float* a, float* b, float* c)
     int ldb = n;
     int ldc = n;
 
-    for (int j = 0; j < n; j += BLOCK_SIZE) {
-        int nn = min(BLOCK_SIZE, n - j);
-        
-        for (int k = 0; k < l; k += BLOCK_SIZE) {
-            int ll = min(BLOCK_SIZE, l - k);
-            
-            for (int i = 0; i < m; i += BLOCK_SIZE) {
-                int mm = min(BLOCK_SIZE, m - i);
+    int j = 0;
+    int k = 0;
+    int i = 0;
+
+    for (i = 0; i < m; i += BLOCK_SIZE) {
+        int mm = min(BLOCK_SIZE, m - i);
+        for (j = 0; j < n; j += BLOCK_SIZE) {
+            int nn = min(BLOCK_SIZE, n - j);
+            for (k = 0; k < l; k += BLOCK_SIZE) {
+                int ll = min(BLOCK_SIZE, l - k);
                 block(
                     mm, nn, ll, 
                     lda, ldb, ldc, 
@@ -36,5 +38,5 @@ void sgemm(int m, int n, int l, float* a, float* b, float* c)
                 );
             }
         }
-    }   
+    }
 }   

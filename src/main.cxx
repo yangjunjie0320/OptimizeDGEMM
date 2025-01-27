@@ -5,7 +5,7 @@
 #include <numeric>
 #include <iostream>
 #include <Eigen/Dense>
-typedef Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColMajor> FloatMatrix;
+typedef Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColMajor> DoubleMatrix;
 
 typedef std::chrono::high_resolution_clock::time_point TimePoint;
 double calculate_time_difference(TimePoint t1, TimePoint t2) {
@@ -14,37 +14,38 @@ double calculate_time_difference(TimePoint t1, TimePoint t2) {
 }
 
 extern "C" {
-    void sgemm(int, int, int, float*, float*, float*);
-    void sgemm_blas(int, int, int, float*, float*, float*);
+    void dgemm(int, int, int, double*, double*, double*);
+    void dgemm_blas(int, int, int, double*, double*, double*);
 }
 
-std::tuple<FloatMatrix, double> mm_sol(const FloatMatrix& ma, const FloatMatrix& mb)
+std::tuple<DoubleMatrix, double> mm_sol(const DoubleMatrix& ma, const DoubleMatrix& mb)
 {
-    FloatMatrix mc(ma.rows(), mb.cols());
+    DoubleMatrix mc(ma.rows(), mb.cols());
     mc.setZero(); // optional, since we specify beta=0 anyway
 
-    float* pa = (float*) ma.data();
-    float* pb = (float*) mb.data();
-    float* pc = (float*) mc.data();
+    double* pa = (double*) ma.data();
+    double* pb = (double*) mb.data();
+    double* pc = (double*) mc.data();
     
     auto t1 = std::chrono::high_resolution_clock::now();
-    sgemm(ma.rows(), ma.cols(), mb.cols(), pa, pb, pc);
+    // dgemm(ma.rows(), ma.cols(), mb.cols(), pa, pb, pc);
+    mc += ma * mb;
     auto t2 = std::chrono::high_resolution_clock::now();
 
     return std::make_tuple(mc, calculate_time_difference(t1, t2));
 }
 
-std::tuple<FloatMatrix, double> mm_ref(const FloatMatrix &ma, const FloatMatrix &mb)
+std::tuple<DoubleMatrix, double> mm_ref(const DoubleMatrix &ma, const DoubleMatrix &mb)
 {
-    FloatMatrix mc(ma.rows(), mb.cols());
+    DoubleMatrix mc(ma.rows(), mb.cols());
     mc.setZero(); // optional, since we specify beta=0 anyway
 
-    float* pa = (float*) ma.data();
-    float* pb = (float*) mb.data();
-    float* pc = (float*) mc.data();
+    double* pa = (double*) ma.data();
+    double* pb = (double*) mb.data();
+    double* pc = (double*) mc.data();
     
     auto t1 = std::chrono::high_resolution_clock::now();
-    sgemm_blas(ma.rows(), ma.cols(), mb.cols(), pa, pb, pc);
+    dgemm_blas(ma.rows(), ma.cols(), mb.cols(), pa, pb, pc);
     auto t2 = std::chrono::high_resolution_clock::now();
 
     return std::make_tuple(mc, calculate_time_difference(t1, t2));
@@ -92,15 +93,14 @@ int main(int argc, char* argv[]) {
     assert(L % 4 == 0);
     printf("L = %d, N = %d\n", L, N);
 
-    // minimal value for single precision error
-    double eps = std::numeric_limits<float>::epsilon();
+    double eps = std::numeric_limits<double>::epsilon();
 
     for (int i = 0; i < N; i++) {
-        FloatMatrix A;
+        DoubleMatrix A;
         A.resize(L, L);
         A.setRandom();
 
-        FloatMatrix B;
+        DoubleMatrix B;
         B.resize(L, L);
         B.setRandom();
 
@@ -111,6 +111,7 @@ int main(int argc, char* argv[]) {
         tt1.push_back(dt1);
         
         auto err = (C0 - C1).array().abs().maxCoeff();
+        printf("err = %6.2e\n", err);
         assert(err < 1e-3);
     }
 

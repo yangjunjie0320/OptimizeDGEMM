@@ -17,13 +17,13 @@ if(BLAS_FOUND)
     message(STATUS "BLAS found: ${BLAS_LIBRARIES}")
 endif()
 
-set(KEY "sgemm")
+set(KEY "dgemm")
 file(GLOB SOURCES "${CMAKE_SOURCE_DIR}/src/${KEY}-*.c")
-list(FILTER SOURCES EXCLUDE REGEX "sgemm-blas.c")
+list(FILTER SOURCES EXCLUDE REGEX "dgemm-blas.c")
 
-add_library(sgemm-blas)
-target_sources(sgemm-blas PRIVATE src/sgemm-blas.c)
-target_link_libraries(sgemm-blas ${BLAS_LIBRARIES})
+add_library(dgemm-blas)
+target_sources(dgemm-blas PRIVATE src/dgemm-blas.c)
+target_link_libraries(dgemm-blas ${BLAS_LIBRARIES})
 
 foreach(f IN LISTS SOURCES)
     get_filename_component(basename ${f} NAME_WE)
@@ -35,7 +35,7 @@ foreach(f IN LISTS SOURCES)
         src/${basename}.c
     )
 
-    target_link_libraries(main-${basename} sgemm-blas)
-    target_compile_options(main-${basename} PRIVATE -march=native -O0 -Ofast)
+    target_link_libraries(main-${basename} dgemm-blas)
+    target_compile_options(main-${basename} PRIVATE -march=native -O2 -Ofast)
 endforeach()
 

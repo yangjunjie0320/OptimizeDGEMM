@@ -7,6 +7,7 @@ conda activate $env
 
 export MKL_NUM_THREADS=1
 export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
 
 lscpu | grep "Model name:"
 lscpu | grep -A 3 "L1d cache:"
@@ -17,12 +18,12 @@ echo "CONDA_PREFIX: $CONDA_PREFIX"
 
 cmake ..; make VERBOSE=1 -j4; cd -
 
-ff=("main-sgemm-block-128" "main-sgemm-block-2" "main-sgemm-block-4")
+ff=("main-dgemm-blas")
 
 cd $PREFIX/build/; echo "" > $PREFIX/plot/tmp;
-for i in $(seq 1 20); do
+for i in $(seq 1 10); do
     for f in "${ff[@]}"; do
-        l=$(($i * 64))
+        l=$(($i * 128))
 
         echo "Running $f with arguments $l ..."
         echo "Running $f with arguments $l ..." >> $PREFIX/plot/tmp
