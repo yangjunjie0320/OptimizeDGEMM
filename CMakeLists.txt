@@ -37,6 +37,5 @@ foreach(f IN LISTS SOURCES)
     )
 
     target_link_libraries(main-${basename} dgemm-blas)
-    target_compile_options(main-${basename} PRIVATE -march=native -O3 -Ofast)
+    target_compile_options(main-${basename} PRIVATE -march=native -O0 -Ofast)
 endforeach()
-

@@ -111,6 +111,7 @@ int main(int argc, char* argv[]) {
         tt1.push_back(dt1);
         
         auto err = (C0 - C1).array().abs().maxCoeff();
+        printf("err = %6.2e\n", err);
         assert(err < 1e-10);
     }
 

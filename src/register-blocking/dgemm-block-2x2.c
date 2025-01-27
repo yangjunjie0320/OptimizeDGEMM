@@ -23,7 +23,6 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c)
     int n2 = n & -2;
 
     register double c00, c01, c10, c11;
-    register double a0k, a1k, bk0, bk1;
 
     for (i = 0; i < m2; i += 2) {
         for (j = 0; j < n2; j += 2) {
@@ -33,16 +32,13 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c)
             c11 = c[(i + 1) + (j + 1) * ldc];
 
             for (k = 0; k < l; k++) {
-                a0k = a[(i + 0) + k * lda];
-                a1k = a[(i + 1) + k * lda];
+                double a0k = a[(i + 0) + k * lda];
+                double a1k = a[(i + 1) + k * lda];
 
-                bk0 = b[k + (j + 0) * ldb];
-                bk1 = b[k + (j + 1) * ldb];
-
-                c00 += a0k * bk0;
-                c01 += a0k * bk1;
-                c10 += a1k * bk0;
-                c11 += a1k * bk1;
+                c00 += a0k * b[k + (j + 0) * ldb];
+                c01 += a0k * b[k + (j + 1) * ldb];
+                c10 += a1k * b[k + (j + 0) * ldb];
+                c11 += a1k * b[k + (j + 1) * ldb];
             }
 
             c[(i + 0) + (j + 0) * ldc] = c00;
@@ -54,5 +50,5 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c)
 
     if (m2 == m && n2 == n) return;
     if (m2 != m) pack(m - m2, n, l, lda, ldb, ldc, a + m2, b, c + m2);
-    if (n2 != n) pack(m, n - n2, l, lda, ldb, ldc, a, b + n2, c);
+    if (n2 != n) pack(m, n - n2, l, lda, ldb, ldc, a, b + n2 * ldb, c + ldc * n2);
 }
