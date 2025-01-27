@@ -34,13 +34,9 @@ static void block(int m, int n, int l, int lda, int ldb, int ldc, float* a, floa
     c_reg_32 = 0.0f;
     c_reg_33 = 0.0f;
 
-    // register float
-    // // volatile float 
-    //     a_reg_00, a_reg_01, a_reg_02, a_reg_03;
+    register float a_reg_00, a_reg_01, a_reg_02, a_reg_03;
 
     for (p = 0; p < l; p++) {
-        float a_reg_00, a_reg_01, a_reg_02, a_reg_03;
-
         a_reg_00 = a[0 + p * lda];
         a_reg_01 = a[1 + p * lda];
         a_reg_02 = a[2 + p * lda];
