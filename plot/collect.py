@@ -17,7 +17,7 @@ current_impl = None
 for line in log.split('\n'):
     if line.startswith('Running'):
         m = re.match(r'Running (\S+) with arguments (\d+) ...', line)
-        current_impl = m.group(1).replace('main-sgemm-', '')
+        current_impl = m.group(1).replace('main-dgemm-', '')
         current_l = int(m.group(2))
         if current_l not in data:
             data[current_l] = {}

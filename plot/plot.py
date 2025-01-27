@@ -23,7 +23,7 @@ def plot(data, out):
     ax.set_xlabel('L')
     ax.set_ylabel('GFLOPS')
     ax.set_xlim(xx[:, 0].min(), xx[:, 0].max())
-    ax.set_ylim(0, 150)
+    ax.set_ylim(0, 100)
     fig.tight_layout()
     fig.savefig(out, bbox_inches='tight')
 

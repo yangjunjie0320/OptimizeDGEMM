@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(sgemm)
+project(optimized-gemm)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,8 +17,9 @@ if(BLAS_FOUND)
     message(STATUS "BLAS found: ${BLAS_LIBRARIES}")
 endif()
 
+# find all the files with name dgemm-*, it can be the subdirectory of src
 set(KEY "dgemm")
-file(GLOB SOURCES "${CMAKE_SOURCE_DIR}/src/${KEY}-*.c")
+file(GLOB SOURCES "${CMAKE_SOURCE_DIR}/src/*/${KEY}-*.c")
 list(FILTER SOURCES EXCLUDE REGEX "dgemm-blas.c")
 
 add_library(dgemm-blas)
@@ -32,10 +33,10 @@ foreach(f IN LISTS SOURCES)
     add_executable(
         main-${basename}
         src/main.cxx 
-        src/${basename}.c
+        ${f}
     )
 
     target_link_libraries(main-${basename} dgemm-blas)
-    target_compile_options(main-${basename} PRIVATE -march=native -O2 -Ofast)
+    target_compile_options(main-${basename} PRIVATE -march=native -O3 -Ofast)
 endforeach()
 

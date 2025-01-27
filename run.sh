@@ -18,12 +18,12 @@ echo "CONDA_PREFIX: $CONDA_PREFIX"
 
 cmake ..; make VERBOSE=1 -j4; cd -
 
-ff=("main-dgemm-blas")
+ff=("main-dgemm-naive-kji" "main-dgemm-naive-jki" "main-dgemm-block-2x2" "main-dgemm-block-4x4")
 
 cd $PREFIX/build/; echo "" > $PREFIX/plot/tmp;
-for i in $(seq 1 10); do
+for i in $(seq 1 20); do
     for f in "${ff[@]}"; do
-        l=$(($i * 128))
+        l=$(($i * 64))
 
         echo "Running $f with arguments $l ..."
         echo "Running $f with arguments $l ..." >> $PREFIX/plot/tmp

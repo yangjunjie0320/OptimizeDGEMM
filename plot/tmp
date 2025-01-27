@@ -1,21 +1,392 @@
 
-Running main-dgemm-blas with arguments 128 ...
+Running main-dgemm-naive-kji with arguments 64 ...
+L = 64, N = 10
+MM_REF t = 8.68e-06 sec, GFLOPS =  62.08
+MM_SOL t = 2.53e-05 sec, GFLOPS =  20.96
 
-Running main-dgemm-blas with arguments 256 ...
+Running main-dgemm-naive-jki with arguments 64 ...
+L = 64, N = 10
+MM_REF t = 8.42e-06 sec, GFLOPS =  64.32
+MM_SOL t = 1.93e-05 sec, GFLOPS =  27.14
 
-Running main-dgemm-blas with arguments 384 ...
+Running main-dgemm-block-2x2 with arguments 64 ...
+L = 64, N = 10
+MM_REF t = 7.95e-06 sec, GFLOPS =  66.38
+MM_SOL t = 2.34e-05 sec, GFLOPS =  22.41
 
-Running main-dgemm-blas with arguments 512 ...
+Running main-dgemm-block-4x4 with arguments 64 ...
+L = 64, N = 10
+MM_REF t = 8.05e-06 sec, GFLOPS =  65.56
+MM_SOL t = 1.71e-05 sec, GFLOPS =  30.64
 
-Running main-dgemm-blas with arguments 640 ...
+Running main-dgemm-naive-kji with arguments 128 ...
+L = 128, N = 10
+MM_REF t = 8.26e-05 sec, GFLOPS =  56.79
+MM_SOL t = 2.21e-04 sec, GFLOPS =  19.01
 
-Running main-dgemm-blas with arguments 768 ...
+Running main-dgemm-naive-jki with arguments 128 ...
+L = 128, N = 10
+MM_REF t = 6.71e-05 sec, GFLOPS =  62.57
+MM_SOL t = 2.62e-04 sec, GFLOPS =  16.16
 
-Running main-dgemm-blas with arguments 896 ...
+Running main-dgemm-block-2x2 with arguments 128 ...
+L = 128, N = 10
+MM_REF t = 6.73e-05 sec, GFLOPS =  62.39
+MM_SOL t = 2.89e-04 sec, GFLOPS =  14.54
 
-Running main-dgemm-blas with arguments 1024 ...
+Running main-dgemm-block-4x4 with arguments 128 ...
+L = 128, N = 10
+MM_REF t = 7.15e-05 sec, GFLOPS =  60.12
+MM_SOL t = 1.69e-04 sec, GFLOPS =  24.90
 
-Running main-dgemm-blas with arguments 1152 ...
+Running main-dgemm-naive-kji with arguments 192 ...
+L = 192, N = 10
+MM_REF t = 2.23e-04 sec, GFLOPS =  63.84
+MM_SOL t = 7.47e-04 sec, GFLOPS =  19.00
 
-Running main-dgemm-blas with arguments 1280 ...
+Running main-dgemm-naive-jki with arguments 192 ...
+L = 192, N = 10
+MM_REF t = 2.14e-04 sec, GFLOPS =  66.23
+MM_SOL t = 9.00e-04 sec, GFLOPS =  15.73
 
+Running main-dgemm-block-2x2 with arguments 192 ...
+L = 192, N = 10
+MM_REF t = 2.36e-04 sec, GFLOPS =  61.42
+MM_SOL t = 9.84e-04 sec, GFLOPS =  14.40
+
+Running main-dgemm-block-4x4 with arguments 192 ...
+L = 192, N = 10
+MM_REF t = 2.23e-04 sec, GFLOPS =  64.03
+MM_SOL t = 5.59e-04 sec, GFLOPS =  25.33
+
+Running main-dgemm-naive-kji with arguments 256 ...
+L = 256, N = 10
+MM_REF t = 5.35e-04 sec, GFLOPS =  63.05
+MM_SOL t = 1.80e-03 sec, GFLOPS =  18.61
+
+Running main-dgemm-naive-jki with arguments 256 ...
+L = 256, N = 10
+MM_REF t = 5.49e-04 sec, GFLOPS =  61.72
+MM_SOL t = 1.83e-03 sec, GFLOPS =  18.34
+
+Running main-dgemm-block-2x2 with arguments 256 ...
+L = 256, N = 10
+MM_REF t = 5.63e-04 sec, GFLOPS =  60.33
+MM_SOL t = 2.59e-03 sec, GFLOPS =  12.96
+
+Running main-dgemm-block-4x4 with arguments 256 ...
+L = 256, N = 10
+MM_REF t = 5.70e-04 sec, GFLOPS =  59.57
+MM_SOL t = 1.59e-03 sec, GFLOPS =  21.07
+
+Running main-dgemm-naive-kji with arguments 320 ...
+L = 320, N = 10
+MM_REF t = 1.05e-03 sec, GFLOPS =  62.71
+MM_SOL t = 4.41e-03 sec, GFLOPS =  14.88
+
+Running main-dgemm-naive-jki with arguments 320 ...
+L = 320, N = 10
+MM_REF t = 1.05e-03 sec, GFLOPS =  62.76
+MM_SOL t = 3.33e-03 sec, GFLOPS =  19.72
+
+Running main-dgemm-block-2x2 with arguments 320 ...
+L = 320, N = 10
+MM_REF t = 1.08e-03 sec, GFLOPS =  60.78
+MM_SOL t = 5.33e-03 sec, GFLOPS =  12.31
+
+Running main-dgemm-block-4x4 with arguments 320 ...
+L = 320, N = 10
+MM_REF t = 1.10e-03 sec, GFLOPS =  60.57
+MM_SOL t = 3.15e-03 sec, GFLOPS =  20.84
+
+Running main-dgemm-naive-kji with arguments 384 ...
+L = 384, N = 10
+MM_REF t = 1.98e-03 sec, GFLOPS =  57.86
+MM_SOL t = 1.03e-02 sec, GFLOPS =  11.00
+
+Running main-dgemm-naive-jki with arguments 384 ...
+L = 384, N = 10
+MM_REF t = 1.80e-03 sec, GFLOPS =  63.25
+MM_SOL t = 5.60e-03 sec, GFLOPS =  20.21
+
+Running main-dgemm-block-2x2 with arguments 384 ...
+L = 384, N = 10
+MM_REF t = 1.83e-03 sec, GFLOPS =  62.08
+MM_SOL t = 9.22e-03 sec, GFLOPS =  12.28
+
+Running main-dgemm-block-4x4 with arguments 384 ...
+L = 384, N = 10
+MM_REF t = 1.80e-03 sec, GFLOPS =  63.22
+MM_SOL t = 5.50e-03 sec, GFLOPS =  20.60
+
+Running main-dgemm-naive-kji with arguments 448 ...
+L = 448, N = 10
+MM_REF t = 2.94e-03 sec, GFLOPS =  61.16
+MM_SOL t = 1.93e-02 sec, GFLOPS =   9.35
+
+Running main-dgemm-naive-jki with arguments 448 ...
+L = 448, N = 10
+MM_REF t = 2.88e-03 sec, GFLOPS =  62.54
+MM_SOL t = 1.08e-02 sec, GFLOPS =  16.63
+
+Running main-dgemm-block-2x2 with arguments 448 ...
+L = 448, N = 10
+MM_REF t = 2.90e-03 sec, GFLOPS =  62.10
+MM_SOL t = 1.68e-02 sec, GFLOPS =  10.70
+
+Running main-dgemm-block-4x4 with arguments 448 ...
+L = 448, N = 10
+MM_REF t = 2.74e-03 sec, GFLOPS =  65.76
+MM_SOL t = 8.95e-03 sec, GFLOPS =  20.12
+
+Running main-dgemm-naive-kji with arguments 512 ...
+L = 512, N = 10
+MM_REF t = 4.57e-03 sec, GFLOPS =  58.88
+MM_SOL t = 3.32e-02 sec, GFLOPS =   8.08
+
+Running main-dgemm-naive-jki with arguments 512 ...
+L = 512, N = 10
+MM_REF t = 4.27e-03 sec, GFLOPS =  63.07
+MM_SOL t = 1.66e-02 sec, GFLOPS =  16.24
+
+Running main-dgemm-block-2x2 with arguments 512 ...
+L = 512, N = 10
+MM_REF t = 4.19e-03 sec, GFLOPS =  64.15
+MM_SOL t = 7.01e-02 sec, GFLOPS =   3.83
+
+Running main-dgemm-block-4x4 with arguments 512 ...
+L = 512, N = 10
+MM_REF t = 4.10e-03 sec, GFLOPS =  65.52
+MM_SOL t = 1.99e-02 sec, GFLOPS =  13.48
+
+Running main-dgemm-naive-kji with arguments 576 ...
+L = 576, N = 10
+MM_REF t = 5.83e-03 sec, GFLOPS =  65.54
+MM_SOL t = 4.68e-02 sec, GFLOPS =   8.17
+
+Running main-dgemm-naive-jki with arguments 576 ...
+L = 576, N = 10
+MM_REF t = 5.74e-03 sec, GFLOPS =  66.70
+MM_SOL t = 2.27e-02 sec, GFLOPS =  16.84
+
+Running main-dgemm-block-2x2 with arguments 576 ...
+L = 576, N = 10
+MM_REF t = 6.03e-03 sec, GFLOPS =  63.56
+MM_SOL t = 3.56e-02 sec, GFLOPS =  10.75
+
+Running main-dgemm-block-4x4 with arguments 576 ...
+L = 576, N = 10
+MM_REF t = 5.86e-03 sec, GFLOPS =  65.37
+MM_SOL t = 1.94e-02 sec, GFLOPS =  19.73
+
+Running main-dgemm-naive-kji with arguments 640 ...
+L = 640, N = 10
+MM_REF t = 8.00e-03 sec, GFLOPS =  65.62
+MM_SOL t = 6.54e-02 sec, GFLOPS =   8.02
+
+Running main-dgemm-naive-jki with arguments 640 ...
+L = 640, N = 10
+MM_REF t = 8.12e-03 sec, GFLOPS =  64.65
+MM_SOL t = 3.20e-02 sec, GFLOPS =  16.38
+
+Running main-dgemm-block-2x2 with arguments 640 ...
+L = 640, N = 10
+MM_REF t = 7.95e-03 sec, GFLOPS =  65.95
+MM_SOL t = 4.89e-02 sec, GFLOPS =  10.72
+
+Running main-dgemm-block-4x4 with arguments 640 ...
+L = 640, N = 10
+MM_REF t = 8.09e-03 sec, GFLOPS =  64.82
+MM_SOL t = 2.76e-02 sec, GFLOPS =  19.04
+
+Running main-dgemm-naive-kji with arguments 704 ...
+L = 704, N = 10
+MM_REF t = 1.09e-02 sec, GFLOPS =  64.10
+MM_SOL t = 8.66e-02 sec, GFLOPS =   8.06
+
+Running main-dgemm-naive-jki with arguments 704 ...
+L = 704, N = 10
+MM_REF t = 1.05e-02 sec, GFLOPS =  66.16
+MM_SOL t = 4.21e-02 sec, GFLOPS =  16.60
+
+Running main-dgemm-block-2x2 with arguments 704 ...
+L = 704, N = 10
+MM_REF t = 1.07e-02 sec, GFLOPS =  65.18
+MM_SOL t = 6.38e-02 sec, GFLOPS =  10.94
+
+Running main-dgemm-block-4x4 with arguments 704 ...
+L = 704, N = 10
+MM_REF t = 1.11e-02 sec, GFLOPS =  63.14
+MM_SOL t = 3.55e-02 sec, GFLOPS =  19.67
+
+Running main-dgemm-naive-kji with arguments 768 ...
+L = 768, N = 10
+MM_REF t = 1.36e-02 sec, GFLOPS =  66.62
+MM_SOL t = 1.13e-01 sec, GFLOPS =   8.03
+
+Running main-dgemm-naive-jki with arguments 768 ...
+L = 768, N = 10
+MM_REF t = 1.41e-02 sec, GFLOPS =  64.74
+MM_SOL t = 5.72e-02 sec, GFLOPS =  15.89
+
+Running main-dgemm-block-2x2 with arguments 768 ...
+L = 768, N = 10
+MM_REF t = 1.37e-02 sec, GFLOPS =  66.20
+MM_SOL t = 1.74e-01 sec, GFLOPS =   5.21
+
+Running main-dgemm-block-4x4 with arguments 768 ...
+L = 768, N = 10
+MM_REF t = 1.39e-02 sec, GFLOPS =  65.13
+MM_SOL t = 6.22e-02 sec, GFLOPS =  14.57
+
+Running main-dgemm-naive-kji with arguments 832 ...
+L = 832, N = 10
+MM_REF t = 1.74e-02 sec, GFLOPS =  66.17
+MM_SOL t = 1.44e-01 sec, GFLOPS =   8.02
+
+Running main-dgemm-naive-jki with arguments 832 ...
+L = 832, N = 10
+MM_REF t = 1.72e-02 sec, GFLOPS =  67.01
+MM_SOL t = 7.16e-02 sec, GFLOPS =  16.10
+
+Running main-dgemm-block-2x2 with arguments 832 ...
+L = 832, N = 10
+MM_REF t = 1.73e-02 sec, GFLOPS =  66.57
+MM_SOL t = 1.07e-01 sec, GFLOPS =  10.74
+
+Running main-dgemm-block-4x4 with arguments 832 ...
+L = 832, N = 10
+MM_REF t = 1.76e-02 sec, GFLOPS =  65.54
+MM_SOL t = 5.83e-02 sec, GFLOPS =  19.77
+
+Running main-dgemm-naive-kji with arguments 896 ...
+L = 896, N = 10
+MM_REF t = 2.18e-02 sec, GFLOPS =  66.15
+MM_SOL t = 1.80e-01 sec, GFLOPS =   8.00
+
+Running main-dgemm-naive-jki with arguments 896 ...
+L = 896, N = 10
+MM_REF t = 2.16e-02 sec, GFLOPS =  66.65
+MM_SOL t = 8.82e-02 sec, GFLOPS =  16.32
+
+Running main-dgemm-block-2x2 with arguments 896 ...
+L = 896, N = 10
+MM_REF t = 2.16e-02 sec, GFLOPS =  66.61
+MM_SOL t = 1.46e-01 sec, GFLOPS =   9.83
+
+Running main-dgemm-block-4x4 with arguments 896 ...
+L = 896, N = 10
+MM_REF t = 2.21e-02 sec, GFLOPS =  65.29
+MM_SOL t = 7.50e-02 sec, GFLOPS =  19.18
+
+Running main-dgemm-naive-kji with arguments 960 ...
+L = 960, N = 10
+MM_REF t = 2.69e-02 sec, GFLOPS =  65.85
+MM_SOL t = 2.17e-01 sec, GFLOPS =   8.14
+
+Running main-dgemm-naive-jki with arguments 960 ...
+L = 960, N = 10
+MM_REF t = 2.64e-02 sec, GFLOPS =  67.09
+MM_SOL t = 1.08e-01 sec, GFLOPS =  16.43
+
+Running main-dgemm-block-2x2 with arguments 960 ...
+L = 960, N = 10
+MM_REF t = 2.63e-02 sec, GFLOPS =  67.25
+MM_SOL t = 1.74e-01 sec, GFLOPS =  10.16
+
+Running main-dgemm-block-4x4 with arguments 960 ...
+L = 960, N = 10
+MM_REF t = 2.69e-02 sec, GFLOPS =  65.71
+MM_SOL t = 9.06e-02 sec, GFLOPS =  19.54
+
+Running main-dgemm-naive-kji with arguments 1024 ...
+L = 1024, N = 10
+MM_REF t = 3.24e-02 sec, GFLOPS =  66.37
+MM_SOL t = 2.71e-01 sec, GFLOPS =   7.93
+
+Running main-dgemm-naive-jki with arguments 1024 ...
+L = 1024, N = 10
+MM_REF t = 3.25e-02 sec, GFLOPS =  66.17
+MM_SOL t = 1.39e-01 sec, GFLOPS =  15.44
+
+Running main-dgemm-block-2x2 with arguments 1024 ...
+L = 1024, N = 10
+MM_REF t = 3.29e-02 sec, GFLOPS =  65.31
+MM_SOL t = 5.86e-01 sec, GFLOPS =   3.66
+
+Running main-dgemm-block-4x4 with arguments 1024 ...
+L = 1024, N = 10
+MM_REF t = 3.26e-02 sec, GFLOPS =  65.83
+MM_SOL t = 2.08e-01 sec, GFLOPS =  10.31
+
+Running main-dgemm-naive-kji with arguments 1088 ...
+L = 1088, N = 10
+MM_REF t = 3.93e-02 sec, GFLOPS =  65.60
+MM_SOL t = 3.20e-01 sec, GFLOPS =   8.05
+
+Running main-dgemm-naive-jki with arguments 1088 ...
+L = 1088, N = 10
+MM_REF t = 3.91e-02 sec, GFLOPS =  65.85
+MM_SOL t = 1.68e-01 sec, GFLOPS =  15.36
+
+Running main-dgemm-block-2x2 with arguments 1088 ...
+L = 1088, N = 10
+MM_REF t = 3.86e-02 sec, GFLOPS =  66.74
+MM_SOL t = 2.65e-01 sec, GFLOPS =   9.72
+
+Running main-dgemm-block-4x4 with arguments 1088 ...
+L = 1088, N = 10
+MM_REF t = 3.88e-02 sec, GFLOPS =  66.42
+MM_SOL t = 1.39e-01 sec, GFLOPS =  18.49
+
+Running main-dgemm-naive-kji with arguments 1152 ...
+L = 1152, N = 10
+MM_REF t = 4.61e-02 sec, GFLOPS =  66.39
+MM_SOL t = 3.84e-01 sec, GFLOPS =   7.96
+
+Running main-dgemm-naive-jki with arguments 1152 ...
+L = 1152, N = 10
+MM_REF t = 4.59e-02 sec, GFLOPS =  66.63
+MM_SOL t = 2.16e-01 sec, GFLOPS =  14.15
+
+Running main-dgemm-block-2x2 with arguments 1152 ...
+L = 1152, N = 10
+MM_REF t = 4.56e-02 sec, GFLOPS =  67.12
+MM_SOL t = 5.23e-01 sec, GFLOPS =   5.85
+
+Running main-dgemm-block-4x4 with arguments 1152 ...
+L = 1152, N = 10
+MM_REF t = 4.59e-02 sec, GFLOPS =  66.76
+MM_SOL t = 3.31e-01 sec, GFLOPS =   9.23
+
+Running main-dgemm-naive-kji with arguments 1216 ...
+L = 1216, N = 10
+MM_REF t = 5.37e-02 sec, GFLOPS =  66.93
+MM_SOL t = 4.48e-01 sec, GFLOPS =   8.04
+
+Running main-dgemm-naive-jki with arguments 1216 ...
+L = 1216, N = 10
+MM_REF t = 5.53e-02 sec, GFLOPS =  65.05
+MM_SOL t = 2.58e-01 sec, GFLOPS =  13.95
+
+Running main-dgemm-block-2x2 with arguments 1216 ...
+L = 1216, N = 10
+MM_REF t = 5.49e-02 sec, GFLOPS =  65.55
+MM_SOL t = 3.84e-01 sec, GFLOPS =   9.35
+
+Running main-dgemm-block-4x4 with arguments 1216 ...
+L = 1216, N = 10
+MM_REF t = 5.36e-02 sec, GFLOPS =  67.14
+MM_SOL t = 2.06e-01 sec, GFLOPS =  17.42
+
+Running main-dgemm-naive-kji with arguments 1280 ...
+L = 1280, N = 10
+MM_REF t = 6.37e-02 sec, GFLOPS =  65.87
+MM_SOL t = 5.43e-01 sec, GFLOPS =   7.73
+
+Running main-dgemm-naive-jki with arguments 1280 ...
+L = 1280, N = 10
+MM_REF t = 6.38e-02 sec, GFLOPS =  65.80
+MM_SOL t = 2.88e-01 sec, GFLOPS =  14.55
+
+Running main-dgemm-block-2x2 with arguments 1280 ...

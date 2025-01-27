@@ -1,4 +1,4 @@
-void sgemm(int m, int n, int l, float* a, float* b, float* c)
+void dgemm(int m, int n, int l, double* a, double* b, double* c)
 {
     int lda = l;
     int ldb = n;
@@ -6,7 +6,7 @@ void sgemm(int m, int n, int l, float* a, float* b, float* c)
 
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            float cij = 0.0;
+            double cij = 0.0;
             for (int k = 0; k < l; k++) {
                 cij += a[i + k * lda] * b[k + j * ldb];
             }

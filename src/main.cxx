@@ -28,8 +28,8 @@ std::tuple<DoubleMatrix, double> mm_sol(const DoubleMatrix& ma, const DoubleMatr
     double* pc = (double*) mc.data();
     
     auto t1 = std::chrono::high_resolution_clock::now();
-    // dgemm(ma.rows(), ma.cols(), mb.cols(), pa, pb, pc);
-    mc += ma * mb;
+    dgemm(ma.rows(), ma.cols(), mb.cols(), pa, pb, pc);
+    // mc += ma * mb;
     auto t2 = std::chrono::high_resolution_clock::now();
 
     return std::make_tuple(mc, calculate_time_difference(t1, t2));
@@ -111,8 +111,7 @@ int main(int argc, char* argv[]) {
         tt1.push_back(dt1);
         
         auto err = (C0 - C1).array().abs().maxCoeff();
-        printf("err = %6.2e\n", err);
-        assert(err < 1e-3);
+        assert(err < 1e-10);
     }
 
     std::sort(tt0.begin(), tt0.end());
