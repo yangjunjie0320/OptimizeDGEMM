@@ -1,4 +1,4 @@
-#define BLOCK_SIZE 128
+#define BLOCK_SIZE 160
 #define min(a, b) ((a) < (b) ? (a) : (b))
 
 static void block(int m, int n, int l, int lda, int ldb, int ldc, float* a, float* b, float* c)
@@ -21,7 +21,6 @@ void sgemm(int m, int n, int l, float* a, float* b, float* c)
 
     for (int j = 0; j < n; j += BLOCK_SIZE) {
         int nn = min(BLOCK_SIZE, n - j);
-        
         for (int k = 0; k < l; k += BLOCK_SIZE) {
             int ll = min(BLOCK_SIZE, l - k);
             

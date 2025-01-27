@@ -17,18 +17,21 @@ echo "CONDA_PREFIX: $CONDA_PREFIX"
 
 cmake ..; make VERBOSE=1 -j4; cd -
 
-ff=("main-sgemm-naive-kji" "main-sgemm-block-32" "main-sgemm-block-64" "main-sgemm-block-128")
+ff=("main-sgemm-block-128" "main-sgemm-block-2" "main-sgemm-block-4")
 
-cd $PREFIX/build/;
-for i in $(seq 1 40); do
+cd $PREFIX/build/; echo "" > $PREFIX/plot/tmp;
+for i in $(seq 1 20); do
     for f in "${ff[@]}"; do
         l=$(($i * 64))
 
-        echo ""
         echo "Running $f with arguments $l ..."
-        ./$f "$l" "6"
-        echo ""
+        echo "Running $f with arguments $l ..." >> $PREFIX/plot/tmp
+        ./$f "$l" "10" >> $PREFIX/plot/tmp
+        echo "" >> $PREFIX/plot/tmp
     done
 done
 
 cd -
+
+python $PREFIX/plot/collect.py $PREFIX/plot/tmp $PREFIX/plot/out.log
+python $PREFIX/plot/plot.py $PREFIX/plot/out.log $PREFIX/plot/out.png

@@ -4,9 +4,6 @@ project(sgemm)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-option(CHECK "Check the correctness" ON)
-add_compile_options(-DCHECK=${CHECK})
-
 find_package(Eigen3 REQUIRED)
 if(EIGEN3_FOUND)
     include_directories(${EIGEN3_INCLUDE_DIRS})
@@ -39,6 +36,6 @@ foreach(f IN LISTS SOURCES)
     )
 
     target_link_libraries(main-${basename} sgemm-blas)
-    target_compile_options(main-${basename} PRIVATE -march=native -O3 -Ofast)
+    target_compile_options(main-${basename} PRIVATE -march=native -O0 -Ofast)
 endforeach()
 
