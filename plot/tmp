@@ -1,12 +1,12 @@
 
 Running naive-jki.x with arguments 64 ...
 L = 64, N = 4
-err = 3.55e-15
-err = 2.75e-15
-err = 3.55e-15
-err = 3.55e-15
-MM_REF t = 1.08e-05 sec, GFLOPS =  49.37
-MM_SOL t = 5.40e-04 sec, GFLOPS =   0.97
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.14e-05 sec, GFLOPS =  48.05
+MM_SOL t = 2.15e-05 sec, GFLOPS =  24.40
 
 Running avx2-4x4.x with arguments 64 ...
 L = 64, N = 4
@@ -14,8 +14,8 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 1.07e-05 sec, GFLOPS =  50.74
-MM_SOL t = 1.30e-04 sec, GFLOPS =   4.04
+MM_REF t = 1.08e-05 sec, GFLOPS =  50.06
+MM_SOL t = 1.40e-05 sec, GFLOPS =  37.34
 
 Running avx2-4x4-unroll.x with arguments 64 ...
 L = 64, N = 4
@@ -23,35 +23,35 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 1.06e-05 sec, GFLOPS =  50.04
-MM_SOL t = 1.39e-04 sec, GFLOPS =   3.77
+MM_REF t = 1.06e-05 sec, GFLOPS =  51.16
+MM_SOL t = 1.39e-05 sec, GFLOPS =  37.75
 
 Running register-blocking-2x2.x with arguments 64 ...
 L = 64, N = 4
-err = 3.55e-15
-err = 2.75e-15
-err = 3.55e-15
-err = 3.55e-15
-MM_REF t = 1.17e-05 sec, GFLOPS =  46.05
-MM_SOL t = 2.55e-04 sec, GFLOPS =   2.06
+err = 5.33e-15
+err = 5.33e-15
+err = 5.33e-15
+err = 5.33e-15
+MM_REF t = 1.10e-05 sec, GFLOPS =  49.45
+MM_SOL t = 2.64e-05 sec, GFLOPS =  19.83
 
 Running register-blocking-4x4.x with arguments 64 ...
 L = 64, N = 4
-err = 3.55e-15
-err = 2.75e-15
-err = 3.55e-15
-err = 3.55e-15
-MM_REF t = 1.04e-05 sec, GFLOPS =  51.02
-MM_SOL t = 2.04e-04 sec, GFLOPS =   2.57
+err = 5.33e-15
+err = 5.33e-15
+err = 5.33e-15
+err = 5.33e-15
+MM_REF t = 1.02e-05 sec, GFLOPS =  52.35
+MM_SOL t = 1.92e-05 sec, GFLOPS =  27.31
 
 Running naive-jki.x with arguments 128 ...
 L = 128, N = 4
-err = 6.66e-15
-err = 6.22e-15
-err = 7.11e-15
-err = 5.33e-15
-MM_REF t = 9.10e-05 sec, GFLOPS =  46.09
-MM_SOL t = 4.01e-03 sec, GFLOPS =   1.05
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 8.46e-05 sec, GFLOPS =  49.60
+MM_SOL t = 1.75e-04 sec, GFLOPS =  24.00
 
 Running avx2-4x4.x with arguments 128 ...
 L = 128, N = 4
@@ -59,8 +59,8 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 8.40e-05 sec, GFLOPS =  49.98
-MM_SOL t = 1.11e-03 sec, GFLOPS =   3.77
+MM_REF t = 8.11e-05 sec, GFLOPS =  52.03
+MM_SOL t = 1.28e-04 sec, GFLOPS =  32.82
 
 Running avx2-4x4-unroll.x with arguments 128 ...
 L = 128, N = 4
@@ -68,35 +68,35 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 8.04e-05 sec, GFLOPS =  52.17
-MM_SOL t = 1.14e-03 sec, GFLOPS =   3.69
+MM_REF t = 8.51e-05 sec, GFLOPS =  49.31
+MM_SOL t = 1.25e-04 sec, GFLOPS =  33.49
 
 Running register-blocking-2x2.x with arguments 128 ...
 L = 128, N = 4
-err = 6.66e-15
-err = 6.22e-15
-err = 7.11e-15
-err = 5.33e-15
-MM_REF t = 8.82e-05 sec, GFLOPS =  47.56
-MM_SOL t = 2.17e-03 sec, GFLOPS =   1.93
+err = 1.07e-14
+err = 1.07e-14
+err = 1.07e-14
+err = 1.07e-14
+MM_REF t = 7.96e-05 sec, GFLOPS =  52.81
+MM_SOL t = 3.24e-04 sec, GFLOPS =  12.94
 
 Running register-blocking-4x4.x with arguments 128 ...
 L = 128, N = 4
-err = 6.66e-15
-err = 6.22e-15
-err = 7.11e-15
-err = 5.33e-15
-MM_REF t = 8.49e-05 sec, GFLOPS =  49.45
-MM_SOL t = 1.62e-03 sec, GFLOPS =   2.59
+err = 1.07e-14
+err = 1.07e-14
+err = 1.07e-14
+err = 1.07e-14
+MM_REF t = 8.55e-05 sec, GFLOPS =  49.49
+MM_SOL t = 1.93e-04 sec, GFLOPS =  21.81
 
 Running naive-jki.x with arguments 192 ...
 L = 192, N = 4
-err = 1.07e-14
-err = 8.88e-15
-err = 7.11e-15
-err = 1.07e-14
-MM_REF t = 4.45e-04 sec, GFLOPS =  34.17
-MM_SOL t = 1.40e-02 sec, GFLOPS =   1.01
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 3.20e-04 sec, GFLOPS =  45.69
+MM_SOL t = 5.96e-04 sec, GFLOPS =  23.76
 
 Running avx2-4x4.x with arguments 192 ...
 L = 192, N = 4
@@ -104,8 +104,8 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 2.85e-04 sec, GFLOPS =  49.98
-MM_SOL t = 3.46e-03 sec, GFLOPS =   4.09
+MM_REF t = 2.60e-04 sec, GFLOPS =  54.40
+MM_SOL t = 4.51e-04 sec, GFLOPS =  31.46
 
 Running avx2-4x4-unroll.x with arguments 192 ...
 L = 192, N = 4
@@ -113,700 +113,789 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 2.79e-04 sec, GFLOPS =  50.92
-MM_SOL t = 3.83e-03 sec, GFLOPS =   3.70
+MM_REF t = 2.63e-04 sec, GFLOPS =  53.86
+MM_SOL t = 4.27e-04 sec, GFLOPS =  33.19
 
 Running register-blocking-2x2.x with arguments 192 ...
 L = 192, N = 4
-err = 1.07e-14
-err = 8.88e-15
-err = 7.11e-15
-err = 1.07e-14
-MM_REF t = 3.43e-04 sec, GFLOPS =  41.24
-MM_SOL t = 7.45e-03 sec, GFLOPS =   1.90
+err = 1.95e-14
+err = 2.13e-14
+err = 2.13e-14
+err = 2.31e-14
+MM_REF t = 2.63e-04 sec, GFLOPS =  53.81
+MM_SOL t = 1.09e-03 sec, GFLOPS =  13.01
 
 Running register-blocking-4x4.x with arguments 192 ...
 L = 192, N = 4
-err = 1.07e-14
-err = 8.88e-15
-err = 7.11e-15
-err = 1.07e-14
-MM_REF t = 3.66e-04 sec, GFLOPS =  41.84
-MM_SOL t = 5.65e-03 sec, GFLOPS =   2.50
+err = 1.95e-14
+err = 2.13e-14
+err = 2.13e-14
+err = 2.31e-14
+MM_REF t = 2.53e-04 sec, GFLOPS =  56.08
+MM_SOL t = 6.72e-04 sec, GFLOPS =  21.07
 
 Running naive-jki.x with arguments 256 ...
 L = 256, N = 4
+err = 1.60e-14
+err = 1.95e-14
 err = 2.13e-14
-err = 2.13e-14
-err = 2.13e-14
-err = 2.13e-14
-MM_REF t = 6.69e-04 sec, GFLOPS =  50.19
-MM_SOL t = 3.18e-02 sec, GFLOPS =   1.06
+err = 1.78e-14
+MM_REF t = 6.33e-04 sec, GFLOPS =  53.04
+MM_SOL t = 1.43e-03 sec, GFLOPS =  23.46
 
 Running avx2-4x4.x with arguments 256 ...
 L = 256, N = 4
-err = 1.95e-14
+err = 1.60e-14
 err = 1.95e-14
 err = 2.13e-14
-err = 2.49e-14
-MM_REF t = 9.82e-04 sec, GFLOPS =  34.64
-MM_SOL t = 8.04e-03 sec, GFLOPS =   4.17
+err = 1.78e-14
+MM_REF t = 6.42e-04 sec, GFLOPS =  52.27
+MM_SOL t = 1.08e-03 sec, GFLOPS =  31.02
 
 Running avx2-4x4-unroll.x with arguments 256 ...
 L = 256, N = 4
-err = 1.95e-14
+err = 1.60e-14
 err = 1.95e-14
 err = 2.13e-14
-err = 2.49e-14
-MM_REF t = 6.83e-04 sec, GFLOPS =  49.19
-MM_SOL t = 9.07e-03 sec, GFLOPS =   3.70
+err = 1.78e-14
+MM_REF t = 6.91e-04 sec, GFLOPS =  49.01
+MM_SOL t = 1.07e-03 sec, GFLOPS =  31.30
 
 Running register-blocking-2x2.x with arguments 256 ...
 L = 256, N = 4
-err = 2.13e-14
-err = 2.13e-14
-err = 2.13e-14
-err = 2.13e-14
-MM_REF t = 6.93e-04 sec, GFLOPS =  48.42
-MM_SOL t = 1.72e-02 sec, GFLOPS =   1.95
+err = 2.49e-14
+err = 2.84e-14
+err = 2.49e-14
+err = 2.49e-14
+MM_REF t = 6.71e-04 sec, GFLOPS =  50.07
+MM_SOL t = 3.07e-03 sec, GFLOPS =  10.94
 
 Running register-blocking-4x4.x with arguments 256 ...
 L = 256, N = 4
-err = 2.13e-14
-err = 2.13e-14
-err = 2.13e-14
-err = 2.13e-14
-MM_REF t = 9.40e-04 sec, GFLOPS =  36.01
-MM_SOL t = 1.33e-02 sec, GFLOPS =   2.52
+err = 2.49e-14
+err = 2.84e-14
+err = 2.49e-14
+err = 2.49e-14
+MM_REF t = 6.15e-04 sec, GFLOPS =  54.59
+MM_SOL t = 1.81e-03 sec, GFLOPS =  18.56
 
 Running naive-jki.x with arguments 320 ...
 L = 320, N = 4
-err = 2.84e-14
+err = 3.02e-14
 err = 3.55e-14
-err = 3.91e-14
 err = 3.55e-14
-MM_REF t = 1.23e-03 sec, GFLOPS =  53.31
-MM_SOL t = 6.29e-02 sec, GFLOPS =   1.04
+err = 3.55e-14
+MM_REF t = 1.17e-03 sec, GFLOPS =  55.90
+MM_SOL t = 3.28e-03 sec, GFLOPS =  20.01
 
 Running avx2-4x4.x with arguments 320 ...
 L = 320, N = 4
-err = 3.20e-14
-err = 3.91e-14
-err = 3.91e-14
-err = 3.91e-14
-MM_REF t = 1.28e-03 sec, GFLOPS =  51.15
-MM_SOL t = 1.62e-02 sec, GFLOPS =   4.06
+err = 3.02e-14
+err = 3.55e-14
+err = 3.55e-14
+err = 3.55e-14
+MM_REF t = 1.47e-03 sec, GFLOPS =  44.66
+MM_SOL t = 2.22e-03 sec, GFLOPS =  29.58
 
 Running avx2-4x4-unroll.x with arguments 320 ...
 L = 320, N = 4
-err = 3.20e-14
-err = 3.91e-14
-err = 3.91e-14
-err = 3.91e-14
-MM_REF t = 1.27e-03 sec, GFLOPS =  51.74
-MM_SOL t = 1.82e-02 sec, GFLOPS =   3.60
+err = 3.02e-14
+err = 3.55e-14
+err = 3.55e-14
+err = 3.55e-14
+MM_REF t = 1.23e-03 sec, GFLOPS =  53.09
+MM_SOL t = 2.22e-03 sec, GFLOPS =  29.49
 
 Running register-blocking-2x2.x with arguments 320 ...
 L = 320, N = 4
-err = 2.84e-14
-err = 3.55e-14
-err = 3.91e-14
-err = 3.55e-14
-MM_REF t = 1.22e-03 sec, GFLOPS =  53.66
-MM_SOL t = 3.44e-02 sec, GFLOPS =   1.90
+err = 2.31e-14
+err = 1.91e-14
+err = 2.49e-14
+err = 2.49e-14
+MM_REF t = 1.36e-03 sec, GFLOPS =  48.12
+MM_SOL t = 6.11e-03 sec, GFLOPS =  10.72
 
 Running register-blocking-4x4.x with arguments 320 ...
 L = 320, N = 4
-err = 2.84e-14
-err = 3.55e-14
-err = 3.91e-14
-err = 3.55e-14
-MM_REF t = 1.27e-03 sec, GFLOPS =  51.46
-MM_SOL t = 2.61e-02 sec, GFLOPS =   2.52
+err = 2.31e-14
+err = 1.91e-14
+err = 2.49e-14
+err = 2.49e-14
+MM_REF t = 1.36e-03 sec, GFLOPS =  48.93
+MM_SOL t = 3.59e-03 sec, GFLOPS =  18.28
 
 Running naive-jki.x with arguments 384 ...
 L = 384, N = 4
-err = 5.68e-14
-err = 3.91e-14
+err = 5.33e-14
+err = 3.55e-14
 err = 4.97e-14
-err = 5.68e-14
-MM_REF t = 2.48e-03 sec, GFLOPS =  47.27
-MM_SOL t = 1.09e-01 sec, GFLOPS =   1.03
+err = 4.62e-14
+MM_REF t = 2.11e-03 sec, GFLOPS =  53.75
+MM_SOL t = 6.46e-03 sec, GFLOPS =  17.62
 
 Running avx2-4x4.x with arguments 384 ...
 L = 384, N = 4
 err = 5.33e-14
-err = 3.91e-14
+err = 3.55e-14
+err = 4.97e-14
 err = 4.62e-14
-err = 5.68e-14
-MM_REF t = 2.14e-03 sec, GFLOPS =  53.01
-MM_SOL t = 2.85e-02 sec, GFLOPS =   3.97
+MM_REF t = 2.04e-03 sec, GFLOPS =  55.62
+MM_SOL t = 4.12e-03 sec, GFLOPS =  27.49
 
 Running avx2-4x4-unroll.x with arguments 384 ...
 L = 384, N = 4
 err = 5.33e-14
-err = 3.91e-14
+err = 3.55e-14
+err = 4.97e-14
 err = 4.62e-14
-err = 5.68e-14
-MM_REF t = 2.05e-03 sec, GFLOPS =  55.28
-MM_SOL t = 3.28e-02 sec, GFLOPS =   3.46
+MM_REF t = 2.44e-03 sec, GFLOPS =  47.15
+MM_SOL t = 4.39e-03 sec, GFLOPS =  25.81
 
 Running register-blocking-2x2.x with arguments 384 ...
 L = 384, N = 4
-err = 5.68e-14
-err = 3.91e-14
-err = 4.97e-14
-err = 5.68e-14
-MM_REF t = 2.09e-03 sec, GFLOPS =  54.09
-MM_SOL t = 5.93e-02 sec, GFLOPS =   1.91
+err = 2.49e-14
+err = 2.84e-14
+err = 3.73e-14
+err = 2.84e-14
+MM_REF t = 2.15e-03 sec, GFLOPS =  52.67
+MM_SOL t = 1.13e-02 sec, GFLOPS =  10.04
 
 Running register-blocking-4x4.x with arguments 384 ...
 L = 384, N = 4
-err = 5.68e-14
-err = 3.91e-14
-err = 4.97e-14
-err = 5.68e-14
-MM_REF t = 2.04e-03 sec, GFLOPS =  55.53
-MM_SOL t = 4.59e-02 sec, GFLOPS =   2.47
+err = 2.49e-14
+err = 2.84e-14
+err = 3.73e-14
+err = 2.84e-14
+MM_REF t = 2.14e-03 sec, GFLOPS =  52.80
+MM_SOL t = 6.57e-03 sec, GFLOPS =  17.25
 
 Running naive-jki.x with arguments 448 ...
 L = 448, N = 4
 err = 4.97e-14
 err = 5.33e-14
-err = 5.68e-14
+err = 4.97e-14
 err = 4.62e-14
-MM_REF t = 3.46e-03 sec, GFLOPS =  52.41
-MM_SOL t = 1.72e-01 sec, GFLOPS =   1.04
+MM_REF t = 3.35e-03 sec, GFLOPS =  53.74
+MM_SOL t = 1.20e-02 sec, GFLOPS =  15.04
 
 Running avx2-4x4.x with arguments 448 ...
 L = 448, N = 4
+err = 4.97e-14
 err = 5.33e-14
-err = 5.33e-14
-err = 5.68e-14
+err = 4.97e-14
 err = 4.62e-14
-MM_REF t = 3.32e-03 sec, GFLOPS =  54.29
-MM_SOL t = 4.55e-02 sec, GFLOPS =   3.95
+MM_REF t = 3.63e-03 sec, GFLOPS =  49.60
+MM_SOL t = 6.58e-03 sec, GFLOPS =  27.35
 
 Running avx2-4x4-unroll.x with arguments 448 ...
 L = 448, N = 4
+err = 4.97e-14
 err = 5.33e-14
-err = 5.33e-14
-err = 5.68e-14
+err = 4.97e-14
 err = 4.62e-14
-MM_REF t = 3.22e-03 sec, GFLOPS =  55.91
-MM_SOL t = 5.26e-02 sec, GFLOPS =   3.42
+MM_REF t = 3.21e-03 sec, GFLOPS =  56.07
+MM_SOL t = 7.06e-03 sec, GFLOPS =  25.51
 
 Running register-blocking-2x2.x with arguments 448 ...
 L = 448, N = 4
-err = 4.97e-14
-err = 5.33e-14
-err = 5.68e-14
-err = 4.62e-14
-MM_REF t = 3.36e-03 sec, GFLOPS =  53.69
-MM_SOL t = 9.92e-02 sec, GFLOPS =   1.81
+err = 3.20e-14
+err = 2.49e-14
+err = 2.49e-14
+err = 2.66e-14
+MM_REF t = 3.26e-03 sec, GFLOPS =  55.21
+MM_SOL t = 1.86e-02 sec, GFLOPS =   9.69
 
 Running register-blocking-4x4.x with arguments 448 ...
 L = 448, N = 4
-err = 4.97e-14
-err = 5.33e-14
-err = 5.68e-14
-err = 4.62e-14
-MM_REF t = 3.81e-03 sec, GFLOPS =  47.60
-MM_SOL t = 7.40e-02 sec, GFLOPS =   2.43
+err = 3.20e-14
+err = 2.49e-14
+err = 2.49e-14
+err = 2.66e-14
+MM_REF t = 3.17e-03 sec, GFLOPS =  56.77
+MM_SOL t = 1.06e-02 sec, GFLOPS =  16.93
 
 Running naive-jki.x with arguments 512 ...
 L = 512, N = 4
-err = 5.68e-14
-err = 5.33e-14
-err = 6.39e-14
 err = 6.04e-14
-MM_REF t = 4.77e-03 sec, GFLOPS =  56.26
-MM_SOL t = 2.55e-01 sec, GFLOPS =   1.05
+err = 5.33e-14
+err = 6.04e-14
+err = 5.68e-14
+MM_REF t = 5.16e-03 sec, GFLOPS =  52.01
+MM_SOL t = 1.82e-02 sec, GFLOPS =  14.78
 
 Running avx2-4x4.x with arguments 512 ...
 L = 512, N = 4
+err = 6.04e-14
 err = 5.33e-14
-err = 5.33e-14
-err = 6.39e-14
-err = 6.75e-14
-MM_REF t = 5.20e-03 sec, GFLOPS =  51.71
-MM_SOL t = 8.32e-02 sec, GFLOPS =   3.23
+err = 6.04e-14
+err = 5.68e-14
+MM_REF t = 5.18e-03 sec, GFLOPS =  51.85
+MM_SOL t = 2.54e-02 sec, GFLOPS =  10.57
 
 Running avx2-4x4-unroll.x with arguments 512 ...
 L = 512, N = 4
+err = 6.04e-14
 err = 5.33e-14
-err = 5.33e-14
-err = 6.39e-14
-err = 6.75e-14
-MM_REF t = 4.83e-03 sec, GFLOPS =  55.60
-MM_SOL t = 8.77e-02 sec, GFLOPS =   3.06
+err = 6.04e-14
+err = 5.68e-14
+MM_REF t = 5.47e-03 sec, GFLOPS =  49.97
+MM_SOL t = 2.32e-02 sec, GFLOPS =  11.58
 
 Running register-blocking-2x2.x with arguments 512 ...
 L = 512, N = 4
-err = 5.68e-14
-err = 5.33e-14
-err = 6.39e-14
-err = 6.04e-14
-MM_REF t = 5.06e-03 sec, GFLOPS =  53.19
-MM_SOL t = 1.90e-01 sec, GFLOPS =   1.41
+err = 3.55e-14
+err = 2.84e-14
+err = 3.20e-14
+err = 2.84e-14
+MM_REF t = 4.83e-03 sec, GFLOPS =  55.53
+MM_SOL t = 7.98e-02 sec, GFLOPS =   3.37
 
 Running register-blocking-4x4.x with arguments 512 ...
 L = 512, N = 4
-err = 5.68e-14
-err = 5.33e-14
-err = 6.39e-14
-err = 6.04e-14
-MM_REF t = 4.84e-03 sec, GFLOPS =  55.57
-MM_SOL t = 1.17e-01 sec, GFLOPS =   2.30
+err = 3.55e-14
+err = 2.84e-14
+err = 3.20e-14
+err = 2.84e-14
+MM_REF t = 4.85e-03 sec, GFLOPS =  55.37
+MM_SOL t = 2.44e-02 sec, GFLOPS =  11.01
 
 Running naive-jki.x with arguments 576 ...
 L = 576, N = 4
-err = 6.93e-14
 err = 6.39e-14
 err = 7.11e-14
-err = 6.93e-14
-MM_REF t = 6.82e-03 sec, GFLOPS =  56.07
-MM_SOL t = 3.63e-01 sec, GFLOPS =   1.05
+err = 7.11e-14
+err = 6.39e-14
+MM_REF t = 7.29e-03 sec, GFLOPS =  52.56
+MM_SOL t = 2.70e-02 sec, GFLOPS =  14.18
 
 Running avx2-4x4.x with arguments 576 ...
 L = 576, N = 4
-err = 6.93e-14
-err = 6.75e-14
+err = 6.39e-14
 err = 7.11e-14
-err = 6.75e-14
-MM_REF t = 6.77e-03 sec, GFLOPS =  56.44
-MM_SOL t = 1.06e-01 sec, GFLOPS =   3.62
+err = 7.11e-14
+err = 6.39e-14
+MM_REF t = 6.63e-03 sec, GFLOPS =  57.69
+MM_SOL t = 1.51e-02 sec, GFLOPS =  25.33
 
 Running avx2-4x4-unroll.x with arguments 576 ...
 L = 576, N = 4
-err = 6.93e-14
-err = 6.75e-14
+err = 6.39e-14
 err = 7.11e-14
-err = 6.75e-14
-MM_REF t = 6.57e-03 sec, GFLOPS =  58.15
-MM_SOL t = 1.16e-01 sec, GFLOPS =   3.30
+err = 7.11e-14
+err = 6.39e-14
+MM_REF t = 7.09e-03 sec, GFLOPS =  53.95
+MM_SOL t = 1.52e-02 sec, GFLOPS =  25.15
 
 Running register-blocking-2x2.x with arguments 576 ...
 L = 576, N = 4
-err = 6.93e-14
-err = 6.39e-14
-err = 7.11e-14
-err = 6.93e-14
-MM_REF t = 7.22e-03 sec, GFLOPS =  52.93
-MM_SOL t = 2.29e-01 sec, GFLOPS =   1.67
+err = 3.55e-14
+err = 3.11e-14
+err = 3.20e-14
+err = 3.20e-14
+MM_REF t = 6.87e-03 sec, GFLOPS =  55.66
+MM_SOL t = 4.20e-02 sec, GFLOPS =   9.10
 
 Running register-blocking-4x4.x with arguments 576 ...
 L = 576, N = 4
-err = 6.93e-14
-err = 6.39e-14
-err = 7.11e-14
-err = 6.93e-14
-MM_REF t = 6.58e-03 sec, GFLOPS =  58.07
-MM_SOL t = 1.57e-01 sec, GFLOPS =   2.44
+err = 3.55e-14
+err = 3.11e-14
+err = 3.20e-14
+err = 3.20e-14
+MM_REF t = 7.24e-03 sec, GFLOPS =  53.24
+MM_SOL t = 2.30e-02 sec, GFLOPS =  16.61
 
 Running naive-jki.x with arguments 640 ...
 L = 640, N = 4
 err = 7.82e-14
 err = 7.11e-14
-err = 8.53e-14
+err = 9.24e-14
 err = 7.11e-14
-MM_REF t = 9.71e-03 sec, GFLOPS =  54.00
-MM_SOL t = 4.97e-01 sec, GFLOPS =   1.06
+MM_REF t = 9.69e-03 sec, GFLOPS =  54.13
+MM_SOL t = 3.66e-02 sec, GFLOPS =  14.34
 
 Running avx2-4x4.x with arguments 640 ...
 L = 640, N = 4
 err = 7.82e-14
 err = 7.11e-14
-err = 8.53e-14
-err = 6.75e-14
-MM_REF t = 9.79e-03 sec, GFLOPS =  53.57
-MM_SOL t = 1.52e-01 sec, GFLOPS =   3.46
+err = 9.24e-14
+err = 7.11e-14
+MM_REF t = 8.98e-03 sec, GFLOPS =  58.36
+MM_SOL t = 2.12e-02 sec, GFLOPS =  24.73
 
 Running avx2-4x4-unroll.x with arguments 640 ...
 L = 640, N = 4
 err = 7.82e-14
 err = 7.11e-14
-err = 8.53e-14
-err = 6.75e-14
-MM_REF t = 9.70e-03 sec, GFLOPS =  54.13
-MM_SOL t = 1.63e-01 sec, GFLOPS =   3.21
+err = 9.24e-14
+err = 7.11e-14
+MM_REF t = 9.81e-03 sec, GFLOPS =  53.72
+MM_SOL t = 2.23e-02 sec, GFLOPS =  23.54
 
 Running register-blocking-2x2.x with arguments 640 ...
 L = 640, N = 4
-err = 7.82e-14
-err = 7.11e-14
-err = 8.53e-14
-err = 7.11e-14
-MM_REF t = 9.25e-03 sec, GFLOPS =  56.70
-MM_SOL t = 3.28e-01 sec, GFLOPS =   1.60
+err = 3.38e-14
+err = 4.26e-14
+err = 3.55e-14
+err = 3.20e-14
+MM_REF t = 9.02e-03 sec, GFLOPS =  58.11
+MM_SOL t = 5.90e-02 sec, GFLOPS =   8.89
 
 Running register-blocking-4x4.x with arguments 640 ...
 L = 640, N = 4
-err = 7.82e-14
-err = 7.11e-14
-err = 8.53e-14
-err = 7.11e-14
-MM_REF t = 9.24e-03 sec, GFLOPS =  56.74
-MM_SOL t = 2.15e-01 sec, GFLOPS =   2.44
+err = 3.38e-14
+err = 4.26e-14
+err = 3.55e-14
+err = 3.20e-14
+MM_REF t = 9.33e-03 sec, GFLOPS =  56.21
+MM_SOL t = 3.26e-02 sec, GFLOPS =  16.06
 
 Running naive-jki.x with arguments 704 ...
 L = 704, N = 4
 err = 8.88e-14
-err = 8.53e-14
-err = 8.53e-14
+err = 9.59e-14
+err = 9.24e-14
 err = 7.82e-14
-MM_REF t = 1.32e-02 sec, GFLOPS =  52.86
-MM_SOL t = 6.63e-01 sec, GFLOPS =   1.05
+MM_REF t = 1.24e-02 sec, GFLOPS =  56.18
+MM_SOL t = 4.95e-02 sec, GFLOPS =  14.10
 
 Running avx2-4x4.x with arguments 704 ...
 L = 704, N = 4
+err = 8.88e-14
+err = 9.59e-14
+err = 9.24e-14
 err = 7.82e-14
-err = 8.53e-14
-err = 8.53e-14
-err = 7.82e-14
-MM_REF t = 1.23e-02 sec, GFLOPS =  56.81
-MM_SOL t = 1.99e-01 sec, GFLOPS =   3.50
+MM_REF t = 1.26e-02 sec, GFLOPS =  55.37
+MM_SOL t = 2.73e-02 sec, GFLOPS =  25.54
 
 Running avx2-4x4-unroll.x with arguments 704 ...
 L = 704, N = 4
+err = 8.88e-14
+err = 9.59e-14
+err = 9.24e-14
 err = 7.82e-14
-err = 8.53e-14
-err = 8.53e-14
-err = 7.82e-14
-MM_REF t = 1.19e-02 sec, GFLOPS =  58.61
-MM_SOL t = 2.17e-01 sec, GFLOPS =   3.22
+MM_REF t = 1.24e-02 sec, GFLOPS =  56.25
+MM_SOL t = 2.62e-02 sec, GFLOPS =  26.68
 
 Running register-blocking-2x2.x with arguments 704 ...
 L = 704, N = 4
-err = 8.88e-14
-err = 8.53e-14
-err = 8.53e-14
-err = 7.82e-14
-MM_REF t = 1.23e-02 sec, GFLOPS =  56.85
-MM_SOL t = 4.36e-01 sec, GFLOPS =   1.60
+err = 4.26e-14
+err = 3.55e-14
+err = 3.73e-14
+err = 4.26e-14
+MM_REF t = 1.30e-02 sec, GFLOPS =  53.54
+MM_SOL t = 7.64e-02 sec, GFLOPS =   9.13
 
 Running register-blocking-4x4.x with arguments 704 ...
 L = 704, N = 4
-err = 8.88e-14
-err = 8.53e-14
-err = 8.53e-14
-err = 7.82e-14
-MM_REF t = 1.24e-02 sec, GFLOPS =  56.07
-MM_SOL t = 2.85e-01 sec, GFLOPS =   2.45
+err = 4.26e-14
+err = 3.55e-14
+err = 3.73e-14
+err = 4.26e-14
+MM_REF t = 1.26e-02 sec, GFLOPS =  55.44
+MM_SOL t = 4.17e-02 sec, GFLOPS =  16.72
 
 Running naive-jki.x with arguments 768 ...
 L = 768, N = 4
-err = 1.21e-13
-err = 8.53e-14
-err = 9.24e-14
+err = 1.14e-13
+err = 9.59e-14
 err = 1.07e-13
-MM_REF t = 1.62e-02 sec, GFLOPS =  55.89
-MM_SOL t = 8.58e-01 sec, GFLOPS =   1.06
+err = 1.07e-13
+MM_REF t = 1.61e-02 sec, GFLOPS =  56.24
+MM_SOL t = 6.83e-02 sec, GFLOPS =  13.26
 
 Running avx2-4x4.x with arguments 768 ...
 L = 768, N = 4
-err = 1.21e-13
-err = 9.24e-14
-err = 9.24e-14
+err = 1.14e-13
+err = 9.59e-14
 err = 1.07e-13
-MM_REF t = 1.57e-02 sec, GFLOPS =  57.66
-MM_SOL t = 2.80e-01 sec, GFLOPS =   3.23
+err = 1.07e-13
+MM_REF t = 1.64e-02 sec, GFLOPS =  55.44
+MM_SOL t = 6.57e-02 sec, GFLOPS =  13.79
 
 Running avx2-4x4-unroll.x with arguments 768 ...
 L = 768, N = 4
-err = 1.21e-13
-err = 9.24e-14
-err = 9.24e-14
+err = 1.14e-13
+err = 9.59e-14
 err = 1.07e-13
-MM_REF t = 1.60e-02 sec, GFLOPS =  56.65
-MM_SOL t = 3.02e-01 sec, GFLOPS =   3.00
+err = 1.07e-13
+MM_REF t = 1.61e-02 sec, GFLOPS =  56.34
+MM_SOL t = 6.63e-02 sec, GFLOPS =  13.67
 
 Running register-blocking-2x2.x with arguments 768 ...
 L = 768, N = 4
-err = 1.21e-13
-err = 8.53e-14
-err = 9.24e-14
-err = 1.07e-13
-MM_REF t = 1.68e-02 sec, GFLOPS =  54.11
-MM_SOL t = 6.41e-01 sec, GFLOPS =   1.41
+err = 4.26e-14
+err = 4.26e-14
+err = 3.91e-14
+err = 3.91e-14
+MM_REF t = 1.60e-02 sec, GFLOPS =  56.68
+MM_SOL t = 2.03e-01 sec, GFLOPS =   4.46
 
 Running register-blocking-4x4.x with arguments 768 ...
 L = 768, N = 4
-err = 1.21e-13
-err = 8.53e-14
-err = 9.24e-14
-err = 1.07e-13
-MM_REF t = 1.62e-02 sec, GFLOPS =  56.04
-MM_SOL t = 4.12e-01 sec, GFLOPS =   2.20
+err = 4.26e-14
+err = 4.26e-14
+err = 3.91e-14
+err = 3.91e-14
+MM_REF t = 1.63e-02 sec, GFLOPS =  55.59
+MM_SOL t = 7.10e-02 sec, GFLOPS =  12.76
 
 Running naive-jki.x with arguments 832 ...
 L = 832, N = 4
-err = 1.28e-13
 err = 1.35e-13
+err = 1.28e-13
+err = 1.14e-13
 err = 1.07e-13
-err = 9.95e-14
-MM_REF t = 2.06e-02 sec, GFLOPS =  55.88
-MM_SOL t = 1.09e+00 sec, GFLOPS =   1.06
+MM_REF t = 2.21e-02 sec, GFLOPS =  52.71
+MM_SOL t = 8.25e-02 sec, GFLOPS =  13.97
 
 Running avx2-4x4.x with arguments 832 ...
 L = 832, N = 4
 err = 1.35e-13
-err = 1.42e-13
+err = 1.28e-13
 err = 1.14e-13
 err = 1.07e-13
-MM_REF t = 2.05e-02 sec, GFLOPS =  56.27
-MM_SOL t = 3.27e-01 sec, GFLOPS =   3.52
+MM_REF t = 2.07e-02 sec, GFLOPS =  55.77
+MM_SOL t = 4.54e-02 sec, GFLOPS =  25.39
 
 Running avx2-4x4-unroll.x with arguments 832 ...
 L = 832, N = 4
 err = 1.35e-13
-err = 1.42e-13
+err = 1.28e-13
 err = 1.14e-13
 err = 1.07e-13
-MM_REF t = 2.05e-02 sec, GFLOPS =  56.24
-MM_SOL t = 3.56e-01 sec, GFLOPS =   3.24
+MM_REF t = 2.00e-02 sec, GFLOPS =  57.64
+MM_SOL t = 4.48e-02 sec, GFLOPS =  25.73
 
 Running register-blocking-2x2.x with arguments 832 ...
 L = 832, N = 4
-err = 1.28e-13
-err = 1.35e-13
-err = 1.07e-13
-err = 9.95e-14
-MM_REF t = 2.09e-02 sec, GFLOPS =  55.12
-MM_SOL t = 6.43e-01 sec, GFLOPS =   1.82
+err = 4.26e-14
+err = 4.26e-14
+err = 4.97e-14
+err = 4.26e-14
+MM_REF t = 2.05e-02 sec, GFLOPS =  56.20
+MM_SOL t = 1.27e-01 sec, GFLOPS =   9.07
 
 Running register-blocking-4x4.x with arguments 832 ...
 L = 832, N = 4
-err = 1.28e-13
-err = 1.35e-13
-err = 1.07e-13
-err = 9.95e-14
-MM_REF t = 1.99e-02 sec, GFLOPS =  57.75
-MM_SOL t = 4.74e-01 sec, GFLOPS =   2.43
+err = 4.26e-14
+err = 4.26e-14
+err = 4.97e-14
+err = 4.26e-14
+MM_REF t = 2.07e-02 sec, GFLOPS =  55.70
+MM_SOL t = 6.87e-02 sec, GFLOPS =  16.78
 
 Running naive-jki.x with arguments 896 ...
 L = 896, N = 4
-err = 1.21e-13
+err = 1.14e-13
 err = 1.21e-13
 err = 1.21e-13
 err = 1.14e-13
-MM_REF t = 2.50e-02 sec, GFLOPS =  57.48
-MM_SOL t = 1.37e+00 sec, GFLOPS =   1.05
+MM_REF t = 2.54e-02 sec, GFLOPS =  56.73
+MM_SOL t = 1.03e-01 sec, GFLOPS =  13.93
 
 Running avx2-4x4.x with arguments 896 ...
 L = 896, N = 4
 err = 1.14e-13
+err = 1.21e-13
+err = 1.21e-13
 err = 1.14e-13
-err = 1.17e-13
-err = 1.14e-13
-MM_REF t = 2.55e-02 sec, GFLOPS =  56.51
-MM_SOL t = 4.15e-01 sec, GFLOPS =   3.46
+MM_REF t = 2.56e-02 sec, GFLOPS =  56.27
+MM_SOL t = 6.17e-02 sec, GFLOPS =  23.30
 
 Running avx2-4x4-unroll.x with arguments 896 ...
 L = 896, N = 4
 err = 1.14e-13
+err = 1.21e-13
+err = 1.21e-13
 err = 1.14e-13
-err = 1.17e-13
-err = 1.14e-13
-MM_REF t = 2.62e-02 sec, GFLOPS =  55.01
-MM_SOL t = 4.49e-01 sec, GFLOPS =   3.20
+MM_REF t = 2.52e-02 sec, GFLOPS =  57.18
+MM_SOL t = 5.92e-02 sec, GFLOPS =  24.31
 
 Running register-blocking-2x2.x with arguments 896 ...
 L = 896, N = 4
-err = 1.21e-13
-err = 1.21e-13
-err = 1.21e-13
-err = 1.14e-13
-MM_REF t = 2.53e-02 sec, GFLOPS =  56.86
-MM_SOL t = 9.31e-01 sec, GFLOPS =   1.55
+err = 5.15e-14
+err = 4.26e-14
+err = 4.62e-14
+err = 4.62e-14
+MM_REF t = 2.43e-02 sec, GFLOPS =  59.15
+MM_SOL t = 1.79e-01 sec, GFLOPS =   8.02
 
 Running register-blocking-4x4.x with arguments 896 ...
 L = 896, N = 4
-err = 1.21e-13
-err = 1.21e-13
-err = 1.21e-13
-err = 1.14e-13
-MM_REF t = 2.56e-02 sec, GFLOPS =  56.25
-MM_SOL t = 6.13e-01 sec, GFLOPS =   2.35
+err = 5.15e-14
+err = 4.26e-14
+err = 4.62e-14
+err = 4.62e-14
+MM_REF t = 2.57e-02 sec, GFLOPS =  55.93
+MM_SOL t = 8.79e-02 sec, GFLOPS =  16.37
 
 Running naive-jki.x with arguments 960 ...
 L = 960, N = 4
-err = 1.14e-13
+err = 1.21e-13
 err = 1.35e-13
-err = 1.42e-13
-err = 1.28e-13
-MM_REF t = 3.05e-02 sec, GFLOPS =  58.01
-MM_SOL t = 1.43e+00 sec, GFLOPS =   1.27
+err = 1.21e-13
+err = 1.35e-13
+MM_REF t = 3.11e-02 sec, GFLOPS =  56.82
+MM_SOL t = 1.32e-01 sec, GFLOPS =  13.39
 
 Running avx2-4x4.x with arguments 960 ...
 L = 960, N = 4
-err = 1.14e-13
+err = 1.21e-13
 err = 1.35e-13
-err = 1.28e-13
-err = 1.28e-13
-MM_REF t = 3.06e-02 sec, GFLOPS =  57.76
-MM_SOL t = 5.04e-01 sec, GFLOPS =   3.51
+err = 1.21e-13
+err = 1.35e-13
+MM_REF t = 3.48e-02 sec, GFLOPS =  51.30
+MM_SOL t = 6.74e-02 sec, GFLOPS =  26.26
 
 Running avx2-4x4-unroll.x with arguments 960 ...
 L = 960, N = 4
-err = 1.14e-13
+err = 1.21e-13
 err = 1.35e-13
-err = 1.28e-13
-err = 1.28e-13
-MM_REF t = 3.11e-02 sec, GFLOPS =  56.84
-MM_SOL t = 4.90e-01 sec, GFLOPS =   3.66
+err = 1.21e-13
+err = 1.35e-13
+MM_REF t = 3.11e-02 sec, GFLOPS =  56.87
+MM_SOL t = 6.86e-02 sec, GFLOPS =  25.80
 
 Running register-blocking-2x2.x with arguments 960 ...
 L = 960, N = 4
-err = 1.14e-13
-err = 1.35e-13
-err = 1.42e-13
-err = 1.28e-13
-MM_REF t = 3.06e-02 sec, GFLOPS =  57.88
-MM_SOL t = 1.12e+00 sec, GFLOPS =   1.59
+err = 4.35e-14
+err = 4.97e-14
+err = 5.15e-14
+err = 4.97e-14
+MM_REF t = 3.06e-02 sec, GFLOPS =  57.83
+MM_SOL t = 2.07e-01 sec, GFLOPS =   8.53
 
 Running register-blocking-4x4.x with arguments 960 ...
 L = 960, N = 4
-err = 1.14e-13
-err = 1.35e-13
-err = 1.42e-13
-err = 1.28e-13
-MM_REF t = 3.14e-02 sec, GFLOPS =  56.43
-MM_SOL t = 7.35e-01 sec, GFLOPS =   2.41
+err = 4.35e-14
+err = 4.97e-14
+err = 5.15e-14
+err = 4.97e-14
+MM_REF t = 3.07e-02 sec, GFLOPS =  57.68
+MM_SOL t = 1.04e-01 sec, GFLOPS =  16.99
 
 Running naive-jki.x with arguments 1024 ...
 L = 1024, N = 4
+err = 1.78e-13
+err = 1.35e-13
 err = 1.85e-13
-err = 1.56e-13
-err = 1.56e-13
-err = 1.63e-13
-MM_REF t = 3.88e-02 sec, GFLOPS =  55.34
-MM_SOL t = 1.81e+00 sec, GFLOPS =   1.21
+err = 1.71e-13
+MM_REF t = 3.85e-02 sec, GFLOPS =  55.76
+MM_SOL t = 1.68e-01 sec, GFLOPS =  12.77
 
 Running avx2-4x4.x with arguments 1024 ...
 L = 1024, N = 4
+err = 1.78e-13
+err = 1.35e-13
 err = 1.85e-13
-err = 1.49e-13
 err = 1.71e-13
-err = 1.71e-13
-MM_REF t = 3.74e-02 sec, GFLOPS =  57.47
-MM_SOL t = 6.89e-01 sec, GFLOPS =   3.12
+MM_REF t = 3.84e-02 sec, GFLOPS =  55.93
+MM_SOL t = 2.09e-01 sec, GFLOPS =  10.30
 
 Running avx2-4x4-unroll.x with arguments 1024 ...
 L = 1024, N = 4
+err = 1.78e-13
+err = 1.35e-13
 err = 1.85e-13
-err = 1.49e-13
 err = 1.71e-13
-err = 1.71e-13
-MM_REF t = 3.89e-02 sec, GFLOPS =  55.21
-MM_SOL t = 7.89e-01 sec, GFLOPS =   2.72
+MM_REF t = 3.79e-02 sec, GFLOPS =  56.60
+MM_SOL t = 1.97e-01 sec, GFLOPS =  10.89
 
 Running register-blocking-2x2.x with arguments 1024 ...
 L = 1024, N = 4
-err = 1.85e-13
-err = 1.56e-13
-err = 1.56e-13
-err = 1.63e-13
-MM_REF t = 3.84e-02 sec, GFLOPS =  55.90
-MM_SOL t = 1.54e+00 sec, GFLOPS =   1.40
+err = 4.62e-14
+err = 4.97e-14
+err = 5.33e-14
+err = 4.97e-14
+MM_REF t = 3.72e-02 sec, GFLOPS =  57.76
+MM_SOL t = 6.72e-01 sec, GFLOPS =   3.20
 
 Running register-blocking-4x4.x with arguments 1024 ...
 L = 1024, N = 4
-err = 1.85e-13
-err = 1.56e-13
-err = 1.56e-13
-err = 1.63e-13
-MM_REF t = 3.85e-02 sec, GFLOPS =  55.84
-MM_SOL t = 1.07e+00 sec, GFLOPS =   2.01
+err = 4.62e-14
+err = 4.97e-14
+err = 5.33e-14
+err = 4.97e-14
+MM_REF t = 3.79e-02 sec, GFLOPS =  56.69
+MM_SOL t = 2.68e-01 sec, GFLOPS =   8.01
 
 Running naive-jki.x with arguments 1088 ...
 L = 1088, N = 4
 err = 1.63e-13
+err = 1.60e-13
 err = 1.56e-13
-err = 1.56e-13
-err = 1.49e-13
-MM_REF t = 4.60e-02 sec, GFLOPS =  56.01
-MM_SOL t = 2.22e+00 sec, GFLOPS =   1.17
+err = 1.85e-13
+MM_REF t = 4.56e-02 sec, GFLOPS =  56.52
+MM_SOL t = 2.17e-01 sec, GFLOPS =  11.89
 
 Running avx2-4x4.x with arguments 1088 ...
 L = 1088, N = 4
-err = 1.71e-13
-err = 1.53e-13
+err = 1.63e-13
 err = 1.60e-13
 err = 1.56e-13
-MM_REF t = 4.48e-02 sec, GFLOPS =  57.47
-MM_SOL t = 7.39e-01 sec, GFLOPS =   3.48
+err = 1.85e-13
+MM_REF t = 4.52e-02 sec, GFLOPS =  56.95
+MM_SOL t = 1.02e-01 sec, GFLOPS =  25.28
 
 Running avx2-4x4-unroll.x with arguments 1088 ...
 L = 1088, N = 4
-err = 1.71e-13
-err = 1.53e-13
+err = 1.63e-13
 err = 1.60e-13
 err = 1.56e-13
-MM_REF t = 4.51e-02 sec, GFLOPS =  57.15
-MM_SOL t = 8.03e-01 sec, GFLOPS =   3.21
+err = 1.85e-13
+MM_REF t = 4.52e-02 sec, GFLOPS =  57.01
+MM_SOL t = 1.12e-01 sec, GFLOPS =  22.91
 
 Running register-blocking-2x2.x with arguments 1088 ...
 L = 1088, N = 4
-err = 1.63e-13
-err = 1.56e-13
-err = 1.56e-13
-err = 1.49e-13
-MM_REF t = 4.53e-02 sec, GFLOPS =  56.89
-MM_SOL t = 4.62e+00 sec, GFLOPS =   0.95
+err = 4.97e-14
+err = 5.68e-14
+err = 5.33e-14
+err = 5.33e-14
+MM_REF t = 4.60e-02 sec, GFLOPS =  56.05
+MM_SOL t = 3.17e-01 sec, GFLOPS =   8.14
 
 Running register-blocking-4x4.x with arguments 1088 ...
 L = 1088, N = 4
-err = 1.63e-13
-err = 1.56e-13
-err = 1.56e-13
-err = 1.49e-13
-MM_REF t = 4.55e-02 sec, GFLOPS =  56.56
-MM_SOL t = 1.08e+00 sec, GFLOPS =   2.38
+err = 4.97e-14
+err = 5.68e-14
+err = 5.33e-14
+err = 5.33e-14
+MM_REF t = 4.56e-02 sec, GFLOPS =  56.44
+MM_SOL t = 1.66e-01 sec, GFLOPS =  15.55
 
 Running naive-jki.x with arguments 1152 ...
 L = 1152, N = 4
-err = 1.35e-13
-err = 1.35e-13
+err = 1.42e-13
+err = 1.28e-13
 err = 1.63e-13
-err = 1.71e-13
-MM_REF t = 5.28e-02 sec, GFLOPS =  57.90
-MM_SOL t = 2.68e+00 sec, GFLOPS =   1.15
+err = 1.49e-13
+MM_REF t = 5.27e-02 sec, GFLOPS =  57.98
+MM_SOL t = 2.58e-01 sec, GFLOPS =  11.85
 
 Running avx2-4x4.x with arguments 1152 ...
 L = 1152, N = 4
-err = 1.46e-13
-err = 1.49e-13
-err = 1.56e-13
+err = 1.42e-13
+err = 1.28e-13
 err = 1.63e-13
-MM_REF t = 5.22e-02 sec, GFLOPS =  58.55
-MM_SOL t = 9.09e-01 sec, GFLOPS =   3.37
+err = 1.49e-13
+MM_REF t = 5.26e-02 sec, GFLOPS =  58.16
+MM_SOL t = 1.49e-01 sec, GFLOPS =  20.49
 
 Running avx2-4x4-unroll.x with arguments 1152 ...
 L = 1152, N = 4
-err = 1.46e-13
-err = 1.49e-13
-err = 1.56e-13
+err = 1.42e-13
+err = 1.28e-13
 err = 1.63e-13
-MM_REF t = 5.38e-02 sec, GFLOPS =  56.86
-MM_SOL t = 9.82e-01 sec, GFLOPS =   3.11
+err = 1.49e-13
+MM_REF t = 5.32e-02 sec, GFLOPS =  57.51
+MM_SOL t = 2.45e-01 sec, GFLOPS =  12.46
 
 Running register-blocking-2x2.x with arguments 1152 ...
 L = 1152, N = 4
-err = 1.35e-13
-err = 1.35e-13
-err = 1.63e-13
-err = 1.71e-13
-MM_REF t = 5.26e-02 sec, GFLOPS =  58.11
-MM_SOL t = 1.80e+00 sec, GFLOPS =   1.72
+err = 5.68e-14
+err = 6.04e-14
+err = 5.68e-14
+err = 5.68e-14
+MM_REF t = 5.51e-02 sec, GFLOPS =  55.52
+MM_SOL t = 6.96e-01 sec, GFLOPS =   4.40
 
 Running register-blocking-4x4.x with arguments 1152 ...
 L = 1152, N = 4
-err = 1.35e-13
-err = 1.35e-13
-err = 1.63e-13
-err = 1.71e-13
-MM_REF t = 5.46e-02 sec, GFLOPS =  56.02
-MM_SOL t = 1.32e+00 sec, GFLOPS =   2.31
+err = 5.68e-14
+err = 6.04e-14
+err = 5.68e-14
+err = 5.68e-14
+MM_REF t = 5.32e-02 sec, GFLOPS =  57.45
+MM_SOL t = 4.17e-01 sec, GFLOPS =   7.33
 
 Running naive-jki.x with arguments 1216 ...
+L = 1216, N = 4
+err = 1.71e-13
+err = 1.85e-13
+err = 1.92e-13
+err = 1.71e-13
+MM_REF t = 6.19e-02 sec, GFLOPS =  58.13
+MM_SOL t = 3.15e-01 sec, GFLOPS =  11.43
+
+Running avx2-4x4.x with arguments 1216 ...
+L = 1216, N = 4
+err = 1.71e-13
+err = 1.85e-13
+err = 1.92e-13
+err = 1.71e-13
+MM_REF t = 6.11e-02 sec, GFLOPS =  58.90
+MM_SOL t = 1.43e-01 sec, GFLOPS =  25.09
+
+Running avx2-4x4-unroll.x with arguments 1216 ...
+L = 1216, N = 4
+err = 1.71e-13
+err = 1.85e-13
+err = 1.92e-13
+err = 1.71e-13
+MM_REF t = 6.23e-02 sec, GFLOPS =  57.73
+MM_SOL t = 1.74e-01 sec, GFLOPS =  20.71
+
+Running register-blocking-2x2.x with arguments 1216 ...
+L = 1216, N = 4
+err = 6.13e-14
+err = 7.11e-14
+err = 6.08e-14
+err = 6.22e-14
+MM_REF t = 6.24e-02 sec, GFLOPS =  57.63
+MM_SOL t = 4.69e-01 sec, GFLOPS =   7.67
+
+Running register-blocking-4x4.x with arguments 1216 ...
+L = 1216, N = 4
+err = 6.13e-14
+err = 7.11e-14
+err = 6.08e-14
+err = 6.22e-14
+MM_REF t = 6.32e-02 sec, GFLOPS =  56.94
+MM_SOL t = 2.50e-01 sec, GFLOPS =  14.40
+
+Running naive-jki.x with arguments 1280 ...
+L = 1280, N = 4
+err = 1.92e-13
+err = 1.85e-13
+err = 1.71e-13
+err = 1.92e-13
+MM_REF t = 7.46e-02 sec, GFLOPS =  56.21
+MM_SOL t = 3.84e-01 sec, GFLOPS =  10.93
+
+Running avx2-4x4.x with arguments 1280 ...
+L = 1280, N = 4
+err = 1.92e-13
+err = 1.85e-13
+err = 1.71e-13
+err = 1.92e-13
+MM_REF t = 7.27e-02 sec, GFLOPS =  57.73
+MM_SOL t = 4.07e-01 sec, GFLOPS =  10.30
+
+Running avx2-4x4-unroll.x with arguments 1280 ...
+L = 1280, N = 4
+err = 1.92e-13
+err = 1.85e-13
+err = 1.71e-13
+err = 1.92e-13
+MM_REF t = 7.23e-02 sec, GFLOPS =  57.99
+MM_SOL t = 4.31e-01 sec, GFLOPS =   9.74
+
+Running register-blocking-2x2.x with arguments 1280 ...
+L = 1280, N = 4
+err = 7.82e-14
+err = 6.39e-14
+err = 6.04e-14
+err = 6.39e-14
+MM_REF t = 7.24e-02 sec, GFLOPS =  57.94
+MM_SOL t = 1.36e+00 sec, GFLOPS =   3.10
+
+Running register-blocking-4x4.x with arguments 1280 ...
+L = 1280, N = 4
+err = 7.82e-14
+err = 6.39e-14
+err = 6.04e-14
+err = 6.39e-14
+MM_REF t = 7.42e-02 sec, GFLOPS =  56.53
+MM_SOL t = 6.46e-01 sec, GFLOPS =   6.50
+

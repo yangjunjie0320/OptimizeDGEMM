@@ -30,13 +30,18 @@ for line in log.split('\n'):
 impls = ['BLAS'] + sorted(set([impl for l in data.values() for impl in l if impl != 'BLAS']))
 
 # format the output
-# print('L,' + ','.join(impls))
-title = ("# %6s, " % "L" + "%12s, " * (len(impls))) % tuple(impls)
-print(title[:-2])
-for l in sorted(data.keys()):
-    print(f"{l:8d}, " + ', '.join([f"{data[l].get(impl, 'nan'): 12.2f}" for impl in impls]))
+lmax = max([len(impl) for impl in impls])
+title = ("# %6s, " % "L" + f"%{lmax}s, " * (len(impls))) % tuple(impls)
 
 with open(out_file, 'w') as f:
     f.write(title[:-2] + '\n')
     for l in sorted(data.keys()):
-        f.write(f"{l:8d}, " + ', '.join([f"{data[l].get(impl, 'nan'): 12.2f}" for impl in impls]) + '\n')
+        info = "%8d, " % l
+        for impl in impls:
+            x = (f"%{lmax}.2f, ")
+            info += x % data[l].get(impl, 'nan')
+        info = info[:-2]
+        f.write(info + '\n')
+
+with open(out_file, 'r') as f:
+    print(f.read())

@@ -29,8 +29,6 @@ add_library(dgemm-blas)
 target_sources(dgemm-blas PRIVATE src/dgemm-blas.c)
 target_link_libraries(dgemm-blas ${BLAS_LIBRARIES})
 
-set(ASM_FILES "")
-
 foreach(f IN LISTS SOURCES)
     # get the parent directory name for example src/avx2/dgemm-2x2.c -> avx2-2x2
     get_filename_component(d ${f} DIRECTORY)
@@ -39,19 +37,8 @@ foreach(f IN LISTS SOURCES)
     string(REGEX REPLACE "^dgemm-" "" b ${b})
     message(STATUS "preparing ${d}-${b}.x")
 
-    # prepare the assembly code
-    set(asm ${CMAKE_BINARY_DIR}/${d}-${b}.s)
-    add_custom_command(
-        OUTPUT ${asm}
-        COMMAND ${CMAKE_C_COMPILER} ${CMAKE_C_FLAGS} -mfma -S -fverbose-asm ${f} -o ${asm}
-        DEPENDS ${f}
-    )
-    list(APPEND ASM_FILES ${asm})
-
     # use the dirname-basename as the executable name
     add_executable(${d}-${b}.x src/main.cxx ${f})
-    target_compile_options(${d}-${b}.x PRIVATE -O0 -march=native)
+    target_compile_options(${d}-${b}.x PRIVATE -g -mfma -O0 -Ofast -march=native)
     target_link_libraries(${d}-${b}.x dgemm-blas)
 endforeach()
-
-add_custom_target(asm DEPENDS ${ASM_FILES})
