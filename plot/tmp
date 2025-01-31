@@ -1,5 +1,5 @@
 
-Running main-dgemm-naive-kji with arguments 64 ...
+Running main-dgemm-kji with arguments 64 ...
 L = 64, N = 10
 err = 0.00e+00
 err = 0.00e+00
@@ -11,10 +11,10 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 8.71e-06 sec, GFLOPS =  62.04
-MM_SOL t = 2.19e-05 sec, GFLOPS =  24.11
+MM_REF t = 9.58e-06 sec, GFLOPS =  56.51
+MM_SOL t = 2.65e-05 sec, GFLOPS =  19.75
 
-Running main-dgemm-naive-jki with arguments 64 ...
+Running main-dgemm-jki with arguments 64 ...
 L = 64, N = 10
 err = 0.00e+00
 err = 0.00e+00
@@ -26,12 +26,40 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 9.02e-06 sec, GFLOPS =  59.83
-MM_SOL t = 2.34e-05 sec, GFLOPS =  22.37
+MM_REF t = 9.17e-06 sec, GFLOPS =  57.91
+MM_SOL t = 2.15e-05 sec, GFLOPS =  24.42
+
+Running main-dgemm-ijk with arguments 64 ...
+L = 64, N = 10
+err = 5.33e-15
+err = 5.33e-15
+err = 7.11e-15
+err = 4.44e-15
+err = 5.33e-15
+err = 4.44e-15
+err = 5.33e-15
+err = 4.44e-15
+err = 5.33e-15
+err = 6.22e-15
+MM_REF t = 9.64e-06 sec, GFLOPS =  54.88
+MM_SOL t = 6.62e-05 sec, GFLOPS =   7.97
 
 Running main-dgemm-avx2 with arguments 64 ...
+L = 64, N = 10
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 9.54e-06 sec, GFLOPS =  56.85
+MM_SOL t = 1.42e-05 sec, GFLOPS =  37.31
 
-Running main-dgemm-block-4x4 with arguments 64 ...
+Running main-dgemm-2x2 with arguments 64 ...
 L = 64, N = 10
 err = 5.33e-15
 err = 5.33e-15
@@ -43,10 +71,25 @@ err = 4.44e-15
 err = 5.33e-15
 err = 5.33e-15
 err = 5.33e-15
-MM_REF t = 8.45e-06 sec, GFLOPS =  62.59
-MM_SOL t = 1.91e-05 sec, GFLOPS =  27.82
+MM_REF t = 1.03e-05 sec, GFLOPS =  52.88
+MM_SOL t = 2.86e-05 sec, GFLOPS =  18.62
 
-Running main-dgemm-naive-kji with arguments 128 ...
+Running main-dgemm-4x4 with arguments 64 ...
+L = 64, N = 10
+err = 5.33e-15
+err = 5.33e-15
+err = 5.33e-15
+err = 5.33e-15
+err = 5.33e-15
+err = 4.44e-15
+err = 4.44e-15
+err = 5.33e-15
+err = 5.33e-15
+err = 5.33e-15
+MM_REF t = 9.21e-06 sec, GFLOPS =  58.09
+MM_SOL t = 1.95e-05 sec, GFLOPS =  26.95
+
+Running main-dgemm-kji with arguments 128 ...
 L = 128, N = 10
 err = 0.00e+00
 err = 0.00e+00
@@ -58,10 +101,10 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 7.11e-05 sec, GFLOPS =  59.07
-MM_SOL t = 2.25e-04 sec, GFLOPS =  18.65
+MM_REF t = 7.47e-05 sec, GFLOPS =  56.16
+MM_SOL t = 3.14e-04 sec, GFLOPS =  13.74
 
-Running main-dgemm-naive-jki with arguments 128 ...
+Running main-dgemm-jki with arguments 128 ...
 L = 128, N = 10
 err = 0.00e+00
 err = 0.00e+00
@@ -73,12 +116,40 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 7.02e-05 sec, GFLOPS =  59.84
-MM_SOL t = 2.55e-04 sec, GFLOPS =  16.45
+MM_REF t = 7.92e-05 sec, GFLOPS =  53.14
+MM_SOL t = 2.32e-04 sec, GFLOPS =  18.07
+
+Running main-dgemm-ijk with arguments 128 ...
+L = 128, N = 10
+err = 1.15e-14
+err = 1.24e-14
+err = 1.07e-14
+err = 1.24e-14
+err = 1.42e-14
+err = 1.24e-14
+err = 1.24e-14
+err = 1.42e-14
+err = 1.24e-14
+err = 1.24e-14
+MM_REF t = 7.65e-05 sec, GFLOPS =  54.86
+MM_SOL t = 1.15e-03 sec, GFLOPS =   3.64
 
 Running main-dgemm-avx2 with arguments 128 ...
+L = 128, N = 10
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 7.58e-05 sec, GFLOPS =  55.37
+MM_SOL t = 1.23e-04 sec, GFLOPS =  34.04
 
-Running main-dgemm-block-4x4 with arguments 128 ...
+Running main-dgemm-2x2 with arguments 128 ...
 L = 128, N = 10
 err = 1.07e-14
 err = 1.07e-14
@@ -90,10 +161,25 @@ err = 1.60e-14
 err = 1.24e-14
 err = 1.42e-14
 err = 1.42e-14
-MM_REF t = 7.04e-05 sec, GFLOPS =  59.65
-MM_SOL t = 1.69e-04 sec, GFLOPS =  24.89
+MM_REF t = 8.14e-05 sec, GFLOPS =  51.83
+MM_SOL t = 3.27e-04 sec, GFLOPS =  12.82
 
-Running main-dgemm-naive-kji with arguments 192 ...
+Running main-dgemm-4x4 with arguments 128 ...
+L = 128, N = 10
+err = 1.07e-14
+err = 1.07e-14
+err = 1.07e-14
+err = 1.07e-14
+err = 1.15e-14
+err = 1.24e-14
+err = 1.60e-14
+err = 1.24e-14
+err = 1.42e-14
+err = 1.42e-14
+MM_REF t = 7.90e-05 sec, GFLOPS =  53.33
+MM_SOL t = 1.96e-04 sec, GFLOPS =  21.40
+
+Running main-dgemm-kji with arguments 192 ...
 L = 192, N = 10
 err = 0.00e+00
 err = 0.00e+00
@@ -105,10 +191,10 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 2.33e-04 sec, GFLOPS =  61.17
-MM_SOL t = 7.76e-04 sec, GFLOPS =  18.25
+MM_REF t = 2.52e-04 sec, GFLOPS =  57.15
+MM_SOL t = 9.01e-04 sec, GFLOPS =  15.74
 
-Running main-dgemm-naive-jki with arguments 192 ...
+Running main-dgemm-jki with arguments 192 ...
 L = 192, N = 10
 err = 0.00e+00
 err = 0.00e+00
@@ -120,12 +206,40 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 2.31e-04 sec, GFLOPS =  61.50
-MM_SOL t = 9.32e-04 sec, GFLOPS =  15.18
+MM_REF t = 2.59e-04 sec, GFLOPS =  56.06
+MM_SOL t = 6.68e-04 sec, GFLOPS =  21.59
+
+Running main-dgemm-ijk with arguments 192 ...
+L = 192, N = 10
+err = 1.95e-14
+err = 1.95e-14
+err = 1.95e-14
+err = 2.13e-14
+err = 2.31e-14
+err = 2.31e-14
+err = 2.49e-14
+err = 1.78e-14
+err = 2.84e-14
+err = 2.31e-14
+MM_REF t = 2.58e-04 sec, GFLOPS =  56.83
+MM_SOL t = 3.79e-03 sec, GFLOPS =   3.74
 
 Running main-dgemm-avx2 with arguments 192 ...
+L = 192, N = 10
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 2.48e-04 sec, GFLOPS =  57.38
+MM_SOL t = 4.14e-04 sec, GFLOPS =  34.24
 
-Running main-dgemm-block-4x4 with arguments 192 ...
+Running main-dgemm-2x2 with arguments 192 ...
 L = 192, N = 10
 err = 1.95e-14
 err = 2.13e-14
@@ -137,10 +251,25 @@ err = 2.13e-14
 err = 2.13e-14
 err = 2.13e-14
 err = 1.95e-14
-MM_REF t = 2.30e-04 sec, GFLOPS =  61.64
-MM_SOL t = 5.90e-04 sec, GFLOPS =  24.03
+MM_REF t = 2.38e-04 sec, GFLOPS =  59.70
+MM_SOL t = 1.04e-03 sec, GFLOPS =  13.63
 
-Running main-dgemm-naive-kji with arguments 256 ...
+Running main-dgemm-4x4 with arguments 192 ...
+L = 192, N = 10
+err = 1.95e-14
+err = 2.13e-14
+err = 2.13e-14
+err = 2.31e-14
+err = 2.66e-14
+err = 2.13e-14
+err = 2.13e-14
+err = 2.13e-14
+err = 2.13e-14
+err = 1.95e-14
+MM_REF t = 2.45e-04 sec, GFLOPS =  58.00
+MM_SOL t = 6.22e-04 sec, GFLOPS =  22.77
+
+Running main-dgemm-kji with arguments 256 ...
 L = 256, N = 10
 err = 1.60e-14
 err = 1.95e-14
@@ -152,10 +281,10 @@ err = 2.13e-14
 err = 2.22e-14
 err = 1.95e-14
 err = 1.42e-14
-MM_REF t = 5.55e-04 sec, GFLOPS =  60.58
-MM_SOL t = 1.89e-03 sec, GFLOPS =  17.77
+MM_REF t = 5.72e-04 sec, GFLOPS =  58.82
+MM_SOL t = 2.05e-03 sec, GFLOPS =  16.36
 
-Running main-dgemm-naive-jki with arguments 256 ...
+Running main-dgemm-jki with arguments 256 ...
 L = 256, N = 10
 err = 1.60e-14
 err = 1.95e-14
@@ -167,12 +296,40 @@ err = 2.13e-14
 err = 2.22e-14
 err = 1.95e-14
 err = 1.42e-14
-MM_REF t = 6.40e-04 sec, GFLOPS =  55.23
-MM_SOL t = 1.89e-03 sec, GFLOPS =  17.81
+MM_REF t = 6.14e-04 sec, GFLOPS =  56.22
+MM_SOL t = 1.47e-03 sec, GFLOPS =  23.14
+
+Running main-dgemm-ijk with arguments 256 ...
+L = 256, N = 10
+err = 2.84e-14
+err = 2.84e-14
+err = 2.49e-14
+err = 2.66e-14
+err = 2.84e-14
+err = 2.66e-14
+err = 3.20e-14
+err = 3.20e-14
+err = 2.84e-14
+err = 2.84e-14
+MM_REF t = 6.22e-04 sec, GFLOPS =  54.28
+MM_SOL t = 9.32e-03 sec, GFLOPS =   3.60
 
 Running main-dgemm-avx2 with arguments 256 ...
+L = 256, N = 10
+err = 1.60e-14
+err = 1.95e-14
+err = 2.13e-14
+err = 1.78e-14
+err = 1.60e-14
+err = 1.78e-14
+err = 2.13e-14
+err = 2.22e-14
+err = 1.95e-14
+err = 1.42e-14
+MM_REF t = 5.93e-04 sec, GFLOPS =  57.48
+MM_SOL t = 1.03e-03 sec, GFLOPS =  32.61
 
-Running main-dgemm-block-4x4 with arguments 256 ...
+Running main-dgemm-2x2 with arguments 256 ...
 L = 256, N = 10
 err = 2.49e-14
 err = 2.84e-14
@@ -184,10 +341,25 @@ err = 2.84e-14
 err = 2.66e-14
 err = 2.84e-14
 err = 2.58e-14
-MM_REF t = 5.92e-04 sec, GFLOPS =  56.97
-MM_SOL t = 1.57e-03 sec, GFLOPS =  21.33
+MM_REF t = 5.87e-04 sec, GFLOPS =  57.54
+MM_SOL t = 2.78e-03 sec, GFLOPS =  12.08
 
-Running main-dgemm-naive-kji with arguments 320 ...
+Running main-dgemm-4x4 with arguments 256 ...
+L = 256, N = 10
+err = 2.49e-14
+err = 2.84e-14
+err = 2.49e-14
+err = 2.49e-14
+err = 2.84e-14
+err = 2.84e-14
+err = 2.84e-14
+err = 2.66e-14
+err = 2.84e-14
+err = 2.58e-14
+MM_REF t = 6.73e-04 sec, GFLOPS =  53.86
+MM_SOL t = 1.67e-03 sec, GFLOPS =  20.04
+
+Running main-dgemm-kji with arguments 320 ...
 L = 320, N = 10
 err = 3.02e-14
 err = 3.55e-14
@@ -199,10 +371,10 @@ err = 3.91e-14
 err = 3.55e-14
 err = 3.55e-14
 err = 3.55e-14
-MM_REF t = 9.92e-04 sec, GFLOPS =  66.11
-MM_SOL t = 4.38e-03 sec, GFLOPS =  14.97
+MM_REF t = 1.14e-03 sec, GFLOPS =  57.65
+MM_SOL t = 5.16e-03 sec, GFLOPS =  12.72
 
-Running main-dgemm-naive-jki with arguments 320 ...
+Running main-dgemm-jki with arguments 320 ...
 L = 320, N = 10
 err = 3.02e-14
 err = 3.55e-14
@@ -214,12 +386,40 @@ err = 3.91e-14
 err = 3.55e-14
 err = 3.55e-14
 err = 3.55e-14
-MM_REF t = 1.03e-03 sec, GFLOPS =  64.23
-MM_SOL t = 3.49e-03 sec, GFLOPS =  18.83
+MM_REF t = 1.11e-03 sec, GFLOPS =  58.93
+MM_SOL t = 3.07e-03 sec, GFLOPS =  21.36
+
+Running main-dgemm-ijk with arguments 320 ...
+L = 320, N = 10
+err = 2.49e-14
+err = 2.49e-14
+err = 2.49e-14
+err = 2.49e-14
+err = 2.84e-14
+err = 2.49e-14
+err = 2.49e-14
+err = 2.66e-14
+err = 2.49e-14
+err = 2.84e-14
+MM_REF t = 1.12e-03 sec, GFLOPS =  58.63
+MM_SOL t = 1.82e-02 sec, GFLOPS =   3.61
 
 Running main-dgemm-avx2 with arguments 320 ...
+L = 320, N = 10
+err = 3.02e-14
+err = 3.55e-14
+err = 3.55e-14
+err = 3.55e-14
+err = 3.91e-14
+err = 4.26e-14
+err = 3.91e-14
+err = 3.55e-14
+err = 3.55e-14
+err = 3.55e-14
+MM_REF t = 1.10e-03 sec, GFLOPS =  59.56
+MM_SOL t = 2.06e-03 sec, GFLOPS =  31.86
 
-Running main-dgemm-block-4x4 with arguments 320 ...
+Running main-dgemm-2x2 with arguments 320 ...
 L = 320, N = 10
 err = 2.31e-14
 err = 1.91e-14
@@ -231,10 +431,25 @@ err = 2.31e-14
 err = 2.13e-14
 err = 1.78e-14
 err = 2.13e-14
-MM_REF t = 1.03e-03 sec, GFLOPS =  63.55
-MM_SOL t = 3.09e-03 sec, GFLOPS =  21.20
+MM_REF t = 1.11e-03 sec, GFLOPS =  59.19
+MM_SOL t = 5.50e-03 sec, GFLOPS =  11.93
 
-Running main-dgemm-naive-kji with arguments 384 ...
+Running main-dgemm-4x4 with arguments 320 ...
+L = 320, N = 10
+err = 2.31e-14
+err = 1.91e-14
+err = 2.49e-14
+err = 2.49e-14
+err = 2.13e-14
+err = 2.49e-14
+err = 2.31e-14
+err = 2.13e-14
+err = 1.78e-14
+err = 2.13e-14
+MM_REF t = 1.08e-03 sec, GFLOPS =  60.60
+MM_SOL t = 3.28e-03 sec, GFLOPS =  19.97
+
+Running main-dgemm-kji with arguments 384 ...
 L = 384, N = 10
 err = 5.33e-14
 err = 3.55e-14
@@ -246,10 +461,10 @@ err = 4.62e-14
 err = 4.62e-14
 err = 3.91e-14
 err = 3.91e-14
-MM_REF t = 1.90e-03 sec, GFLOPS =  59.96
-MM_SOL t = 1.05e-02 sec, GFLOPS =  10.76
+MM_REF t = 1.99e-03 sec, GFLOPS =  57.17
+MM_SOL t = 1.10e-02 sec, GFLOPS =  10.27
 
-Running main-dgemm-naive-jki with arguments 384 ...
+Running main-dgemm-jki with arguments 384 ...
 L = 384, N = 10
 err = 5.33e-14
 err = 3.55e-14
@@ -261,12 +476,40 @@ err = 4.62e-14
 err = 4.62e-14
 err = 3.91e-14
 err = 3.91e-14
-MM_REF t = 1.81e-03 sec, GFLOPS =  62.76
-MM_SOL t = 5.98e-03 sec, GFLOPS =  18.98
+MM_REF t = 1.92e-03 sec, GFLOPS =  59.23
+MM_SOL t = 5.33e-03 sec, GFLOPS =  21.29
+
+Running main-dgemm-ijk with arguments 384 ...
+L = 384, N = 10
+err = 3.02e-14
+err = 3.20e-14
+err = 3.02e-14
+err = 3.20e-14
+err = 3.20e-14
+err = 2.66e-14
+err = 3.55e-14
+err = 2.84e-14
+err = 2.84e-14
+err = 2.84e-14
+MM_REF t = 1.96e-03 sec, GFLOPS =  57.78
+MM_SOL t = 3.30e-02 sec, GFLOPS =   3.43
 
 Running main-dgemm-avx2 with arguments 384 ...
+L = 384, N = 10
+err = 5.33e-14
+err = 3.55e-14
+err = 4.97e-14
+err = 4.62e-14
+err = 4.26e-14
+err = 3.91e-14
+err = 4.62e-14
+err = 4.62e-14
+err = 3.91e-14
+err = 3.91e-14
+MM_REF t = 1.95e-03 sec, GFLOPS =  58.14
+MM_SOL t = 3.78e-03 sec, GFLOPS =  29.98
 
-Running main-dgemm-block-4x4 with arguments 384 ...
+Running main-dgemm-2x2 with arguments 384 ...
 L = 384, N = 10
 err = 2.49e-14
 err = 2.84e-14
@@ -278,10 +521,25 @@ err = 2.84e-14
 err = 2.18e-14
 err = 3.20e-14
 err = 2.49e-14
-MM_REF t = 1.90e-03 sec, GFLOPS =  59.66
-MM_SOL t = 5.89e-03 sec, GFLOPS =  19.24
+MM_REF t = 1.96e-03 sec, GFLOPS =  57.73
+MM_SOL t = 1.06e-02 sec, GFLOPS =  10.68
 
-Running main-dgemm-naive-kji with arguments 448 ...
+Running main-dgemm-4x4 with arguments 384 ...
+L = 384, N = 10
+err = 2.49e-14
+err = 2.84e-14
+err = 3.73e-14
+err = 2.84e-14
+err = 2.84e-14
+err = 2.49e-14
+err = 2.84e-14
+err = 2.18e-14
+err = 3.20e-14
+err = 2.49e-14
+MM_REF t = 1.95e-03 sec, GFLOPS =  58.17
+MM_SOL t = 5.98e-03 sec, GFLOPS =  18.95
+
+Running main-dgemm-kji with arguments 448 ...
 L = 448, N = 10
 err = 4.97e-14
 err = 5.33e-14
@@ -293,10 +551,10 @@ err = 4.26e-14
 err = 5.33e-14
 err = 4.97e-14
 err = 4.97e-14
-MM_REF t = 2.83e-03 sec, GFLOPS =  63.69
-MM_SOL t = 2.07e-02 sec, GFLOPS =   8.70
+MM_REF t = 3.07e-03 sec, GFLOPS =  58.69
+MM_SOL t = 2.22e-02 sec, GFLOPS =   8.09
 
-Running main-dgemm-naive-jki with arguments 448 ...
+Running main-dgemm-jki with arguments 448 ...
 L = 448, N = 10
 err = 4.97e-14
 err = 5.33e-14
@@ -308,12 +566,40 @@ err = 4.26e-14
 err = 5.33e-14
 err = 4.97e-14
 err = 4.97e-14
-MM_REF t = 2.89e-03 sec, GFLOPS =  62.39
-MM_SOL t = 9.77e-03 sec, GFLOPS =  18.42
+MM_REF t = 3.07e-03 sec, GFLOPS =  58.88
+MM_SOL t = 9.71e-03 sec, GFLOPS =  18.54
+
+Running main-dgemm-ijk with arguments 448 ...
+L = 448, N = 10
+err = 3.91e-14
+err = 3.20e-14
+err = 3.55e-14
+err = 3.55e-14
+err = 3.55e-14
+err = 3.02e-14
+err = 3.20e-14
+err = 3.55e-14
+err = 3.73e-14
+err = 3.55e-14
+MM_REF t = 3.05e-03 sec, GFLOPS =  59.19
+MM_SOL t = 5.33e-02 sec, GFLOPS =   3.38
 
 Running main-dgemm-avx2 with arguments 448 ...
+L = 448, N = 10
+err = 4.97e-14
+err = 5.33e-14
+err = 4.97e-14
+err = 4.62e-14
+err = 6.04e-14
+err = 5.33e-14
+err = 4.26e-14
+err = 5.33e-14
+err = 4.97e-14
+err = 4.97e-14
+MM_REF t = 3.15e-03 sec, GFLOPS =  57.04
+MM_SOL t = 6.77e-03 sec, GFLOPS =  26.58
 
-Running main-dgemm-block-4x4 with arguments 448 ...
+Running main-dgemm-2x2 with arguments 448 ...
 L = 448, N = 10
 err = 3.20e-14
 err = 2.49e-14
@@ -325,10 +611,25 @@ err = 2.84e-14
 err = 2.84e-14
 err = 2.84e-14
 err = 2.66e-14
-MM_REF t = 2.80e-03 sec, GFLOPS =  64.27
-MM_SOL t = 9.21e-03 sec, GFLOPS =  19.53
+MM_REF t = 3.16e-03 sec, GFLOPS =  57.25
+MM_SOL t = 1.75e-02 sec, GFLOPS =  10.32
 
-Running main-dgemm-naive-kji with arguments 512 ...
+Running main-dgemm-4x4 with arguments 448 ...
+L = 448, N = 10
+err = 3.20e-14
+err = 2.49e-14
+err = 2.49e-14
+err = 2.66e-14
+err = 2.66e-14
+err = 2.84e-14
+err = 2.84e-14
+err = 2.84e-14
+err = 2.84e-14
+err = 2.66e-14
+MM_REF t = 3.03e-03 sec, GFLOPS =  59.37
+MM_SOL t = 9.52e-03 sec, GFLOPS =  18.90
+
+Running main-dgemm-kji with arguments 512 ...
 L = 512, N = 10
 err = 6.04e-14
 err = 5.33e-14
@@ -340,10 +641,10 @@ err = 7.11e-14
 err = 6.04e-14
 err = 5.33e-14
 err = 5.51e-14
-MM_REF t = 4.38e-03 sec, GFLOPS =  61.37
-MM_SOL t = 3.31e-02 sec, GFLOPS =   8.11
+MM_REF t = 4.70e-03 sec, GFLOPS =  57.19
+MM_SOL t = 3.38e-02 sec, GFLOPS =   7.94
 
-Running main-dgemm-naive-jki with arguments 512 ...
+Running main-dgemm-jki with arguments 512 ...
 L = 512, N = 10
 err = 6.04e-14
 err = 5.33e-14
@@ -355,12 +656,40 @@ err = 7.11e-14
 err = 6.04e-14
 err = 5.33e-14
 err = 5.51e-14
-MM_REF t = 4.33e-03 sec, GFLOPS =  62.18
-MM_SOL t = 1.58e-02 sec, GFLOPS =  17.00
+MM_REF t = 4.39e-03 sec, GFLOPS =  61.10
+MM_SOL t = 1.60e-02 sec, GFLOPS =  16.78
+
+Running main-dgemm-ijk with arguments 512 ...
+L = 512, N = 10
+err = 3.91e-14
+err = 3.73e-14
+err = 4.26e-14
+err = 4.26e-14
+err = 3.55e-14
+err = 3.55e-14
+err = 3.91e-14
+err = 3.38e-14
+err = 4.62e-14
+err = 3.55e-14
+MM_REF t = 4.61e-03 sec, GFLOPS =  58.27
+MM_SOL t = 2.91e-01 sec, GFLOPS =   0.92
 
 Running main-dgemm-avx2 with arguments 512 ...
+L = 512, N = 10
+err = 6.04e-14
+err = 5.33e-14
+err = 6.04e-14
+err = 5.68e-14
+err = 7.11e-14
+err = 5.68e-14
+err = 7.11e-14
+err = 6.04e-14
+err = 5.33e-14
+err = 5.51e-14
+MM_REF t = 4.44e-03 sec, GFLOPS =  60.54
+MM_SOL t = 2.00e-02 sec, GFLOPS =  13.47
 
-Running main-dgemm-block-4x4 with arguments 512 ...
+Running main-dgemm-2x2 with arguments 512 ...
 L = 512, N = 10
 err = 3.55e-14
 err = 2.84e-14
@@ -372,10 +701,25 @@ err = 2.84e-14
 err = 3.02e-14
 err = 3.20e-14
 err = 3.20e-14
-MM_REF t = 4.34e-03 sec, GFLOPS =  61.91
-MM_SOL t = 2.07e-02 sec, GFLOPS =  12.98
+MM_REF t = 4.48e-03 sec, GFLOPS =  59.92
+MM_SOL t = 7.44e-02 sec, GFLOPS =   3.61
 
-Running main-dgemm-naive-kji with arguments 576 ...
+Running main-dgemm-4x4 with arguments 512 ...
+L = 512, N = 10
+err = 3.55e-14
+err = 2.84e-14
+err = 3.20e-14
+err = 2.84e-14
+err = 3.20e-14
+err = 2.84e-14
+err = 2.84e-14
+err = 3.02e-14
+err = 3.20e-14
+err = 3.20e-14
+MM_REF t = 4.62e-03 sec, GFLOPS =  58.33
+MM_SOL t = 2.08e-02 sec, GFLOPS =  12.93
+
+Running main-dgemm-kji with arguments 576 ...
 L = 576, N = 10
 err = 6.39e-14
 err = 7.11e-14
@@ -387,10 +731,10 @@ err = 6.75e-14
 err = 7.82e-14
 err = 7.46e-14
 err = 8.88e-14
-MM_REF t = 5.87e-03 sec, GFLOPS =  65.17
-MM_SOL t = 4.66e-02 sec, GFLOPS =   8.20
+MM_REF t = 6.37e-03 sec, GFLOPS =  60.08
+MM_SOL t = 5.01e-02 sec, GFLOPS =   7.63
 
-Running main-dgemm-naive-jki with arguments 576 ...
+Running main-dgemm-jki with arguments 576 ...
 L = 576, N = 10
 err = 6.39e-14
 err = 7.11e-14
@@ -402,12 +746,40 @@ err = 6.75e-14
 err = 7.82e-14
 err = 7.46e-14
 err = 8.88e-14
-MM_REF t = 6.19e-03 sec, GFLOPS =  62.93
-MM_SOL t = 2.38e-02 sec, GFLOPS =  16.08
+MM_REF t = 6.26e-03 sec, GFLOPS =  61.04
+MM_SOL t = 2.36e-02 sec, GFLOPS =  16.20
+
+Running main-dgemm-ijk with arguments 576 ...
+L = 576, N = 10
+err = 4.97e-14
+err = 4.26e-14
+err = 4.26e-14
+err = 3.91e-14
+err = 4.97e-14
+err = 3.91e-14
+err = 4.97e-14
+err = 4.97e-14
+err = 4.97e-14
+err = 4.75e-14
+MM_REF t = 6.33e-03 sec, GFLOPS =  60.49
+MM_SOL t = 1.16e-01 sec, GFLOPS =   3.29
 
 Running main-dgemm-avx2 with arguments 576 ...
+L = 576, N = 10
+err = 6.39e-14
+err = 7.11e-14
+err = 7.11e-14
+err = 6.39e-14
+err = 7.46e-14
+err = 7.99e-14
+err = 6.75e-14
+err = 7.82e-14
+err = 7.46e-14
+err = 8.88e-14
+MM_REF t = 6.20e-03 sec, GFLOPS =  61.72
+MM_SOL t = 1.36e-02 sec, GFLOPS =  28.13
 
-Running main-dgemm-block-4x4 with arguments 576 ...
+Running main-dgemm-2x2 with arguments 576 ...
 L = 576, N = 10
 err = 3.55e-14
 err = 3.11e-14
@@ -419,10 +791,25 @@ err = 4.26e-14
 err = 2.98e-14
 err = 3.55e-14
 err = 3.20e-14
-MM_REF t = 5.83e-03 sec, GFLOPS =  65.57
-MM_SOL t = 1.97e-02 sec, GFLOPS =  19.41
+MM_REF t = 6.40e-03 sec, GFLOPS =  59.96
+MM_SOL t = 3.78e-02 sec, GFLOPS =  10.13
 
-Running main-dgemm-naive-kji with arguments 640 ...
+Running main-dgemm-4x4 with arguments 576 ...
+L = 576, N = 10
+err = 3.55e-14
+err = 3.11e-14
+err = 3.20e-14
+err = 3.20e-14
+err = 4.13e-14
+err = 3.38e-14
+err = 4.26e-14
+err = 2.98e-14
+err = 3.55e-14
+err = 3.20e-14
+MM_REF t = 6.32e-03 sec, GFLOPS =  60.55
+MM_SOL t = 2.08e-02 sec, GFLOPS =  18.38
+
+Running main-dgemm-kji with arguments 640 ...
 L = 640, N = 10
 err = 7.82e-14
 err = 7.11e-14
@@ -434,10 +821,10 @@ err = 7.46e-14
 err = 7.11e-14
 err = 6.75e-14
 err = 7.82e-14
-MM_REF t = 7.99e-03 sec, GFLOPS =  65.62
-MM_SOL t = 6.50e-02 sec, GFLOPS =   8.06
+MM_REF t = 8.62e-03 sec, GFLOPS =  60.84
+MM_SOL t = 6.87e-02 sec, GFLOPS =   7.63
 
-Running main-dgemm-naive-jki with arguments 640 ...
+Running main-dgemm-jki with arguments 640 ...
 L = 640, N = 10
 err = 7.82e-14
 err = 7.11e-14
@@ -449,12 +836,40 @@ err = 7.46e-14
 err = 7.11e-14
 err = 6.75e-14
 err = 7.82e-14
-MM_REF t = 8.08e-03 sec, GFLOPS =  64.88
-MM_SOL t = 3.19e-02 sec, GFLOPS =  16.46
+MM_REF t = 8.49e-03 sec, GFLOPS =  61.73
+MM_SOL t = 3.29e-02 sec, GFLOPS =  15.95
+
+Running main-dgemm-ijk with arguments 640 ...
+L = 640, N = 10
+err = 5.68e-14
+err = 5.33e-14
+err = 4.97e-14
+err = 4.62e-14
+err = 4.26e-14
+err = 5.68e-14
+err = 5.33e-14
+err = 4.26e-14
+err = 4.62e-14
+err = 4.97e-14
+MM_REF t = 8.70e-03 sec, GFLOPS =  60.39
+MM_SOL t = 1.64e-01 sec, GFLOPS =   3.20
 
 Running main-dgemm-avx2 with arguments 640 ...
+L = 640, N = 10
+err = 7.82e-14
+err = 7.11e-14
+err = 9.24e-14
+err = 7.11e-14
+err = 7.11e-14
+err = 7.82e-14
+err = 7.46e-14
+err = 7.11e-14
+err = 6.75e-14
+err = 7.82e-14
+MM_REF t = 8.64e-03 sec, GFLOPS =  60.74
+MM_SOL t = 1.84e-02 sec, GFLOPS =  28.45
 
-Running main-dgemm-block-4x4 with arguments 640 ...
+Running main-dgemm-2x2 with arguments 640 ...
 L = 640, N = 10
 err = 3.38e-14
 err = 4.26e-14
@@ -466,10 +881,25 @@ err = 3.55e-14
 err = 3.91e-14
 err = 3.55e-14
 err = 3.55e-14
-MM_REF t = 7.89e-03 sec, GFLOPS =  66.48
-MM_SOL t = 2.69e-02 sec, GFLOPS =  19.52
+MM_REF t = 8.68e-03 sec, GFLOPS =  60.52
+MM_SOL t = 5.56e-02 sec, GFLOPS =   9.44
 
-Running main-dgemm-naive-kji with arguments 704 ...
+Running main-dgemm-4x4 with arguments 640 ...
+L = 640, N = 10
+err = 3.38e-14
+err = 4.26e-14
+err = 3.55e-14
+err = 3.20e-14
+err = 3.55e-14
+err = 3.46e-14
+err = 3.55e-14
+err = 3.91e-14
+err = 3.55e-14
+err = 3.55e-14
+MM_REF t = 8.86e-03 sec, GFLOPS =  59.35
+MM_SOL t = 2.95e-02 sec, GFLOPS =  17.77
+
+Running main-dgemm-kji with arguments 704 ...
 L = 704, N = 10
 err = 8.88e-14
 err = 9.59e-14
@@ -481,10 +911,10 @@ err = 9.24e-14
 err = 8.17e-14
 err = 8.53e-14
 err = 7.82e-14
-MM_REF t = 1.04e-02 sec, GFLOPS =  67.26
-MM_SOL t = 8.63e-02 sec, GFLOPS =   8.09
+MM_REF t = 1.17e-02 sec, GFLOPS =  59.95
+MM_SOL t = 9.19e-02 sec, GFLOPS =   7.59
 
-Running main-dgemm-naive-jki with arguments 704 ...
+Running main-dgemm-jki with arguments 704 ...
 L = 704, N = 10
 err = 8.88e-14
 err = 9.59e-14
@@ -496,12 +926,40 @@ err = 9.24e-14
 err = 8.17e-14
 err = 8.53e-14
 err = 7.82e-14
-MM_REF t = 1.08e-02 sec, GFLOPS =  64.89
-MM_SOL t = 4.31e-02 sec, GFLOPS =  16.18
+MM_REF t = 1.14e-02 sec, GFLOPS =  61.35
+MM_SOL t = 4.46e-02 sec, GFLOPS =  15.65
+
+Running main-dgemm-ijk with arguments 704 ...
+L = 704, N = 10
+err = 6.93e-14
+err = 5.68e-14
+err = 5.86e-14
+err = 6.04e-14
+err = 5.68e-14
+err = 5.33e-14
+err = 4.97e-14
+err = 5.33e-14
+err = 4.97e-14
+err = 5.33e-14
+MM_REF t = 1.13e-02 sec, GFLOPS =  61.65
+MM_SOL t = 2.11e-01 sec, GFLOPS =   3.31
 
 Running main-dgemm-avx2 with arguments 704 ...
+L = 704, N = 10
+err = 8.88e-14
+err = 9.59e-14
+err = 9.24e-14
+err = 7.82e-14
+err = 9.24e-14
+err = 1.07e-13
+err = 9.24e-14
+err = 8.17e-14
+err = 8.53e-14
+err = 7.82e-14
+MM_REF t = 1.14e-02 sec, GFLOPS =  61.14
+MM_SOL t = 2.40e-02 sec, GFLOPS =  29.03
 
-Running main-dgemm-block-4x4 with arguments 704 ...
+Running main-dgemm-2x2 with arguments 704 ...
 L = 704, N = 10
 err = 4.26e-14
 err = 3.55e-14
@@ -513,10 +971,25 @@ err = 3.55e-14
 err = 3.55e-14
 err = 4.26e-14
 err = 3.91e-14
-MM_REF t = 1.07e-02 sec, GFLOPS =  65.21
-MM_SOL t = 3.61e-02 sec, GFLOPS =  19.34
+MM_REF t = 1.14e-02 sec, GFLOPS =  61.44
+MM_SOL t = 6.73e-02 sec, GFLOPS =  10.38
 
-Running main-dgemm-naive-kji with arguments 768 ...
+Running main-dgemm-4x4 with arguments 704 ...
+L = 704, N = 10
+err = 4.26e-14
+err = 3.55e-14
+err = 3.73e-14
+err = 4.26e-14
+err = 3.91e-14
+err = 4.26e-14
+err = 3.55e-14
+err = 3.55e-14
+err = 4.26e-14
+err = 3.91e-14
+MM_REF t = 1.14e-02 sec, GFLOPS =  61.53
+MM_SOL t = 3.84e-02 sec, GFLOPS =  18.19
+
+Running main-dgemm-kji with arguments 768 ...
 L = 768, N = 10
 err = 1.14e-13
 err = 9.59e-14
@@ -528,10 +1001,10 @@ err = 1.14e-13
 err = 1.07e-13
 err = 9.95e-14
 err = 1.14e-13
-MM_REF t = 1.37e-02 sec, GFLOPS =  66.08
-MM_SOL t = 1.12e-01 sec, GFLOPS =   8.09
+MM_REF t = 1.48e-02 sec, GFLOPS =  61.22
+MM_SOL t = 1.20e-01 sec, GFLOPS =   7.54
 
-Running main-dgemm-naive-jki with arguments 768 ...
+Running main-dgemm-jki with arguments 768 ...
 L = 768, N = 10
 err = 1.14e-13
 err = 9.59e-14
@@ -543,12 +1016,40 @@ err = 1.14e-13
 err = 1.07e-13
 err = 9.95e-14
 err = 1.14e-13
-MM_REF t = 1.39e-02 sec, GFLOPS =  65.47
-MM_SOL t = 5.53e-02 sec, GFLOPS =  16.39
+MM_REF t = 1.46e-02 sec, GFLOPS =  61.91
+MM_SOL t = 5.60e-02 sec, GFLOPS =  16.18
+
+Running main-dgemm-ijk with arguments 768 ...
+L = 768, N = 10
+err = 6.04e-14
+err = 6.39e-14
+err = 5.68e-14
+err = 6.39e-14
+err = 6.04e-14
+err = 5.33e-14
+err = 5.24e-14
+err = 6.39e-14
+err = 5.68e-14
+err = 5.68e-14
+MM_REF t = 1.47e-02 sec, GFLOPS =  61.51
+MM_SOL t = 7.05e-01 sec, GFLOPS =   1.29
 
 Running main-dgemm-avx2 with arguments 768 ...
+L = 768, N = 10
+err = 1.14e-13
+err = 9.59e-14
+err = 1.07e-13
+err = 1.07e-13
+err = 9.95e-14
+err = 9.24e-14
+err = 1.14e-13
+err = 1.07e-13
+err = 9.95e-14
+err = 1.14e-13
+MM_REF t = 1.50e-02 sec, GFLOPS =  60.57
+MM_SOL t = 5.41e-02 sec, GFLOPS =  16.76
 
-Running main-dgemm-block-4x4 with arguments 768 ...
+Running main-dgemm-2x2 with arguments 768 ...
 L = 768, N = 10
 err = 4.26e-14
 err = 4.26e-14
@@ -560,10 +1061,25 @@ err = 3.91e-14
 err = 4.26e-14
 err = 3.55e-14
 err = 3.91e-14
-MM_REF t = 1.38e-02 sec, GFLOPS =  65.50
-MM_SOL t = 6.17e-02 sec, GFLOPS =  14.69
+MM_REF t = 1.47e-02 sec, GFLOPS =  61.47
+MM_SOL t = 1.81e-01 sec, GFLOPS =   5.00
 
-Running main-dgemm-naive-kji with arguments 832 ...
+Running main-dgemm-4x4 with arguments 768 ...
+L = 768, N = 10
+err = 4.26e-14
+err = 4.26e-14
+err = 3.91e-14
+err = 3.91e-14
+err = 3.55e-14
+err = 4.17e-14
+err = 3.91e-14
+err = 4.26e-14
+err = 3.55e-14
+err = 3.91e-14
+MM_REF t = 1.48e-02 sec, GFLOPS =  61.07
+MM_SOL t = 6.09e-02 sec, GFLOPS =  14.87
+
+Running main-dgemm-kji with arguments 832 ...
 L = 832, N = 10
 err = 1.35e-13
 err = 1.28e-13
@@ -575,10 +1091,10 @@ err = 9.59e-14
 err = 9.59e-14
 err = 1.14e-13
 err = 1.07e-13
-MM_REF t = 1.74e-02 sec, GFLOPS =  66.26
-MM_SOL t = 1.43e-01 sec, GFLOPS =   8.07
+MM_REF t = 1.87e-02 sec, GFLOPS =  61.69
+MM_SOL t = 1.53e-01 sec, GFLOPS =   7.52
 
-Running main-dgemm-naive-jki with arguments 832 ...
+Running main-dgemm-jki with arguments 832 ...
 L = 832, N = 10
 err = 1.35e-13
 err = 1.28e-13
@@ -590,12 +1106,40 @@ err = 9.59e-14
 err = 9.59e-14
 err = 1.14e-13
 err = 1.07e-13
-MM_REF t = 1.75e-02 sec, GFLOPS =  65.70
-MM_SOL t = 6.99e-02 sec, GFLOPS =  16.49
+MM_REF t = 1.86e-02 sec, GFLOPS =  61.84
+MM_SOL t = 7.33e-02 sec, GFLOPS =  15.72
+
+Running main-dgemm-ijk with arguments 832 ...
+L = 832, N = 10
+err = 6.39e-14
+err = 8.53e-14
+err = 6.04e-14
+err = 6.04e-14
+err = 6.22e-14
+err = 6.04e-14
+err = 7.46e-14
+err = 6.84e-14
+err = 6.04e-14
+err = 7.46e-14
+MM_REF t = 1.86e-02 sec, GFLOPS =  61.91
+MM_SOL t = 3.52e-01 sec, GFLOPS =   3.27
 
 Running main-dgemm-avx2 with arguments 832 ...
+L = 832, N = 10
+err = 1.35e-13
+err = 1.28e-13
+err = 1.14e-13
+err = 1.07e-13
+err = 1.14e-13
+err = 9.95e-14
+err = 9.59e-14
+err = 9.59e-14
+err = 1.14e-13
+err = 1.07e-13
+MM_REF t = 1.85e-02 sec, GFLOPS =  62.39
+MM_SOL t = 3.96e-02 sec, GFLOPS =  29.11
 
-Running main-dgemm-block-4x4 with arguments 832 ...
+Running main-dgemm-2x2 with arguments 832 ...
 L = 832, N = 10
 err = 4.26e-14
 err = 4.26e-14
@@ -607,10 +1151,25 @@ err = 4.26e-14
 err = 4.62e-14
 err = 3.91e-14
 err = 4.26e-14
-MM_REF t = 1.76e-02 sec, GFLOPS =  65.34
-MM_SOL t = 5.99e-02 sec, GFLOPS =  19.23
+MM_REF t = 1.84e-02 sec, GFLOPS =  62.46
+MM_SOL t = 1.16e-01 sec, GFLOPS =   9.94
 
-Running main-dgemm-naive-kji with arguments 896 ...
+Running main-dgemm-4x4 with arguments 832 ...
+L = 832, N = 10
+err = 4.26e-14
+err = 4.26e-14
+err = 4.97e-14
+err = 4.26e-14
+err = 4.26e-14
+err = 4.26e-14
+err = 4.26e-14
+err = 4.62e-14
+err = 3.91e-14
+err = 4.26e-14
+MM_REF t = 1.89e-02 sec, GFLOPS =  61.12
+MM_SOL t = 6.30e-02 sec, GFLOPS =  18.31
+
+Running main-dgemm-kji with arguments 896 ...
 L = 896, N = 10
 err = 1.14e-13
 err = 1.21e-13
@@ -622,10 +1181,10 @@ err = 1.21e-13
 err = 1.21e-13
 err = 1.14e-13
 err = 1.71e-13
-MM_REF t = 2.17e-02 sec, GFLOPS =  66.35
-MM_SOL t = 1.80e-01 sec, GFLOPS =   7.99
+MM_REF t = 2.38e-02 sec, GFLOPS =  60.36
+MM_SOL t = 1.90e-01 sec, GFLOPS =   7.59
 
-Running main-dgemm-naive-jki with arguments 896 ...
+Running main-dgemm-jki with arguments 896 ...
 L = 896, N = 10
 err = 1.14e-13
 err = 1.21e-13
@@ -637,12 +1196,40 @@ err = 1.21e-13
 err = 1.21e-13
 err = 1.14e-13
 err = 1.71e-13
-MM_REF t = 2.19e-02 sec, GFLOPS =  65.78
-MM_SOL t = 9.05e-02 sec, GFLOPS =  15.91
+MM_REF t = 2.45e-02 sec, GFLOPS =  58.71
+MM_SOL t = 9.92e-02 sec, GFLOPS =  14.55
+
+Running main-dgemm-ijk with arguments 896 ...
+L = 896, N = 10
+err = 7.82e-14
+err = 7.28e-14
+err = 6.75e-14
+err = 7.19e-14
+err = 7.11e-14
+err = 7.82e-14
+err = 7.82e-14
+err = 7.82e-14
+err = 6.39e-14
+err = 7.11e-14
+MM_REF t = 2.36e-02 sec, GFLOPS =  61.09
+MM_SOL t = 4.83e-01 sec, GFLOPS =   2.98
 
 Running main-dgemm-avx2 with arguments 896 ...
+L = 896, N = 10
+err = 1.14e-13
+err = 1.21e-13
+err = 1.21e-13
+err = 1.14e-13
+err = 1.21e-13
+err = 1.28e-13
+err = 1.21e-13
+err = 1.21e-13
+err = 1.14e-13
+err = 1.71e-13
+MM_REF t = 2.38e-02 sec, GFLOPS =  60.41
+MM_SOL t = 5.40e-02 sec, GFLOPS =  26.65
 
-Running main-dgemm-block-4x4 with arguments 896 ...
+Running main-dgemm-2x2 with arguments 896 ...
 L = 896, N = 10
 err = 5.15e-14
 err = 4.26e-14
@@ -654,10 +1241,25 @@ err = 4.62e-14
 err = 4.35e-14
 err = 4.97e-14
 err = 4.97e-14
-MM_REF t = 2.19e-02 sec, GFLOPS =  65.80
-MM_SOL t = 7.47e-02 sec, GFLOPS =  19.26
+MM_REF t = 2.40e-02 sec, GFLOPS =  60.17
+MM_SOL t = -4.85e-01 sec, GFLOPS =   7.75
 
-Running main-dgemm-naive-kji with arguments 960 ...
+Running main-dgemm-4x4 with arguments 896 ...
+L = 896, N = 10
+err = 5.15e-14
+err = 4.26e-14
+err = 4.62e-14
+err = 4.62e-14
+err = 4.26e-14
+err = 4.80e-14
+err = 4.62e-14
+err = 4.35e-14
+err = 4.97e-14
+err = 4.97e-14
+MM_REF t = 2.44e-02 sec, GFLOPS =  59.13
+MM_SOL t = 8.19e-02 sec, GFLOPS =  17.56
+
+Running main-dgemm-kji with arguments 960 ...
 L = 960, N = 10
 err = 1.21e-13
 err = 1.35e-13
@@ -669,10 +1271,10 @@ err = 1.28e-13
 err = 1.74e-13
 err = 1.35e-13
 err = 1.28e-13
-MM_REF t = 2.66e-02 sec, GFLOPS =  66.48
-MM_SOL t = 2.19e-01 sec, GFLOPS =   8.09
+MM_REF t = 2.91e-02 sec, GFLOPS =  60.92
+MM_SOL t = 2.33e-01 sec, GFLOPS =   7.59
 
-Running main-dgemm-naive-jki with arguments 960 ...
+Running main-dgemm-jki with arguments 960 ...
 L = 960, N = 10
 err = 1.21e-13
 err = 1.35e-13
@@ -684,9 +1286,516 @@ err = 1.28e-13
 err = 1.74e-13
 err = 1.35e-13
 err = 1.28e-13
-MM_REF t = 2.69e-02 sec, GFLOPS =  65.73
-MM_SOL t = 1.09e-01 sec, GFLOPS =  16.18
+MM_REF t = 2.87e-02 sec, GFLOPS =  61.59
+MM_SOL t = 1.14e-01 sec, GFLOPS =  15.49
+
+Running main-dgemm-ijk with arguments 960 ...
+L = 960, N = 10
+err = 7.11e-14
+err = 8.53e-14
+err = 7.11e-14
+err = 7.11e-14
+err = 7.82e-14
+err = 8.17e-14
+err = 6.39e-14
+err = 8.26e-14
+err = 7.11e-14
+err = 7.28e-14
+MM_REF t = 2.84e-02 sec, GFLOPS =  62.33
+MM_SOL t = 5.48e-01 sec, GFLOPS =   3.23
 
 Running main-dgemm-avx2 with arguments 960 ...
+L = 960, N = 10
+err = 1.21e-13
+err = 1.35e-13
+err = 1.21e-13
+err = 1.35e-13
+err = 1.21e-13
+err = 1.28e-13
+err = 1.28e-13
+err = 1.74e-13
+err = 1.35e-13
+err = 1.28e-13
+MM_REF t = 3.12e-02 sec, GFLOPS =  58.33
+MM_SOL t = 6.09e-02 sec, GFLOPS =  29.08
 
-Running main-dgemm-block-4x4 with arguments 960 ...
+Running main-dgemm-2x2 with arguments 960 ...
+L = 960, N = 10
+err = 4.35e-14
+err = 4.97e-14
+err = 5.15e-14
+err = 4.97e-14
+err = 4.97e-14
+err = 4.88e-14
+err = 4.97e-14
+err = 4.62e-14
+err = 4.73e-14
+err = 4.26e-14
+MM_REF t = 2.90e-02 sec, GFLOPS =  61.17
+MM_SOL t = 1.88e-01 sec, GFLOPS =   9.41
+
+Running main-dgemm-4x4 with arguments 960 ...
+L = 960, N = 10
+err = 4.35e-14
+err = 4.97e-14
+err = 5.15e-14
+err = 4.97e-14
+err = 4.97e-14
+err = 4.88e-14
+err = 4.97e-14
+err = 4.62e-14
+err = 4.73e-14
+err = 4.26e-14
+MM_REF t = 2.86e-02 sec, GFLOPS =  61.80
+MM_SOL t = 9.61e-02 sec, GFLOPS =  18.42
+
+Running main-dgemm-kji with arguments 1024 ...
+L = 1024, N = 10
+err = 1.78e-13
+err = 1.35e-13
+err = 1.85e-13
+err = 1.71e-13
+err = 1.56e-13
+err = 1.35e-13
+err = 1.46e-13
+err = 1.63e-13
+err = 1.42e-13
+err = 1.63e-13
+MM_REF t = 3.41e-02 sec, GFLOPS =  63.00
+MM_SOL t = 2.84e-01 sec, GFLOPS =   7.58
+
+Running main-dgemm-jki with arguments 1024 ...
+L = 1024, N = 10
+err = 1.78e-13
+err = 1.35e-13
+err = 1.85e-13
+err = 1.71e-13
+err = 1.56e-13
+err = 1.35e-13
+err = 1.46e-13
+err = 1.63e-13
+err = 1.42e-13
+err = 1.63e-13
+MM_REF t = 3.30e-02 sec, GFLOPS =  65.09
+MM_SOL t = 1.40e-01 sec, GFLOPS =  15.33
+
+Running main-dgemm-ijk with arguments 1024 ...
+L = 1024, N = 10
+err = 7.11e-14
+err = 7.46e-14
+err = 7.11e-14
+err = 7.82e-14
+err = 7.82e-14
+err = 7.82e-14
+err = 7.82e-14
+err = 7.82e-14
+err = 7.82e-14
+err = 7.64e-14
+MM_REF t = 3.23e-02 sec, GFLOPS =  66.54
+MM_SOL t = 2.17e+00 sec, GFLOPS =   0.99
+
+Running main-dgemm-avx2 with arguments 1024 ...
+L = 1024, N = 10
+err = 1.78e-13
+err = 1.35e-13
+err = 1.85e-13
+err = 1.71e-13
+err = 1.56e-13
+err = 1.35e-13
+err = 1.46e-13
+err = 1.63e-13
+err = 1.42e-13
+err = 1.63e-13
+MM_REF t = 3.28e-02 sec, GFLOPS =  65.46
+MM_SOL t = 1.63e-01 sec, GFLOPS =  13.19
+
+Running main-dgemm-2x2 with arguments 1024 ...
+L = 1024, N = 10
+err = 4.62e-14
+err = 4.97e-14
+err = 5.33e-14
+err = 4.97e-14
+err = 5.33e-14
+err = 4.97e-14
+err = 4.49e-14
+err = 5.33e-14
+err = 5.15e-14
+err = 6.04e-14
+MM_REF t = 3.47e-02 sec, GFLOPS =  61.92
+MM_SOL t = 5.92e-01 sec, GFLOPS =   3.64
+
+Running main-dgemm-4x4 with arguments 1024 ...
+L = 1024, N = 10
+err = 4.62e-14
+err = 4.97e-14
+err = 5.33e-14
+err = 4.97e-14
+err = 5.33e-14
+err = 4.97e-14
+err = 4.49e-14
+err = 5.33e-14
+err = 5.15e-14
+err = 6.04e-14
+MM_REF t = 3.53e-02 sec, GFLOPS =  60.90
+MM_SOL t = 2.24e-01 sec, GFLOPS =   9.59
+
+Running main-dgemm-kji with arguments 1088 ...
+L = 1088, N = 10
+err = 1.63e-13
+err = 1.60e-13
+err = 1.56e-13
+err = 1.85e-13
+err = 1.99e-13
+err = 1.71e-13
+err = 1.71e-13
+err = 1.63e-13
+err = 1.42e-13
+err = 1.56e-13
+MM_REF t = 4.15e-02 sec, GFLOPS =  62.07
+MM_SOL t = 3.45e-01 sec, GFLOPS =   7.46
+
+Running main-dgemm-jki with arguments 1088 ...
+L = 1088, N = 10
+err = 1.63e-13
+err = 1.60e-13
+err = 1.56e-13
+err = 1.85e-13
+err = 1.99e-13
+err = 1.71e-13
+err = 1.71e-13
+err = 1.63e-13
+err = 1.42e-13
+err = 1.56e-13
+MM_REF t = 4.17e-02 sec, GFLOPS =  61.76
+MM_SOL t = 1.81e-01 sec, GFLOPS =  14.26
+
+Running main-dgemm-ijk with arguments 1088 ...
+L = 1088, N = 10
+err = 9.24e-14
+err = 9.55e-14
+err = 7.82e-14
+err = 7.82e-14
+err = 8.17e-14
+err = 8.53e-14
+err = 9.95e-14
+err = 7.82e-14
+err = 8.26e-14
+err = 9.06e-14
+MM_REF t = 4.25e-02 sec, GFLOPS =  60.69
+MM_SOL t = 8.17e-01 sec, GFLOPS =   3.15
+
+Running main-dgemm-avx2 with arguments 1088 ...
+L = 1088, N = 10
+err = 1.63e-13
+err = 1.60e-13
+err = 1.56e-13
+err = 1.85e-13
+err = 1.99e-13
+err = 1.71e-13
+err = 1.71e-13
+err = 1.63e-13
+err = 1.42e-13
+err = 1.56e-13
+MM_REF t = 4.14e-02 sec, GFLOPS =  62.28
+MM_SOL t = 8.97e-02 sec, GFLOPS =  28.73
+
+Running main-dgemm-2x2 with arguments 1088 ...
+L = 1088, N = 10
+err = 4.97e-14
+err = 5.68e-14
+err = 5.33e-14
+err = 5.33e-14
+err = 5.06e-14
+err = 4.97e-14
+err = 5.33e-14
+err = 5.68e-14
+err = 4.97e-14
+err = 5.33e-14
+MM_REF t = 4.23e-02 sec, GFLOPS =  61.02
+MM_SOL t = 2.80e-01 sec, GFLOPS =   9.19
+
+Running main-dgemm-4x4 with arguments 1088 ...
+L = 1088, N = 10
+err = 4.97e-14
+err = 5.68e-14
+err = 5.33e-14
+err = 5.33e-14
+err = 5.06e-14
+err = 4.97e-14
+err = 5.33e-14
+err = 5.68e-14
+err = 4.97e-14
+err = 5.33e-14
+MM_REF t = 4.17e-02 sec, GFLOPS =  61.81
+MM_SOL t = 1.49e-01 sec, GFLOPS =  17.23
+
+Running main-dgemm-kji with arguments 1152 ...
+L = 1152, N = 10
+err = 1.42e-13
+err = 1.28e-13
+err = 1.63e-13
+err = 1.49e-13
+err = 2.27e-13
+err = 1.92e-13
+err = 1.71e-13
+err = 1.56e-13
+err = 1.28e-13
+err = 1.71e-13
+MM_REF t = 4.91e-02 sec, GFLOPS =  62.28
+MM_SOL t = 4.12e-01 sec, GFLOPS =   7.42
+
+Running main-dgemm-jki with arguments 1152 ...
+L = 1152, N = 10
+err = 1.42e-13
+err = 1.28e-13
+err = 1.63e-13
+err = 1.49e-13
+err = 2.27e-13
+err = 1.92e-13
+err = 1.71e-13
+err = 1.56e-13
+err = 1.28e-13
+err = 1.71e-13
+MM_REF t = 4.94e-02 sec, GFLOPS =  61.84
+MM_SOL t = 2.21e-01 sec, GFLOPS =  13.83
+
+Running main-dgemm-ijk with arguments 1152 ...
+L = 1152, N = 10
+err = 8.53e-14
+err = 8.35e-14
+err = 9.95e-14
+err = 1.02e-13
+err = 8.35e-14
+err = 9.95e-14
+err = 9.95e-14
+err = 8.88e-14
+err = 8.53e-14
+err = 9.95e-14
+MM_REF t = 5.00e-02 sec, GFLOPS =  61.23
+MM_SOL t = 1.27e+00 sec, GFLOPS =   2.41
+
+Running main-dgemm-avx2 with arguments 1152 ...
+L = 1152, N = 10
+err = 1.42e-13
+err = 1.28e-13
+err = 1.63e-13
+err = 1.49e-13
+err = 2.27e-13
+err = 1.92e-13
+err = 1.71e-13
+err = 1.56e-13
+err = 1.28e-13
+err = 1.71e-13
+MM_REF t = 4.97e-02 sec, GFLOPS =  61.55
+MM_SOL t = 1.23e-01 sec, GFLOPS =  24.85
+
+Running main-dgemm-2x2 with arguments 1152 ...
+L = 1152, N = 10
+err = 5.68e-14
+err = 6.04e-14
+err = 5.68e-14
+err = 5.68e-14
+err = 5.37e-14
+err = 6.39e-14
+err = 5.68e-14
+err = 6.39e-14
+err = 6.39e-14
+err = 6.39e-14
+MM_REF t = 4.93e-02 sec, GFLOPS =  62.04
+MM_SOL t = 5.70e-01 sec, GFLOPS =   5.36
+
+Running main-dgemm-4x4 with arguments 1152 ...
+L = 1152, N = 10
+err = 5.68e-14
+err = 6.04e-14
+err = 5.68e-14
+err = 5.68e-14
+err = 5.37e-14
+err = 6.39e-14
+err = 5.68e-14
+err = 6.39e-14
+err = 6.39e-14
+err = 6.39e-14
+MM_REF t = 4.95e-02 sec, GFLOPS =  61.78
+MM_SOL t = 3.46e-01 sec, GFLOPS =   8.84
+
+Running main-dgemm-kji with arguments 1216 ...
+L = 1216, N = 10
+err = 1.71e-13
+err = 1.85e-13
+err = 1.92e-13
+err = 1.71e-13
+err = 1.71e-13
+err = 1.99e-13
+err = 1.63e-13
+err = 1.78e-13
+err = 1.92e-13
+err = 1.63e-13
+MM_REF t = 5.83e-02 sec, GFLOPS =  61.70
+MM_SOL t = 4.98e-01 sec, GFLOPS =   7.22
+
+Running main-dgemm-jki with arguments 1216 ...
+L = 1216, N = 10
+err = 1.71e-13
+err = 1.85e-13
+err = 1.92e-13
+err = 1.71e-13
+err = 1.71e-13
+err = 1.99e-13
+err = 1.63e-13
+err = 1.78e-13
+err = 1.92e-13
+err = 1.63e-13
+MM_REF t = 5.83e-02 sec, GFLOPS =  61.67
+MM_SOL t = 2.71e-01 sec, GFLOPS =  13.25
+
+Running main-dgemm-ijk with arguments 1216 ...
+L = 1216, N = 10
+err = 8.88e-14
+err = 9.95e-14
+err = 9.24e-14
+err = 1.10e-13
+err = 8.99e-14
+err = 9.86e-14
+err = 8.88e-14
+err = 9.95e-14
+err = 9.77e-14
+err = 9.24e-14
+MM_REF t = 5.88e-02 sec, GFLOPS =  61.14
+MM_SOL t = 1.17e+00 sec, GFLOPS =   3.07
+
+Running main-dgemm-avx2 with arguments 1216 ...
+L = 1216, N = 10
+err = 1.71e-13
+err = 1.85e-13
+err = 1.92e-13
+err = 1.71e-13
+err = 1.71e-13
+err = 1.99e-13
+err = 1.63e-13
+err = 1.78e-13
+err = 1.92e-13
+err = 1.63e-13
+MM_REF t = 5.82e-02 sec, GFLOPS =  61.78
+MM_SOL t = 1.25e-01 sec, GFLOPS =  28.66
+
+Running main-dgemm-2x2 with arguments 1216 ...
+L = 1216, N = 10
+err = 6.13e-14
+err = 7.11e-14
+err = 6.08e-14
+err = 6.22e-14
+err = 5.68e-14
+err = 6.22e-14
+err = 6.39e-14
+err = 5.68e-14
+err = 6.04e-14
+err = 6.88e-14
+MM_REF t = 5.85e-02 sec, GFLOPS =  61.52
+MM_SOL t = 4.09e-01 sec, GFLOPS =   8.80
+
+Running main-dgemm-4x4 with arguments 1216 ...
+L = 1216, N = 10
+err = 6.13e-14
+err = 7.11e-14
+err = 6.08e-14
+err = 6.22e-14
+err = 5.68e-14
+err = 6.22e-14
+err = 6.39e-14
+err = 5.68e-14
+err = 6.04e-14
+err = 6.88e-14
+MM_REF t = 5.82e-02 sec, GFLOPS =  61.74
+MM_SOL t = 2.27e-01 sec, GFLOPS =  15.82
+
+Running main-dgemm-kji with arguments 1280 ...
+L = 1280, N = 10
+err = 1.92e-13
+err = 1.85e-13
+err = 1.71e-13
+err = 1.92e-13
+err = 1.99e-13
+err = 1.71e-13
+err = 1.63e-13
+err = 1.92e-13
+err = 2.42e-13
+err = 1.78e-13
+MM_REF t = 6.83e-02 sec, GFLOPS =  61.37
+MM_SOL t = 5.86e-01 sec, GFLOPS =   7.15
+
+Running main-dgemm-jki with arguments 1280 ...
+L = 1280, N = 10
+err = 1.92e-13
+err = 1.85e-13
+err = 1.71e-13
+err = 1.92e-13
+err = 1.99e-13
+err = 1.71e-13
+err = 1.63e-13
+err = 1.92e-13
+err = 2.42e-13
+err = 1.78e-13
+MM_REF t = 6.85e-02 sec, GFLOPS =  61.21
+MM_SOL t = 3.34e-01 sec, GFLOPS =  12.57
+
+Running main-dgemm-ijk with arguments 1280 ...
+L = 1280, N = 10
+err = 1.10e-13
+err = 9.95e-14
+err = 1.21e-13
+err = 1.07e-13
+err = 9.24e-14
+err = 9.24e-14
+err = 9.59e-14
+err = 1.11e-13
+err = 1.03e-13
+err = 1.14e-13
+MM_REF t = 6.88e-02 sec, GFLOPS =  60.98
+MM_SOL t = 4.62e+00 sec, GFLOPS =   0.97
+
+Running main-dgemm-avx2 with arguments 1280 ...
+L = 1280, N = 10
+err = 1.92e-13
+err = 1.85e-13
+err = 1.71e-13
+err = 1.92e-13
+err = 1.99e-13
+err = 1.71e-13
+err = 1.63e-13
+err = 1.92e-13
+err = 2.42e-13
+err = 1.78e-13
+MM_REF t = 6.91e-02 sec, GFLOPS =  60.69
+MM_SOL t = 3.76e-01 sec, GFLOPS =  11.15
+
+Running main-dgemm-2x2 with arguments 1280 ...
+L = 1280, N = 10
+err = 7.82e-14
+err = 6.39e-14
+err = 6.04e-14
+err = 6.39e-14
+err = 6.39e-14
+err = 6.75e-14
+err = 6.04e-14
+err = 6.39e-14
+err = 6.57e-14
+err = 6.39e-14
+MM_REF t = 7.05e-02 sec, GFLOPS =  59.53
+MM_SOL t = 1.38e+00 sec, GFLOPS =   3.05
+
+Running main-dgemm-4x4 with arguments 1280 ...
+L = 1280, N = 10
+err = 7.82e-14
+err = 6.39e-14
+err = 6.04e-14
+err = 6.39e-14
+err = 6.39e-14
+err = 6.75e-14
+err = 6.04e-14
+err = 6.39e-14
+err = 6.57e-14
+err = 6.39e-14
+MM_REF t = 6.88e-02 sec, GFLOPS =  60.95
+MM_SOL t = 5.46e-01 sec, GFLOPS =   7.68
+

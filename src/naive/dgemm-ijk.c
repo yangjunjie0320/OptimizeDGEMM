@@ -1,8 +1,11 @@
 void dgemm(int m, int n, int l, double* a, double* b, double* c)
 {
-    int lda = l;
-    int ldb = n;
-    int ldc = n;
+    // A is m x l
+    // B is l x n
+    // C is m x n
+    int lda = m;
+    int ldb = l;
+    int ldc = m;
 
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {

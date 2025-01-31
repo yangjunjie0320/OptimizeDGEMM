@@ -1,11 +1,16 @@
-void pack(int m, int n, int l, int lda, int ldb, int ldc, double* a, double* b, double* c) {
+#define BLOCK_SIZE 2
+
+void edge_block(int m, int n, int l, int lda, int ldb, int ldc, double* a, double* b, double* c) {
     int i, j, k;
 
     for (i = 0; i < m; i++) {
         for (j = 0; j < n; j++) {
             double cij = c[i + j * ldc];
+
             for (k = 0; k < l; k++) {
-                cij += a[i + k * lda] * b[k + j * ldb];
+                double aik = a[i + k * lda];
+                double bkj = b[k + j * ldb];
+                cij += aik * bkj;
             }
             c[i + j * ldc] = cij;
         }
@@ -14,18 +19,23 @@ void pack(int m, int n, int l, int lda, int ldb, int ldc, double* a, double* b, 
 
 void dgemm(int m, int n, int l, double* a, double* b, double* c)
 {
-    int lda = l;
-    int ldb = n;
-    int ldc = n;
+    // A is m x l
+    // B is l x n
+    // C is m x n
+    int lda = m;
+    int ldb = l;
+    int ldc = m;
 
     int i, j, k;
-    int m2 = m & -2;
-    int n2 = n & -2;
+
+    int m1 = m, n1 = n, l1 = l;
+    int m2 = m1 & -BLOCK_SIZE;
+    int n2 = n1 & -BLOCK_SIZE;
 
     register double c00, c01, c10, c11;
 
-    for (i = 0; i < m2; i += 2) {
-        for (j = 0; j < n2; j += 2) {
+    for (i = 0; i < m2; i += BLOCK_SIZE) {
+        for (j = 0; j < n2; j += BLOCK_SIZE) {
             c00 = c[(i + 0) + (j + 0) * ldc];
             c01 = c[(i + 0) + (j + 1) * ldc];
             c10 = c[(i + 1) + (j + 0) * ldc];
@@ -47,8 +57,16 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c)
             c[(i + 1) + (j + 1) * ldc] = c11;
         }
     }
+    
+    if (m2 == m1 && n2 == n1) return;
 
-    if (m2 == m && n2 == n) return;
-    if (m2 != m) pack(m - m2, n, l, lda, ldb, ldc, a + m2, b, c + m2);
-    if (n2 != n) pack(m, n - n2, l, lda, ldb, ldc, a, b + n2 * ldb, c + ldc * n2);
+    double *aa, *bb, *cc;
+
+    // case 1: m2 != m1 
+    aa = a + m2; bb = b; cc = c + m2;
+    if (m2 != m1) edge_block(m1 - m2, n1, l1, lda, ldb, ldc, aa, bb, cc);
+
+    // case 2: n2 != n1
+    aa = a; bb = b + n2 * ldb; cc = c + ldc * n2;
+    if (n2 != n1) edge_block(m1, n1 - n2, l1, lda, ldb, ldc, aa, bb, cc);
 }
