@@ -18,7 +18,7 @@ echo "CONDA_PREFIX: $CONDA_PREFIX"
 
 cmake ..; make VERBOSE=1 -j4; cd -
 
-ff=("main-dgemm-kji" "main-dgemm-jki" "main-dgemm-ijk" "main-dgemm-avx2" "main-dgemm-2x2" "main-dgemm-4x4")
+ff=("naive-jki.x" "avx2-4x4.x" "register-blocking-2x2.x" "register-blocking-4x4.x")
 
 cd $PREFIX/build/; echo "" > $PREFIX/plot/tmp;
 for i in $(seq 1 20); do
