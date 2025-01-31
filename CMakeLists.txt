@@ -39,6 +39,14 @@ foreach(f IN LISTS SOURCES)
 
     # use the dirname-basename as the executable name
     add_executable(${d}-${b}.x src/main.cxx ${f})
-    target_compile_options(${d}-${b}.x PRIVATE -g -mfma -O0 -Ofast -march=native)
+    target_compile_options(${d}-${b}.x PRIVATE -mfma -Og -march=native)
     target_link_libraries(${d}-${b}.x dgemm-blas)
+
+    add_custom_command(
+        OUTPUT ${CMAKE_BINARY_DIR}/${d}-${b}.s
+        COMMAND ${CMAKE_C_COMPILER} -mfma -Og -march=native -S -fverbose-asm -o ${CMAKE_BINARY_DIR}/${d}-${b}.s ${f}
+        DEPENDS ${f}
+        COMMENT "Generating assembly for ${f}"
+    )
+    add_custom_target(${d}-${b}.s ALL DEPENDS ${CMAKE_BINARY_DIR}/${d}-${b}.s)
 endforeach()
