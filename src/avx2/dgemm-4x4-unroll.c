@@ -1,5 +1,6 @@
 #include "immintrin.h"
 #define BLOCK_SIZE 4
+#define UNROLL 4
 
 void edge_block(int m, int n, int l, int lda, int ldb, int ldc, double* a, double* b, double* c) {
     int i, j, k;
@@ -18,6 +19,10 @@ void edge_block(int m, int n, int l, int lda, int ldb, int ldc, double* a, doubl
     }
 }
 
+
+
+
+
 void dgemm(int m, int n, int l, double* a, double* b, double* c)
 {
     // A is m x l
@@ -32,6 +37,7 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c)
     int m0 = m, n0 = n, l0 = l;
     int m4 = m0 & -BLOCK_SIZE;
     int n4 = n0 & -BLOCK_SIZE;
+    int l4 = l0 & -BLOCK_SIZE;
 
     for (i = 0; i < m4; i += BLOCK_SIZE) {
         for (j = 0; j < n4; j += BLOCK_SIZE) {
@@ -40,17 +46,29 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c)
             __m256d c2 = _mm256_setzero_pd();
             __m256d c3 = _mm256_setzero_pd();
 
-            for (k = 0; k < l; k++) {
-                __m256d a0 = _mm256_loadu_pd(&a[i + k * lda]);
-                __m256d b0 = _mm256_broadcast_sd(&b[k + (j + 0) * ldb]);
-                __m256d b1 = _mm256_broadcast_sd(&b[k + (j + 1) * ldb]);
-                __m256d b2 = _mm256_broadcast_sd(&b[k + (j + 2) * ldb]);
-                __m256d b3 = _mm256_broadcast_sd(&b[k + (j + 3) * ldb]);
-                
+            __m256d a0, b0, b1, b2, b3;
+
+            for (k = 0; k < l4;) {
+                for (int f = 0; f < UNROLL; f++) {
+                    a0 = _mm256_loadu_pd(&a[i + k * lda]);
+                    b0 = _mm256_broadcast_sd(&b[k + (j + 0) * ldb]);
+                    b1 = _mm256_broadcast_sd(&b[k + (j + 1) * ldb]);
+                    b2 = _mm256_broadcast_sd(&b[k + (j + 2) * ldb]);
+                    b3 = _mm256_broadcast_sd(&b[k + (j + 3) * ldb]);
+
+                    c0 = _mm256_fmadd_pd(a0, b0, c0);
+                    c1 = _mm256_fmadd_pd(a0, b1, c1);
+                    c2 = _mm256_fmadd_pd(a0, b2, c2);
+                    c3 = _mm256_fmadd_pd(a0, b3, c3);
+                    k++;
+                }
+            }
+
+            for (k = l4; k < l; ) {
+                a0 = _mm256_loadu_pd(&a[i + k * lda]);
+                b0 = _mm256_broadcast_sd(&b[k + (j + 0) * ldb]);
                 c0 = _mm256_fmadd_pd(a0, b0, c0);
-                c1 = _mm256_fmadd_pd(a0, b1, c1);
-                c2 = _mm256_fmadd_pd(a0, b2, c2);
-                c3 = _mm256_fmadd_pd(a0, b3, c3);
+                k++;
             }
 
             _mm256_storeu_pd(&c[i + (j + 0) * ldc], _mm256_add_pd(c0, _mm256_loadu_pd(&c[i + (j + 0) * ldc])));

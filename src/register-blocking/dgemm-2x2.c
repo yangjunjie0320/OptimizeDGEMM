@@ -28,9 +28,9 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c)
 
     int i, j, k;
 
-    int m1 = m, n1 = n, l1 = l;
-    int m2 = m1 & -BLOCK_SIZE;
-    int n2 = n1 & -BLOCK_SIZE;
+    int m0 = m, n0 = n, l0 = l;
+    int m2 = m0 & -BLOCK_SIZE;
+    int n2 = n0 & -BLOCK_SIZE;
 
     register double c00, c01, c10, c11;
 
@@ -58,15 +58,15 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c)
         }
     }
     
-    if (m2 == m1 && n2 == n1) return;
+    if (m2 == m0 && n2 == n0) return;
 
     double *aa, *bb, *cc;
 
-    // case 1: m2 != m1 
+    // case 1: m2 != m0 
     aa = a + m2; bb = b; cc = c + m2;
-    if (m2 != m1) edge_block(m1 - m2, n1, l1, lda, ldb, ldc, aa, bb, cc);
+    if (m2 != m0) edge_block(m0 - m2, n0, l0, lda, ldb, ldc, aa, bb, cc);
 
-    // case 2: n2 != n1
+    // case 2: n2 != n0
     aa = a; bb = b + n2 * ldb; cc = c + ldc * n2;
-    if (n2 != n1) edge_block(m1, n1 - n2, l1, lda, ldb, ldc, aa, bb, cc);
+    if (n2 != n0) edge_block(m0, n0 - n2, l0, lda, ldb, ldc, aa, bb, cc);
 }

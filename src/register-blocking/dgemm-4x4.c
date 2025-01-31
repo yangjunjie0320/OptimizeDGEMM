@@ -28,17 +28,17 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c)
 
     int i, j, k;
 
-    int m1 = m, n1 = n, l1 = l;
-    int m2 = m1 & -BLOCK_SIZE;
-    int n2 = n1 & -BLOCK_SIZE;
+    int m0 = m, n0 = n, l0 = l;
+    int m4 = m0 & -BLOCK_SIZE;
+    int n4 = n0 & -BLOCK_SIZE;
 
     register double c00, c01, c10, c11;
     register double c20, c21, c30, c31;
     register double c02, c03, c12, c13;
     register double c22, c23, c32, c33;
 
-    for (i = 0; i < m2; i += BLOCK_SIZE) {
-        for (j = 0; j < n2; j += BLOCK_SIZE) {
+    for (i = 0; i < m4; i += BLOCK_SIZE) {
+        for (j = 0; j < n4; j += BLOCK_SIZE) {
             c00 = c[(i + 0) + (j + 0) * ldc];
             c01 = c[(i + 0) + (j + 1) * ldc];
             c10 = c[(i + 1) + (j + 0) * ldc];
@@ -109,16 +109,16 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c)
         }
     }
 
-    if (m2 == m1 && n2 == n1) return;
+    if (m4 == m0 && n4 == n0) return;
 
     double *aa, *bb, *cc;
 
-    // case 1: m2 != m1 
-    aa = a + m2; bb = b; cc = c + m2;
-    if (m2 != m1) edge_block(m1 - m2, n1, l1, lda, ldb, ldc, aa, bb, cc);
+    // case 1: m4 != m0 
+    aa = a + m4; bb = b; cc = c + m4;
+    if (m4 != m0) edge_block(m0 - m4, n0, l0, lda, ldb, ldc, aa, bb, cc);
 
-    // case 2: n2 != n1
-    aa = a; bb = b + n2 * ldb; cc = c + ldc * n2;
-    if (n2 != n1) edge_block(m1, n1 - n2, l1, lda, ldb, ldc, aa, bb, cc);
+    // case 2: n4 != n0
+    aa = a; bb = b + n4 * ldb; cc = c + ldc * n4;
+    if (n4 != n0) edge_block(m0, n0 - n4, l0, lda, ldb, ldc, aa, bb, cc);
 }
 
