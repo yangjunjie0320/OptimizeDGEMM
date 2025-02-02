@@ -178,14 +178,22 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c) {
     int ldc = m;
 
     // n, l, m
-    for (jj = 0; jj < n0; jj += n1) {
+    for (jj = 0; jj < n0;) {
         n1 = min(N_BLOCKING, n0 - jj);
-        for (kk = 0; kk < l0; kk += l1) {
+        for (kk = 0; kk < l0;) {
             l1 = min(K_BLOCKING, l0 - kk);
-            for (ii = 0; ii < m0; ii += m1) {
+            for (ii = 0; ii < m0; ) {
                 m1 = min(M_BLOCKING, m0 - ii);
-                macro_dgemm(m1, n1, l1, lda, ldb, ldc, a + ii * lda, b + kk * ldb, c + ii * ldc);
+                macro_dgemm(
+                    m1, n1, l1, lda, ldb, ldc, 
+                    a + ii + kk * lda, 
+                    b + kk + jj * ldb, 
+                    c + ii + jj * ldc
+                );
+                ii += m1;
             }
+            kk += l1;
         }
+        jj += n1;
     }
 }

@@ -5,8 +5,8 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 8.51e-06 sec, GFLOPS =  62.73
-MM_SOL t = 1.13e-05 sec, GFLOPS =  46.28
+MM_REF t = 9.11e-06 sec, GFLOPS =  58.93
+MM_SOL t = 1.14e-05 sec, GFLOPS =  46.15
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 64 ...
 L = 64, N = 4
@@ -14,8 +14,8 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 1.07e-05 sec, GFLOPS =  53.23
-MM_SOL t = 1.27e-05 sec, GFLOPS =  41.57
+MM_REF t = 9.30e-06 sec, GFLOPS =  57.06
+MM_SOL t = 1.13e-05 sec, GFLOPS =  46.24
 
 Running avx2-8x4-unroll.x with arguments 128 ...
 L = 128, N = 4
@@ -23,8 +23,8 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 6.86e-05 sec, GFLOPS =  61.20
-MM_SOL t = 9.44e-05 sec, GFLOPS =  44.44
+MM_REF t = 6.83e-05 sec, GFLOPS =  61.53
+MM_SOL t = 9.71e-05 sec, GFLOPS =  43.34
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 128 ...
 L = 128, N = 4
@@ -32,8 +32,8 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 6.94e-05 sec, GFLOPS =  60.54
-MM_SOL t = 9.30e-05 sec, GFLOPS =  45.08
+MM_REF t = 6.73e-05 sec, GFLOPS =  62.44
+MM_SOL t = 9.17e-05 sec, GFLOPS =  45.74
 
 Running avx2-8x4-unroll.x with arguments 192 ...
 L = 192, N = 4
@@ -41,8 +41,8 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 2.64e-04 sec, GFLOPS =  54.48
-MM_SOL t = 3.17e-04 sec, GFLOPS =  44.69
+MM_REF t = 2.23e-04 sec, GFLOPS =  63.62
+MM_SOL t = 3.14e-04 sec, GFLOPS =  45.08
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 192 ...
 L = 192, N = 4
@@ -50,8 +50,8 @@ err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
 err = 0.00e+00
-MM_REF t = 2.45e-04 sec, GFLOPS =  58.61
-MM_SOL t = 3.09e-04 sec, GFLOPS =  45.87
+MM_REF t = 2.22e-04 sec, GFLOPS =  63.83
+MM_SOL t = 3.15e-04 sec, GFLOPS =  44.88
 
 Running avx2-8x4-unroll.x with arguments 256 ...
 L = 256, N = 4
@@ -59,10 +59,17 @@ err = 1.95e-14
 err = 1.95e-14
 err = 2.13e-14
 err = 2.49e-14
-MM_REF t = 5.18e-04 sec, GFLOPS =  64.81
-MM_SOL t = 7.77e-04 sec, GFLOPS =  43.18
+MM_REF t = 6.30e-04 sec, GFLOPS =  55.22
+MM_SOL t = 7.79e-04 sec, GFLOPS =  43.10
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 256 ...
+L = 256, N = 4
+err = 1.95e-14
+err = 1.95e-14
+err = 2.13e-14
+err = 2.49e-14
+MM_REF t = 5.65e-04 sec, GFLOPS =  59.65
+MM_SOL t = 7.84e-04 sec, GFLOPS =  42.83
 
 Running avx2-8x4-unroll.x with arguments 320 ...
 L = 320, N = 4
@@ -70,10 +77,17 @@ err = 3.20e-14
 err = 3.91e-14
 err = 3.91e-14
 err = 3.91e-14
-MM_REF t = 1.14e-03 sec, GFLOPS =  58.34
-MM_SOL t = 1.51e-03 sec, GFLOPS =  43.37
+MM_REF t = 9.79e-04 sec, GFLOPS =  66.91
+MM_SOL t = 1.52e-03 sec, GFLOPS =  43.18
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 320 ...
+L = 320, N = 4
+err = 3.20e-14
+err = 3.91e-14
+err = 3.91e-14
+err = 3.91e-14
+MM_REF t = 9.87e-04 sec, GFLOPS =  66.38
+MM_SOL t = 1.60e-03 sec, GFLOPS =  40.88
 
 Running avx2-8x4-unroll.x with arguments 384 ...
 L = 384, N = 4
@@ -81,10 +95,17 @@ err = 5.33e-14
 err = 3.91e-14
 err = 4.62e-14
 err = 5.68e-14
-MM_REF t = 1.76e-03 sec, GFLOPS =  64.21
-MM_SOL t = 2.80e-03 sec, GFLOPS =  40.48
+MM_REF t = 1.82e-03 sec, GFLOPS =  62.33
+MM_SOL t = 2.70e-03 sec, GFLOPS =  41.94
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 384 ...
+L = 384, N = 4
+err = 5.33e-14
+err = 3.91e-14
+err = 4.62e-14
+err = 5.68e-14
+MM_REF t = 2.04e-03 sec, GFLOPS =  55.56
+MM_SOL t = 2.87e-03 sec, GFLOPS =  39.54
 
 Running avx2-8x4-unroll.x with arguments 448 ...
 L = 448, N = 4
@@ -92,10 +113,17 @@ err = 5.33e-14
 err = 5.33e-14
 err = 5.68e-14
 err = 4.62e-14
-MM_REF t = 2.84e-03 sec, GFLOPS =  63.39
-MM_SOL t = 4.52e-03 sec, GFLOPS =  39.82
+MM_REF t = 2.80e-03 sec, GFLOPS =  64.17
+MM_SOL t = 4.75e-03 sec, GFLOPS =  37.86
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 448 ...
+L = 448, N = 4
+err = 4.62e-14
+err = 4.97e-14
+err = 4.62e-14
+err = 3.91e-14
+MM_REF t = 2.90e-03 sec, GFLOPS =  62.04
+MM_SOL t = 4.71e-03 sec, GFLOPS =  38.14
 
 Running avx2-8x4-unroll.x with arguments 512 ...
 L = 512, N = 4
@@ -103,10 +131,17 @@ err = 5.33e-14
 err = 5.33e-14
 err = 6.39e-14
 err = 6.75e-14
-MM_REF t = 4.13e-03 sec, GFLOPS =  64.96
-MM_SOL t = 1.11e-02 sec, GFLOPS =  24.34
+MM_REF t = 4.20e-03 sec, GFLOPS =  63.90
+MM_SOL t = 1.25e-02 sec, GFLOPS =  21.55
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 512 ...
+L = 512, N = 4
+err = 4.62e-14
+err = 3.91e-14
+err = 4.97e-14
+err = 4.97e-14
+MM_REF t = 4.23e-03 sec, GFLOPS =  63.41
+MM_SOL t = 1.14e-02 sec, GFLOPS =  23.62
 
 Running avx2-8x4-unroll.x with arguments 576 ...
 L = 576, N = 4
@@ -114,10 +149,17 @@ err = 6.93e-14
 err = 6.75e-14
 err = 7.11e-14
 err = 6.75e-14
-MM_REF t = 5.67e-03 sec, GFLOPS =  67.45
-MM_SOL t = 9.86e-03 sec, GFLOPS =  38.78
+MM_REF t = 5.98e-03 sec, GFLOPS =  63.99
+MM_SOL t = 1.01e-02 sec, GFLOPS =  38.02
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 576 ...
+L = 576, N = 4
+err = 4.26e-14
+err = 4.26e-14
+err = 4.97e-14
+err = 4.62e-14
+MM_REF t = 6.09e-03 sec, GFLOPS =  62.81
+MM_SOL t = 1.02e-02 sec, GFLOPS =  37.37
 
 Running avx2-8x4-unroll.x with arguments 640 ...
 L = 640, N = 4
@@ -125,10 +167,17 @@ err = 7.82e-14
 err = 7.11e-14
 err = 8.53e-14
 err = 6.75e-14
-MM_REF t = 8.02e-03 sec, GFLOPS =  65.43
-MM_SOL t = 1.35e-02 sec, GFLOPS =  38.73
+MM_REF t = 8.14e-03 sec, GFLOPS =  64.48
+MM_SOL t = 1.39e-02 sec, GFLOPS =  37.79
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 640 ...
+L = 640, N = 4
+err = 5.33e-14
+err = 4.97e-14
+err = 4.97e-14
+err = 4.62e-14
+MM_REF t = 7.84e-03 sec, GFLOPS =  66.88
+MM_SOL t = 1.48e-02 sec, GFLOPS =  35.34
 
 Running avx2-8x4-unroll.x with arguments 704 ...
 L = 704, N = 4
@@ -136,10 +185,17 @@ err = 7.82e-14
 err = 8.53e-14
 err = 8.53e-14
 err = 7.82e-14
-MM_REF t = 1.03e-02 sec, GFLOPS =  67.95
-MM_SOL t = 1.80e-02 sec, GFLOPS =  38.75
+MM_REF t = 1.06e-02 sec, GFLOPS =  65.55
+MM_SOL t = 1.83e-02 sec, GFLOPS =  38.11
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 704 ...
+L = 704, N = 4
+err = 5.68e-14
+err = 4.62e-14
+err = 5.33e-14
+err = 5.33e-14
+MM_REF t = 1.05e-02 sec, GFLOPS =  66.69
+MM_SOL t = 1.92e-02 sec, GFLOPS =  36.29
 
 Running avx2-8x4-unroll.x with arguments 768 ...
 L = 768, N = 4
@@ -147,10 +203,17 @@ err = 1.21e-13
 err = 9.24e-14
 err = 9.24e-14
 err = 1.07e-13
-MM_REF t = 1.34e-02 sec, GFLOPS =  67.54
-MM_SOL t = 3.42e-02 sec, GFLOPS =  26.50
+MM_REF t = 1.37e-02 sec, GFLOPS =  66.33
+MM_SOL t = 4.03e-02 sec, GFLOPS =  22.50
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 768 ...
+L = 768, N = 4
+err = 5.33e-14
+err = 5.68e-14
+err = 5.51e-14
+err = 4.97e-14
+MM_REF t = 1.35e-02 sec, GFLOPS =  67.18
+MM_SOL t = 2.77e-02 sec, GFLOPS =  32.79
 
 Running avx2-8x4-unroll.x with arguments 832 ...
 L = 832, N = 4
@@ -158,10 +221,17 @@ err = 1.35e-13
 err = 1.42e-13
 err = 1.14e-13
 err = 1.07e-13
-MM_REF t = 1.69e-02 sec, GFLOPS =  68.16
-MM_SOL t = 2.98e-02 sec, GFLOPS =  38.61
+MM_REF t = 1.73e-02 sec, GFLOPS =  66.73
+MM_SOL t = 3.02e-02 sec, GFLOPS =  38.13
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 832 ...
+L = 832, N = 4
+err = 5.68e-14
+err = 6.39e-14
+err = 5.33e-14
+err = 6.22e-14
+MM_REF t = 1.72e-02 sec, GFLOPS =  66.84
+MM_SOL t = 3.38e-02 sec, GFLOPS =  34.12
 
 Running avx2-8x4-unroll.x with arguments 896 ...
 L = 896, N = 4
@@ -169,10 +239,17 @@ err = 1.14e-13
 err = 1.14e-13
 err = 1.17e-13
 err = 1.14e-13
-MM_REF t = 2.13e-02 sec, GFLOPS =  67.50
-MM_SOL t = 4.19e-02 sec, GFLOPS =  34.36
+MM_REF t = 2.12e-02 sec, GFLOPS =  67.93
+MM_SOL t = 3.86e-02 sec, GFLOPS =  37.24
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 896 ...
+L = 896, N = 4
+err = 7.64e-14
+err = 6.39e-14
+err = 5.68e-14
+err = 4.97e-14
+MM_REF t = 2.13e-02 sec, GFLOPS =  67.66
+MM_SOL t = 4.14e-02 sec, GFLOPS =  34.77
 
 Running avx2-8x4-unroll.x with arguments 960 ...
 L = 960, N = 4
@@ -180,10 +257,17 @@ err = 1.14e-13
 err = 1.35e-13
 err = 1.28e-13
 err = 1.28e-13
-MM_REF t = 2.57e-02 sec, GFLOPS =  68.77
-MM_SOL t = 4.50e-02 sec, GFLOPS =  39.29
+MM_REF t = 2.64e-02 sec, GFLOPS =  67.16
+MM_SOL t = 4.66e-02 sec, GFLOPS =  37.96
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 960 ...
+L = 960, N = 4
+err = 6.04e-14
+err = 6.39e-14
+err = 6.04e-14
+err = 5.60e-14
+MM_REF t = 2.64e-02 sec, GFLOPS =  67.10
+MM_SOL t = 5.17e-02 sec, GFLOPS =  34.25
 
 Running avx2-8x4-unroll.x with arguments 1024 ...
 L = 1024, N = 4
@@ -191,10 +275,17 @@ err = 1.85e-13
 err = 1.49e-13
 err = 1.71e-13
 err = 1.71e-13
-MM_REF t = 3.17e-02 sec, GFLOPS =  67.86
-MM_SOL t = 9.58e-02 sec, GFLOPS =  22.41
+MM_REF t = 3.25e-02 sec, GFLOPS =  66.13
+MM_SOL t = 1.11e-01 sec, GFLOPS =  19.37
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1024 ...
+L = 1024, N = 4
+err = 6.04e-14
+err = 5.68e-14
+err = 6.04e-14
+err = 6.04e-14
+MM_REF t = 3.14e-02 sec, GFLOPS =  68.37
+MM_SOL t = 1.18e-01 sec, GFLOPS =  18.27
 
 Running avx2-8x4-unroll.x with arguments 1088 ...
 L = 1088, N = 4
@@ -202,9 +293,429 @@ err = 1.71e-13
 err = 1.53e-13
 err = 1.60e-13
 err = 1.56e-13
-MM_REF t = 3.70e-02 sec, GFLOPS =  69.68
-MM_SOL t = 7.69e-02 sec, GFLOPS =  33.50
+MM_REF t = 3.80e-02 sec, GFLOPS =  67.74
+MM_SOL t = 7.31e-02 sec, GFLOPS =  35.26
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1088 ...
+L = 1088, N = 4
+err = 6.04e-14
+err = 6.39e-14
+err = 5.77e-14
+err = 5.68e-14
+MM_REF t = 3.81e-02 sec, GFLOPS =  67.61
+MM_SOL t = 7.52e-02 sec, GFLOPS =  34.27
 
 Running avx2-8x4-unroll.x with arguments 1152 ...
+L = 1152, N = 4
+err = 1.46e-13
+err = 1.49e-13
+err = 1.56e-13
+err = 1.63e-13
+MM_REF t = 4.44e-02 sec, GFLOPS =  68.93
+MM_SOL t = 1.80e-01 sec, GFLOPS =  17.04
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1152 ...
+L = 1152, N = 4
+err = 6.75e-14
+err = 7.11e-14
+err = 6.66e-14
+err = 6.75e-14
+MM_REF t = 4.47e-02 sec, GFLOPS =  68.44
+MM_SOL t = 9.15e-02 sec, GFLOPS =  33.41
+
+Running avx2-8x4-unroll.x with arguments 1216 ...
+L = 1216, N = 4
+err = 1.99e-13
+err = 1.99e-13
+err = 1.99e-13
+err = 1.63e-13
+MM_REF t = 5.09e-02 sec, GFLOPS =  70.64
+MM_SOL t = 1.18e-01 sec, GFLOPS =  30.54
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1216 ...
+L = 1216, N = 4
+err = 7.11e-14
+err = 6.39e-14
+err = 6.22e-14
+err = 6.04e-14
+MM_REF t = 5.15e-02 sec, GFLOPS =  69.79
+MM_SOL t = 1.07e-01 sec, GFLOPS =  33.71
+
+Running avx2-8x4-unroll.x with arguments 1280 ...
+L = 1280, N = 4
+err = 1.92e-13
+err = 1.63e-13
+err = 1.71e-13
+err = 1.92e-13
+MM_REF t = 6.04e-02 sec, GFLOPS =  69.46
+MM_SOL t = 2.11e-01 sec, GFLOPS =  19.84
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1280 ...
+L = 1280, N = 4
+err = 5.68e-14
+err = 7.11e-14
+err = 6.04e-14
+err = 6.04e-14
+MM_REF t = 6.16e-02 sec, GFLOPS =  68.06
+MM_SOL t = 1.58e-01 sec, GFLOPS =  26.63
+
+Running avx2-8x4-unroll.x with arguments 1344 ...
+L = 1344, N = 4
+err = 1.99e-13
+err = 1.92e-13
+err = 1.92e-13
+err = 2.06e-13
+MM_REF t = 7.00e-02 sec, GFLOPS =  69.40
+MM_SOL t = 2.14e-01 sec, GFLOPS =  22.74
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1344 ...
+L = 1344, N = 4
+err = 6.84e-14
+err = 6.04e-14
+err = 6.04e-14
+err = 6.39e-14
+MM_REF t = 6.96e-02 sec, GFLOPS =  70.05
+MM_SOL t = 1.42e-01 sec, GFLOPS =  34.26
+
+Running avx2-8x4-unroll.x with arguments 1408 ...
+L = 1408, N = 4
+err = 2.42e-13
+err = 1.78e-13
+err = 1.92e-13
+err = 2.06e-13
+MM_REF t = 7.56e-02 sec, GFLOPS =  73.87
+MM_SOL t = 3.03e-01 sec, GFLOPS =  18.41
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1408 ...
+L = 1408, N = 4
+err = 6.39e-14
+err = 6.04e-14
+err = 6.39e-14
+err = 6.04e-14
+MM_REF t = 7.58e-02 sec, GFLOPS =  73.69
+MM_SOL t = 1.57e-01 sec, GFLOPS =  35.50
+
+Running avx2-8x4-unroll.x with arguments 1472 ...
+L = 1472, N = 4
+err = 2.27e-13
+err = 2.27e-13
+err = 2.13e-13
+err = 1.99e-13
+MM_REF t = 9.12e-02 sec, GFLOPS =  69.95
+MM_SOL t = 2.44e-01 sec, GFLOPS =  26.20
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1472 ...
+L = 1472, N = 4
+err = 7.46e-14
+err = 6.39e-14
+err = 6.39e-14
+err = 6.75e-14
+MM_REF t = 9.33e-02 sec, GFLOPS =  68.42
+MM_SOL t = 1.88e-01 sec, GFLOPS =  34.00
+
+Running avx2-8x4-unroll.x with arguments 1536 ...
+L = 1536, N = 4
+err = 2.20e-13
+err = 1.99e-13
+err = 2.06e-13
+err = 2.34e-13
+MM_REF t = 1.06e-01 sec, GFLOPS =  68.51
+MM_SOL t = 4.10e-01 sec, GFLOPS =  17.69
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1536 ...
+L = 1536, N = 4
+err = 7.82e-14
+err = 6.39e-14
+err = 7.46e-14
+err = 7.11e-14
+MM_REF t = 1.04e-01 sec, GFLOPS =  69.38
+MM_SOL t = 3.75e-01 sec, GFLOPS =  19.34
+
+Running avx2-8x4-unroll.x with arguments 1600 ...
+L = 1600, N = 4
+err = 2.20e-13
+err = 2.20e-13
+err = 2.34e-13
+err = 2.20e-13
+MM_REF t = 1.19e-01 sec, GFLOPS =  68.76
+MM_SOL t = 4.17e-01 sec, GFLOPS =  19.64
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1600 ...
+L = 1600, N = 4
+err = 7.28e-14
+err = 7.11e-14
+err = 7.11e-14
+err = 7.82e-14
+MM_REF t = 1.18e-01 sec, GFLOPS =  69.58
+MM_SOL t = 2.49e-01 sec, GFLOPS =  32.90
+
+Running avx2-8x4-unroll.x with arguments 1664 ...
+L = 1664, N = 4
+err = 2.42e-13
+err = 2.42e-13
+err = 2.20e-13
+err = 2.42e-13
+MM_REF t = 1.33e-01 sec, GFLOPS =  69.27
+MM_SOL t = 7.30e-01 sec, GFLOPS =  12.62
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1664 ...
+L = 1664, N = 4
+err = 7.11e-14
+err = 6.75e-14
+err = 8.53e-14
+err = 7.11e-14
+MM_REF t = 1.32e-01 sec, GFLOPS =  69.66
+MM_SOL t = 2.85e-01 sec, GFLOPS =  32.30
+
+Running avx2-8x4-unroll.x with arguments 1728 ...
+L = 1728, N = 4
+err = 2.59e-13
+err = 2.34e-13
+err = 2.56e-13
+err = 2.77e-13
+MM_REF t = 1.50e-01 sec, GFLOPS =  68.79
+MM_SOL t = 4.68e-01 sec, GFLOPS =  22.06
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1728 ...
+L = 1728, N = 4
+err = 7.82e-14
+err = 6.75e-14
+err = 6.39e-14
+err = 6.93e-14
+MM_REF t = 1.36e-01 sec, GFLOPS =  75.83
+MM_SOL t = 2.89e-01 sec, GFLOPS =  35.67
+
+Running avx2-8x4-unroll.x with arguments 1792 ...
+L = 1792, N = 4
+err = 2.84e-13
+err = 2.84e-13
+err = 2.77e-13
+err = 3.20e-13
+MM_REF t = 1.61e-01 sec, GFLOPS =  71.28
+MM_SOL t = 7.09e-01 sec, GFLOPS =  16.23
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1792 ...
+L = 1792, N = 4
+err = 8.53e-14
+err = 7.82e-14
+err = 7.82e-14
+err = 7.46e-14
+MM_REF t = 1.66e-01 sec, GFLOPS =  69.19
+MM_SOL t = 4.35e-01 sec, GFLOPS =  26.45
+
+Running avx2-8x4-unroll.x with arguments 1856 ...
+L = 1856, N = 4
+err = 2.49e-13
+err = 2.70e-13
+err = 2.63e-13
+err = 2.56e-13
+MM_REF t = 1.84e-01 sec, GFLOPS =  69.62
+MM_SOL t = 6.22e-01 sec, GFLOPS =  20.57
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1856 ...
+L = 1856, N = 4
+err = 7.11e-14
+err = 7.11e-14
+err = 7.73e-14
+err = 7.46e-14
+MM_REF t = 1.84e-01 sec, GFLOPS =  69.55
+MM_SOL t = 3.81e-01 sec, GFLOPS =  33.60
+
+Running avx2-8x4-unroll.x with arguments 1920 ...
+L = 1920, N = 4
+err = 2.98e-13
+err = 2.56e-13
+err = 2.91e-13
+err = 2.98e-13
+MM_REF t = 2.02e-01 sec, GFLOPS =  70.13
+MM_SOL t = 8.57e-01 sec, GFLOPS =  16.52
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1920 ...
+L = 1920, N = 4
+err = 7.82e-14
+err = 7.06e-14
+err = 8.53e-14
+err = 7.82e-14
+MM_REF t = 2.03e-01 sec, GFLOPS =  69.57
+MM_SOL t = 4.87e-01 sec, GFLOPS =  29.05
+
+Running avx2-8x4-unroll.x with arguments 1984 ...
+L = 1984, N = 4
+err = 2.70e-13
+err = 2.84e-13
+err = 2.84e-13
+err = 2.70e-13
+MM_REF t = 2.28e-01 sec, GFLOPS =  68.42
+MM_SOL t = 9.74e-01 sec, GFLOPS =  16.04
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1984 ...
+L = 1984, N = 4
+err = 7.82e-14
+err = 7.11e-14
+err = 7.46e-14
+err = 7.82e-14
+MM_REF t = 2.28e-01 sec, GFLOPS =  68.50
+MM_SOL t = 5.37e-01 sec, GFLOPS =  29.09
+
+Running avx2-8x4-unroll.x with arguments 2048 ...
+L = 2048, N = 4
+err = 2.77e-13
+err = 2.98e-13
+err = 2.88e-13
+err = 2.84e-13
+MM_REF t = 2.45e-01 sec, GFLOPS =  70.08
+MM_SOL t = 2.04e+00 sec, GFLOPS =   8.40
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 2048 ...
+L = 2048, N = 4
+err = 8.35e-14
+err = 7.11e-14
+err = 7.64e-14
+err = 7.11e-14
+MM_REF t = 2.43e-01 sec, GFLOPS =  70.75
+MM_SOL t = 1.19e+00 sec, GFLOPS =  14.41
+
+Running avx2-8x4-unroll.x with arguments 2112 ...
+L = 2112, N = 4
+err = 2.98e-13
+err = 3.13e-13
+err = 3.13e-13
+err = 3.55e-13
+MM_REF t = 2.68e-01 sec, GFLOPS =  70.20
+MM_SOL t = 1.45e+00 sec, GFLOPS =  12.95
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 2112 ...
+L = 2112, N = 4
+err = 7.11e-14
+err = 8.53e-14
+err = 8.53e-14
+err = 8.17e-14
+MM_REF t = 2.71e-01 sec, GFLOPS =  69.60
+MM_SOL t = 6.52e-01 sec, GFLOPS =  28.89
+
+Running avx2-8x4-unroll.x with arguments 2176 ...
+L = 2176, N = 4
+err = 3.34e-13
+err = 3.13e-13
+err = 3.27e-13
+err = 2.98e-13
+MM_REF t = 2.93e-01 sec, GFLOPS =  70.45
+MM_SOL t = 1.71e+00 sec, GFLOPS =  12.06
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 2176 ...
+L = 2176, N = 4
+err = 7.82e-14
+err = 7.82e-14
+err = 8.53e-14
+err = 7.46e-14
+MM_REF t = 2.94e-01 sec, GFLOPS =  70.09
+MM_SOL t = 7.01e-01 sec, GFLOPS =  29.42
+
+Running avx2-8x4-unroll.x with arguments 2240 ...
+L = 2240, N = 4
+err = 3.06e-13
+err = 3.41e-13
+err = 3.77e-13
+err = 3.23e-13
+MM_REF t = 3.21e-01 sec, GFLOPS =  69.97
+MM_SOL t = 1.34e+00 sec, GFLOPS =  16.72
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 2240 ...
+L = 2240, N = 4
+err = 7.11e-14
+err = 8.17e-14
+err = 8.53e-14
+err = 7.82e-14
+MM_REF t = 3.22e-01 sec, GFLOPS =  69.91
+MM_SOL t = 6.73e-01 sec, GFLOPS =  33.38
+
+Running avx2-8x4-unroll.x with arguments 2304 ...
+L = 2304, N = 4
+err = 3.27e-13
+err = 3.62e-13
+err = 3.41e-13
+err = 3.20e-13
+MM_REF t = 3.52e-01 sec, GFLOPS =  69.54
+MM_SOL t = 2.16e+00 sec, GFLOPS =  11.30
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 2304 ...
+L = 2304, N = 4
+err = 8.53e-14
+err = 8.53e-14
+err = 7.82e-14
+err = 7.82e-14
+MM_REF t = 3.46e-01 sec, GFLOPS =  70.70
+MM_SOL t = 9.10e-01 sec, GFLOPS =  26.90
+
+Running avx2-8x4-unroll.x with arguments 2368 ...
+L = 2368, N = 4
+err = 3.62e-13
+err = 3.34e-13
+err = 3.20e-13
+err = 3.27e-13
+MM_REF t = 3.71e-01 sec, GFLOPS =  71.64
+MM_SOL t = 1.62e+00 sec, GFLOPS =  16.36
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 2368 ...
+L = 2368, N = 4
+err = 7.82e-14
+err = 8.53e-14
+err = 7.82e-14
+err = 8.53e-14
+MM_REF t = 3.84e-01 sec, GFLOPS =  69.09
+MM_SOL t = 8.22e-01 sec, GFLOPS =  32.32
+
+Running avx2-8x4-unroll.x with arguments 2432 ...
+L = 2432, N = 4
+err = 3.41e-13
+err = 3.98e-13
+err = 3.69e-13
+err = 3.77e-13
+MM_REF t = 4.21e-01 sec, GFLOPS =  68.38
+MM_SOL t = 2.47e+00 sec, GFLOPS =  11.64
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 2432 ...
+L = 2432, N = 4
+err = 8.53e-14
+err = 8.53e-14
+err = 8.53e-14
+err = 8.53e-14
+MM_REF t = 4.14e-01 sec, GFLOPS =  69.52
+MM_SOL t = 8.87e-01 sec, GFLOPS =  32.44
+
+Running avx2-8x4-unroll.x with arguments 2496 ...
+L = 2496, N = 4
+err = 3.34e-13
+err = 3.13e-13
+err = 4.05e-13
+err = 3.27e-13
+MM_REF t = 4.41e-01 sec, GFLOPS =  70.56
+MM_SOL t = 2.08e+00 sec, GFLOPS =  14.96
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 2496 ...
+L = 2496, N = 4
+err = 8.53e-14
+err = 8.53e-14
+err = 9.24e-14
+err = 8.30e-14
+MM_REF t = 4.49e-01 sec, GFLOPS =  69.22
+MM_SOL t = 9.69e-01 sec, GFLOPS =  32.10
+
+Running avx2-8x4-unroll.x with arguments 2560 ...
+L = 2560, N = 4
+err = 3.41e-13
+err = 3.77e-13
+err = 4.12e-13
+err = 5.47e-13
+MM_REF t = 4.91e-01 sec, GFLOPS =  68.43
+MM_SOL t = 3.28e+00 sec, GFLOPS =  10.23
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 2560 ...
+L = 2560, N = 4
+err = 7.82e-14
+err = 8.53e-14
+err = 8.35e-14
+err = 8.17e-14
+MM_REF t = 4.74e-01 sec, GFLOPS =  70.78
+MM_SOL t = 1.93e+00 sec, GFLOPS =  17.42
+
