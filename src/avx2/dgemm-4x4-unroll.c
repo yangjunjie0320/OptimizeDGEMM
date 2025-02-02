@@ -101,7 +101,14 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c)
             for (k = l4; k < l; ) {
                 a0 = _mm256_loadu_pd(&a[i + k * lda]);
                 b0 = _mm256_broadcast_sd(&b[k + (j + 0) * ldb]);
+                b1 = _mm256_broadcast_sd(&b[k + (j + 1) * ldb]);
+                b2 = _mm256_broadcast_sd(&b[k + (j + 2) * ldb]);
+                b3 = _mm256_broadcast_sd(&b[k + (j + 3) * ldb]);
+
                 c0 = _mm256_fmadd_pd(a0, b0, c0);
+                c1 = _mm256_fmadd_pd(a0, b1, c1);
+                c2 = _mm256_fmadd_pd(a0, b2, c2);
+                c3 = _mm256_fmadd_pd(a0, b3, c3);
                 k++;
             }
 

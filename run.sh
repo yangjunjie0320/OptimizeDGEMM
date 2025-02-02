@@ -18,11 +18,11 @@ echo "CONDA_PREFIX: $CONDA_PREFIX"
 
 cmake ..; make VERBOSE=1 -j4; cd -
 
-ff=("avx2-4x4.x" "avx2-4x4-unroll.x" "register-blocking-2x2.x" "register-blocking-4x4.x")
+ff=("avx2-8x4-unroll.x" "avx2-cache-blocking-8x4-unroll.x")
 # ff=("naive-jki.x" "naive-ijk.x" "naive-kji.x")
 
 cd $PREFIX/build/; echo "" > $PREFIX/plot/tmp;
-for i in $(seq 1 20); do
+for i in $(seq 1 40); do
     echo ""
     echo "L = $i * 64"
     for f in "${ff[@]}"; do
