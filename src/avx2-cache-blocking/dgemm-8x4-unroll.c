@@ -163,9 +163,16 @@ void macro_dgemm(int m, int n, int l, int lda, int ldb, int ldc, double* a, doub
     if (n4 != n0) edge_block(m0, n0 - n4, l0, lda, ldb, ldc, aa, bb, cc);
 }
 
+#ifndef M_BLOCKING
 #define M_BLOCKING 192
+#endif
+#ifndef N_BLOCKING
 #define N_BLOCKING 2048
+#endif
+#ifndef K_BLOCKING
 #define K_BLOCKING 384
+#endif
+
 #define min(a, b) ((a) < (b) ? (a) : (b))
 
 void dgemm(int m, int n, int l, double* a, double* b, double* c) {
