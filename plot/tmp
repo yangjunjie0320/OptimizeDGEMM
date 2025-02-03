@@ -1,1496 +1,801 @@
 
-Running dgemm-96-1024-192.x with arguments 64 ...
+Running avx2-8x4-unroll.x with arguments 64 ...
 L = 64, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.22e-05 sec, GFLOPS =  44.36
-MM_SOL t = 1.19e-05 sec, GFLOPS =  44.14
+MM_REF t = 1.63e-05 sec, GFLOPS =  32.87
+MM_SOL t = 1.11e-05 sec, GFLOPS =  47.36
 
-Running dgemm-96-1024-384.x with arguments 64 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 64 ...
 L = 64, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 9.31e-06 sec, GFLOPS =  57.75
-MM_SOL t = 1.17e-05 sec, GFLOPS =  44.88
+MM_REF t = 9.86e-06 sec, GFLOPS =  55.27
+MM_SOL t = 8.70e-06 sec, GFLOPS =  60.28
 
-Running dgemm-96-1024-768.x with arguments 64 ...
+Running dgemm-32-32-32.x with arguments 64 ...
 L = 64, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.01e-05 sec, GFLOPS =  54.79
-MM_SOL t = 1.22e-05 sec, GFLOPS =  42.92
+MM_REF t = 1.01e-05 sec, GFLOPS =  54.19
+MM_SOL t = 8.57e-06 sec, GFLOPS =  61.18
 
-Running dgemm-192-1024-192.x with arguments 64 ...
+Running dgemm-64-64-64.x with arguments 64 ...
 L = 64, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.01e-05 sec, GFLOPS =  54.43
-MM_SOL t = 1.22e-05 sec, GFLOPS =  43.08
+MM_REF t = 1.16e-05 sec, GFLOPS =  49.71
+MM_SOL t = 9.96e-06 sec, GFLOPS =  53.42
 
-Running dgemm-192-1024-384.x with arguments 64 ...
+Running dgemm-96-96-96.x with arguments 64 ...
 L = 64, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.15e-05 sec, GFLOPS =  49.93
-MM_SOL t = 1.38e-05 sec, GFLOPS =  38.78
+MM_REF t = 1.21e-05 sec, GFLOPS =  48.15
+MM_SOL t = 9.55e-06 sec, GFLOPS =  55.30
 
-Running dgemm-192-1024-768.x with arguments 64 ...
-L = 64, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.02e-05 sec, GFLOPS =  54.11
-MM_SOL t = 1.28e-05 sec, GFLOPS =  41.03
-
-Running dgemm-384-1024-192.x with arguments 64 ...
-L = 64, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 9.79e-06 sec, GFLOPS =  55.74
-MM_SOL t = 1.17e-05 sec, GFLOPS =  44.76
-
-Running dgemm-384-1024-384.x with arguments 64 ...
-L = 64, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 9.62e-06 sec, GFLOPS =  56.48
-MM_SOL t = 1.18e-05 sec, GFLOPS =  44.29
-
-Running dgemm-384-1024-768.x with arguments 64 ...
-L = 64, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.07e-05 sec, GFLOPS =  52.39
-MM_SOL t = 1.29e-05 sec, GFLOPS =  41.02
-
-Running dgemm-96-1024-192.x with arguments 128 ...
+Running avx2-8x4-unroll.x with arguments 128 ...
 L = 128, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 7.85e-05 sec, GFLOPS =  53.46
-MM_SOL t = 1.01e-04 sec, GFLOPS =  41.80
+MM_REF t = 9.57e-05 sec, GFLOPS =  43.94
+MM_SOL t = 8.33e-05 sec, GFLOPS =  50.33
 
-Running dgemm-96-1024-384.x with arguments 128 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 128 ...
 L = 128, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 7.45e-05 sec, GFLOPS =  56.28
-MM_SOL t = 9.60e-05 sec, GFLOPS =  43.68
+MM_REF t = 9.33e-05 sec, GFLOPS =  46.29
+MM_SOL t = 7.20e-05 sec, GFLOPS =  58.23
 
-Running dgemm-96-1024-768.x with arguments 128 ...
+Running dgemm-32-32-32.x with arguments 128 ...
 L = 128, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.02e-04 sec, GFLOPS =  44.35
-MM_SOL t = 9.86e-05 sec, GFLOPS =  42.57
+MM_REF t = 7.30e-05 sec, GFLOPS =  57.70
+MM_SOL t = 7.20e-05 sec, GFLOPS =  58.36
 
-Running dgemm-192-1024-192.x with arguments 128 ...
+Running dgemm-64-64-64.x with arguments 128 ...
 L = 128, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 8.13e-05 sec, GFLOPS =  51.59
-MM_SOL t = 9.57e-05 sec, GFLOPS =  43.82
+MM_REF t = 9.10e-05 sec, GFLOPS =  47.07
+MM_SOL t = 7.45e-05 sec, GFLOPS =  56.47
 
-Running dgemm-192-1024-384.x with arguments 128 ...
+Running dgemm-96-96-96.x with arguments 128 ...
 L = 128, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 7.44e-05 sec, GFLOPS =  56.42
-MM_SOL t = 9.88e-05 sec, GFLOPS =  42.43
+MM_REF t = 7.26e-05 sec, GFLOPS =  58.05
+MM_SOL t = 7.10e-05 sec, GFLOPS =  59.04
 
-Running dgemm-192-1024-768.x with arguments 128 ...
-L = 128, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 7.17e-05 sec, GFLOPS =  58.68
-MM_SOL t = 9.61e-05 sec, GFLOPS =  43.65
-
-Running dgemm-384-1024-192.x with arguments 128 ...
-L = 128, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 9.73e-05 sec, GFLOPS =  43.36
-MM_SOL t = 1.09e-04 sec, GFLOPS =  38.48
-
-Running dgemm-384-1024-384.x with arguments 128 ...
-L = 128, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 7.11e-05 sec, GFLOPS =  59.05
-MM_SOL t = 9.62e-05 sec, GFLOPS =  43.59
-
-Running dgemm-384-1024-768.x with arguments 128 ...
-L = 128, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 7.68e-05 sec, GFLOPS =  54.61
-MM_SOL t = 9.88e-05 sec, GFLOPS =  42.47
-
-Running dgemm-96-1024-192.x with arguments 192 ...
+Running avx2-8x4-unroll.x with arguments 192 ...
 L = 192, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.70e-04 sec, GFLOPS =  52.83
-MM_SOL t = 3.19e-04 sec, GFLOPS =  44.39
+MM_REF t = 3.04e-04 sec, GFLOPS =  46.67
+MM_SOL t = 2.64e-04 sec, GFLOPS =  53.74
 
-Running dgemm-96-1024-384.x with arguments 192 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 192 ...
 L = 192, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.43e-04 sec, GFLOPS =  58.27
-MM_SOL t = 3.24e-04 sec, GFLOPS =  43.75
+MM_REF t = 2.48e-04 sec, GFLOPS =  57.07
+MM_SOL t = 2.48e-04 sec, GFLOPS =  57.08
 
-Running dgemm-96-1024-768.x with arguments 192 ...
+Running dgemm-32-32-32.x with arguments 192 ...
 L = 192, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.28e-04 sec, GFLOPS =  62.17
-MM_SOL t = 3.25e-04 sec, GFLOPS =  43.58
+MM_REF t = 2.32e-04 sec, GFLOPS =  60.89
+MM_SOL t = 2.46e-04 sec, GFLOPS =  57.49
 
-Running dgemm-192-1024-192.x with arguments 192 ...
+Running dgemm-64-64-64.x with arguments 192 ...
 L = 192, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 3.33e-04 sec, GFLOPS =  42.63
-MM_SOL t = 3.90e-04 sec, GFLOPS =  37.29
+MM_REF t = 2.29e-04 sec, GFLOPS =  61.80
+MM_SOL t = 2.46e-04 sec, GFLOPS =  57.51
 
-Running dgemm-192-1024-384.x with arguments 192 ...
+Running dgemm-96-96-96.x with arguments 192 ...
 L = 192, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.56e-04 sec, GFLOPS =  55.62
-MM_SOL t = 3.24e-04 sec, GFLOPS =  43.73
+MM_REF t = 2.36e-04 sec, GFLOPS =  60.13
+MM_SOL t = 2.54e-04 sec, GFLOPS =  55.68
 
-Running dgemm-192-1024-768.x with arguments 192 ...
-L = 192, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.84e-04 sec, GFLOPS =  50.65
-MM_SOL t = 4.05e-04 sec, GFLOPS =  34.95
-
-Running dgemm-384-1024-192.x with arguments 192 ...
-L = 192, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.50e-04 sec, GFLOPS =  56.80
-MM_SOL t = 3.31e-04 sec, GFLOPS =  42.84
-
-Running dgemm-384-1024-384.x with arguments 192 ...
-L = 192, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.35e-04 sec, GFLOPS =  60.41
-MM_SOL t = 3.34e-04 sec, GFLOPS =  42.52
-
-Running dgemm-384-1024-768.x with arguments 192 ...
-L = 192, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.49e-04 sec, GFLOPS =  56.94
-MM_SOL t = 3.25e-04 sec, GFLOPS =  43.51
-
-Running dgemm-96-1024-192.x with arguments 256 ...
+Running avx2-8x4-unroll.x with arguments 256 ...
 L = 256, N = 4
-err = 2.13e-14
-err = 1.78e-14
-err = 1.78e-14
-err = 2.13e-14
-MM_REF t = 5.64e-04 sec, GFLOPS =  59.55
-MM_SOL t = 8.08e-04 sec, GFLOPS =  41.54
+MM_REF t = 7.18e-04 sec, GFLOPS =  47.52
+MM_SOL t = 6.52e-04 sec, GFLOPS =  51.75
 
-Running dgemm-96-1024-384.x with arguments 256 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 256 ...
 L = 256, N = 4
-err = 1.95e-14
-err = 1.95e-14
-err = 2.13e-14
-err = 2.49e-14
-MM_REF t = 5.57e-04 sec, GFLOPS =  60.25
-MM_SOL t = 8.14e-04 sec, GFLOPS =  41.25
+MM_REF t = 5.73e-04 sec, GFLOPS =  58.61
+MM_SOL t = 6.19e-04 sec, GFLOPS =  54.23
 
-Running dgemm-96-1024-768.x with arguments 256 ...
+Running dgemm-32-32-32.x with arguments 256 ...
 L = 256, N = 4
-err = 1.95e-14
-err = 1.95e-14
-err = 2.13e-14
-err = 2.49e-14
-MM_REF t = 5.97e-04 sec, GFLOPS =  56.24
-MM_SOL t = 1.02e-03 sec, GFLOPS =  32.89
+MM_REF t = 5.72e-04 sec, GFLOPS =  58.64
+MM_SOL t = 6.94e-04 sec, GFLOPS =  48.69
 
-Running dgemm-192-1024-192.x with arguments 256 ...
+Running dgemm-64-64-64.x with arguments 256 ...
 L = 256, N = 4
-err = 2.13e-14
-err = 1.78e-14
-err = 1.78e-14
-err = 2.13e-14
-MM_REF t = 6.56e-04 sec, GFLOPS =  51.14
-MM_SOL t = 8.18e-04 sec, GFLOPS =  41.03
+MM_REF t = 5.70e-04 sec, GFLOPS =  58.95
+MM_SOL t = 5.97e-04 sec, GFLOPS =  56.19
 
-Running dgemm-192-1024-384.x with arguments 256 ...
+Running dgemm-96-96-96.x with arguments 256 ...
 L = 256, N = 4
-err = 1.95e-14
-err = 1.95e-14
-err = 2.13e-14
-err = 2.49e-14
-MM_REF t = 7.57e-04 sec, GFLOPS =  45.69
-MM_SOL t = 8.22e-04 sec, GFLOPS =  40.84
+MM_REF t = 7.18e-04 sec, GFLOPS =  47.64
+MM_SOL t = 7.25e-04 sec, GFLOPS =  46.52
 
-Running dgemm-192-1024-768.x with arguments 256 ...
-L = 256, N = 4
-err = 1.95e-14
-err = 1.95e-14
-err = 2.13e-14
-err = 2.49e-14
-MM_REF t = 7.91e-04 sec, GFLOPS =  43.54
-MM_SOL t = 8.30e-04 sec, GFLOPS =  40.42
-
-Running dgemm-384-1024-192.x with arguments 256 ...
-L = 256, N = 4
-err = 2.13e-14
-err = 1.78e-14
-err = 1.78e-14
-err = 2.13e-14
-MM_REF t = 5.74e-04 sec, GFLOPS =  58.46
-MM_SOL t = 9.79e-04 sec, GFLOPS =  34.31
-
-Running dgemm-384-1024-384.x with arguments 256 ...
-L = 256, N = 4
-err = 1.95e-14
-err = 1.95e-14
-err = 2.13e-14
-err = 2.49e-14
-MM_REF t = 5.70e-04 sec, GFLOPS =  58.87
-MM_SOL t = 8.03e-04 sec, GFLOPS =  41.81
-
-Running dgemm-384-1024-768.x with arguments 256 ...
-L = 256, N = 4
-err = 1.95e-14
-err = 1.95e-14
-err = 2.13e-14
-err = 2.49e-14
-MM_REF t = 6.08e-04 sec, GFLOPS =  55.61
-MM_SOL t = 1.00e-03 sec, GFLOPS =  33.66
-
-Running dgemm-96-1024-192.x with arguments 320 ...
+Running avx2-8x4-unroll.x with arguments 320 ...
 L = 320, N = 4
-err = 1.78e-14
-err = 1.78e-14
-err = 2.13e-14
-err = 2.49e-14
-MM_REF t = 1.11e-03 sec, GFLOPS =  59.25
-MM_SOL t = 1.68e-03 sec, GFLOPS =  38.97
+MM_REF t = 1.83e-03 sec, GFLOPS =  36.80
+MM_SOL t = 1.32e-03 sec, GFLOPS =  49.91
 
-Running dgemm-96-1024-384.x with arguments 320 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 320 ...
 L = 320, N = 4
-err = 3.20e-14
-err = 3.91e-14
-err = 3.91e-14
-err = 3.91e-14
-MM_REF t = 1.05e-03 sec, GFLOPS =  62.45
-MM_SOL t = 1.55e-03 sec, GFLOPS =  42.33
+MM_REF t = 1.13e-03 sec, GFLOPS =  58.24
+MM_SOL t = 1.26e-03 sec, GFLOPS =  52.06
 
-Running dgemm-96-1024-768.x with arguments 320 ...
+Running dgemm-32-32-32.x with arguments 320 ...
 L = 320, N = 4
-err = 3.20e-14
-err = 3.91e-14
-err = 3.91e-14
-err = 3.91e-14
-MM_REF t = 1.29e-03 sec, GFLOPS =  52.26
-MM_SOL t = 1.64e-03 sec, GFLOPS =  40.09
+MM_REF t = 1.13e-03 sec, GFLOPS =  58.25
+MM_SOL t = 1.14e-03 sec, GFLOPS =  57.29
 
-Running dgemm-192-1024-192.x with arguments 320 ...
+Running dgemm-64-64-64.x with arguments 320 ...
 L = 320, N = 4
-err = 1.78e-14
-err = 1.78e-14
-err = 2.13e-14
-err = 2.49e-14
-MM_REF t = 1.22e-03 sec, GFLOPS =  53.82
-MM_SOL t = 1.61e-03 sec, GFLOPS =  40.66
+MM_REF t = 1.12e-03 sec, GFLOPS =  58.49
+MM_SOL t = 1.16e-03 sec, GFLOPS =  56.58
 
-Running dgemm-192-1024-384.x with arguments 320 ...
+Running dgemm-96-96-96.x with arguments 320 ...
 L = 320, N = 4
-err = 3.20e-14
-err = 3.91e-14
-err = 3.91e-14
-err = 3.91e-14
-MM_REF t = 1.54e-03 sec, GFLOPS =  46.16
-MM_SOL t = 1.63e-03 sec, GFLOPS =  40.30
+MM_REF t = 1.37e-03 sec, GFLOPS =  50.37
+MM_SOL t = 1.31e-03 sec, GFLOPS =  50.20
 
-Running dgemm-192-1024-768.x with arguments 320 ...
-L = 320, N = 4
-err = 3.20e-14
-err = 3.91e-14
-err = 3.91e-14
-err = 3.91e-14
-MM_REF t = 1.12e-03 sec, GFLOPS =  58.68
-MM_SOL t = 1.62e-03 sec, GFLOPS =  40.46
-
-Running dgemm-384-1024-192.x with arguments 320 ...
-L = 320, N = 4
-err = 1.78e-14
-err = 1.78e-14
-err = 2.13e-14
-err = 2.49e-14
-MM_REF t = 1.11e-03 sec, GFLOPS =  59.26
-MM_SOL t = 1.65e-03 sec, GFLOPS =  39.60
-
-Running dgemm-384-1024-384.x with arguments 320 ...
-L = 320, N = 4
-err = 3.20e-14
-err = 3.91e-14
-err = 3.91e-14
-err = 3.91e-14
-MM_REF t = 1.28e-03 sec, GFLOPS =  51.61
-MM_SOL t = 2.54e-03 sec, GFLOPS =  26.01
-
-Running dgemm-384-1024-768.x with arguments 320 ...
-L = 320, N = 4
-err = 3.20e-14
-err = 3.91e-14
-err = 3.91e-14
-err = 3.91e-14
-MM_REF t = 1.16e-03 sec, GFLOPS =  56.68
-MM_SOL t = 1.71e-03 sec, GFLOPS =  38.31
-
-Running dgemm-96-1024-192.x with arguments 384 ...
+Running avx2-8x4-unroll.x with arguments 384 ...
 L = 384, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.03e-03 sec, GFLOPS =  56.16
-MM_SOL t = 3.01e-03 sec, GFLOPS =  37.63
+MM_REF t = 2.11e-03 sec, GFLOPS =  53.79
+MM_SOL t = 2.37e-03 sec, GFLOPS =  47.90
 
-Running dgemm-96-1024-384.x with arguments 384 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 384 ...
 L = 384, N = 4
-err = 5.33e-14
-err = 3.91e-14
-err = 4.62e-14
-err = 5.68e-14
-MM_REF t = 1.87e-03 sec, GFLOPS =  60.52
-MM_SOL t = 3.17e-03 sec, GFLOPS =  35.74
+MM_REF t = 2.09e-03 sec, GFLOPS =  54.43
+MM_SOL t = 2.30e-03 sec, GFLOPS =  49.33
 
-Running dgemm-96-1024-768.x with arguments 384 ...
+Running dgemm-32-32-32.x with arguments 384 ...
 L = 384, N = 4
-err = 5.33e-14
-err = 3.91e-14
-err = 4.62e-14
-err = 5.68e-14
-MM_REF t = 2.24e-03 sec, GFLOPS =  50.66
-MM_SOL t = 3.48e-03 sec, GFLOPS =  33.14
+MM_REF t = 1.90e-03 sec, GFLOPS =  59.66
+MM_SOL t = 2.01e-03 sec, GFLOPS =  56.27
 
-Running dgemm-192-1024-192.x with arguments 384 ...
+Running dgemm-64-64-64.x with arguments 384 ...
 L = 384, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.09e-03 sec, GFLOPS =  55.10
-MM_SOL t = 3.17e-03 sec, GFLOPS =  35.77
+MM_REF t = 2.22e-03 sec, GFLOPS =  51.67
+MM_SOL t = 2.14e-03 sec, GFLOPS =  52.84
 
-Running dgemm-192-1024-384.x with arguments 384 ...
+Running dgemm-96-96-96.x with arguments 384 ...
 L = 384, N = 4
-err = 5.33e-14
-err = 3.91e-14
-err = 4.62e-14
-err = 5.68e-14
-MM_REF t = 1.99e-03 sec, GFLOPS =  56.95
-MM_SOL t = 3.08e-03 sec, GFLOPS =  36.84
+MM_REF t = 1.84e-03 sec, GFLOPS =  61.46
+MM_SOL t = 2.11e-03 sec, GFLOPS =  53.70
 
-Running dgemm-192-1024-768.x with arguments 384 ...
-L = 384, N = 4
-err = 5.33e-14
-err = 3.91e-14
-err = 4.62e-14
-err = 5.68e-14
-MM_REF t = 1.92e-03 sec, GFLOPS =  58.95
-MM_SOL t = 3.02e-03 sec, GFLOPS =  37.59
-
-Running dgemm-384-1024-192.x with arguments 384 ...
-L = 384, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.00e-03 sec, GFLOPS =  57.01
-MM_SOL t = 3.01e-03 sec, GFLOPS =  37.60
-
-Running dgemm-384-1024-384.x with arguments 384 ...
-L = 384, N = 4
-err = 5.33e-14
-err = 3.91e-14
-err = 4.62e-14
-err = 5.68e-14
-MM_REF t = 2.01e-03 sec, GFLOPS =  56.50
-MM_SOL t = 3.03e-03 sec, GFLOPS =  37.38
-
-Running dgemm-384-1024-768.x with arguments 384 ...
-L = 384, N = 4
-err = 5.33e-14
-err = 3.91e-14
-err = 4.62e-14
-err = 5.68e-14
-MM_REF t = 1.83e-03 sec, GFLOPS =  61.76
-MM_SOL t = 2.94e-03 sec, GFLOPS =  38.51
-
-Running dgemm-96-1024-192.x with arguments 448 ...
+Running avx2-8x4-unroll.x with arguments 448 ...
 L = 448, N = 4
-err = 2.13e-14
-err = 2.20e-14
-err = 1.51e-14
-err = 1.95e-14
-MM_REF t = 3.34e-03 sec, GFLOPS =  54.54
-MM_SOL t = 5.08e-03 sec, GFLOPS =  35.42
+MM_REF t = 3.28e-03 sec, GFLOPS =  55.43
+MM_SOL t = 3.73e-03 sec, GFLOPS =  48.21
 
-Running dgemm-96-1024-384.x with arguments 448 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 448 ...
 L = 448, N = 4
-err = 4.62e-14
-err = 4.97e-14
-err = 4.62e-14
-err = 3.91e-14
-MM_REF t = 3.05e-03 sec, GFLOPS =  59.12
-MM_SOL t = 4.99e-03 sec, GFLOPS =  36.07
+MM_REF t = 2.99e-03 sec, GFLOPS =  60.22
+MM_SOL t = 4.08e-03 sec, GFLOPS =  44.11
 
-Running dgemm-96-1024-768.x with arguments 448 ...
+Running dgemm-32-32-32.x with arguments 448 ...
 L = 448, N = 4
-err = 5.33e-14
-err = 5.33e-14
-err = 5.68e-14
-err = 4.62e-14
-MM_REF t = 3.00e-03 sec, GFLOPS =  59.88
-MM_SOL t = 5.38e-03 sec, GFLOPS =  33.49
+MM_REF t = 3.13e-03 sec, GFLOPS =  57.59
+MM_SOL t = 3.15e-03 sec, GFLOPS =  57.06
 
-Running dgemm-192-1024-192.x with arguments 448 ...
+Running dgemm-64-64-64.x with arguments 448 ...
 L = 448, N = 4
-err = 2.13e-14
-err = 2.20e-14
-err = 1.51e-14
-err = 1.95e-14
-MM_REF t = 3.55e-03 sec, GFLOPS =  50.63
-MM_SOL t = 5.16e-03 sec, GFLOPS =  34.93
+MM_REF t = 3.00e-03 sec, GFLOPS =  59.97
+MM_SOL t = 3.41e-03 sec, GFLOPS =  52.78
 
-Running dgemm-192-1024-384.x with arguments 448 ...
+Running dgemm-96-96-96.x with arguments 448 ...
 L = 448, N = 4
-err = 4.62e-14
-err = 4.97e-14
-err = 4.62e-14
-err = 3.91e-14
-MM_REF t = 3.01e-03 sec, GFLOPS =  59.71
-MM_SOL t = 5.00e-03 sec, GFLOPS =  35.95
+MM_REF t = 3.04e-03 sec, GFLOPS =  59.20
+MM_SOL t = 3.48e-03 sec, GFLOPS =  51.67
 
-Running dgemm-192-1024-768.x with arguments 448 ...
-L = 448, N = 4
-err = 5.33e-14
-err = 5.33e-14
-err = 5.68e-14
-err = 4.62e-14
-MM_REF t = 3.07e-03 sec, GFLOPS =  58.75
-MM_SOL t = 5.20e-03 sec, GFLOPS =  34.61
-
-Running dgemm-384-1024-192.x with arguments 448 ...
-L = 448, N = 4
-err = 2.13e-14
-err = 2.20e-14
-err = 1.51e-14
-err = 1.95e-14
-MM_REF t = 3.58e-03 sec, GFLOPS =  52.03
-MM_SOL t = 4.97e-03 sec, GFLOPS =  36.17
-
-Running dgemm-384-1024-384.x with arguments 448 ...
-L = 448, N = 4
-err = 4.62e-14
-err = 4.97e-14
-err = 4.62e-14
-err = 3.91e-14
-MM_REF t = 3.00e-03 sec, GFLOPS =  59.92
-MM_SOL t = 5.09e-03 sec, GFLOPS =  35.34
-
-Running dgemm-384-1024-768.x with arguments 448 ...
-L = 448, N = 4
-err = 5.33e-14
-err = 5.33e-14
-err = 5.68e-14
-err = 4.62e-14
-MM_REF t = 3.35e-03 sec, GFLOPS =  54.19
-MM_SOL t = 5.21e-03 sec, GFLOPS =  34.61
-
-Running dgemm-96-1024-192.x with arguments 512 ...
+Running avx2-8x4-unroll.x with arguments 512 ...
 L = 512, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 5.20e-03 sec, GFLOPS =  51.74
-MM_SOL t = 1.10e-02 sec, GFLOPS =  24.35
+MM_REF t = 4.75e-03 sec, GFLOPS =  56.72
+MM_SOL t = 1.27e-02 sec, GFLOPS =  21.16
 
-Running dgemm-96-1024-384.x with arguments 512 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 512 ...
 L = 512, N = 4
-err = 4.62e-14
-err = 3.91e-14
-err = 4.97e-14
-err = 4.97e-14
-MM_REF t = 4.64e-03 sec, GFLOPS =  57.91
-MM_SOL t = 1.25e-02 sec, GFLOPS =  21.44
+MM_REF t = 4.56e-03 sec, GFLOPS =  58.95
+MM_SOL t = 1.06e-02 sec, GFLOPS =  25.22
 
-Running dgemm-96-1024-768.x with arguments 512 ...
+Running dgemm-32-32-32.x with arguments 512 ...
 L = 512, N = 4
-err = 5.33e-14
-err = 5.33e-14
-err = 6.39e-14
-err = 6.75e-14
-MM_REF t = 4.70e-03 sec, GFLOPS =  57.47
-MM_SOL t = 1.58e-02 sec, GFLOPS =  17.02
+MM_REF t = 4.62e-03 sec, GFLOPS =  58.22
+MM_SOL t = 5.62e-03 sec, GFLOPS =  47.80
 
-Running dgemm-192-1024-192.x with arguments 512 ...
+Running dgemm-64-64-64.x with arguments 512 ...
 L = 512, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 4.63e-03 sec, GFLOPS =  58.32
-MM_SOL t = 1.03e-02 sec, GFLOPS =  26.19
+MM_REF t = 5.30e-03 sec, GFLOPS =  51.38
+MM_SOL t = 5.86e-03 sec, GFLOPS =  45.82
 
-Running dgemm-192-1024-384.x with arguments 512 ...
+Running dgemm-96-96-96.x with arguments 512 ...
 L = 512, N = 4
-err = 4.62e-14
-err = 3.91e-14
-err = 4.97e-14
-err = 4.97e-14
-MM_REF t = 4.93e-03 sec, GFLOPS =  55.15
-MM_SOL t = 1.24e-02 sec, GFLOPS =  21.61
+MM_REF t = 4.88e-03 sec, GFLOPS =  55.04
+MM_SOL t = 5.56e-03 sec, GFLOPS =  48.31
 
-Running dgemm-192-1024-768.x with arguments 512 ...
-L = 512, N = 4
-err = 5.33e-14
-err = 5.33e-14
-err = 6.39e-14
-err = 6.75e-14
-MM_REF t = 5.09e-03 sec, GFLOPS =  54.12
-MM_SOL t = 1.49e-02 sec, GFLOPS =  18.16
-
-Running dgemm-384-1024-192.x with arguments 512 ...
-L = 512, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 4.71e-03 sec, GFLOPS =  57.02
-MM_SOL t = 1.01e-02 sec, GFLOPS =  26.69
-
-Running dgemm-384-1024-384.x with arguments 512 ...
-L = 512, N = 4
-err = 4.62e-14
-err = 3.91e-14
-err = 4.97e-14
-err = 4.97e-14
-MM_REF t = 4.63e-03 sec, GFLOPS =  57.96
-MM_SOL t = 1.24e-02 sec, GFLOPS =  21.76
-
-Running dgemm-384-1024-768.x with arguments 512 ...
-L = 512, N = 4
-err = 5.33e-14
-err = 5.33e-14
-err = 6.39e-14
-err = 6.75e-14
-MM_REF t = 4.56e-03 sec, GFLOPS =  59.05
-MM_SOL t = 1.45e-02 sec, GFLOPS =  18.46
-
-Running dgemm-96-1024-192.x with arguments 576 ...
+Running avx2-8x4-unroll.x with arguments 576 ...
 L = 576, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 6.39e-03 sec, GFLOPS =  59.85
-MM_SOL t = 1.26e-02 sec, GFLOPS =  30.33
+MM_REF t = 6.69e-03 sec, GFLOPS =  57.14
+MM_SOL t = 9.33e-03 sec, GFLOPS =  41.11
 
-Running dgemm-96-1024-384.x with arguments 576 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 576 ...
 L = 576, N = 4
-err = 4.26e-14
-err = 4.26e-14
-err = 4.97e-14
-err = 4.62e-14
-MM_REF t = 6.62e-03 sec, GFLOPS =  57.80
-MM_SOL t = 1.21e-02 sec, GFLOPS =  31.68
+MM_REF t = 6.50e-03 sec, GFLOPS =  58.85
+MM_SOL t = 8.91e-03 sec, GFLOPS =  42.89
 
-Running dgemm-96-1024-768.x with arguments 576 ...
+Running dgemm-32-32-32.x with arguments 576 ...
 L = 576, N = 4
-err = 6.93e-14
-err = 6.75e-14
-err = 7.11e-14
-err = 6.75e-14
-MM_REF t = 6.48e-03 sec, GFLOPS =  59.39
-MM_SOL t = 1.11e-02 sec, GFLOPS =  34.55
+MM_REF t = 6.46e-03 sec, GFLOPS =  59.23
+MM_SOL t = 6.73e-03 sec, GFLOPS =  56.79
 
-Running dgemm-192-1024-192.x with arguments 576 ...
+Running dgemm-64-64-64.x with arguments 576 ...
 L = 576, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 7.08e-03 sec, GFLOPS =  54.06
-MM_SOL t = 1.27e-02 sec, GFLOPS =  30.30
+MM_REF t = 6.99e-03 sec, GFLOPS =  55.17
+MM_SOL t = 7.42e-03 sec, GFLOPS =  51.53
 
-Running dgemm-192-1024-384.x with arguments 576 ...
+Running dgemm-96-96-96.x with arguments 576 ...
 L = 576, N = 4
-err = 4.26e-14
-err = 4.26e-14
-err = 4.97e-14
-err = 4.62e-14
-MM_REF t = 6.60e-03 sec, GFLOPS =  58.02
-MM_SOL t = 1.19e-02 sec, GFLOPS =  32.14
+MM_REF t = 6.99e-03 sec, GFLOPS =  54.87
+MM_SOL t = 7.84e-03 sec, GFLOPS =  48.77
 
-Running dgemm-192-1024-768.x with arguments 576 ...
-L = 576, N = 4
-err = 6.93e-14
-err = 6.75e-14
-err = 7.11e-14
-err = 6.75e-14
-MM_REF t = 6.69e-03 sec, GFLOPS =  57.50
-MM_SOL t = 1.10e-02 sec, GFLOPS =  34.78
-
-Running dgemm-384-1024-192.x with arguments 576 ...
-L = 576, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 6.14e-03 sec, GFLOPS =  62.29
-MM_SOL t = 1.34e-02 sec, GFLOPS =  28.64
-
-Running dgemm-384-1024-384.x with arguments 576 ...
-L = 576, N = 4
-err = 4.26e-14
-err = 4.26e-14
-err = 4.97e-14
-err = 4.62e-14
-MM_REF t = 6.60e-03 sec, GFLOPS =  58.28
-MM_SOL t = 1.16e-02 sec, GFLOPS =  32.92
-
-Running dgemm-384-1024-768.x with arguments 576 ...
-L = 576, N = 4
-err = 6.93e-14
-err = 6.75e-14
-err = 7.11e-14
-err = 6.75e-14
-MM_REF t = 6.76e-03 sec, GFLOPS =  56.76
-MM_SOL t = 1.07e-02 sec, GFLOPS =  35.66
-
-Running dgemm-96-1024-192.x with arguments 640 ...
+Running avx2-8x4-unroll.x with arguments 640 ...
 L = 640, N = 4
-err = 2.13e-14
-err = 1.95e-14
-err = 2.09e-14
-err = 2.66e-14
-MM_REF t = 1.00e-02 sec, GFLOPS =  52.23
-MM_SOL t = 1.89e-02 sec, GFLOPS =  27.79
+MM_REF t = 9.30e-03 sec, GFLOPS =  56.54
+MM_SOL t = 1.27e-02 sec, GFLOPS =  41.37
 
-Running dgemm-96-1024-384.x with arguments 640 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 640 ...
 L = 640, N = 4
-err = 5.33e-14
-err = 4.97e-14
-err = 4.97e-14
-err = 4.62e-14
-MM_REF t = 8.83e-03 sec, GFLOPS =  59.42
-MM_SOL t = 1.65e-02 sec, GFLOPS =  31.71
+MM_REF t = 8.71e-03 sec, GFLOPS =  60.25
+MM_SOL t = 1.31e-02 sec, GFLOPS =  40.09
 
-Running dgemm-96-1024-768.x with arguments 640 ...
+Running dgemm-32-32-32.x with arguments 640 ...
 L = 640, N = 4
-err = 7.82e-14
-err = 7.11e-14
-err = 8.53e-14
-err = 6.75e-14
-MM_REF t = 8.87e-03 sec, GFLOPS =  59.14
-MM_SOL t = 1.67e-02 sec, GFLOPS =  31.55
+MM_REF t = 1.02e-02 sec, GFLOPS =  51.49
+MM_SOL t = 9.79e-03 sec, GFLOPS =  53.58
 
-Running dgemm-192-1024-192.x with arguments 640 ...
+Running dgemm-64-64-64.x with arguments 640 ...
 L = 640, N = 4
-err = 2.13e-14
-err = 1.95e-14
-err = 2.09e-14
-err = 2.66e-14
-MM_REF t = 8.54e-03 sec, GFLOPS =  61.37
-MM_SOL t = 1.83e-02 sec, GFLOPS =  28.71
+MM_REF t = 9.53e-03 sec, GFLOPS =  55.02
+MM_SOL t = 1.01e-02 sec, GFLOPS =  51.73
 
-Running dgemm-192-1024-384.x with arguments 640 ...
+Running dgemm-96-96-96.x with arguments 640 ...
 L = 640, N = 4
-err = 5.33e-14
-err = 4.97e-14
-err = 4.97e-14
-err = 4.62e-14
-MM_REF t = 9.23e-03 sec, GFLOPS =  56.97
-MM_SOL t = 1.67e-02 sec, GFLOPS =  31.43
+MM_REF t = 9.27e-03 sec, GFLOPS =  56.65
+MM_SOL t = 1.14e-02 sec, GFLOPS =  45.90
 
-Running dgemm-192-1024-768.x with arguments 640 ...
-L = 640, N = 4
-err = 7.82e-14
-err = 7.11e-14
-err = 8.53e-14
-err = 6.75e-14
-MM_REF t = 8.98e-03 sec, GFLOPS =  58.52
-MM_SOL t = 1.64e-02 sec, GFLOPS =  32.07
-
-Running dgemm-384-1024-192.x with arguments 640 ...
-L = 640, N = 4
-err = 2.13e-14
-err = 1.95e-14
-err = 2.09e-14
-err = 2.66e-14
-MM_REF t = 8.47e-03 sec, GFLOPS =  61.87
-MM_SOL t = 1.92e-02 sec, GFLOPS =  27.39
-
-Running dgemm-384-1024-384.x with arguments 640 ...
-L = 640, N = 4
-err = 5.33e-14
-err = 4.97e-14
-err = 4.97e-14
-err = 4.62e-14
-MM_REF t = 9.04e-03 sec, GFLOPS =  58.08
-MM_SOL t = 1.64e-02 sec, GFLOPS =  32.01
-
-Running dgemm-384-1024-768.x with arguments 640 ...
-L = 640, N = 4
-err = 7.82e-14
-err = 7.11e-14
-err = 8.53e-14
-err = 6.75e-14
-MM_REF t = 8.73e-03 sec, GFLOPS =  60.14
-MM_SOL t = 1.61e-02 sec, GFLOPS =  32.63
-
-Running dgemm-96-1024-192.x with arguments 704 ...
+Running avx2-8x4-unroll.x with arguments 704 ...
 L = 704, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.22e-02 sec, GFLOPS =  57.22
-MM_SOL t = 2.45e-02 sec, GFLOPS =  28.49
+MM_REF t = 1.27e-02 sec, GFLOPS =  54.78
+MM_SOL t = 1.52e-02 sec, GFLOPS =  46.05
 
-Running dgemm-96-1024-384.x with arguments 704 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 704 ...
 L = 704, N = 4
-err = 5.68e-14
-err = 4.62e-14
-err = 5.33e-14
-err = 5.33e-14
-MM_REF t = 1.14e-02 sec, GFLOPS =  61.11
-MM_SOL t = 2.31e-02 sec, GFLOPS =  30.18
+MM_REF t = 1.21e-02 sec, GFLOPS =  57.46
+MM_SOL t = 1.80e-02 sec, GFLOPS =  38.86
 
-Running dgemm-96-1024-768.x with arguments 704 ...
+Running dgemm-32-32-32.x with arguments 704 ...
 L = 704, N = 4
-err = 7.82e-14
-err = 8.53e-14
-err = 8.53e-14
-err = 7.82e-14
-MM_REF t = 1.12e-02 sec, GFLOPS =  62.42
-MM_SOL t = 2.06e-02 sec, GFLOPS =  33.94
+MM_REF t = 1.24e-02 sec, GFLOPS =  56.39
+MM_SOL t = 1.29e-02 sec, GFLOPS =  54.29
 
-Running dgemm-192-1024-192.x with arguments 704 ...
+Running dgemm-64-64-64.x with arguments 704 ...
 L = 704, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.11e-02 sec, GFLOPS =  62.83
-MM_SOL t = 2.62e-02 sec, GFLOPS =  26.59
+MM_REF t = 1.15e-02 sec, GFLOPS =  60.46
+MM_SOL t = 1.43e-02 sec, GFLOPS =  48.69
 
-Running dgemm-192-1024-384.x with arguments 704 ...
+Running dgemm-96-96-96.x with arguments 704 ...
 L = 704, N = 4
-err = 5.68e-14
-err = 4.62e-14
-err = 5.33e-14
-err = 5.33e-14
-MM_REF t = 1.25e-02 sec, GFLOPS =  55.80
-MM_SOL t = 2.17e-02 sec, GFLOPS =  32.13
+MM_REF t = 1.18e-02 sec, GFLOPS =  59.09
+MM_SOL t = 1.42e-02 sec, GFLOPS =  49.09
 
-Running dgemm-192-1024-768.x with arguments 704 ...
-L = 704, N = 4
-err = 7.82e-14
-err = 8.53e-14
-err = 8.53e-14
-err = 7.82e-14
-MM_REF t = 1.18e-02 sec, GFLOPS =  59.29
-MM_SOL t = 2.14e-02 sec, GFLOPS =  32.54
-
-Running dgemm-384-1024-192.x with arguments 704 ...
-L = 704, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.16e-02 sec, GFLOPS =  60.12
-MM_SOL t = 2.50e-02 sec, GFLOPS =  27.91
-
-Running dgemm-384-1024-384.x with arguments 704 ...
-L = 704, N = 4
-err = 5.68e-14
-err = 4.62e-14
-err = 5.33e-14
-err = 5.33e-14
-MM_REF t = 1.17e-02 sec, GFLOPS =  59.44
-MM_SOL t = 2.27e-02 sec, GFLOPS =  30.81
-
-Running dgemm-384-1024-768.x with arguments 704 ...
-L = 704, N = 4
-err = 7.82e-14
-err = 8.53e-14
-err = 8.53e-14
-err = 7.82e-14
-MM_REF t = 1.11e-02 sec, GFLOPS =  62.60
-MM_SOL t = 2.06e-02 sec, GFLOPS =  33.82
-
-Running dgemm-96-1024-192.x with arguments 768 ...
+Running avx2-8x4-unroll.x with arguments 768 ...
 L = 768, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.47e-02 sec, GFLOPS =  61.46
-MM_SOL t = 3.35e-02 sec, GFLOPS =  27.02
+MM_REF t = 1.55e-02 sec, GFLOPS =  58.77
+MM_SOL t = 3.82e-02 sec, GFLOPS =  23.82
 
-Running dgemm-96-1024-384.x with arguments 768 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 768 ...
 L = 768, N = 4
-err = 5.33e-14
-err = 5.68e-14
-err = 5.51e-14
-err = 4.97e-14
-MM_REF t = 1.53e-02 sec, GFLOPS =  59.10
-MM_SOL t = 3.02e-02 sec, GFLOPS =  29.99
+MM_REF t = 1.69e-02 sec, GFLOPS =  53.53
+MM_SOL t = 2.24e-02 sec, GFLOPS =  40.54
 
-Running dgemm-96-1024-768.x with arguments 768 ...
+Running dgemm-32-32-32.x with arguments 768 ...
 L = 768, N = 4
-err = 1.21e-13
-err = 9.24e-14
-err = 9.24e-14
-err = 1.07e-13
-MM_REF t = 1.42e-02 sec, GFLOPS =  63.86
-MM_SOL t = 4.38e-02 sec, GFLOPS =  20.74
+MM_REF t = 1.46e-02 sec, GFLOPS =  61.88
+MM_SOL t = 1.90e-02 sec, GFLOPS =  47.58
 
-Running dgemm-192-1024-192.x with arguments 768 ...
+Running dgemm-64-64-64.x with arguments 768 ...
 L = 768, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.52e-02 sec, GFLOPS =  59.88
-MM_SOL t = 3.44e-02 sec, GFLOPS =  26.30
+MM_REF t = 1.52e-02 sec, GFLOPS =  59.75
+MM_SOL t = 1.78e-02 sec, GFLOPS =  50.94
 
-Running dgemm-192-1024-384.x with arguments 768 ...
+Running dgemm-96-96-96.x with arguments 768 ...
 L = 768, N = 4
-err = 5.33e-14
-err = 5.68e-14
-err = 5.51e-14
-err = 4.97e-14
-MM_REF t = 1.53e-02 sec, GFLOPS =  59.24
-MM_SOL t = 3.30e-02 sec, GFLOPS =  27.48
+MM_REF t = 1.51e-02 sec, GFLOPS =  59.93
+MM_SOL t = 1.87e-02 sec, GFLOPS =  48.44
 
-Running dgemm-192-1024-768.x with arguments 768 ...
-L = 768, N = 4
-err = 1.21e-13
-err = 9.24e-14
-err = 9.24e-14
-err = 1.07e-13
-MM_REF t = 1.58e-02 sec, GFLOPS =  57.41
-MM_SOL t = 4.12e-02 sec, GFLOPS =  22.01
-
-Running dgemm-384-1024-192.x with arguments 768 ...
-L = 768, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.55e-02 sec, GFLOPS =  58.52
-MM_SOL t = 3.36e-02 sec, GFLOPS =  26.98
-
-Running dgemm-384-1024-384.x with arguments 768 ...
-L = 768, N = 4
-err = 5.33e-14
-err = 5.68e-14
-err = 5.51e-14
-err = 4.97e-14
-MM_REF t = 1.53e-02 sec, GFLOPS =  59.19
-MM_SOL t = 3.13e-02 sec, GFLOPS =  28.98
-
-Running dgemm-384-1024-768.x with arguments 768 ...
-L = 768, N = 4
-err = 1.21e-13
-err = 9.24e-14
-err = 9.24e-14
-err = 1.07e-13
-MM_REF t = 1.60e-02 sec, GFLOPS =  56.53
-MM_SOL t = 4.17e-02 sec, GFLOPS =  21.74
-
-Running dgemm-96-1024-192.x with arguments 832 ...
+Running avx2-8x4-unroll.x with arguments 832 ...
 L = 832, N = 4
-err = 1.95e-14
-err = 2.75e-14
-err = 2.49e-14
-err = 2.66e-14
-MM_REF t = 1.85e-02 sec, GFLOPS =  62.17
-MM_SOL t = 4.32e-02 sec, GFLOPS =  26.66
+MM_REF t = 1.97e-02 sec, GFLOPS =  58.61
+MM_SOL t = 2.54e-02 sec, GFLOPS =  45.36
 
-Running dgemm-96-1024-384.x with arguments 832 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 832 ...
 L = 832, N = 4
-err = 5.68e-14
-err = 6.39e-14
-err = 5.33e-14
-err = 6.22e-14
-MM_REF t = 1.95e-02 sec, GFLOPS =  59.19
-MM_SOL t = 3.87e-02 sec, GFLOPS =  29.73
+MM_REF t = 2.06e-02 sec, GFLOPS =  55.82
+MM_SOL t = 2.90e-02 sec, GFLOPS =  39.69
 
-Running dgemm-96-1024-768.x with arguments 832 ...
+Running dgemm-32-32-32.x with arguments 832 ...
 L = 832, N = 4
-err = 9.95e-14
-err = 1.14e-13
-err = 9.95e-14
-err = 1.14e-13
-MM_REF t = 1.89e-02 sec, GFLOPS =  60.90
-MM_SOL t = 3.63e-02 sec, GFLOPS =  31.71
+MM_REF t = 1.92e-02 sec, GFLOPS =  60.09
+MM_SOL t = 2.16e-02 sec, GFLOPS =  53.43
 
-Running dgemm-192-1024-192.x with arguments 832 ...
+Running dgemm-64-64-64.x with arguments 832 ...
 L = 832, N = 4
-err = 1.95e-14
-err = 2.75e-14
-err = 2.49e-14
-err = 2.66e-14
-MM_REF t = 1.98e-02 sec, GFLOPS =  58.34
-MM_SOL t = 4.30e-02 sec, GFLOPS =  26.78
+MM_REF t = 1.99e-02 sec, GFLOPS =  57.95
+MM_SOL t = 2.47e-02 sec, GFLOPS =  46.71
 
-Running dgemm-192-1024-384.x with arguments 832 ...
+Running dgemm-96-96-96.x with arguments 832 ...
 L = 832, N = 4
-err = 5.68e-14
-err = 6.39e-14
-err = 5.33e-14
-err = 6.22e-14
-MM_REF t = 1.99e-02 sec, GFLOPS =  57.97
-MM_SOL t = 4.23e-02 sec, GFLOPS =  27.21
+MM_REF t = 1.91e-02 sec, GFLOPS =  60.24
+MM_SOL t = 2.39e-02 sec, GFLOPS =  48.11
 
-Running dgemm-192-1024-768.x with arguments 832 ...
-L = 832, N = 4
-err = 9.95e-14
-err = 1.14e-13
-err = 9.95e-14
-err = 1.14e-13
-MM_REF t = 1.86e-02 sec, GFLOPS =  61.80
-MM_SOL t = 3.86e-02 sec, GFLOPS =  29.88
-
-Running dgemm-384-1024-192.x with arguments 832 ...
-L = 832, N = 4
-err = 1.95e-14
-err = 2.75e-14
-err = 2.49e-14
-err = 2.66e-14
-MM_REF t = 1.95e-02 sec, GFLOPS =  59.11
-MM_SOL t = 4.55e-02 sec, GFLOPS =  25.29
-
-Running dgemm-384-1024-384.x with arguments 832 ...
-L = 832, N = 4
-err = 5.68e-14
-err = 6.39e-14
-err = 5.33e-14
-err = 6.22e-14
-MM_REF t = 1.90e-02 sec, GFLOPS =  60.63
-MM_SOL t = 3.74e-02 sec, GFLOPS =  30.76
-
-Running dgemm-384-1024-768.x with arguments 832 ...
-L = 832, N = 4
-err = 9.95e-14
-err = 1.14e-13
-err = 9.95e-14
-err = 1.14e-13
-MM_REF t = 1.86e-02 sec, GFLOPS =  61.99
-MM_SOL t = 3.71e-02 sec, GFLOPS =  31.10
-
-Running dgemm-96-1024-192.x with arguments 896 ...
+Running avx2-8x4-unroll.x with arguments 896 ...
 L = 896, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.38e-02 sec, GFLOPS =  60.50
-MM_SOL t = 5.60e-02 sec, GFLOPS =  25.68
+MM_REF t = 2.52e-02 sec, GFLOPS =  57.08
+MM_SOL t = 3.58e-02 sec, GFLOPS =  40.18
 
-Running dgemm-96-1024-384.x with arguments 896 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 896 ...
 L = 896, N = 4
-err = 7.64e-14
-err = 6.39e-14
-err = 5.68e-14
-err = 4.97e-14
-MM_REF t = 2.37e-02 sec, GFLOPS =  60.61
-MM_SOL t = 4.75e-02 sec, GFLOPS =  30.26
+MM_REF t = 2.40e-02 sec, GFLOPS =  59.87
+MM_SOL t = 3.83e-02 sec, GFLOPS =  37.52
 
-Running dgemm-96-1024-768.x with arguments 896 ...
+Running dgemm-32-32-32.x with arguments 896 ...
 L = 896, N = 4
-err = 1.28e-13
-err = 9.24e-14
-err = 1.07e-13
-err = 1.07e-13
-MM_REF t = 2.31e-02 sec, GFLOPS =  62.27
-MM_SOL t = 4.68e-02 sec, GFLOPS =  30.71
+MM_REF t = 2.30e-02 sec, GFLOPS =  62.46
+MM_SOL t = 2.84e-02 sec, GFLOPS =  50.82
 
-Running dgemm-192-1024-192.x with arguments 896 ...
+Running dgemm-64-64-64.x with arguments 896 ...
 L = 896, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.40e-02 sec, GFLOPS =  59.97
-MM_SOL t = 5.69e-02 sec, GFLOPS =  25.29
+MM_REF t = 2.45e-02 sec, GFLOPS =  58.66
+MM_SOL t = 2.94e-02 sec, GFLOPS =  48.85
 
-Running dgemm-192-1024-384.x with arguments 896 ...
+Running dgemm-96-96-96.x with arguments 896 ...
 L = 896, N = 4
-err = 7.64e-14
-err = 6.39e-14
-err = 5.68e-14
-err = 4.97e-14
-MM_REF t = 2.39e-02 sec, GFLOPS =  60.20
-MM_SOL t = 5.03e-02 sec, GFLOPS =  28.62
+MM_REF t = 2.48e-02 sec, GFLOPS =  57.92
+MM_SOL t = 3.08e-02 sec, GFLOPS =  46.74
 
-Running dgemm-192-1024-768.x with arguments 896 ...
-L = 896, N = 4
-err = 1.28e-13
-err = 9.24e-14
-err = 1.07e-13
-err = 1.07e-13
-MM_REF t = 2.47e-02 sec, GFLOPS =  58.45
-MM_SOL t = 4.67e-02 sec, GFLOPS =  30.84
-
-Running dgemm-384-1024-192.x with arguments 896 ...
-L = 896, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.41e-02 sec, GFLOPS =  59.72
-MM_SOL t = 5.49e-02 sec, GFLOPS =  26.21
-
-Running dgemm-384-1024-384.x with arguments 896 ...
-L = 896, N = 4
-err = 7.64e-14
-err = 6.39e-14
-err = 5.68e-14
-err = 4.97e-14
-MM_REF t = 2.49e-02 sec, GFLOPS =  57.89
-MM_SOL t = 4.86e-02 sec, GFLOPS =  29.60
-
-Running dgemm-384-1024-768.x with arguments 896 ...
-L = 896, N = 4
-err = 1.28e-13
-err = 9.24e-14
-err = 1.07e-13
-err = 1.07e-13
-MM_REF t = 2.41e-02 sec, GFLOPS =  59.61
-MM_SOL t = 4.68e-02 sec, GFLOPS =  30.72
-
-Running dgemm-96-1024-192.x with arguments 960 ...
+Running avx2-8x4-unroll.x with arguments 960 ...
 L = 960, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.89e-02 sec, GFLOPS =  61.19
-MM_SOL t = 6.73e-02 sec, GFLOPS =  26.30
+MM_REF t = 2.95e-02 sec, GFLOPS =  59.95
+MM_SOL t = 3.72e-02 sec, GFLOPS =  47.55
 
-Running dgemm-96-1024-384.x with arguments 960 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 960 ...
 L = 960, N = 4
-err = 6.04e-14
-err = 6.39e-14
-err = 6.04e-14
-err = 5.60e-14
-MM_REF t = 2.90e-02 sec, GFLOPS =  61.14
-MM_SOL t = 6.11e-02 sec, GFLOPS =  28.98
+MM_REF t = 2.89e-02 sec, GFLOPS =  61.22
+MM_SOL t = 4.67e-02 sec, GFLOPS =  37.86
 
-Running dgemm-96-1024-768.x with arguments 960 ...
+Running dgemm-32-32-32.x with arguments 960 ...
 L = 960, N = 4
-err = 9.24e-14
-err = 8.88e-14
-err = 9.95e-14
-err = 9.59e-14
-MM_REF t = 2.90e-02 sec, GFLOPS =  61.03
-MM_SOL t = 5.83e-02 sec, GFLOPS =  30.34
+MM_REF t = 3.02e-02 sec, GFLOPS =  58.61
+MM_SOL t = 3.29e-02 sec, GFLOPS =  53.85
 
-Running dgemm-192-1024-192.x with arguments 960 ...
+Running dgemm-64-64-64.x with arguments 960 ...
 L = 960, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.92e-02 sec, GFLOPS =  60.51
-MM_SOL t = 7.01e-02 sec, GFLOPS =  25.24
+MM_REF t = 2.94e-02 sec, GFLOPS =  60.29
+MM_SOL t = 3.90e-02 sec, GFLOPS =  45.41
 
-Running dgemm-192-1024-384.x with arguments 960 ...
+Running dgemm-96-96-96.x with arguments 960 ...
 L = 960, N = 4
-err = 6.04e-14
-err = 6.39e-14
-err = 6.04e-14
-err = 5.60e-14
-MM_REF t = 2.98e-02 sec, GFLOPS =  59.43
-MM_SOL t = 6.03e-02 sec, GFLOPS =  29.35
+MM_REF t = 2.89e-02 sec, GFLOPS =  61.21
+MM_SOL t = 3.79e-02 sec, GFLOPS =  46.65
 
-Running dgemm-192-1024-768.x with arguments 960 ...
-L = 960, N = 4
-err = 9.24e-14
-err = 8.88e-14
-err = 9.95e-14
-err = 9.59e-14
-MM_REF t = 2.95e-02 sec, GFLOPS =  60.04
-MM_SOL t = 5.77e-02 sec, GFLOPS =  30.69
-
-Running dgemm-384-1024-192.x with arguments 960 ...
-L = 960, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.87e-02 sec, GFLOPS =  61.60
-MM_SOL t = 6.79e-02 sec, GFLOPS =  26.08
-
-Running dgemm-384-1024-384.x with arguments 960 ...
-L = 960, N = 4
-err = 6.04e-14
-err = 6.39e-14
-err = 6.04e-14
-err = 5.60e-14
-MM_REF t = 2.95e-02 sec, GFLOPS =  60.03
-MM_SOL t = 6.04e-02 sec, GFLOPS =  29.31
-
-Running dgemm-384-1024-768.x with arguments 960 ...
-L = 960, N = 4
-err = 9.24e-14
-err = 8.88e-14
-err = 9.95e-14
-err = 9.59e-14
-MM_REF t = 2.94e-02 sec, GFLOPS =  60.12
-MM_SOL t = 5.64e-02 sec, GFLOPS =  31.38
-
-Running dgemm-96-1024-192.x with arguments 1024 ...
+Running avx2-8x4-unroll.x with arguments 1024 ...
 L = 1024, N = 4
-err = 2.75e-14
-err = 2.33e-14
-err = 2.49e-14
-err = 2.31e-14
-MM_REF t = 3.51e-02 sec, GFLOPS =  61.16
-MM_SOL t = 1.13e-01 sec, GFLOPS =  18.95
+MM_REF t = 3.54e-02 sec, GFLOPS =  60.60
+MM_SOL t = 1.08e-01 sec, GFLOPS =  19.89
 
-Running dgemm-96-1024-384.x with arguments 1024 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1024 ...
 L = 1024, N = 4
-err = 6.04e-14
-err = 5.68e-14
-err = 6.04e-14
-err = 6.04e-14
-MM_REF t = 3.63e-02 sec, GFLOPS =  59.25
-MM_SOL t = 1.23e-01 sec, GFLOPS =  17.41
+MM_REF t = 3.83e-02 sec, GFLOPS =  56.03
+MM_SOL t = 1.10e-01 sec, GFLOPS =  19.47
 
-Running dgemm-96-1024-768.x with arguments 1024 ...
+Running dgemm-32-32-32.x with arguments 1024 ...
 L = 1024, N = 4
-err = 1.07e-13
-err = 1.14e-13
-err = 1.07e-13
-err = 9.95e-14
-MM_REF t = 3.58e-02 sec, GFLOPS =  59.99
-MM_SOL t = 1.18e-01 sec, GFLOPS =  18.21
+MM_REF t = 3.60e-02 sec, GFLOPS =  59.71
+MM_SOL t = 4.76e-02 sec, GFLOPS =  45.15
 
-Running dgemm-192-1024-192.x with arguments 1024 ...
+Running dgemm-64-64-64.x with arguments 1024 ...
 L = 1024, N = 4
-err = 2.75e-14
-err = 2.33e-14
-err = 2.49e-14
-err = 2.31e-14
-MM_REF t = 3.59e-02 sec, GFLOPS =  59.76
-MM_SOL t = 1.15e-01 sec, GFLOPS =  18.63
+MM_REF t = 3.48e-02 sec, GFLOPS =  61.72
+MM_SOL t = 4.82e-02 sec, GFLOPS =  44.52
 
-Running dgemm-192-1024-384.x with arguments 1024 ...
+Running dgemm-96-96-96.x with arguments 1024 ...
 L = 1024, N = 4
-err = 6.04e-14
-err = 5.68e-14
-err = 6.04e-14
-err = 6.04e-14
-MM_REF t = 3.62e-02 sec, GFLOPS =  59.43
-MM_SOL t = 1.30e-01 sec, GFLOPS =  16.56
+MM_REF t = 3.69e-02 sec, GFLOPS =  58.27
+MM_SOL t = 5.58e-02 sec, GFLOPS =  38.51
 
-Running dgemm-192-1024-768.x with arguments 1024 ...
-L = 1024, N = 4
-err = 1.07e-13
-err = 1.14e-13
-err = 1.07e-13
-err = 9.95e-14
-MM_REF t = 3.56e-02 sec, GFLOPS =  60.43
-MM_SOL t = 1.21e-01 sec, GFLOPS =  17.68
-
-Running dgemm-384-1024-192.x with arguments 1024 ...
-L = 1024, N = 4
-err = 2.75e-14
-err = 2.33e-14
-err = 2.49e-14
-err = 2.31e-14
-MM_REF t = 3.60e-02 sec, GFLOPS =  59.77
-MM_SOL t = 1.13e-01 sec, GFLOPS =  18.94
-
-Running dgemm-384-1024-384.x with arguments 1024 ...
-L = 1024, N = 4
-err = 6.04e-14
-err = 5.68e-14
-err = 6.04e-14
-err = 6.04e-14
-MM_REF t = 3.63e-02 sec, GFLOPS =  59.18
-MM_SOL t = 1.25e-01 sec, GFLOPS =  17.24
-
-Running dgemm-384-1024-768.x with arguments 1024 ...
-L = 1024, N = 4
-err = 1.07e-13
-err = 1.14e-13
-err = 1.07e-13
-err = 9.95e-14
-MM_REF t = 3.48e-02 sec, GFLOPS =  61.77
-MM_SOL t = 1.17e-01 sec, GFLOPS =  18.29
-
-Running dgemm-96-1024-192.x with arguments 1088 ...
+Running avx2-8x4-unroll.x with arguments 1088 ...
 L = 1088, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 4.11e-02 sec, GFLOPS =  62.61
-MM_SOL t = 1.02e-01 sec, GFLOPS =  25.22
+MM_REF t = 4.19e-02 sec, GFLOPS =  61.50
+MM_SOL t = 6.71e-02 sec, GFLOPS =  38.39
 
-Running dgemm-96-1024-384.x with arguments 1088 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1088 ...
 L = 1088, N = 4
-err = 6.04e-14
-err = 6.39e-14
-err = 5.77e-14
-err = 5.68e-14
-MM_REF t = 4.35e-02 sec, GFLOPS =  59.39
-MM_SOL t = 8.97e-02 sec, GFLOPS =  28.73
+MM_REF t = 4.26e-02 sec, GFLOPS =  60.41
+MM_SOL t = 6.82e-02 sec, GFLOPS =  37.74
 
-Running dgemm-96-1024-768.x with arguments 1088 ...
+Running dgemm-32-32-32.x with arguments 1088 ...
 L = 1088, N = 4
-err = 1.35e-13
-err = 9.95e-14
-err = 1.07e-13
-err = 9.95e-14
-MM_REF t = 4.25e-02 sec, GFLOPS =  60.56
-MM_SOL t = 8.45e-02 sec, GFLOPS =  30.48
+MM_REF t = 4.31e-02 sec, GFLOPS =  59.72
+MM_SOL t = 5.03e-02 sec, GFLOPS =  51.25
 
-Running dgemm-192-1024-192.x with arguments 1088 ...
+Running dgemm-64-64-64.x with arguments 1088 ...
 L = 1088, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 4.26e-02 sec, GFLOPS =  60.49
-MM_SOL t = 1.01e-01 sec, GFLOPS =  25.49
+MM_REF t = 4.15e-02 sec, GFLOPS =  62.11
+MM_SOL t = 5.81e-02 sec, GFLOPS =  44.36
 
-Running dgemm-192-1024-384.x with arguments 1088 ...
+Running dgemm-96-96-96.x with arguments 1088 ...
 L = 1088, N = 4
-err = 6.04e-14
-err = 6.39e-14
-err = 5.77e-14
-err = 5.68e-14
-MM_REF t = 4.23e-02 sec, GFLOPS =  60.84
-MM_SOL t = 8.80e-02 sec, GFLOPS =  29.27
+MM_REF t = 4.18e-02 sec, GFLOPS =  61.63
+MM_SOL t = 6.01e-02 sec, GFLOPS =  42.85
 
-Running dgemm-192-1024-768.x with arguments 1088 ...
-L = 1088, N = 4
-err = 1.35e-13
-err = 9.95e-14
-err = 1.07e-13
-err = 9.95e-14
-MM_REF t = 4.09e-02 sec, GFLOPS =  62.91
-MM_SOL t = 8.37e-02 sec, GFLOPS =  30.76
-
-Running dgemm-384-1024-192.x with arguments 1088 ...
-L = 1088, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 4.10e-02 sec, GFLOPS =  62.76
-MM_SOL t = 9.80e-02 sec, GFLOPS =  26.28
-
-Running dgemm-384-1024-384.x with arguments 1088 ...
-L = 1088, N = 4
-err = 6.04e-14
-err = 6.39e-14
-err = 5.77e-14
-err = 5.68e-14
-MM_REF t = 4.23e-02 sec, GFLOPS =  60.92
-MM_SOL t = 8.72e-02 sec, GFLOPS =  29.55
-
-Running dgemm-384-1024-768.x with arguments 1088 ...
-L = 1088, N = 4
-err = 1.35e-13
-err = 9.95e-14
-err = 1.07e-13
-err = 9.95e-14
-MM_REF t = 4.21e-02 sec, GFLOPS =  61.24
-MM_SOL t = 8.23e-02 sec, GFLOPS =  31.30
-
-Running dgemm-96-1024-192.x with arguments 1152 ...
+Running avx2-8x4-unroll.x with arguments 1152 ...
 L = 1152, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 5.04e-02 sec, GFLOPS =  60.71
-MM_SOL t = 1.16e-01 sec, GFLOPS =  26.29
+MM_REF t = 4.98e-02 sec, GFLOPS =  61.45
+MM_SOL t = 2.12e-01 sec, GFLOPS =  14.43
 
-Running dgemm-96-1024-384.x with arguments 1152 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1152 ...
 L = 1152, N = 4
-err = 6.75e-14
-err = 7.11e-14
-err = 6.66e-14
-err = 6.75e-14
-MM_REF t = 5.08e-02 sec, GFLOPS =  60.25
-MM_SOL t = 1.07e-01 sec, GFLOPS =  28.50
+MM_REF t = 4.94e-02 sec, GFLOPS =  61.91
+MM_SOL t = 8.24e-02 sec, GFLOPS =  37.15
 
-Running dgemm-96-1024-768.x with arguments 1152 ...
+Running dgemm-32-32-32.x with arguments 1152 ...
 L = 1152, N = 4
-err = 9.24e-14
-err = 9.24e-14
-err = 9.59e-14
-err = 9.24e-14
-MM_REF t = 4.99e-02 sec, GFLOPS =  61.33
-MM_SOL t = 1.38e-01 sec, GFLOPS =  22.15
+MM_REF t = 4.91e-02 sec, GFLOPS =  62.26
+MM_SOL t = 5.94e-02 sec, GFLOPS =  51.51
 
-Running dgemm-192-1024-192.x with arguments 1152 ...
+Running dgemm-64-64-64.x with arguments 1152 ...
 L = 1152, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 4.94e-02 sec, GFLOPS =  61.90
-MM_SOL t = 1.20e-01 sec, GFLOPS =  25.56
+MM_REF t = 4.99e-02 sec, GFLOPS =  61.24
+MM_SOL t = 6.49e-02 sec, GFLOPS =  47.14
 
-Running dgemm-192-1024-384.x with arguments 1152 ...
+Running dgemm-96-96-96.x with arguments 1152 ...
 L = 1152, N = 4
-err = 6.75e-14
-err = 7.11e-14
-err = 6.66e-14
-err = 6.75e-14
-MM_REF t = 4.87e-02 sec, GFLOPS =  62.85
-MM_SOL t = 1.03e-01 sec, GFLOPS =  29.81
+MM_REF t = 4.90e-02 sec, GFLOPS =  62.44
+MM_SOL t = 6.73e-02 sec, GFLOPS =  45.45
 
-Running dgemm-192-1024-768.x with arguments 1152 ...
-L = 1152, N = 4
-err = 9.24e-14
-err = 9.24e-14
-err = 9.59e-14
-err = 9.24e-14
-MM_REF t = 4.99e-02 sec, GFLOPS =  61.34
-MM_SOL t = 1.36e-01 sec, GFLOPS =  22.49
-
-Running dgemm-384-1024-192.x with arguments 1152 ...
-L = 1152, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 4.82e-02 sec, GFLOPS =  63.46
-MM_SOL t = 1.18e-01 sec, GFLOPS =  25.95
-
-Running dgemm-384-1024-384.x with arguments 1152 ...
-L = 1152, N = 4
-err = 6.75e-14
-err = 7.11e-14
-err = 6.66e-14
-err = 6.75e-14
-MM_REF t = 4.87e-02 sec, GFLOPS =  62.79
-MM_SOL t = 1.03e-01 sec, GFLOPS =  29.77
-
-Running dgemm-384-1024-768.x with arguments 1152 ...
-L = 1152, N = 4
-err = 9.24e-14
-err = 9.24e-14
-err = 9.59e-14
-err = 9.24e-14
-MM_REF t = 4.92e-02 sec, GFLOPS =  62.14
-MM_SOL t = 1.37e-01 sec, GFLOPS =  22.36
-
-Running dgemm-96-1024-192.x with arguments 1216 ...
+Running avx2-8x4-unroll.x with arguments 1216 ...
 L = 1216, N = 4
-err = 3.55e-14
-err = 3.91e-14
-err = 3.11e-14
-err = 3.55e-14
-MM_REF t = 5.81e-02 sec, GFLOPS =  61.91
-MM_SOL t = 1.41e-01 sec, GFLOPS =  25.59
+MM_REF t = 5.98e-02 sec, GFLOPS =  60.13
+MM_SOL t = 1.02e-01 sec, GFLOPS =  35.27
 
-Running dgemm-96-1024-384.x with arguments 1216 ...
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1216 ...
 L = 1216, N = 4
-err = 7.11e-14
-err = 6.39e-14
-err = 6.22e-14
-err = 6.04e-14
-MM_REF t = 5.85e-02 sec, GFLOPS =  61.51
-MM_SOL t = 1.22e-01 sec, GFLOPS =  29.46
+MM_REF t = 5.91e-02 sec, GFLOPS =  60.83
+MM_SOL t = 1.01e-01 sec, GFLOPS =  35.71
 
-Running dgemm-96-1024-768.x with arguments 1216 ...
+Running dgemm-32-32-32.x with arguments 1216 ...
 L = 1216, N = 4
-err = 1.07e-13
-err = 1.21e-13
-err = 1.14e-13
-err = 9.95e-14
-MM_REF t = 5.83e-02 sec, GFLOPS =  61.67
-MM_SOL t = 1.14e-01 sec, GFLOPS =  31.59
+MM_REF t = 5.86e-02 sec, GFLOPS =  61.44
+MM_SOL t = 7.13e-02 sec, GFLOPS =  50.43
 
-Running dgemm-192-1024-192.x with arguments 1216 ...
+Running dgemm-64-64-64.x with arguments 1216 ...
 L = 1216, N = 4
-err = 3.55e-14
-err = 3.91e-14
-err = 3.11e-14
-err = 3.55e-14
-MM_REF t = 5.86e-02 sec, GFLOPS =  61.40
-MM_SOL t = 1.38e-01 sec, GFLOPS =  26.01
+MM_REF t = 5.92e-02 sec, GFLOPS =  60.76
+MM_SOL t = 7.58e-02 sec, GFLOPS =  47.43
 
-Running dgemm-192-1024-384.x with arguments 1216 ...
+Running dgemm-96-96-96.x with arguments 1216 ...
+L = 1216, N = 4
+MM_REF t = 6.18e-02 sec, GFLOPS =  58.23
+MM_SOL t = 8.55e-02 sec, GFLOPS =  42.08
+
+Running avx2-8x4-unroll.x with arguments 1280 ...
+L = 1280, N = 4
+MM_REF t = 6.73e-02 sec, GFLOPS =  62.36
+MM_SOL t = 2.69e-01 sec, GFLOPS =  15.58
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1280 ...
+L = 1280, N = 4
+MM_REF t = 6.86e-02 sec, GFLOPS =  61.20
+MM_SOL t = 1.42e-01 sec, GFLOPS =  29.55
+
+Running dgemm-32-32-32.x with arguments 1280 ...
+L = 1280, N = 4
+MM_REF t = 7.42e-02 sec, GFLOPS =  56.55
+MM_SOL t = 9.83e-02 sec, GFLOPS =  42.73
+
+Running dgemm-64-64-64.x with arguments 1280 ...
+L = 1280, N = 4
+MM_REF t = 7.16e-02 sec, GFLOPS =  58.60
+MM_SOL t = 9.87e-02 sec, GFLOPS =  42.49
+
+Running dgemm-96-96-96.x with arguments 1280 ...
+L = 1280, N = 4
+MM_REF t = 6.77e-02 sec, GFLOPS =  61.95
+MM_SOL t = 1.16e-01 sec, GFLOPS =  36.22
+
+Running avx2-8x4-unroll.x with arguments 1344 ...
+L = 1344, N = 4
+MM_REF t = 7.76e-02 sec, GFLOPS =  62.55
+MM_SOL t = 2.33e-01 sec, GFLOPS =  20.85
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1344 ...
+L = 1344, N = 4
+MM_REF t = 7.84e-02 sec, GFLOPS =  61.91
+MM_SOL t = 1.38e-01 sec, GFLOPS =  35.21
+
+Running dgemm-32-32-32.x with arguments 1344 ...
+L = 1344, N = 4
+MM_REF t = 7.88e-02 sec, GFLOPS =  61.62
+MM_SOL t = 9.52e-02 sec, GFLOPS =  51.02
+
+Running dgemm-64-64-64.x with arguments 1344 ...
+L = 1344, N = 4
+MM_REF t = 7.96e-02 sec, GFLOPS =  60.98
+MM_SOL t = 1.04e-01 sec, GFLOPS =  46.80
+
+Running dgemm-96-96-96.x with arguments 1344 ...
+L = 1344, N = 4
+MM_REF t = 7.95e-02 sec, GFLOPS =  61.07
+MM_SOL t = 1.08e-01 sec, GFLOPS =  44.93
+
+Running avx2-8x4-unroll.x with arguments 1408 ...
+L = 1408, N = 4
+MM_REF t = 8.95e-02 sec, GFLOPS =  62.36
+MM_SOL t = 3.73e-01 sec, GFLOPS =  14.99
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1408 ...
+L = 1408, N = 4
+MM_REF t = 9.39e-02 sec, GFLOPS =  59.46
+MM_SOL t = 1.61e-01 sec, GFLOPS =  34.69
+
+Running dgemm-32-32-32.x with arguments 1408 ...
+L = 1408, N = 4
+MM_REF t = 9.25e-02 sec, GFLOPS =  60.39
+MM_SOL t = 1.13e-01 sec, GFLOPS =  49.42
+
+Running dgemm-64-64-64.x with arguments 1408 ...
+L = 1408, N = 4
+MM_REF t = 9.14e-02 sec, GFLOPS =  61.10
+MM_SOL t = 1.22e-01 sec, GFLOPS =  45.90
+
+Running dgemm-96-96-96.x with arguments 1408 ...
+L = 1408, N = 4
+MM_REF t = 9.05e-02 sec, GFLOPS =  61.68
+MM_SOL t = 1.26e-01 sec, GFLOPS =  44.26
+
+Running avx2-8x4-unroll.x with arguments 1472 ...
+L = 1472, N = 4
+MM_REF t = 1.05e-01 sec, GFLOPS =  60.51
+MM_SOL t = 2.25e-01 sec, GFLOPS =  28.31
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1472 ...
+L = 1472, N = 4
+MM_REF t = 1.04e-01 sec, GFLOPS =  61.55
+MM_SOL t = 1.75e-01 sec, GFLOPS =  36.37
+
+Running dgemm-32-32-32.x with arguments 1472 ...
+L = 1472, N = 4
+MM_REF t = 1.05e-01 sec, GFLOPS =  60.81
+MM_SOL t = 1.35e-01 sec, GFLOPS =  47.44
+
+Running dgemm-64-64-64.x with arguments 1472 ...
+L = 1472, N = 4
+MM_REF t = 1.04e-01 sec, GFLOPS =  61.62
+MM_SOL t = 1.44e-01 sec, GFLOPS =  44.42
+
+Running dgemm-96-96-96.x with arguments 1472 ...
+L = 1472, N = 4
+MM_REF t = 1.04e-01 sec, GFLOPS =  61.43
+MM_SOL t = 1.77e-01 sec, GFLOPS =  36.03
+
+Running avx2-8x4-unroll.x with arguments 1536 ...
+L = 1536, N = 4
+MM_REF t = 1.17e-01 sec, GFLOPS =  62.05
+MM_SOL t = 5.50e-01 sec, GFLOPS =  13.19
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1536 ...
+L = 1536, N = 4
+MM_REF t = 1.16e-01 sec, GFLOPS =  62.36
+MM_SOL t = 4.04e-01 sec, GFLOPS =  17.94
+
+Running dgemm-32-32-32.x with arguments 1536 ...
+L = 1536, N = 4
+MM_REF t = 1.17e-01 sec, GFLOPS =  62.09
+MM_SOL t = 1.79e-01 sec, GFLOPS =  40.41
+
+Running dgemm-64-64-64.x with arguments 1536 ...
+L = 1536, N = 4
+MM_REF t = 1.19e-01 sec, GFLOPS =  61.10
+MM_SOL t = 2.01e-01 sec, GFLOPS =  36.15
+
+Running dgemm-96-96-96.x with arguments 1536 ...
+L = 1536, N = 4
+MM_REF t = 1.16e-01 sec, GFLOPS =  62.25
+MM_SOL t = 1.99e-01 sec, GFLOPS =  36.49
+
+Running avx2-8x4-unroll.x with arguments 1600 ...
+L = 1600, N = 4
+MM_REF t = 1.32e-01 sec, GFLOPS =  62.01
+MM_SOL t = 3.90e-01 sec, GFLOPS =  21.02
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1600 ...
+L = 1600, N = 4
+MM_REF t = 1.34e-01 sec, GFLOPS =  61.25
+MM_SOL t = 2.42e-01 sec, GFLOPS =  33.87
+
+Running dgemm-32-32-32.x with arguments 1600 ...
+L = 1600, N = 4
+MM_REF t = 1.33e-01 sec, GFLOPS =  61.46
+MM_SOL t = 1.71e-01 sec, GFLOPS =  47.86
+
+Running dgemm-64-64-64.x with arguments 1600 ...
+L = 1600, N = 4
+MM_REF t = 1.31e-01 sec, GFLOPS =  62.34
+MM_SOL t = 1.75e-01 sec, GFLOPS =  46.77
+
+Running dgemm-96-96-96.x with arguments 1600 ...
+L = 1600, N = 4
+MM_REF t = 1.31e-01 sec, GFLOPS =  62.75
+MM_SOL t = 1.96e-01 sec, GFLOPS =  41.86
+
+Running avx2-8x4-unroll.x with arguments 1664 ...
+L = 1664, N = 4
+MM_REF t = 1.48e-01 sec, GFLOPS =  62.28
+MM_SOL t = 8.56e-01 sec, GFLOPS =  10.77
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1664 ...
+L = 1664, N = 4
+MM_REF t = 1.49e-01 sec, GFLOPS =  61.98
+MM_SOL t = 2.74e-01 sec, GFLOPS =  33.63
+
+Running dgemm-32-32-32.x with arguments 1664 ...
+L = 1664, N = 4
+MM_REF t = 1.47e-01 sec, GFLOPS =  62.77
+MM_SOL t = 1.89e-01 sec, GFLOPS =  48.66
+
+Running dgemm-64-64-64.x with arguments 1664 ...
+L = 1664, N = 4
+MM_REF t = 1.47e-01 sec, GFLOPS =  62.69
+MM_SOL t = 2.01e-01 sec, GFLOPS =  45.75
+
+Running dgemm-96-96-96.x with arguments 1664 ...
+L = 1664, N = 4
+MM_REF t = 1.47e-01 sec, GFLOPS =  62.50
+MM_SOL t = 2.00e-01 sec, GFLOPS =  46.18
+
+Running avx2-8x4-unroll.x with arguments 1728 ...
+L = 1728, N = 4
+MM_REF t = 1.68e-01 sec, GFLOPS =  61.41
+MM_SOL t = 4.54e-01 sec, GFLOPS =  22.72
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1728 ...
+L = 1728, N = 4
+MM_REF t = 1.68e-01 sec, GFLOPS =  61.51
+MM_SOL t = 2.97e-01 sec, GFLOPS =  34.74
+
+Running dgemm-32-32-32.x with arguments 1728 ...
+L = 1728, N = 4
+MM_REF t = 1.65e-01 sec, GFLOPS =  62.38
+MM_SOL t = 2.12e-01 sec, GFLOPS =  48.66
+
+Running dgemm-64-64-64.x with arguments 1728 ...
+L = 1728, N = 4
+MM_REF t = 1.65e-01 sec, GFLOPS =  62.63
+MM_SOL t = 2.35e-01 sec, GFLOPS =  43.90
+
+Running dgemm-96-96-96.x with arguments 1728 ...
+L = 1728, N = 4
+MM_REF t = 1.67e-01 sec, GFLOPS =  61.86
+MM_SOL t = 2.79e-01 sec, GFLOPS =  36.98
+
+Running avx2-8x4-unroll.x with arguments 1792 ...
+L = 1792, N = 4
+MM_REF t = 1.85e-01 sec, GFLOPS =  62.18
+MM_SOL t = 8.92e-01 sec, GFLOPS =  12.90
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1792 ...
+L = 1792, N = 4
+MM_REF t = 1.85e-01 sec, GFLOPS =  62.13
+MM_SOL t = 3.95e-01 sec, GFLOPS =  29.13
+
+Running dgemm-32-32-32.x with arguments 1792 ...
+L = 1792, N = 4
+MM_REF t = 1.86e-01 sec, GFLOPS =  61.74
+MM_SOL t = 2.83e-01 sec, GFLOPS =  40.68
+
+Running dgemm-64-64-64.x with arguments 1792 ...
+L = 1792, N = 4
+MM_REF t = 1.89e-01 sec, GFLOPS =  61.04
+MM_SOL t = 3.27e-01 sec, GFLOPS =  35.23
+
+Running dgemm-96-96-96.x with arguments 1792 ...
+L = 1792, N = 4
+MM_REF t = 1.87e-01 sec, GFLOPS =  61.44
+MM_SOL t = 3.47e-01 sec, GFLOPS =  33.15
+
+Running avx2-8x4-unroll.x with arguments 1856 ...
+L = 1856, N = 4
+MM_REF t = 2.07e-01 sec, GFLOPS =  61.75
+MM_SOL t = 6.01e-01 sec, GFLOPS =  21.29
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1856 ...
+L = 1856, N = 4
+MM_REF t = 2.06e-01 sec, GFLOPS =  62.03
+MM_SOL t = 3.76e-01 sec, GFLOPS =  34.01
+
+Running dgemm-32-32-32.x with arguments 1856 ...
+L = 1856, N = 4
+MM_REF t = 2.05e-01 sec, GFLOPS =  62.28
+MM_SOL t = 2.84e-01 sec, GFLOPS =  45.09
+
+Running dgemm-64-64-64.x with arguments 1856 ...
+L = 1856, N = 4
+MM_REF t = 2.04e-01 sec, GFLOPS =  62.77
+MM_SOL t = 3.57e-01 sec, GFLOPS =  35.89
+
+Running dgemm-96-96-96.x with arguments 1856 ...
+L = 1856, N = 4
+MM_REF t = 2.11e-01 sec, GFLOPS =  60.67
+MM_SOL t = 3.80e-01 sec, GFLOPS =  33.64
+
+Running avx2-8x4-unroll.x with arguments 1920 ...
+L = 1920, N = 4
+MM_REF t = 2.27e-01 sec, GFLOPS =  62.34
+MM_SOL t = 1.06e+00 sec, GFLOPS =  13.34
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1920 ...
+L = 1920, N = 4
+MM_REF t = 2.25e-01 sec, GFLOPS =  62.83
+MM_SOL t = 5.02e-01 sec, GFLOPS =  28.17
+
+Running dgemm-32-32-32.x with arguments 1920 ...
+L = 1920, N = 4
+MM_REF t = 2.29e-01 sec, GFLOPS =  61.90
+MM_SOL t = 3.12e-01 sec, GFLOPS =  45.36
+
+Running dgemm-64-64-64.x with arguments 1920 ...
+L = 1920, N = 4
+MM_REF t = 2.28e-01 sec, GFLOPS =  61.99
+MM_SOL t = 3.45e-01 sec, GFLOPS =  41.02
+
+Running dgemm-96-96-96.x with arguments 1920 ...
+L = 1920, N = 4
+MM_REF t = 2.31e-01 sec, GFLOPS =  61.25
+MM_SOL t = 4.06e-01 sec, GFLOPS =  34.84
+
+Running avx2-8x4-unroll.x with arguments 1984 ...
+L = 1984, N = 4
+MM_REF t = 2.57e-01 sec, GFLOPS =  60.88
+MM_SOL t = 9.60e-01 sec, GFLOPS =  16.28
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 1984 ...
+L = 1984, N = 4
+MM_REF t = 2.52e-01 sec, GFLOPS =  61.90
+MM_SOL t = 5.29e-01 sec, GFLOPS =  29.54
+
+Running dgemm-32-32-32.x with arguments 1984 ...
+L = 1984, N = 4
+MM_REF t = 2.53e-01 sec, GFLOPS =  61.68
+MM_SOL t = 3.34e-01 sec, GFLOPS =  46.81
+
+Running dgemm-64-64-64.x with arguments 1984 ...
+L = 1984, N = 4
+MM_REF t = 2.52e-01 sec, GFLOPS =  62.09
+MM_SOL t = 3.90e-01 sec, GFLOPS =  40.10
+
+Running dgemm-96-96-96.x with arguments 1984 ...
+L = 1984, N = 4
+MM_REF t = 2.47e-01 sec, GFLOPS =  63.12
+MM_SOL t = 4.24e-01 sec, GFLOPS =  36.86
+
+Running avx2-8x4-unroll.x with arguments 2048 ...
+L = 2048, N = 4
+MM_REF t = 2.77e-01 sec, GFLOPS =  62.13
+MM_SOL t = 2.51e+00 sec, GFLOPS =   6.83
+
+Running avx2-cache-blocking-8x4-unroll.x with arguments 2048 ...
+L = 2048, N = 4
+MM_REF t = 2.76e-01 sec, GFLOPS =  62.36
+MM_SOL t = 1.45e+00 sec, GFLOPS =  11.86
+
+Running dgemm-32-32-32.x with arguments 2048 ...
+L = 2048, N = 4
+MM_REF t = 2.77e-01 sec, GFLOPS =  61.91
+MM_SOL t = 4.48e-01 sec, GFLOPS =  38.33
+
+Running dgemm-64-64-64.x with arguments 2048 ...
+L = 2048, N = 4
+MM_REF t = 2.74e-01 sec, GFLOPS =  62.71
+MM_SOL t = 4.06e-01 sec, GFLOPS =  42.28
+
+Running dgemm-96-96-96.x with arguments 2048 ...
+L = 2048, N = 4
+MM_REF t = 2.74e-01 sec, GFLOPS =  62.79
+MM_SOL t = 9.04e-01 sec, GFLOPS =  19.01
+

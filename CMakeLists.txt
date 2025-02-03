@@ -29,43 +29,48 @@ add_library(dgemm-blas)
 target_sources(dgemm-blas PRIVATE src/dgemm-blas.c)
 target_link_libraries(dgemm-blas ${BLAS_LIBRARIES})
 
-# foreach(f IN LISTS SOURCES)
-#     if(${f} MATCHES "avx2-cache-blocking")
-#         continue()
-#     endif()
+foreach(f IN LISTS SOURCES)
+    # get the parent directory name for example src/avx2/dgemm-2x2.c -> avx2-2x2
+    get_filename_component(d ${f} DIRECTORY)
+    get_filename_component(d ${d} NAME)
+    get_filename_component(b ${f} NAME_WE)
+    string(REGEX REPLACE "^dgemm-" "" b ${b})
+    message(STATUS "preparing ${d}-${b}.x")
 
-#     # get the parent directory name for example src/avx2/dgemm-2x2.c -> avx2-2x2
-#     get_filename_component(d ${f} DIRECTORY)
-#     get_filename_component(d ${d} NAME)
-#     get_filename_component(b ${f} NAME_WE)
-#     string(REGEX REPLACE "^dgemm-" "" b ${b})
-#     message(STATUS "preparing ${d}-${b}.x")
+    # use the dirname-basename as the executable name
+    add_executable(${d}-${b}.x src/main.cxx ${f})
+    target_compile_options(${d}-${b}.x PRIVATE -mfma -Ofast -march=native)
+    target_link_libraries(${d}-${b}.x dgemm-blas)
 
-#     # use the dirname-basename as the executable name
-#     add_executable(${d}-${b}.x src/main.cxx ${f})
-#     target_compile_options(${d}-${b}.x PRIVATE -mfma -Og -march=native)
-#     target_link_libraries(${d}-${b}.x dgemm-blas)
-
-#     # add_custom_command(
-#     #     OUTPUT ${CMAKE_BINARY_DIR}/${d}-${b}.s
-#     #     COMMAND ${CMAKE_C_COMPILER} -mfma -Og -march=native -S -fverbose-asm -o ${CMAKE_BINARY_DIR}/${d}-${b}.s ${f}
-#     #     DEPENDS ${f}
-#     #     COMMENT "Generating assembly for ${f}"
-#     # )
-#     # add_custom_target(${d}-${b}.s ALL DEPENDS ${CMAKE_BINARY_DIR}/${d}-${b}.s)
-# endforeach()
-
-set(M_BLOCKING 96 192 384)
-set(N_BLOCKING 1024 2048 4096)
-set(K_BLOCKING 192 384 768)
-
-foreach(mm IN LISTS M_BLOCKING)
-    foreach(nn IN LISTS N_BLOCKING)
-        foreach(ll IN LISTS K_BLOCKING)
-            message(STATUS "preparing ${mm}-${nn}-${ll}")
-            add_executable(dgemm-${mm}-${nn}-${ll}.x src/main.cxx src/avx2-cache-blocking/dgemm-8x4-unroll.c)
-            target_compile_options(dgemm-${mm}-${nn}-${ll}.x PRIVATE -mfma -Og -march=native -DM_BLOCKING=${mm} -DN_BLOCKING=${nn} -DK_BLOCKING=${ll})
-            target_link_libraries(dgemm-${mm}-${nn}-${ll}.x dgemm-blas)
-        endforeach()
-    endforeach()
+    # add_custom_command(
+    #     OUTPUT ${CMAKE_BINARY_DIR}/${d}-${b}.s
+    #     COMMAND ${CMAKE_C_COMPILER} -mfma -Og -march=native -S -fverbose-asm -o ${CMAKE_BINARY_DIR}/${d}-${b}.s ${f}
+    #     DEPENDS ${f}
+    #     COMMENT "Generating assembly for ${f}"
+    # )
+    # add_custom_target(${d}-${b}.s ALL DEPENDS ${CMAKE_BINARY_DIR}/${d}-${b}.s)
 endforeach()
+
+set(mm 32)
+set(nn 32)
+set(ll 32)
+message(STATUS "preparing ${mm}-${nn}-${ll}")
+add_executable(dgemm-${mm}-${nn}-${ll}.x src/main.cxx src/avx2-cache-blocking/dgemm-8x4-unroll.c)
+target_compile_options(dgemm-${mm}-${nn}-${ll}.x PRIVATE -mfma -Ofast -march=native -DM_BLOCKING=${mm} -DN_BLOCKING=${nn} -DK_BLOCKING=${ll})
+target_link_libraries(dgemm-${mm}-${nn}-${ll}.x dgemm-blas)
+
+set(mm 64)
+set(nn 64)
+set(ll 64)
+message(STATUS "preparing ${mm}-${nn}-${ll}")
+add_executable(dgemm-${mm}-${nn}-${ll}.x src/main.cxx src/avx2-cache-blocking/dgemm-8x4-unroll.c)
+target_compile_options(dgemm-${mm}-${nn}-${ll}.x PRIVATE -mfma -Ofast -march=native -DM_BLOCKING=${mm} -DN_BLOCKING=${nn} -DK_BLOCKING=${ll})
+target_link_libraries(dgemm-${mm}-${nn}-${ll}.x dgemm-blas)
+
+set(mm 96)
+set(nn 96)
+set(ll 96)
+message(STATUS "preparing ${mm}-${nn}-${ll}")
+add_executable(dgemm-${mm}-${nn}-${ll}.x src/main.cxx src/avx2-cache-blocking/dgemm-8x4-unroll.c)
+target_compile_options(dgemm-${mm}-${nn}-${ll}.x PRIVATE -mfma -Ofast -march=native -DM_BLOCKING=${mm} -DN_BLOCKING=${nn} -DK_BLOCKING=${ll})
+target_link_libraries(dgemm-${mm}-${nn}-${ll}.x dgemm-blas)

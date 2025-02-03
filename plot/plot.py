@@ -12,6 +12,7 @@ def plot(data, out):
 
     dd = {}
     xx = numpy.loadtxt(data, delimiter=',', skiprows=1)
+    assert len(label) == xx.shape[1] - 1
 
     for i, k in enumerate(label):
         dd[k] = xx[:, i+1]
@@ -19,11 +20,36 @@ def plot(data, out):
     for k, v in dd.items():
         ax.plot(xx[:, 0], v, label=k, marker='o')
 
-    ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
+    #     # calculate the distribution of v
+    #     m = numpy.mean(v)
+    #     s = numpy.std(v)
+    #     mm[k] = m
+    #     ss[k] = s
+
+    # # sort mm by value
+    # mm = sorted(mm.items(), key=lambda x: x[1])
+
+    # for k, v in mm:
+    #     print(f"{k}: {v} +/- {ss[k]}")
+
+    # # plot the distribution of v
+    # fig, ax = plt.subplots(figsize=(6, 3))
+    # for k, v in mm:
+    #     # if not  k == 'BLAS':
+    #     #     continue
+    #     # ax.hist(dd[k], bins=20, label=k)
+    #     # # Plot the normal distribution
+    #     m = numpy.mean(dd[k])
+    #     s = numpy.std(dd[k])
+    #     x = numpy.linspace(0, 100, 100)
+    #     y = numpy.exp(-(x-m)**2/(2*s**2))/(s*numpy.sqrt(2*numpy.pi))
+        
+    #     ax.plot(x, y, label=k)
+
     ax.set_xlabel('L')
-    ax.set_ylabel('GFLOPS')
     ax.set_xlim(xx[:, 0].min(), xx[:, 0].max())
-    ax.set_ylim(0, 100)
+    ax.set_ylim(0.0, 80.0)
+    ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
     fig.tight_layout()
     fig.savefig(out, bbox_inches='tight')
 
