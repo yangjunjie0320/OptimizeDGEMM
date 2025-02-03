@@ -1,4 +1,7 @@
-#include "immintrin.h"
+// #include <cstdio>
+#include <immintrin.h>
+
+#define min( i, j ) ( (i)<(j) ? (i): (j) )
 #define BLOCK_SIZE_M 8
 #define BLOCK_SIZE_N 4
 #define UNROLL 4
@@ -163,6 +166,37 @@ void macro_dgemm(int m, int n, int l, int lda, int ldb, int ldc, double* a, doub
     if (n4 != n0) edge_block(m0, n0 - n4, l0, lda, ldb, ldc, aa, bb, cc);
 }
 
+void packing_a(int n, double *a, int lda, double *a_buffer)
+{
+    
+    double *pt;
+    for(int j = 0; j < n; j++)
+    {
+        pt = a + j * lda;
+        *a_buffer = *pt;     a_buffer++; 
+        *a_buffer = *(pt+1); a_buffer++; 
+        *a_buffer = *(pt+2); a_buffer++; 
+        *a_buffer = *(pt+3); a_buffer++; 
+    }
+    
+}
+
+void packing_b(int K, double *B, int LDB, double *Bbuffer)
+{
+    double *pt0, *pt1, *pt2, *pt3; 
+    pt0 = &B(0, 0), pt1 = &B(0, 1); 
+    pt2 = &B(0, 2), pt3 = &B(0, 3); 
+    
+    for(int j=0;j<K;j++)
+    {
+        *Bbuffer = *pt0; pt0++;Bbuffer++; 
+        *Bbuffer = *pt1; pt1++;Bbuffer++; 
+        *Bbuffer = *pt2; pt2++;Bbuffer++; 
+        *Bbuffer = *pt3; pt3++;Bbuffer++; 
+    }
+    
+}
+
 #ifndef M_MACRO_BLOCKING
 #define M_MACRO_BLOCKING 32
 #endif
@@ -186,11 +220,15 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c) {
     int ldb = l;  
     int ldc = m;
 
+    double* a_buffer = (double*)malloc(sizeof(double)*m*l);
+    double* b_buffer = (double*)malloc(sizeof(double)*l*4);
+
     // n, l, m
     for (jj = 0; jj < n0;) {
         n1 = min(N_MACRO_BLOCKING, n0 - jj);
         for (kk = 0; kk < l0;) {
             l1 = min(K_MACRO_BLOCKING, l0 - kk);
+            packing_b(l1, b + kk + jj * ldb, ldb, b_buffer);
             for (ii = 0; ii < m0; ) {
                 m1 = min(M_MACRO_BLOCKING, m0 - ii);
                 macro_dgemm(
@@ -205,4 +243,7 @@ void dgemm(int m, int n, int l, double* a, double* b, double* c) {
         }
         jj += n1;
     }
+
+    free(a_buffer);
+    free(b_buffer);
 }

@@ -1,801 +1,481 @@
 
 Running avx2-8x4-unroll.x with arguments 64 ...
 L = 64, N = 4
-MM_REF t = 1.63e-05 sec, GFLOPS =  32.87
-MM_SOL t = 1.11e-05 sec, GFLOPS =  47.36
+MM_REF t = 1.67e-05 sec, GFLOPS =  37.91
+MM_SOL t = 1.28e-05 sec, GFLOPS =  41.21
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 64 ...
 L = 64, N = 4
-MM_REF t = 9.86e-06 sec, GFLOPS =  55.27
-MM_SOL t = 8.70e-06 sec, GFLOPS =  60.28
+MM_REF t = 1.03e-05 sec, GFLOPS =  53.07
+MM_SOL t = 1.22e-05 sec, GFLOPS =  43.07
 
-Running dgemm-32-32-32.x with arguments 64 ...
+Running avx2-packing-8x4-unroll.x with arguments 64 ...
 L = 64, N = 4
-MM_REF t = 1.01e-05 sec, GFLOPS =  54.19
-MM_SOL t = 8.57e-06 sec, GFLOPS =  61.18
-
-Running dgemm-64-64-64.x with arguments 64 ...
-L = 64, N = 4
-MM_REF t = 1.16e-05 sec, GFLOPS =  49.71
-MM_SOL t = 9.96e-06 sec, GFLOPS =  53.42
-
-Running dgemm-96-96-96.x with arguments 64 ...
-L = 64, N = 4
-MM_REF t = 1.21e-05 sec, GFLOPS =  48.15
-MM_SOL t = 9.55e-06 sec, GFLOPS =  55.30
+MM_REF t = 1.46e-05 sec, GFLOPS =  35.83
+MM_SOL t = 2.12e-05 sec, GFLOPS =  24.73
 
 Running avx2-8x4-unroll.x with arguments 128 ...
 L = 128, N = 4
-MM_REF t = 9.57e-05 sec, GFLOPS =  43.94
-MM_SOL t = 8.33e-05 sec, GFLOPS =  50.33
+MM_REF t = 2.16e-04 sec, GFLOPS =  23.95
+MM_SOL t = 1.18e-04 sec, GFLOPS =  36.57
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 128 ...
 L = 128, N = 4
-MM_REF t = 9.33e-05 sec, GFLOPS =  46.29
-MM_SOL t = 7.20e-05 sec, GFLOPS =  58.23
+MM_REF t = 1.24e-04 sec, GFLOPS =  34.25
+MM_SOL t = 1.22e-04 sec, GFLOPS =  34.43
 
-Running dgemm-32-32-32.x with arguments 128 ...
+Running avx2-packing-8x4-unroll.x with arguments 128 ...
 L = 128, N = 4
-MM_REF t = 7.30e-05 sec, GFLOPS =  57.70
-MM_SOL t = 7.20e-05 sec, GFLOPS =  58.36
-
-Running dgemm-64-64-64.x with arguments 128 ...
-L = 128, N = 4
-MM_REF t = 9.10e-05 sec, GFLOPS =  47.07
-MM_SOL t = 7.45e-05 sec, GFLOPS =  56.47
-
-Running dgemm-96-96-96.x with arguments 128 ...
-L = 128, N = 4
-MM_REF t = 7.26e-05 sec, GFLOPS =  58.05
-MM_SOL t = 7.10e-05 sec, GFLOPS =  59.04
+MM_REF t = 1.02e-04 sec, GFLOPS =  41.38
+MM_SOL t = 1.63e-04 sec, GFLOPS =  25.82
 
 Running avx2-8x4-unroll.x with arguments 192 ...
 L = 192, N = 4
-MM_REF t = 3.04e-04 sec, GFLOPS =  46.67
-MM_SOL t = 2.64e-04 sec, GFLOPS =  53.74
+MM_REF t = 2.89e-04 sec, GFLOPS =  48.95
+MM_SOL t = 3.27e-04 sec, GFLOPS =  43.27
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 192 ...
 L = 192, N = 4
-MM_REF t = 2.48e-04 sec, GFLOPS =  57.07
-MM_SOL t = 2.48e-04 sec, GFLOPS =  57.08
+MM_REF t = 3.09e-04 sec, GFLOPS =  46.02
+MM_SOL t = 3.36e-04 sec, GFLOPS =  42.16
 
-Running dgemm-32-32-32.x with arguments 192 ...
+Running avx2-packing-8x4-unroll.x with arguments 192 ...
 L = 192, N = 4
-MM_REF t = 2.32e-04 sec, GFLOPS =  60.89
-MM_SOL t = 2.46e-04 sec, GFLOPS =  57.49
-
-Running dgemm-64-64-64.x with arguments 192 ...
-L = 192, N = 4
-MM_REF t = 2.29e-04 sec, GFLOPS =  61.80
-MM_SOL t = 2.46e-04 sec, GFLOPS =  57.51
-
-Running dgemm-96-96-96.x with arguments 192 ...
-L = 192, N = 4
-MM_REF t = 2.36e-04 sec, GFLOPS =  60.13
-MM_SOL t = 2.54e-04 sec, GFLOPS =  55.68
+MM_REF t = 3.10e-04 sec, GFLOPS =  45.69
+MM_SOL t = 5.02e-04 sec, GFLOPS =  28.21
 
 Running avx2-8x4-unroll.x with arguments 256 ...
 L = 256, N = 4
-MM_REF t = 7.18e-04 sec, GFLOPS =  47.52
-MM_SOL t = 6.52e-04 sec, GFLOPS =  51.75
+MM_REF t = 7.57e-04 sec, GFLOPS =  44.94
+MM_SOL t = 8.34e-04 sec, GFLOPS =  40.23
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 256 ...
 L = 256, N = 4
-MM_REF t = 5.73e-04 sec, GFLOPS =  58.61
-MM_SOL t = 6.19e-04 sec, GFLOPS =  54.23
+MM_REF t = 6.64e-04 sec, GFLOPS =  50.57
+MM_SOL t = 8.87e-04 sec, GFLOPS =  37.85
 
-Running dgemm-32-32-32.x with arguments 256 ...
+Running avx2-packing-8x4-unroll.x with arguments 256 ...
 L = 256, N = 4
-MM_REF t = 5.72e-04 sec, GFLOPS =  58.64
-MM_SOL t = 6.94e-04 sec, GFLOPS =  48.69
-
-Running dgemm-64-64-64.x with arguments 256 ...
-L = 256, N = 4
-MM_REF t = 5.70e-04 sec, GFLOPS =  58.95
-MM_SOL t = 5.97e-04 sec, GFLOPS =  56.19
-
-Running dgemm-96-96-96.x with arguments 256 ...
-L = 256, N = 4
-MM_REF t = 7.18e-04 sec, GFLOPS =  47.64
-MM_SOL t = 7.25e-04 sec, GFLOPS =  46.52
+MM_REF t = 7.52e-04 sec, GFLOPS =  44.80
+MM_SOL t = 1.17e-03 sec, GFLOPS =  28.72
 
 Running avx2-8x4-unroll.x with arguments 320 ...
 L = 320, N = 4
-MM_REF t = 1.83e-03 sec, GFLOPS =  36.80
-MM_SOL t = 1.32e-03 sec, GFLOPS =  49.91
+MM_REF t = 1.73e-03 sec, GFLOPS =  39.47
+MM_SOL t = 1.63e-03 sec, GFLOPS =  40.16
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 320 ...
 L = 320, N = 4
-MM_REF t = 1.13e-03 sec, GFLOPS =  58.24
-MM_SOL t = 1.26e-03 sec, GFLOPS =  52.06
+MM_REF t = 1.21e-03 sec, GFLOPS =  54.36
+MM_SOL t = 1.80e-03 sec, GFLOPS =  37.00
 
-Running dgemm-32-32-32.x with arguments 320 ...
+Running avx2-packing-8x4-unroll.x with arguments 320 ...
 L = 320, N = 4
-MM_REF t = 1.13e-03 sec, GFLOPS =  58.25
-MM_SOL t = 1.14e-03 sec, GFLOPS =  57.29
-
-Running dgemm-64-64-64.x with arguments 320 ...
-L = 320, N = 4
-MM_REF t = 1.12e-03 sec, GFLOPS =  58.49
-MM_SOL t = 1.16e-03 sec, GFLOPS =  56.58
-
-Running dgemm-96-96-96.x with arguments 320 ...
-L = 320, N = 4
-MM_REF t = 1.37e-03 sec, GFLOPS =  50.37
-MM_SOL t = 1.31e-03 sec, GFLOPS =  50.20
+MM_REF t = 2.09e-03 sec, GFLOPS =  33.03
+MM_SOL t = 2.35e-03 sec, GFLOPS =  28.08
 
 Running avx2-8x4-unroll.x with arguments 384 ...
 L = 384, N = 4
-MM_REF t = 2.11e-03 sec, GFLOPS =  53.79
-MM_SOL t = 2.37e-03 sec, GFLOPS =  47.90
+MM_REF t = 2.03e-03 sec, GFLOPS =  55.95
+MM_SOL t = 2.98e-03 sec, GFLOPS =  38.06
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 384 ...
 L = 384, N = 4
-MM_REF t = 2.09e-03 sec, GFLOPS =  54.43
-MM_SOL t = 2.30e-03 sec, GFLOPS =  49.33
+MM_REF t = 2.29e-03 sec, GFLOPS =  49.37
+MM_SOL t = 3.08e-03 sec, GFLOPS =  36.90
 
-Running dgemm-32-32-32.x with arguments 384 ...
+Running avx2-packing-8x4-unroll.x with arguments 384 ...
 L = 384, N = 4
-MM_REF t = 1.90e-03 sec, GFLOPS =  59.66
-MM_SOL t = 2.01e-03 sec, GFLOPS =  56.27
-
-Running dgemm-64-64-64.x with arguments 384 ...
-L = 384, N = 4
-MM_REF t = 2.22e-03 sec, GFLOPS =  51.67
-MM_SOL t = 2.14e-03 sec, GFLOPS =  52.84
-
-Running dgemm-96-96-96.x with arguments 384 ...
-L = 384, N = 4
-MM_REF t = 1.84e-03 sec, GFLOPS =  61.46
-MM_SOL t = 2.11e-03 sec, GFLOPS =  53.70
+MM_REF t = 2.02e-03 sec, GFLOPS =  56.18
+MM_SOL t = 4.17e-03 sec, GFLOPS =  27.20
 
 Running avx2-8x4-unroll.x with arguments 448 ...
 L = 448, N = 4
-MM_REF t = 3.28e-03 sec, GFLOPS =  55.43
-MM_SOL t = 3.73e-03 sec, GFLOPS =  48.21
+MM_REF t = 3.28e-03 sec, GFLOPS =  55.06
+MM_SOL t = 5.27e-03 sec, GFLOPS =  34.41
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 448 ...
 L = 448, N = 4
-MM_REF t = 2.99e-03 sec, GFLOPS =  60.22
-MM_SOL t = 4.08e-03 sec, GFLOPS =  44.11
+MM_REF t = 3.08e-03 sec, GFLOPS =  58.44
+MM_SOL t = 4.69e-03 sec, GFLOPS =  38.42
 
-Running dgemm-32-32-32.x with arguments 448 ...
+Running avx2-packing-8x4-unroll.x with arguments 448 ...
 L = 448, N = 4
-MM_REF t = 3.13e-03 sec, GFLOPS =  57.59
-MM_SOL t = 3.15e-03 sec, GFLOPS =  57.06
-
-Running dgemm-64-64-64.x with arguments 448 ...
-L = 448, N = 4
-MM_REF t = 3.00e-03 sec, GFLOPS =  59.97
-MM_SOL t = 3.41e-03 sec, GFLOPS =  52.78
-
-Running dgemm-96-96-96.x with arguments 448 ...
-L = 448, N = 4
-MM_REF t = 3.04e-03 sec, GFLOPS =  59.20
-MM_SOL t = 3.48e-03 sec, GFLOPS =  51.67
+MM_REF t = 3.40e-03 sec, GFLOPS =  52.86
+MM_SOL t = 6.64e-03 sec, GFLOPS =  27.11
 
 Running avx2-8x4-unroll.x with arguments 512 ...
 L = 512, N = 4
-MM_REF t = 4.75e-03 sec, GFLOPS =  56.72
-MM_SOL t = 1.27e-02 sec, GFLOPS =  21.16
+MM_REF t = 4.52e-03 sec, GFLOPS =  59.39
+MM_SOL t = 1.69e-02 sec, GFLOPS =  15.88
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 512 ...
 L = 512, N = 4
-MM_REF t = 4.56e-03 sec, GFLOPS =  58.95
-MM_SOL t = 1.06e-02 sec, GFLOPS =  25.22
+MM_REF t = 4.59e-03 sec, GFLOPS =  58.51
+MM_SOL t = 8.07e-03 sec, GFLOPS =  33.31
 
-Running dgemm-32-32-32.x with arguments 512 ...
+Running avx2-packing-8x4-unroll.x with arguments 512 ...
 L = 512, N = 4
-MM_REF t = 4.62e-03 sec, GFLOPS =  58.22
-MM_SOL t = 5.62e-03 sec, GFLOPS =  47.80
-
-Running dgemm-64-64-64.x with arguments 512 ...
-L = 512, N = 4
-MM_REF t = 5.30e-03 sec, GFLOPS =  51.38
-MM_SOL t = 5.86e-03 sec, GFLOPS =  45.82
-
-Running dgemm-96-96-96.x with arguments 512 ...
-L = 512, N = 4
-MM_REF t = 4.88e-03 sec, GFLOPS =  55.04
-MM_SOL t = 5.56e-03 sec, GFLOPS =  48.31
+MM_REF t = 4.71e-03 sec, GFLOPS =  57.10
+MM_SOL t = 9.09e-03 sec, GFLOPS =  29.53
 
 Running avx2-8x4-unroll.x with arguments 576 ...
 L = 576, N = 4
-MM_REF t = 6.69e-03 sec, GFLOPS =  57.14
-MM_SOL t = 9.33e-03 sec, GFLOPS =  41.11
+MM_REF t = 6.95e-03 sec, GFLOPS =  55.46
+MM_SOL t = 1.14e-02 sec, GFLOPS =  33.61
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 576 ...
 L = 576, N = 4
-MM_REF t = 6.50e-03 sec, GFLOPS =  58.85
-MM_SOL t = 8.91e-03 sec, GFLOPS =  42.89
+MM_REF t = 7.01e-03 sec, GFLOPS =  54.53
+MM_SOL t = 9.74e-03 sec, GFLOPS =  39.23
 
-Running dgemm-32-32-32.x with arguments 576 ...
+Running avx2-packing-8x4-unroll.x with arguments 576 ...
 L = 576, N = 4
-MM_REF t = 6.46e-03 sec, GFLOPS =  59.23
-MM_SOL t = 6.73e-03 sec, GFLOPS =  56.79
-
-Running dgemm-64-64-64.x with arguments 576 ...
-L = 576, N = 4
-MM_REF t = 6.99e-03 sec, GFLOPS =  55.17
-MM_SOL t = 7.42e-03 sec, GFLOPS =  51.53
-
-Running dgemm-96-96-96.x with arguments 576 ...
-L = 576, N = 4
-MM_REF t = 6.99e-03 sec, GFLOPS =  54.87
-MM_SOL t = 7.84e-03 sec, GFLOPS =  48.77
+MM_REF t = 6.44e-03 sec, GFLOPS =  59.41
+MM_SOL t = 1.36e-02 sec, GFLOPS =  28.28
 
 Running avx2-8x4-unroll.x with arguments 640 ...
 L = 640, N = 4
-MM_REF t = 9.30e-03 sec, GFLOPS =  56.54
-MM_SOL t = 1.27e-02 sec, GFLOPS =  41.37
+MM_REF t = 9.70e-03 sec, GFLOPS =  54.07
+MM_SOL t = 1.58e-02 sec, GFLOPS =  33.18
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 640 ...
 L = 640, N = 4
-MM_REF t = 8.71e-03 sec, GFLOPS =  60.25
-MM_SOL t = 1.31e-02 sec, GFLOPS =  40.09
+MM_REF t = 8.96e-03 sec, GFLOPS =  58.63
+MM_SOL t = 1.50e-02 sec, GFLOPS =  35.22
 
-Running dgemm-32-32-32.x with arguments 640 ...
+Running avx2-packing-8x4-unroll.x with arguments 640 ...
 L = 640, N = 4
-MM_REF t = 1.02e-02 sec, GFLOPS =  51.49
-MM_SOL t = 9.79e-03 sec, GFLOPS =  53.58
-
-Running dgemm-64-64-64.x with arguments 640 ...
-L = 640, N = 4
-MM_REF t = 9.53e-03 sec, GFLOPS =  55.02
-MM_SOL t = 1.01e-02 sec, GFLOPS =  51.73
-
-Running dgemm-96-96-96.x with arguments 640 ...
-L = 640, N = 4
-MM_REF t = 9.27e-03 sec, GFLOPS =  56.65
-MM_SOL t = 1.14e-02 sec, GFLOPS =  45.90
+MM_REF t = 9.34e-03 sec, GFLOPS =  56.13
+MM_SOL t = 1.73e-02 sec, GFLOPS =  30.26
 
 Running avx2-8x4-unroll.x with arguments 704 ...
 L = 704, N = 4
-MM_REF t = 1.27e-02 sec, GFLOPS =  54.78
-MM_SOL t = 1.52e-02 sec, GFLOPS =  46.05
+MM_REF t = 1.36e-02 sec, GFLOPS =  51.40
+MM_SOL t = 2.15e-02 sec, GFLOPS =  32.51
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 704 ...
 L = 704, N = 4
-MM_REF t = 1.21e-02 sec, GFLOPS =  57.46
-MM_SOL t = 1.80e-02 sec, GFLOPS =  38.86
+MM_REF t = 1.17e-02 sec, GFLOPS =  59.60
+MM_SOL t = 2.19e-02 sec, GFLOPS =  31.83
 
-Running dgemm-32-32-32.x with arguments 704 ...
+Running avx2-packing-8x4-unroll.x with arguments 704 ...
 L = 704, N = 4
-MM_REF t = 1.24e-02 sec, GFLOPS =  56.39
-MM_SOL t = 1.29e-02 sec, GFLOPS =  54.29
-
-Running dgemm-64-64-64.x with arguments 704 ...
-L = 704, N = 4
-MM_REF t = 1.15e-02 sec, GFLOPS =  60.46
-MM_SOL t = 1.43e-02 sec, GFLOPS =  48.69
-
-Running dgemm-96-96-96.x with arguments 704 ...
-L = 704, N = 4
-MM_REF t = 1.18e-02 sec, GFLOPS =  59.09
-MM_SOL t = 1.42e-02 sec, GFLOPS =  49.09
+MM_REF t = 1.20e-02 sec, GFLOPS =  58.11
+MM_SOL t = 2.35e-02 sec, GFLOPS =  29.73
 
 Running avx2-8x4-unroll.x with arguments 768 ...
 L = 768, N = 4
-MM_REF t = 1.55e-02 sec, GFLOPS =  58.77
-MM_SOL t = 3.82e-02 sec, GFLOPS =  23.82
+MM_REF t = 1.58e-02 sec, GFLOPS =  57.30
+MM_SOL t = 4.20e-02 sec, GFLOPS =  21.55
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 768 ...
 L = 768, N = 4
-MM_REF t = 1.69e-02 sec, GFLOPS =  53.53
-MM_SOL t = 2.24e-02 sec, GFLOPS =  40.54
+MM_REF t = 1.57e-02 sec, GFLOPS =  57.83
+MM_SOL t = 2.54e-02 sec, GFLOPS =  35.66
 
-Running dgemm-32-32-32.x with arguments 768 ...
+Running avx2-packing-8x4-unroll.x with arguments 768 ...
 L = 768, N = 4
-MM_REF t = 1.46e-02 sec, GFLOPS =  61.88
-MM_SOL t = 1.90e-02 sec, GFLOPS =  47.58
-
-Running dgemm-64-64-64.x with arguments 768 ...
-L = 768, N = 4
-MM_REF t = 1.52e-02 sec, GFLOPS =  59.75
-MM_SOL t = 1.78e-02 sec, GFLOPS =  50.94
-
-Running dgemm-96-96-96.x with arguments 768 ...
-L = 768, N = 4
-MM_REF t = 1.51e-02 sec, GFLOPS =  59.93
-MM_SOL t = 1.87e-02 sec, GFLOPS =  48.44
+MM_REF t = 1.55e-02 sec, GFLOPS =  58.43
+MM_SOL t = 3.16e-02 sec, GFLOPS =  28.68
 
 Running avx2-8x4-unroll.x with arguments 832 ...
 L = 832, N = 4
-MM_REF t = 1.97e-02 sec, GFLOPS =  58.61
-MM_SOL t = 2.54e-02 sec, GFLOPS =  45.36
+MM_REF t = 1.90e-02 sec, GFLOPS =  60.85
+MM_SOL t = 3.95e-02 sec, GFLOPS =  29.15
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 832 ...
 L = 832, N = 4
-MM_REF t = 2.06e-02 sec, GFLOPS =  55.82
-MM_SOL t = 2.90e-02 sec, GFLOPS =  39.69
+MM_REF t = 1.98e-02 sec, GFLOPS =  58.18
+MM_SOL t = 3.06e-02 sec, GFLOPS =  37.69
 
-Running dgemm-32-32-32.x with arguments 832 ...
+Running avx2-packing-8x4-unroll.x with arguments 832 ...
 L = 832, N = 4
-MM_REF t = 1.92e-02 sec, GFLOPS =  60.09
-MM_SOL t = 2.16e-02 sec, GFLOPS =  53.43
-
-Running dgemm-64-64-64.x with arguments 832 ...
-L = 832, N = 4
-MM_REF t = 1.99e-02 sec, GFLOPS =  57.95
-MM_SOL t = 2.47e-02 sec, GFLOPS =  46.71
-
-Running dgemm-96-96-96.x with arguments 832 ...
-L = 832, N = 4
-MM_REF t = 1.91e-02 sec, GFLOPS =  60.24
-MM_SOL t = 2.39e-02 sec, GFLOPS =  48.11
+MM_REF t = 1.98e-02 sec, GFLOPS =  58.15
+MM_SOL t = 3.73e-02 sec, GFLOPS =  30.91
 
 Running avx2-8x4-unroll.x with arguments 896 ...
 L = 896, N = 4
-MM_REF t = 2.52e-02 sec, GFLOPS =  57.08
-MM_SOL t = 3.58e-02 sec, GFLOPS =  40.18
+MM_REF t = 2.42e-02 sec, GFLOPS =  59.55
+MM_SOL t = 4.69e-02 sec, GFLOPS =  30.67
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 896 ...
 L = 896, N = 4
-MM_REF t = 2.40e-02 sec, GFLOPS =  59.87
-MM_SOL t = 3.83e-02 sec, GFLOPS =  37.52
+MM_REF t = 2.40e-02 sec, GFLOPS =  59.98
+MM_SOL t = 4.05e-02 sec, GFLOPS =  35.54
 
-Running dgemm-32-32-32.x with arguments 896 ...
+Running avx2-packing-8x4-unroll.x with arguments 896 ...
 L = 896, N = 4
-MM_REF t = 2.30e-02 sec, GFLOPS =  62.46
-MM_SOL t = 2.84e-02 sec, GFLOPS =  50.82
-
-Running dgemm-64-64-64.x with arguments 896 ...
-L = 896, N = 4
-MM_REF t = 2.45e-02 sec, GFLOPS =  58.66
-MM_SOL t = 2.94e-02 sec, GFLOPS =  48.85
-
-Running dgemm-96-96-96.x with arguments 896 ...
-L = 896, N = 4
-MM_REF t = 2.48e-02 sec, GFLOPS =  57.92
-MM_SOL t = 3.08e-02 sec, GFLOPS =  46.74
+MM_REF t = 2.35e-02 sec, GFLOPS =  61.12
+MM_SOL t = 4.73e-02 sec, GFLOPS =  30.42
 
 Running avx2-8x4-unroll.x with arguments 960 ...
 L = 960, N = 4
-MM_REF t = 2.95e-02 sec, GFLOPS =  59.95
-MM_SOL t = 3.72e-02 sec, GFLOPS =  47.55
+MM_REF t = 3.02e-02 sec, GFLOPS =  58.73
+MM_SOL t = 5.28e-02 sec, GFLOPS =  33.53
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 960 ...
 L = 960, N = 4
-MM_REF t = 2.89e-02 sec, GFLOPS =  61.22
-MM_SOL t = 4.67e-02 sec, GFLOPS =  37.86
+MM_REF t = 2.99e-02 sec, GFLOPS =  59.19
+MM_SOL t = 4.89e-02 sec, GFLOPS =  36.21
 
-Running dgemm-32-32-32.x with arguments 960 ...
+Running avx2-packing-8x4-unroll.x with arguments 960 ...
 L = 960, N = 4
-MM_REF t = 3.02e-02 sec, GFLOPS =  58.61
-MM_SOL t = 3.29e-02 sec, GFLOPS =  53.85
-
-Running dgemm-64-64-64.x with arguments 960 ...
-L = 960, N = 4
-MM_REF t = 2.94e-02 sec, GFLOPS =  60.29
-MM_SOL t = 3.90e-02 sec, GFLOPS =  45.41
-
-Running dgemm-96-96-96.x with arguments 960 ...
-L = 960, N = 4
-MM_REF t = 2.89e-02 sec, GFLOPS =  61.21
-MM_SOL t = 3.79e-02 sec, GFLOPS =  46.65
+MM_REF t = 2.95e-02 sec, GFLOPS =  60.01
+MM_SOL t = 5.64e-02 sec, GFLOPS =  31.37
 
 Running avx2-8x4-unroll.x with arguments 1024 ...
 L = 1024, N = 4
-MM_REF t = 3.54e-02 sec, GFLOPS =  60.60
-MM_SOL t = 1.08e-01 sec, GFLOPS =  19.89
+MM_REF t = 3.61e-02 sec, GFLOPS =  59.48
+MM_SOL t = 1.22e-01 sec, GFLOPS =  17.66
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1024 ...
 L = 1024, N = 4
-MM_REF t = 3.83e-02 sec, GFLOPS =  56.03
-MM_SOL t = 1.10e-01 sec, GFLOPS =  19.47
+MM_REF t = 3.60e-02 sec, GFLOPS =  59.70
+MM_SOL t = 6.68e-02 sec, GFLOPS =  32.13
 
-Running dgemm-32-32-32.x with arguments 1024 ...
+Running avx2-packing-8x4-unroll.x with arguments 1024 ...
 L = 1024, N = 4
-MM_REF t = 3.60e-02 sec, GFLOPS =  59.71
-MM_SOL t = 4.76e-02 sec, GFLOPS =  45.15
-
-Running dgemm-64-64-64.x with arguments 1024 ...
-L = 1024, N = 4
-MM_REF t = 3.48e-02 sec, GFLOPS =  61.72
-MM_SOL t = 4.82e-02 sec, GFLOPS =  44.52
-
-Running dgemm-96-96-96.x with arguments 1024 ...
-L = 1024, N = 4
-MM_REF t = 3.69e-02 sec, GFLOPS =  58.27
-MM_SOL t = 5.58e-02 sec, GFLOPS =  38.51
+MM_REF t = 3.63e-02 sec, GFLOPS =  59.13
+MM_SOL t = 7.04e-02 sec, GFLOPS =  30.49
 
 Running avx2-8x4-unroll.x with arguments 1088 ...
 L = 1088, N = 4
-MM_REF t = 4.19e-02 sec, GFLOPS =  61.50
-MM_SOL t = 6.71e-02 sec, GFLOPS =  38.39
+MM_REF t = 4.16e-02 sec, GFLOPS =  61.85
+MM_SOL t = 9.80e-02 sec, GFLOPS =  26.30
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1088 ...
 L = 1088, N = 4
-MM_REF t = 4.26e-02 sec, GFLOPS =  60.41
-MM_SOL t = 6.82e-02 sec, GFLOPS =  37.74
+MM_REF t = 4.35e-02 sec, GFLOPS =  59.28
+MM_SOL t = 7.47e-02 sec, GFLOPS =  34.46
 
-Running dgemm-32-32-32.x with arguments 1088 ...
+Running avx2-packing-8x4-unroll.x with arguments 1088 ...
 L = 1088, N = 4
-MM_REF t = 4.31e-02 sec, GFLOPS =  59.72
-MM_SOL t = 5.03e-02 sec, GFLOPS =  51.25
-
-Running dgemm-64-64-64.x with arguments 1088 ...
-L = 1088, N = 4
-MM_REF t = 4.15e-02 sec, GFLOPS =  62.11
-MM_SOL t = 5.81e-02 sec, GFLOPS =  44.36
-
-Running dgemm-96-96-96.x with arguments 1088 ...
-L = 1088, N = 4
-MM_REF t = 4.18e-02 sec, GFLOPS =  61.63
-MM_SOL t = 6.01e-02 sec, GFLOPS =  42.85
+MM_REF t = 4.18e-02 sec, GFLOPS =  61.68
+MM_SOL t = 8.20e-02 sec, GFLOPS =  31.41
 
 Running avx2-8x4-unroll.x with arguments 1152 ...
 L = 1152, N = 4
-MM_REF t = 4.98e-02 sec, GFLOPS =  61.45
-MM_SOL t = 2.12e-01 sec, GFLOPS =  14.43
+MM_REF t = 4.92e-02 sec, GFLOPS =  62.09
+MM_SOL t = 2.48e-01 sec, GFLOPS =  12.35
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1152 ...
 L = 1152, N = 4
-MM_REF t = 4.94e-02 sec, GFLOPS =  61.91
-MM_SOL t = 8.24e-02 sec, GFLOPS =  37.15
+MM_REF t = 5.08e-02 sec, GFLOPS =  60.20
+MM_SOL t = 8.74e-02 sec, GFLOPS =  35.00
 
-Running dgemm-32-32-32.x with arguments 1152 ...
+Running avx2-packing-8x4-unroll.x with arguments 1152 ...
 L = 1152, N = 4
-MM_REF t = 4.91e-02 sec, GFLOPS =  62.26
-MM_SOL t = 5.94e-02 sec, GFLOPS =  51.51
-
-Running dgemm-64-64-64.x with arguments 1152 ...
-L = 1152, N = 4
-MM_REF t = 4.99e-02 sec, GFLOPS =  61.24
-MM_SOL t = 6.49e-02 sec, GFLOPS =  47.14
-
-Running dgemm-96-96-96.x with arguments 1152 ...
-L = 1152, N = 4
-MM_REF t = 4.90e-02 sec, GFLOPS =  62.44
-MM_SOL t = 6.73e-02 sec, GFLOPS =  45.45
+MM_REF t = 4.98e-02 sec, GFLOPS =  61.43
+MM_SOL t = 9.91e-02 sec, GFLOPS =  30.87
 
 Running avx2-8x4-unroll.x with arguments 1216 ...
 L = 1216, N = 4
-MM_REF t = 5.98e-02 sec, GFLOPS =  60.13
-MM_SOL t = 1.02e-01 sec, GFLOPS =  35.27
+MM_REF t = 5.84e-02 sec, GFLOPS =  61.56
+MM_SOL t = 1.57e-01 sec, GFLOPS =  22.96
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1216 ...
 L = 1216, N = 4
-MM_REF t = 5.91e-02 sec, GFLOPS =  60.83
-MM_SOL t = 1.01e-01 sec, GFLOPS =  35.71
+MM_REF t = 5.93e-02 sec, GFLOPS =  60.61
+MM_SOL t = 1.01e-01 sec, GFLOPS =  35.65
 
-Running dgemm-32-32-32.x with arguments 1216 ...
+Running avx2-packing-8x4-unroll.x with arguments 1216 ...
 L = 1216, N = 4
-MM_REF t = 5.86e-02 sec, GFLOPS =  61.44
-MM_SOL t = 7.13e-02 sec, GFLOPS =  50.43
-
-Running dgemm-64-64-64.x with arguments 1216 ...
-L = 1216, N = 4
-MM_REF t = 5.92e-02 sec, GFLOPS =  60.76
-MM_SOL t = 7.58e-02 sec, GFLOPS =  47.43
-
-Running dgemm-96-96-96.x with arguments 1216 ...
-L = 1216, N = 4
-MM_REF t = 6.18e-02 sec, GFLOPS =  58.23
-MM_SOL t = 8.55e-02 sec, GFLOPS =  42.08
+MM_REF t = 6.00e-02 sec, GFLOPS =  59.91
+MM_SOL t = 1.16e-01 sec, GFLOPS =  30.90
 
 Running avx2-8x4-unroll.x with arguments 1280 ...
 L = 1280, N = 4
-MM_REF t = 6.73e-02 sec, GFLOPS =  62.36
-MM_SOL t = 2.69e-01 sec, GFLOPS =  15.58
+MM_REF t = 7.03e-02 sec, GFLOPS =  59.73
+MM_SOL t = 3.15e-01 sec, GFLOPS =  13.32
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1280 ...
 L = 1280, N = 4
-MM_REF t = 6.86e-02 sec, GFLOPS =  61.20
-MM_SOL t = 1.42e-01 sec, GFLOPS =  29.55
+MM_REF t = 6.87e-02 sec, GFLOPS =  61.01
+MM_SOL t = 1.29e-01 sec, GFLOPS =  32.45
 
-Running dgemm-32-32-32.x with arguments 1280 ...
+Running avx2-packing-8x4-unroll.x with arguments 1280 ...
 L = 1280, N = 4
-MM_REF t = 7.42e-02 sec, GFLOPS =  56.55
-MM_SOL t = 9.83e-02 sec, GFLOPS =  42.73
-
-Running dgemm-64-64-64.x with arguments 1280 ...
-L = 1280, N = 4
-MM_REF t = 7.16e-02 sec, GFLOPS =  58.60
-MM_SOL t = 9.87e-02 sec, GFLOPS =  42.49
-
-Running dgemm-96-96-96.x with arguments 1280 ...
-L = 1280, N = 4
-MM_REF t = 6.77e-02 sec, GFLOPS =  61.95
-MM_SOL t = 1.16e-01 sec, GFLOPS =  36.22
+MM_REF t = 6.82e-02 sec, GFLOPS =  61.54
+MM_SOL t = 1.36e-01 sec, GFLOPS =  30.95
 
 Running avx2-8x4-unroll.x with arguments 1344 ...
 L = 1344, N = 4
-MM_REF t = 7.76e-02 sec, GFLOPS =  62.55
-MM_SOL t = 2.33e-01 sec, GFLOPS =  20.85
+MM_REF t = 7.87e-02 sec, GFLOPS =  61.67
+MM_SOL t = 2.80e-01 sec, GFLOPS =  17.32
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1344 ...
 L = 1344, N = 4
-MM_REF t = 7.84e-02 sec, GFLOPS =  61.91
-MM_SOL t = 1.38e-01 sec, GFLOPS =  35.21
+MM_REF t = 7.86e-02 sec, GFLOPS =  61.76
+MM_SOL t = 1.40e-01 sec, GFLOPS =  34.58
 
-Running dgemm-32-32-32.x with arguments 1344 ...
+Running avx2-packing-8x4-unroll.x with arguments 1344 ...
 L = 1344, N = 4
-MM_REF t = 7.88e-02 sec, GFLOPS =  61.62
-MM_SOL t = 9.52e-02 sec, GFLOPS =  51.02
-
-Running dgemm-64-64-64.x with arguments 1344 ...
-L = 1344, N = 4
-MM_REF t = 7.96e-02 sec, GFLOPS =  60.98
-MM_SOL t = 1.04e-01 sec, GFLOPS =  46.80
-
-Running dgemm-96-96-96.x with arguments 1344 ...
-L = 1344, N = 4
-MM_REF t = 7.95e-02 sec, GFLOPS =  61.07
-MM_SOL t = 1.08e-01 sec, GFLOPS =  44.93
+MM_REF t = 7.96e-02 sec, GFLOPS =  60.97
+MM_SOL t = 1.58e-01 sec, GFLOPS =  30.77
 
 Running avx2-8x4-unroll.x with arguments 1408 ...
 L = 1408, N = 4
-MM_REF t = 8.95e-02 sec, GFLOPS =  62.36
-MM_SOL t = 3.73e-01 sec, GFLOPS =  14.99
+MM_REF t = 9.02e-02 sec, GFLOPS =  61.90
+MM_SOL t = 4.67e-01 sec, GFLOPS =  11.97
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1408 ...
 L = 1408, N = 4
-MM_REF t = 9.39e-02 sec, GFLOPS =  59.46
-MM_SOL t = 1.61e-01 sec, GFLOPS =  34.69
+MM_REF t = 9.09e-02 sec, GFLOPS =  61.40
+MM_SOL t = 1.64e-01 sec, GFLOPS =  34.07
 
-Running dgemm-32-32-32.x with arguments 1408 ...
+Running avx2-packing-8x4-unroll.x with arguments 1408 ...
 L = 1408, N = 4
-MM_REF t = 9.25e-02 sec, GFLOPS =  60.39
-MM_SOL t = 1.13e-01 sec, GFLOPS =  49.42
-
-Running dgemm-64-64-64.x with arguments 1408 ...
-L = 1408, N = 4
-MM_REF t = 9.14e-02 sec, GFLOPS =  61.10
-MM_SOL t = 1.22e-01 sec, GFLOPS =  45.90
-
-Running dgemm-96-96-96.x with arguments 1408 ...
-L = 1408, N = 4
-MM_REF t = 9.05e-02 sec, GFLOPS =  61.68
-MM_SOL t = 1.26e-01 sec, GFLOPS =  44.26
+MM_REF t = 9.33e-02 sec, GFLOPS =  59.82
+MM_SOL t = 1.78e-01 sec, GFLOPS =  31.40
 
 Running avx2-8x4-unroll.x with arguments 1472 ...
 L = 1472, N = 4
-MM_REF t = 1.05e-01 sec, GFLOPS =  60.51
-MM_SOL t = 2.25e-01 sec, GFLOPS =  28.31
+MM_REF t = 1.03e-01 sec, GFLOPS =  62.23
+MM_SOL t = 3.15e-01 sec, GFLOPS =  20.24
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1472 ...
 L = 1472, N = 4
-MM_REF t = 1.04e-01 sec, GFLOPS =  61.55
-MM_SOL t = 1.75e-01 sec, GFLOPS =  36.37
+MM_REF t = 1.04e-01 sec, GFLOPS =  61.39
+MM_SOL t = 1.86e-01 sec, GFLOPS =  34.26
 
-Running dgemm-32-32-32.x with arguments 1472 ...
+Running avx2-packing-8x4-unroll.x with arguments 1472 ...
 L = 1472, N = 4
-MM_REF t = 1.05e-01 sec, GFLOPS =  60.81
-MM_SOL t = 1.35e-01 sec, GFLOPS =  47.44
-
-Running dgemm-64-64-64.x with arguments 1472 ...
-L = 1472, N = 4
-MM_REF t = 1.04e-01 sec, GFLOPS =  61.62
-MM_SOL t = 1.44e-01 sec, GFLOPS =  44.42
-
-Running dgemm-96-96-96.x with arguments 1472 ...
-L = 1472, N = 4
-MM_REF t = 1.04e-01 sec, GFLOPS =  61.43
-MM_SOL t = 1.77e-01 sec, GFLOPS =  36.03
+MM_REF t = 1.05e-01 sec, GFLOPS =  60.82
+MM_SOL t = 2.02e-01 sec, GFLOPS =  31.58
 
 Running avx2-8x4-unroll.x with arguments 1536 ...
 L = 1536, N = 4
-MM_REF t = 1.17e-01 sec, GFLOPS =  62.05
-MM_SOL t = 5.50e-01 sec, GFLOPS =  13.19
+MM_REF t = 1.19e-01 sec, GFLOPS =  60.92
+MM_SOL t = 6.49e-01 sec, GFLOPS =  11.18
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1536 ...
 L = 1536, N = 4
-MM_REF t = 1.16e-01 sec, GFLOPS =  62.36
-MM_SOL t = 4.04e-01 sec, GFLOPS =  17.94
+MM_REF t = 1.19e-01 sec, GFLOPS =  60.70
+MM_SOL t = 2.44e-01 sec, GFLOPS =  29.66
 
-Running dgemm-32-32-32.x with arguments 1536 ...
+Running avx2-packing-8x4-unroll.x with arguments 1536 ...
 L = 1536, N = 4
-MM_REF t = 1.17e-01 sec, GFLOPS =  62.09
-MM_SOL t = 1.79e-01 sec, GFLOPS =  40.41
-
-Running dgemm-64-64-64.x with arguments 1536 ...
-L = 1536, N = 4
-MM_REF t = 1.19e-01 sec, GFLOPS =  61.10
-MM_SOL t = 2.01e-01 sec, GFLOPS =  36.15
-
-Running dgemm-96-96-96.x with arguments 1536 ...
-L = 1536, N = 4
-MM_REF t = 1.16e-01 sec, GFLOPS =  62.25
-MM_SOL t = 1.99e-01 sec, GFLOPS =  36.49
+MM_REF t = 1.17e-01 sec, GFLOPS =  62.20
+MM_SOL t = 2.30e-01 sec, GFLOPS =  31.46
 
 Running avx2-8x4-unroll.x with arguments 1600 ...
 L = 1600, N = 4
-MM_REF t = 1.32e-01 sec, GFLOPS =  62.01
-MM_SOL t = 3.90e-01 sec, GFLOPS =  21.02
+MM_REF t = 1.38e-01 sec, GFLOPS =  59.39
+MM_SOL t = 5.36e-01 sec, GFLOPS =  15.28
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1600 ...
 L = 1600, N = 4
-MM_REF t = 1.34e-01 sec, GFLOPS =  61.25
-MM_SOL t = 2.42e-01 sec, GFLOPS =  33.87
+MM_REF t = 1.35e-01 sec, GFLOPS =  60.71
+MM_SOL t = 2.40e-01 sec, GFLOPS =  34.15
 
-Running dgemm-32-32-32.x with arguments 1600 ...
+Running avx2-packing-8x4-unroll.x with arguments 1600 ...
 L = 1600, N = 4
-MM_REF t = 1.33e-01 sec, GFLOPS =  61.46
-MM_SOL t = 1.71e-01 sec, GFLOPS =  47.86
-
-Running dgemm-64-64-64.x with arguments 1600 ...
-L = 1600, N = 4
-MM_REF t = 1.31e-01 sec, GFLOPS =  62.34
-MM_SOL t = 1.75e-01 sec, GFLOPS =  46.77
-
-Running dgemm-96-96-96.x with arguments 1600 ...
-L = 1600, N = 4
-MM_REF t = 1.31e-01 sec, GFLOPS =  62.75
-MM_SOL t = 1.96e-01 sec, GFLOPS =  41.86
+MM_REF t = 1.32e-01 sec, GFLOPS =  61.85
+MM_SOL t = 2.63e-01 sec, GFLOPS =  31.15
 
 Running avx2-8x4-unroll.x with arguments 1664 ...
 L = 1664, N = 4
-MM_REF t = 1.48e-01 sec, GFLOPS =  62.28
-MM_SOL t = 8.56e-01 sec, GFLOPS =  10.77
+MM_REF t = 1.47e-01 sec, GFLOPS =  62.56
+MM_SOL t = 9.64e-01 sec, GFLOPS =   9.55
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1664 ...
 L = 1664, N = 4
-MM_REF t = 1.49e-01 sec, GFLOPS =  61.98
-MM_SOL t = 2.74e-01 sec, GFLOPS =  33.63
+MM_REF t = 1.47e-01 sec, GFLOPS =  62.88
+MM_SOL t = 2.77e-01 sec, GFLOPS =  33.23
 
-Running dgemm-32-32-32.x with arguments 1664 ...
+Running avx2-packing-8x4-unroll.x with arguments 1664 ...
 L = 1664, N = 4
-MM_REF t = 1.47e-01 sec, GFLOPS =  62.77
-MM_SOL t = 1.89e-01 sec, GFLOPS =  48.66
-
-Running dgemm-64-64-64.x with arguments 1664 ...
-L = 1664, N = 4
-MM_REF t = 1.47e-01 sec, GFLOPS =  62.69
-MM_SOL t = 2.01e-01 sec, GFLOPS =  45.75
-
-Running dgemm-96-96-96.x with arguments 1664 ...
-L = 1664, N = 4
-MM_REF t = 1.47e-01 sec, GFLOPS =  62.50
-MM_SOL t = 2.00e-01 sec, GFLOPS =  46.18
+MM_REF t = 1.49e-01 sec, GFLOPS =  61.90
+MM_SOL t = 2.95e-01 sec, GFLOPS =  31.26
 
 Running avx2-8x4-unroll.x with arguments 1728 ...
 L = 1728, N = 4
-MM_REF t = 1.68e-01 sec, GFLOPS =  61.41
-MM_SOL t = 4.54e-01 sec, GFLOPS =  22.72
+MM_REF t = 1.65e-01 sec, GFLOPS =  62.61
+MM_SOL t = 5.99e-01 sec, GFLOPS =  17.23
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1728 ...
 L = 1728, N = 4
-MM_REF t = 1.68e-01 sec, GFLOPS =  61.51
-MM_SOL t = 2.97e-01 sec, GFLOPS =  34.74
+MM_REF t = 1.68e-01 sec, GFLOPS =  61.54
+MM_SOL t = 3.09e-01 sec, GFLOPS =  33.39
 
-Running dgemm-32-32-32.x with arguments 1728 ...
+Running avx2-packing-8x4-unroll.x with arguments 1728 ...
 L = 1728, N = 4
-MM_REF t = 1.65e-01 sec, GFLOPS =  62.38
-MM_SOL t = 2.12e-01 sec, GFLOPS =  48.66
-
-Running dgemm-64-64-64.x with arguments 1728 ...
-L = 1728, N = 4
-MM_REF t = 1.65e-01 sec, GFLOPS =  62.63
-MM_SOL t = 2.35e-01 sec, GFLOPS =  43.90
-
-Running dgemm-96-96-96.x with arguments 1728 ...
-L = 1728, N = 4
-MM_REF t = 1.67e-01 sec, GFLOPS =  61.86
-MM_SOL t = 2.79e-01 sec, GFLOPS =  36.98
+MM_REF t = 1.64e-01 sec, GFLOPS =  62.98
+MM_SOL t = 3.29e-01 sec, GFLOPS =  31.40
 
 Running avx2-8x4-unroll.x with arguments 1792 ...
 L = 1792, N = 4
-MM_REF t = 1.85e-01 sec, GFLOPS =  62.18
-MM_SOL t = 8.92e-01 sec, GFLOPS =  12.90
+MM_REF t = 1.87e-01 sec, GFLOPS =  61.53
+MM_SOL t = 9.94e-01 sec, GFLOPS =  11.59
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1792 ...
 L = 1792, N = 4
-MM_REF t = 1.85e-01 sec, GFLOPS =  62.13
-MM_SOL t = 3.95e-01 sec, GFLOPS =  29.13
+MM_REF t = 1.86e-01 sec, GFLOPS =  61.90
+MM_SOL t = 3.69e-01 sec, GFLOPS =  31.20
 
-Running dgemm-32-32-32.x with arguments 1792 ...
+Running avx2-packing-8x4-unroll.x with arguments 1792 ...
 L = 1792, N = 4
-MM_REF t = 1.86e-01 sec, GFLOPS =  61.74
-MM_SOL t = 2.83e-01 sec, GFLOPS =  40.68
-
-Running dgemm-64-64-64.x with arguments 1792 ...
-L = 1792, N = 4
-MM_REF t = 1.89e-01 sec, GFLOPS =  61.04
-MM_SOL t = 3.27e-01 sec, GFLOPS =  35.23
-
-Running dgemm-96-96-96.x with arguments 1792 ...
-L = 1792, N = 4
-MM_REF t = 1.87e-01 sec, GFLOPS =  61.44
-MM_SOL t = 3.47e-01 sec, GFLOPS =  33.15
+MM_REF t = 1.87e-01 sec, GFLOPS =  61.66
+MM_SOL t = 3.66e-01 sec, GFLOPS =  31.44
 
 Running avx2-8x4-unroll.x with arguments 1856 ...
 L = 1856, N = 4
-MM_REF t = 2.07e-01 sec, GFLOPS =  61.75
-MM_SOL t = 6.01e-01 sec, GFLOPS =  21.29
+MM_REF t = 2.06e-01 sec, GFLOPS =  61.96
+MM_SOL t = 8.26e-01 sec, GFLOPS =  15.48
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1856 ...
 L = 1856, N = 4
-MM_REF t = 2.06e-01 sec, GFLOPS =  62.03
-MM_SOL t = 3.76e-01 sec, GFLOPS =  34.01
+MM_REF t = 2.07e-01 sec, GFLOPS =  61.71
+MM_SOL t = 3.97e-01 sec, GFLOPS =  32.24
 
-Running dgemm-32-32-32.x with arguments 1856 ...
+Running avx2-packing-8x4-unroll.x with arguments 1856 ...
 L = 1856, N = 4
-MM_REF t = 2.05e-01 sec, GFLOPS =  62.28
-MM_SOL t = 2.84e-01 sec, GFLOPS =  45.09
-
-Running dgemm-64-64-64.x with arguments 1856 ...
-L = 1856, N = 4
-MM_REF t = 2.04e-01 sec, GFLOPS =  62.77
-MM_SOL t = 3.57e-01 sec, GFLOPS =  35.89
-
-Running dgemm-96-96-96.x with arguments 1856 ...
-L = 1856, N = 4
-MM_REF t = 2.11e-01 sec, GFLOPS =  60.67
-MM_SOL t = 3.80e-01 sec, GFLOPS =  33.64
+MM_REF t = 2.07e-01 sec, GFLOPS =  61.80
+MM_SOL t = 4.07e-01 sec, GFLOPS =  31.43
 
 Running avx2-8x4-unroll.x with arguments 1920 ...
 L = 1920, N = 4
-MM_REF t = 2.27e-01 sec, GFLOPS =  62.34
-MM_SOL t = 1.06e+00 sec, GFLOPS =  13.34
+MM_REF t = 2.27e-01 sec, GFLOPS =  62.25
+MM_SOL t = 1.25e+00 sec, GFLOPS =  11.37
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1920 ...
 L = 1920, N = 4
-MM_REF t = 2.25e-01 sec, GFLOPS =  62.83
-MM_SOL t = 5.02e-01 sec, GFLOPS =  28.17
+MM_REF t = 2.28e-01 sec, GFLOPS =  62.16
+MM_SOL t = 4.39e-01 sec, GFLOPS =  32.25
 
-Running dgemm-32-32-32.x with arguments 1920 ...
+Running avx2-packing-8x4-unroll.x with arguments 1920 ...
 L = 1920, N = 4
-MM_REF t = 2.29e-01 sec, GFLOPS =  61.90
-MM_SOL t = 3.12e-01 sec, GFLOPS =  45.36
-
-Running dgemm-64-64-64.x with arguments 1920 ...
-L = 1920, N = 4
-MM_REF t = 2.28e-01 sec, GFLOPS =  61.99
-MM_SOL t = 3.45e-01 sec, GFLOPS =  41.02
-
-Running dgemm-96-96-96.x with arguments 1920 ...
-L = 1920, N = 4
-MM_REF t = 2.31e-01 sec, GFLOPS =  61.25
-MM_SOL t = 4.06e-01 sec, GFLOPS =  34.84
+MM_REF t = 2.29e-01 sec, GFLOPS =  61.76
+MM_SOL t = 4.51e-01 sec, GFLOPS =  31.41
 
 Running avx2-8x4-unroll.x with arguments 1984 ...
 L = 1984, N = 4
-MM_REF t = 2.57e-01 sec, GFLOPS =  60.88
-MM_SOL t = 9.60e-01 sec, GFLOPS =  16.28
+MM_REF t = 2.53e-01 sec, GFLOPS =  61.71
+MM_SOL t = 1.24e+00 sec, GFLOPS =  12.64
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 1984 ...
 L = 1984, N = 4
-MM_REF t = 2.52e-01 sec, GFLOPS =  61.90
-MM_SOL t = 5.29e-01 sec, GFLOPS =  29.54
+MM_REF t = 2.52e-01 sec, GFLOPS =  62.02
+MM_SOL t = 4.60e-01 sec, GFLOPS =  33.96
 
-Running dgemm-32-32-32.x with arguments 1984 ...
+Running avx2-packing-8x4-unroll.x with arguments 1984 ...
 L = 1984, N = 4
-MM_REF t = 2.53e-01 sec, GFLOPS =  61.68
-MM_SOL t = 3.34e-01 sec, GFLOPS =  46.81
-
-Running dgemm-64-64-64.x with arguments 1984 ...
-L = 1984, N = 4
-MM_REF t = 2.52e-01 sec, GFLOPS =  62.09
-MM_SOL t = 3.90e-01 sec, GFLOPS =  40.10
-
-Running dgemm-96-96-96.x with arguments 1984 ...
-L = 1984, N = 4
-MM_REF t = 2.47e-01 sec, GFLOPS =  63.12
-MM_SOL t = 4.24e-01 sec, GFLOPS =  36.86
+MM_REF t = 2.52e-01 sec, GFLOPS =  61.98
+MM_SOL t = 4.90e-01 sec, GFLOPS =  31.87
 
 Running avx2-8x4-unroll.x with arguments 2048 ...
 L = 2048, N = 4
-MM_REF t = 2.77e-01 sec, GFLOPS =  62.13
-MM_SOL t = 2.51e+00 sec, GFLOPS =   6.83
+MM_REF t = 2.78e-01 sec, GFLOPS =  61.78
+MM_SOL t = 2.79e+00 sec, GFLOPS =   6.16
 
 Running avx2-cache-blocking-8x4-unroll.x with arguments 2048 ...
 L = 2048, N = 4
-MM_REF t = 2.76e-01 sec, GFLOPS =  62.36
-MM_SOL t = 1.45e+00 sec, GFLOPS =  11.86
+MM_REF t = 2.76e-01 sec, GFLOPS =  62.15
+MM_SOL t = 5.79e-01 sec, GFLOPS =  29.69
 
-Running dgemm-32-32-32.x with arguments 2048 ...
+Running avx2-packing-8x4-unroll.x with arguments 2048 ...
 L = 2048, N = 4
-MM_REF t = 2.77e-01 sec, GFLOPS =  61.91
-MM_SOL t = 4.48e-01 sec, GFLOPS =  38.33
-
-Running dgemm-64-64-64.x with arguments 2048 ...
-L = 2048, N = 4
-MM_REF t = 2.74e-01 sec, GFLOPS =  62.71
-MM_SOL t = 4.06e-01 sec, GFLOPS =  42.28
-
-Running dgemm-96-96-96.x with arguments 2048 ...
-L = 2048, N = 4
-MM_REF t = 2.74e-01 sec, GFLOPS =  62.79
-MM_SOL t = 9.04e-01 sec, GFLOPS =  19.01
+MM_REF t = 2.78e-01 sec, GFLOPS =  61.91
+MM_SOL t = 5.48e-01 sec, GFLOPS =  31.34
 

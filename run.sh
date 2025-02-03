@@ -17,7 +17,7 @@ echo "CONDA_PREFIX: $CONDA_PREFIX"
 
 cmake ..; make VERBOSE=1 -j4; cd -
 
-ff=("avx2-8x4-unroll.x" "avx2-cache-blocking-8x4-unroll.x" "dgemm-32-32-32.x" "dgemm-64-64-64.x" "dgemm-96-96-96.x")
+ff=("avx2-8x4-unroll.x" "avx2-cache-blocking-8x4-unroll.x" "avx2-packing-8x4-unroll.x")
 # ff=("naive-jki.x" "naive-ijk.x" "naive-kji.x")
 # ff=('dgemm-96-4096-192.x' 'dgemm-96-2048-384.x' 'dgemm-192-1024-192.x' 'dgemm-192-1024-384.x' 'dgemm-192-2048-192.x' 'dgemm-192-2048-384.x')
 
