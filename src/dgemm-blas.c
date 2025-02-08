@@ -1,8 +1,7 @@
-extern void dgemm_(char*, char*, int*, int*, int*, double*, double*, int*, double*, int*, double*, double*, int*); 
+extern void dgemm_(char*, char*, int*, int*, int*, double*, double*, int*, double*, int*, double*, double*, int*);
 
 void dgemm_blas(int m, int n, int k, double* a, double* b, double* c)
 {
-    char layout = 'C';
     char transa = 'N';
     char transb = 'N';
     double alpha = 1.0;
@@ -11,14 +10,13 @@ void dgemm_blas(int m, int n, int k, double* a, double* b, double* c)
     int ldb = n;
     int ldc = n;
     dgemm_(
-      // layout, 
-      &transa, 
-      &transb, 
-      &m, &n, &k, 
-      &alpha, 
-      a, &lda, 
-      b, &ldb, 
-      &beta, 
-      c, &ldc
+        &transa,  // transa
+        &transb,  // transb
+        &m, &n, &k,
+        &alpha,
+        a, &lda,
+        b, &ldb,
+        &beta,
+        c, &ldc
     );
-}   
+}

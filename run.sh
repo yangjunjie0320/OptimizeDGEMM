@@ -15,11 +15,11 @@ export PREFIX=$(pwd);
 rm -rf $PREFIX/build/; mkdir $PREFIX/build/; cd $PREFIX/build/;
 echo "CONDA_PREFIX: $CONDA_PREFIX"
 
-cmake ..; make VERBOSE=1 -j4; cd -
+opt_flags="-O2"
+cmake -DCMAKE_CXX_FLAGS="$opt_flags" -DCMAKE_C_FLAGS="$opt_flags" ..
+make VERBOSE=1 -j16; cd -
 
-ff=("avx2-8x4-unroll.x" "avx2-cache-blocking-8x4-unroll.x" "avx2-packing-8x4.x")
-# ff=("naive-jki.x" "naive-ijk.x" "naive-kji.x")
-# ff=('dgemm-96-4096-192.x' 'dgemm-96-2048-384.x' 'dgemm-192-1024-192.x' 'dgemm-192-1024-384.x' 'dgemm-192-2048-192.x' 'dgemm-192-2048-384.x')
+ff=("naive-nkm.x" "macro-kernel-nkm.x" "macro-kernel-4x4.x" "micro-kernel-4x4.x")
 
 cd $PREFIX/build/; echo "" > $PREFIX/plot/tmp; pwd
 for i in $(seq 1 32); do
@@ -31,7 +31,7 @@ for i in $(seq 1 32); do
         # echo "Running $f with arguments $l ..."
         echo "Running $f with arguments $l ..." >> $PREFIX/plot/tmp
         tail -n 1 $PREFIX/plot/tmp
-        ./$f "$l" "4" >> $PREFIX/plot/tmp
+        ./$f "$l" "10" >> $PREFIX/plot/tmp
         tail -n 1 $PREFIX/plot/tmp
         echo "" >> $PREFIX/plot/tmp
     done

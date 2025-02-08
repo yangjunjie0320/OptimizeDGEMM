@@ -1,488 +1,212 @@
 
-Running avx2-8x4-unroll.x with arguments 64 ...
-L = 64, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 1.14e-05 sec, GFLOPS =  47.07
-MM_SOL t = 8.95e-06 sec, GFLOPS =  58.55
+Running naive-nkm.x with arguments 64 ...
+L = 64, N = 10
+MM_REF t = 6.77e-05 sec, GFLOPS =   9.48
+MM_SOL t = 4.56e-04 sec, GFLOPS =   1.15
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 64 ...
-L = 64, N = 4
-err = 4.44e-15
-err = 5.33e-15
-err = 4.44e-15
-err = 3.55e-15
-MM_REF t = 9.94e-06 sec, GFLOPS =  53.98
-MM_SOL t = 9.12e-06 sec, GFLOPS =  57.48
+Running macro-kernel-nkm.x with arguments 64 ...
+L = 64, N = 10
+MM_REF t = 6.28e-05 sec, GFLOPS =   9.82
+MM_SOL t = 4.52e-04 sec, GFLOPS =   1.16
 
-Running avx2-packing-8x4.x with arguments 64 ...
-L = 64, N = 4
-err = 1.56e+01
-err = 1.54e+01
-err = 1.44e+01
-err = 1.30e+01
-MM_REF t = 1.12e-05 sec, GFLOPS =  47.27
-MM_SOL t = 2.86e-05 sec, GFLOPS =  18.30
+Running macro-kernel-4x4.x with arguments 64 ...
+L = 64, N = 10
+MM_REF t = 2.76e-05 sec, GFLOPS =  19.18
+MM_SOL t = 1.13e-04 sec, GFLOPS =   4.64
 
-Running avx2-8x4-unroll.x with arguments 128 ...
-L = 128, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 7.76e-05 sec, GFLOPS =  54.12
-MM_SOL t = 8.07e-05 sec, GFLOPS =  52.21
+Running micro-kernel-4x4.x with arguments 64 ...
+L = 64, N = 10
+MM_REF t = 9.72e-05 sec, GFLOPS =   5.58
+MM_SOL t = 1.36e-04 sec, GFLOPS =   4.00
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 128 ...
-L = 128, N = 4
-err = 1.07e-14
-err = 1.24e-14
-err = 1.24e-14
-err = 1.07e-14
-MM_REF t = 8.00e-05 sec, GFLOPS =  52.54
-MM_SOL t = 7.48e-05 sec, GFLOPS =  56.11
+Running naive-nkm.x with arguments 128 ...
+L = 128, N = 10
+MM_REF t = 2.98e-04 sec, GFLOPS =  14.63
+MM_SOL t = 2.39e-03 sec, GFLOPS =   1.83
 
-Running avx2-packing-8x4.x with arguments 128 ...
-L = 128, N = 4
-err = 2.23e+01
-err = 2.36e+01
-err = 2.16e+01
-err = 2.13e+01
-MM_REF t = 7.68e-05 sec, GFLOPS =  54.65
-MM_SOL t = 1.74e-04 sec, GFLOPS =  24.11
+Running macro-kernel-nkm.x with arguments 128 ...
+L = 128, N = 10
+MM_REF t = 3.02e-04 sec, GFLOPS =  14.05
+MM_SOL t = 2.54e-03 sec, GFLOPS =   1.70
 
-Running avx2-8x4-unroll.x with arguments 192 ...
-L = 192, N = 4
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-err = 0.00e+00
-MM_REF t = 2.37e-04 sec, GFLOPS =  59.67
-MM_SOL t = 2.60e-04 sec, GFLOPS =  54.39
+Running macro-kernel-4x4.x with arguments 128 ...
+L = 128, N = 10
+MM_REF t = 5.62e-04 sec, GFLOPS =   8.98
+MM_SOL t = 1.15e-03 sec, GFLOPS =   3.86
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 192 ...
-L = 192, N = 4
-err = 1.95e-14
-err = 1.78e-14
-err = 1.78e-14
-err = 1.78e-14
-MM_REF t = 2.82e-04 sec, GFLOPS =  50.72
-MM_SOL t = 2.49e-04 sec, GFLOPS =  56.77
+Running micro-kernel-4x4.x with arguments 128 ...
+L = 128, N = 10
+MM_REF t = 2.72e-04 sec, GFLOPS =  16.35
+MM_SOL t = 7.10e-04 sec, GFLOPS =   6.21
 
-Running avx2-packing-8x4.x with arguments 192 ...
-L = 192, N = 4
-err = 2.75e+01
-err = 3.03e+01
-err = 2.84e+01
-err = 2.82e+01
-MM_REF t = 2.48e-04 sec, GFLOPS =  57.05
-MM_SOL t = 4.83e-04 sec, GFLOPS =  29.53
+Running naive-nkm.x with arguments 192 ...
+L = 192, N = 10
+MM_REF t = 6.73e-04 sec, GFLOPS =  22.31
+MM_SOL t = 6.65e-03 sec, GFLOPS =   2.13
 
-Running avx2-8x4-unroll.x with arguments 256 ...
-L = 256, N = 4
-err = 1.60e-14
-err = 1.95e-14
-err = 2.13e-14
-err = 1.78e-14
-MM_REF t = 6.47e-04 sec, GFLOPS =  51.85
-MM_SOL t = 6.24e-04 sec, GFLOPS =  53.81
+Running macro-kernel-nkm.x with arguments 192 ...
+L = 192, N = 10
+MM_REF t = 6.77e-04 sec, GFLOPS =  22.59
+MM_SOL t = 6.61e-03 sec, GFLOPS =   2.14
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 256 ...
-L = 256, N = 4
-err = 2.49e-14
-err = 2.49e-14
-err = 2.49e-14
-err = 2.49e-14
-MM_REF t = 5.87e-04 sec, GFLOPS =  57.23
-MM_SOL t = 6.57e-04 sec, GFLOPS =  51.07
+Running macro-kernel-4x4.x with arguments 192 ...
+L = 192, N = 10
+MM_REF t = 5.93e-04 sec, GFLOPS =  23.97
+MM_SOL t = 1.67e-03 sec, GFLOPS =   8.46
 
-Running avx2-packing-8x4.x with arguments 256 ...
-L = 256, N = 4
-err = 3.32e+01
-err = 3.54e+01
-err = 3.54e+01
-err = 3.32e+01
-MM_REF t = 5.89e-04 sec, GFLOPS =  56.94
-MM_SOL t = 1.04e-03 sec, GFLOPS =  32.17
+Running micro-kernel-4x4.x with arguments 192 ...
+L = 192, N = 10
+MM_REF t = 6.56e-04 sec, GFLOPS =  22.41
+MM_SOL t = 1.78e-03 sec, GFLOPS =   8.03
 
-Running avx2-8x4-unroll.x with arguments 320 ...
-L = 320, N = 4
-err = 3.02e-14
-err = 3.55e-14
-err = 3.55e-14
-err = 3.55e-14
-MM_REF t = 1.13e-03 sec, GFLOPS =  58.12
-MM_SOL t = 1.26e-03 sec, GFLOPS =  51.97
+Running naive-nkm.x with arguments 256 ...
+L = 256, N = 10
+MM_REF t = 1.30e-03 sec, GFLOPS =  25.97
+MM_SOL t = 1.66e-02 sec, GFLOPS =   2.03
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 320 ...
-L = 320, N = 4
-err = 2.13e-14
-err = 1.87e-14
-err = 2.31e-14
-err = 2.31e-14
-MM_REF t = 1.15e-03 sec, GFLOPS =  57.08
-MM_SOL t = 1.17e-03 sec, GFLOPS =  56.01
+Running macro-kernel-nkm.x with arguments 256 ...
+L = 256, N = 10
+MM_REF t = 1.27e-03 sec, GFLOPS =  26.33
+MM_SOL t = 1.62e-02 sec, GFLOPS =   2.07
 
-Running avx2-packing-8x4.x with arguments 320 ...
-L = 320, N = 4
-err = 3.94e+01
-err = 3.65e+01
-err = 3.75e+01
-err = 3.90e+01
-MM_REF t = 1.15e-03 sec, GFLOPS =  57.23
-MM_SOL t = 1.82e-03 sec, GFLOPS =  36.00
+Running macro-kernel-4x4.x with arguments 256 ...
+L = 256, N = 10
+MM_REF t = 1.25e-03 sec, GFLOPS =  26.88
+MM_SOL t = 4.20e-03 sec, GFLOPS =   7.99
 
-Running avx2-8x4-unroll.x with arguments 384 ...
-L = 384, N = 4
-err = 5.33e-14
-err = 3.55e-14
-err = 4.97e-14
-err = 4.62e-14
-MM_REF t = 1.91e-03 sec, GFLOPS =  59.45
-MM_SOL t = 2.23e-03 sec, GFLOPS =  50.89
+Running micro-kernel-4x4.x with arguments 256 ...
+L = 256, N = 10
+MM_REF t = 1.97e-03 sec, GFLOPS =  18.60
+MM_SOL t = 5.09e-03 sec, GFLOPS =   6.78
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 384 ...
-L = 384, N = 4
-err = 2.31e-14
-err = 2.49e-14
-err = 2.66e-14
-err = 2.84e-14
-MM_REF t = 2.23e-03 sec, GFLOPS =  51.79
-MM_SOL t = 2.03e-03 sec, GFLOPS =  55.81
+Running naive-nkm.x with arguments 320 ...
+L = 320, N = 10
+MM_REF t = 2.31e-03 sec, GFLOPS =  28.39
+MM_SOL t = 3.10e-02 sec, GFLOPS =   2.11
 
-Running avx2-packing-8x4.x with arguments 384 ...
-L = 384, N = 4
-err = 4.06e+01
-err = 4.23e+01
-err = 4.07e+01
-err = 4.07e+01
-MM_REF t = 2.13e-03 sec, GFLOPS =  53.74
-MM_SOL t = 3.26e-03 sec, GFLOPS =  34.89
+Running macro-kernel-nkm.x with arguments 320 ...
+L = 320, N = 10
+MM_REF t = 2.33e-03 sec, GFLOPS =  28.13
+MM_SOL t = 3.14e-02 sec, GFLOPS =   2.09
 
-Running avx2-8x4-unroll.x with arguments 448 ...
-L = 448, N = 4
-err = 4.97e-14
-err = 5.33e-14
-err = 4.97e-14
-err = 4.62e-14
-MM_REF t = 3.33e-03 sec, GFLOPS =  54.21
-MM_SOL t = 3.85e-03 sec, GFLOPS =  46.77
+Running macro-kernel-4x4.x with arguments 320 ...
+L = 320, N = 10
+MM_REF t = 2.29e-03 sec, GFLOPS =  28.67
+MM_SOL t = 8.15e-03 sec, GFLOPS =   8.04
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 448 ...
-L = 448, N = 4
-err = 2.84e-14
-err = 2.84e-14
-err = 2.49e-14
-err = 2.84e-14
-MM_REF t = 3.33e-03 sec, GFLOPS =  54.49
-MM_SOL t = 3.35e-03 sec, GFLOPS =  53.73
+Running micro-kernel-4x4.x with arguments 320 ...
+L = 320, N = 10
+MM_REF t = 2.23e-03 sec, GFLOPS =  29.45
+MM_SOL t = 8.12e-03 sec, GFLOPS =   8.07
 
-Running avx2-packing-8x4.x with arguments 448 ...
-L = 448, N = 4
-err = 4.54e+01
-err = 4.47e+01
-err = 4.55e+01
-err = 4.57e+01
-MM_REF t = 3.09e-03 sec, GFLOPS =  58.29
-MM_SOL t = 4.97e-03 sec, GFLOPS =  36.71
+Running naive-nkm.x with arguments 384 ...
+L = 384, N = 10
+MM_REF t = 3.75e-03 sec, GFLOPS =  30.20
+MM_SOL t = 5.35e-02 sec, GFLOPS =   2.12
 
-Running avx2-8x4-unroll.x with arguments 512 ...
-L = 512, N = 4
-err = 6.04e-14
-err = 5.33e-14
-err = 6.04e-14
-err = 5.68e-14
-MM_REF t = 5.05e-03 sec, GFLOPS =  53.52
-MM_SOL t = 1.23e-02 sec, GFLOPS =  21.76
+Running macro-kernel-nkm.x with arguments 384 ...
+L = 384, N = 10
+MM_REF t = 3.59e-03 sec, GFLOPS =  31.75
+MM_SOL t = 5.66e-02 sec, GFLOPS =   2.00
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 512 ...
-L = 512, N = 4
-err = 2.66e-14
-err = 2.84e-14
-err = 3.15e-14
-err = 2.66e-14
-MM_REF t = 4.50e-03 sec, GFLOPS =  59.65
-MM_SOL t = 5.95e-03 sec, GFLOPS =  45.21
+Running macro-kernel-4x4.x with arguments 384 ...
+L = 384, N = 10
+MM_REF t = 3.65e-03 sec, GFLOPS =  31.33
+MM_SOL t = 1.44e-02 sec, GFLOPS =   7.87
 
-Running avx2-packing-8x4.x with arguments 512 ...
-L = 512, N = 4
-err = 5.31e+01
-err = 4.72e+01
-err = 5.45e+01
-err = 5.09e+01
-MM_REF t = 4.49e-03 sec, GFLOPS =  59.73
-MM_SOL t = 6.82e-03 sec, GFLOPS =  39.35
+Running micro-kernel-4x4.x with arguments 384 ...
+L = 384, N = 10
+MM_REF t = 3.55e-03 sec, GFLOPS =  31.88
+MM_SOL t = 1.42e-02 sec, GFLOPS =   7.96
 
-Running avx2-8x4-unroll.x with arguments 576 ...
-L = 576, N = 4
-err = 6.39e-14
-err = 7.11e-14
-err = 7.11e-14
-err = 6.39e-14
-MM_REF t = 6.55e-03 sec, GFLOPS =  58.45
-MM_SOL t = 8.12e-03 sec, GFLOPS =  47.07
+Running naive-nkm.x with arguments 448 ...
+L = 448, N = 10
+MM_REF t = 5.43e-03 sec, GFLOPS =  33.11
+MM_SOL t = 8.58e-02 sec, GFLOPS =   2.10
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 576 ...
-L = 576, N = 4
-err = 2.84e-14
-err = 2.93e-14
-err = 2.84e-14
-err = 3.20e-14
-MM_REF t = 6.94e-03 sec, GFLOPS =  55.26
-MM_SOL t = 7.22e-03 sec, GFLOPS =  52.98
+Running macro-kernel-nkm.x with arguments 448 ...
+L = 448, N = 10
+MM_REF t = 5.50e-03 sec, GFLOPS =  32.74
+MM_SOL t = 8.68e-02 sec, GFLOPS =   2.07
 
-Running avx2-packing-8x4.x with arguments 576 ...
-L = 576, N = 4
-err = 5.46e+01
-err = 5.52e+01
-err = 5.56e+01
-err = 5.76e+01
-MM_REF t = 6.69e-03 sec, GFLOPS =  57.14
-MM_SOL t = 9.04e-03 sec, GFLOPS =  42.33
+Running macro-kernel-4x4.x with arguments 448 ...
+L = 448, N = 10
+MM_REF t = 5.46e-03 sec, GFLOPS =  32.97
+MM_SOL t = 2.25e-02 sec, GFLOPS =   7.98
 
-Running avx2-8x4-unroll.x with arguments 640 ...
-L = 640, N = 4
-err = 7.82e-14
-err = 7.11e-14
-err = 9.24e-14
-err = 7.11e-14
-MM_REF t = 8.59e-03 sec, GFLOPS =  61.02
-MM_SOL t = 1.19e-02 sec, GFLOPS =  44.14
+Running micro-kernel-4x4.x with arguments 448 ...
+L = 448, N = 10
+MM_REF t = 5.23e-03 sec, GFLOPS =  34.38
+MM_SOL t = 2.31e-02 sec, GFLOPS =   7.77
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 640 ...
-L = 640, N = 4
-err = 3.02e-14
-err = 3.55e-14
-err = 3.20e-14
-err = 3.55e-14
-MM_REF t = 8.59e-03 sec, GFLOPS =  61.07
-MM_SOL t = 9.82e-03 sec, GFLOPS =  53.40
+Running naive-nkm.x with arguments 512 ...
+L = 512, N = 10
+MM_REF t = 8.41e-03 sec, GFLOPS =  32.09
+MM_SOL t = 1.34e-01 sec, GFLOPS =   2.01
 
-Running avx2-packing-8x4.x with arguments 640 ...
-L = 640, N = 4
-err = 5.61e+01
-err = 5.76e+01
-err = 5.84e+01
-err = 5.79e+01
-MM_REF t = 9.27e-03 sec, GFLOPS =  56.56
-MM_SOL t = 1.29e-02 sec, GFLOPS =  40.54
+Running macro-kernel-nkm.x with arguments 512 ...
+L = 512, N = 10
+MM_REF t = 8.30e-03 sec, GFLOPS =  32.33
+MM_SOL t = 1.30e-01 sec, GFLOPS =   2.07
 
-Running avx2-8x4-unroll.x with arguments 704 ...
-L = 704, N = 4
-err = 8.88e-14
-err = 9.59e-14
-err = 9.24e-14
-err = 7.82e-14
-MM_REF t = 1.24e-02 sec, GFLOPS =  56.56
-MM_SOL t = 1.48e-02 sec, GFLOPS =  47.08
+Running macro-kernel-4x4.x with arguments 512 ...
+L = 512, N = 10
+MM_REF t = 7.87e-03 sec, GFLOPS =  34.14
+MM_SOL t = 4.14e-02 sec, GFLOPS =   6.50
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 704 ...
-L = 704, N = 4
-err = 3.55e-14
-err = 3.55e-14
-err = 3.20e-14
-err = 3.20e-14
-MM_REF t = 1.21e-02 sec, GFLOPS =  57.84
-MM_SOL t = 1.33e-02 sec, GFLOPS =  52.53
+Running micro-kernel-4x4.x with arguments 512 ...
+L = 512, N = 10
+MM_REF t = 7.83e-03 sec, GFLOPS =  34.37
+MM_SOL t = 5.86e-02 sec, GFLOPS =   4.58
 
-Running avx2-packing-8x4.x with arguments 704 ...
-L = 704, N = 4
-err = 6.34e+01
-err = 6.16e+01
-err = 6.76e+01
-err = 6.23e+01
-MM_REF t = 1.19e-02 sec, GFLOPS =  58.71
-MM_SOL t = 1.58e-02 sec, GFLOPS =  44.07
+Running naive-nkm.x with arguments 576 ...
+L = 576, N = 10
+MM_REF t = 1.13e-02 sec, GFLOPS =  33.97
+MM_SOL t = 1.79e-01 sec, GFLOPS =   2.13
 
-Running avx2-8x4-unroll.x with arguments 768 ...
-L = 768, N = 4
-err = 1.14e-13
-err = 9.59e-14
-err = 1.07e-13
-err = 1.07e-13
-MM_REF t = 1.52e-02 sec, GFLOPS =  59.42
-MM_SOL t = 3.73e-02 sec, GFLOPS =  24.31
+Running macro-kernel-nkm.x with arguments 576 ...
+L = 576, N = 10
+MM_REF t = 1.06e-02 sec, GFLOPS =  36.19
+MM_SOL t = 1.85e-01 sec, GFLOPS =   2.07
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 768 ...
-L = 768, N = 4
-err = 3.20e-14
-err = 3.55e-14
-err = 3.55e-14
-err = 3.55e-14
-MM_REF t = 1.56e-02 sec, GFLOPS =  58.11
-MM_SOL t = 1.88e-02 sec, GFLOPS =  48.27
+Running macro-kernel-4x4.x with arguments 576 ...
+L = 576, N = 10
+MM_REF t = 1.10e-02 sec, GFLOPS =  34.67
+MM_SOL t = 4.79e-02 sec, GFLOPS =   7.99
 
-Running avx2-packing-8x4.x with arguments 768 ...
-L = 768, N = 4
-err = 6.33e+01
-err = 6.24e+01
-err = 6.67e+01
-err = 6.26e+01
-MM_REF t = 1.50e-02 sec, GFLOPS =  60.27
-MM_SOL t = 2.18e-02 sec, GFLOPS =  41.64
+Running micro-kernel-4x4.x with arguments 576 ...
+L = 576, N = 10
+MM_REF t = 1.05e-02 sec, GFLOPS =  36.47
+MM_SOL t = 4.78e-02 sec, GFLOPS =   8.00
 
-Running avx2-8x4-unroll.x with arguments 832 ...
-L = 832, N = 4
-err = 1.35e-13
-err = 1.28e-13
-err = 1.14e-13
-err = 1.07e-13
-MM_REF t = 1.95e-02 sec, GFLOPS =  59.19
-MM_SOL t = 2.48e-02 sec, GFLOPS =  46.44
+Running naive-nkm.x with arguments 640 ...
+L = 640, N = 10
+MM_REF t = 1.44e-02 sec, GFLOPS =  36.44
+MM_SOL t = 2.60e-01 sec, GFLOPS =   2.02
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 832 ...
-L = 832, N = 4
-err = 3.55e-14
-err = 3.20e-14
-err = 3.55e-14
-err = 3.55e-14
-MM_REF t = 1.94e-02 sec, GFLOPS =  59.28
-MM_SOL t = 2.15e-02 sec, GFLOPS =  53.64
+Running macro-kernel-nkm.x with arguments 640 ...
+L = 640, N = 10
+MM_REF t = 1.41e-02 sec, GFLOPS =  37.32
+MM_SOL t = 2.66e-01 sec, GFLOPS =   1.97
 
-Running avx2-packing-8x4.x with arguments 832 ...
-L = 832, N = 4
-err = 7.05e+01
-err = 7.12e+01
-err = 6.66e+01
-err = 6.93e+01
-MM_REF t = 1.98e-02 sec, GFLOPS =  58.19
-MM_SOL t = 2.78e-02 sec, GFLOPS =  41.37
+Running macro-kernel-4x4.x with arguments 640 ...
+L = 640, N = 10
+MM_REF t = 1.32e-02 sec, GFLOPS =  39.90
+MM_SOL t = 6.61e-02 sec, GFLOPS =   7.94
 
-Running avx2-8x4-unroll.x with arguments 896 ...
-L = 896, N = 4
-err = 1.14e-13
-err = 1.21e-13
-err = 1.21e-13
-err = 1.14e-13
-MM_REF t = 2.47e-02 sec, GFLOPS =  58.35
-MM_SOL t = 3.73e-02 sec, GFLOPS =  38.60
+Running micro-kernel-4x4.x with arguments 640 ...
+L = 640, N = 10
+MM_REF t = 1.32e-02 sec, GFLOPS =  39.74
+MM_SOL t = 6.87e-02 sec, GFLOPS =   7.66
 
-Running avx2-cache-blocking-8x4-unroll.x with arguments 896 ...
-L = 896, N = 4
-err = 3.73e-14
-err = 3.38e-14
-err = 4.26e-14
-err = 3.55e-14
-MM_REF t = 2.42e-02 sec, GFLOPS =  59.48
-MM_SOL t = 2.76e-02 sec, GFLOPS =  52.19
+Running naive-nkm.x with arguments 704 ...
+L = 704, N = 10
+MM_REF t = 1.78e-02 sec, GFLOPS =  39.22
+MM_SOL t = 3.41e-01 sec, GFLOPS =   2.04
 
-Running avx2-packing-8x4.x with arguments 896 ...
-L = 896, N = 4
-err = 6.89e+01
-err = 7.32e+01
-err = 7.67e+01
-err = 7.67e+01
-MM_REF t = 2.42e-02 sec, GFLOPS =  59.50
-MM_SOL t = 3.57e-02 sec, GFLOPS =  40.35
+Running macro-kernel-nkm.x with arguments 704 ...
+L = 704, N = 10
+MM_REF t = 1.79e-02 sec, GFLOPS =  39.08
+MM_SOL t = 3.39e-01 sec, GFLOPS =   2.06
 
-Running avx2-8x4-unroll.x with arguments 960 ...
-L = 960, N = 4
-err = 1.21e-13
-err = 1.35e-13
-err = 1.21e-13
-err = 1.35e-13
-MM_REF t = 3.03e-02 sec, GFLOPS =  58.39
-MM_SOL t = 3.69e-02 sec, GFLOPS =  47.91
-
-Running avx2-cache-blocking-8x4-unroll.x with arguments 960 ...
-L = 960, N = 4
-err = 4.26e-14
-err = 5.68e-14
-err = 4.26e-14
-err = 3.91e-14
-MM_REF t = 2.96e-02 sec, GFLOPS =  59.68
-MM_SOL t = 3.34e-02 sec, GFLOPS =  52.94
-
-Running avx2-packing-8x4.x with arguments 960 ...
-L = 960, N = 4
-err = 7.54e+01
-err = 7.28e+01
-err = 6.99e+01
-err = 7.74e+01
-MM_REF t = 2.94e-02 sec, GFLOPS =  60.27
-MM_SOL t = 4.22e-02 sec, GFLOPS =  41.92
-
-Running avx2-8x4-unroll.x with arguments 1024 ...
-L = 1024, N = 4
-err = 1.78e-13
-err = 1.35e-13
-err = 1.85e-13
-err = 1.71e-13
-MM_REF t = 3.63e-02 sec, GFLOPS =  59.10
-MM_SOL t = 1.00e-01 sec, GFLOPS =  21.42
-
-Running avx2-cache-blocking-8x4-unroll.x with arguments 1024 ...
-L = 1024, N = 4
-err = 3.91e-14
-err = 3.91e-14
-err = 4.26e-14
-err = 4.26e-14
-MM_REF t = 3.57e-02 sec, GFLOPS =  60.11
-MM_SOL t = 4.68e-02 sec, GFLOPS =  45.87
-
-Running avx2-packing-8x4.x with arguments 1024 ...
-L = 1024, N = 4
-err = 7.52e+01
-err = 7.06e+01
-err = 7.47e+01
-err = 7.51e+01
-MM_REF t = 3.59e-02 sec, GFLOPS =  59.88
-MM_SOL t = 5.52e-02 sec, GFLOPS =  38.89
-
-Running avx2-8x4-unroll.x with arguments 1088 ...
-L = 1088, N = 4
-err = 1.63e-13
-err = 1.60e-13
-err = 1.56e-13
-err = 1.85e-13
-MM_REF t = 4.37e-02 sec, GFLOPS =  58.94
-MM_SOL t = 6.37e-02 sec, GFLOPS =  40.43
-
-Running avx2-cache-blocking-8x4-unroll.x with arguments 1088 ...
-L = 1088, N = 4
-err = 4.26e-14
-err = 4.62e-14
-err = 4.26e-14
-err = 3.91e-14
-MM_REF t = 4.05e-02 sec, GFLOPS =  63.61
-MM_SOL t = 4.68e-02 sec, GFLOPS =  54.98
-
-Running avx2-packing-8x4.x with arguments 1088 ...
-L = 1088, N = 4
-err = 7.65e+01
-err = 8.04e+01
-err = 7.92e+01
-err = 7.57e+01
-MM_REF t = 4.17e-02 sec, GFLOPS =  61.79
-MM_SOL t = 6.09e-02 sec, GFLOPS =  42.30
-
-Running avx2-8x4-unroll.x with arguments 1152 ...
-L = 1152, N = 4
-err = 1.42e-13
-err = 1.28e-13
-err = 1.63e-13
-err = 1.49e-13
-MM_REF t = 4.93e-02 sec, GFLOPS =  61.99
-MM_SOL t = 2.01e-01 sec, GFLOPS =  15.23
-
-Running avx2-cache-blocking-8x4-unroll.x with arguments 1152 ...
-L = 1152, N = 4
-err = 4.26e-14
-err = 5.33e-14
-err = 4.26e-14
-err = 4.97e-14
-MM_REF t = 4.93e-02 sec, GFLOPS =  61.97
-MM_SOL t = 5.85e-02 sec, GFLOPS =  52.29
-
-Running avx2-packing-8x4.x with arguments 1152 ...
-L = 1152, N = 4
-err = 7.87e+01
-err = 8.40e+01
-err = 7.97e+01
-err = 8.82e+01
-MM_REF t = 5.02e-02 sec, GFLOPS =  60.95
-MM_SOL t = 7.41e-02 sec, GFLOPS =  41.27
-
-Running avx2-8x4-unroll.x with arguments 1216 ...
+Running macro-kernel-4x4.x with arguments 704 ...
