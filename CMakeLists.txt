@@ -39,7 +39,7 @@ foreach(f IN LISTS SOURCES)
 
     # use the dirname-basename as the executable name
     add_executable(${d}-${b}.x src/main.cxx ${f})
-    target_compile_options(${d}-${b}.x PRIVATE -mfma -O2 -march=native)
+    target_compile_options(${d}-${b}.x PRIVATE -mfma -Ofast -march=native)
     target_link_libraries(${d}-${b}.x dgemm-blas)
 
     # add_custom_command(
