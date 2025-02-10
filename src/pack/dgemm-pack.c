@@ -1,3 +1,5 @@
+#include <string.h>
+
 #define M_BLOCK_SIZE  384
 #define K_BLOCK_SIZE  384
 #define N_BLOCK_SIZE  4096
@@ -7,49 +9,68 @@
 
 #define min(a, b) ((a) < (b) ? (a) : (b))
 
-
-
-static void pack_A(int mc, int kc, const double *A, int LDA, double *buffer)
+static void pack_A(int M, int K, const double *A, int LDA, double *buffer)
 {
-    int mp  = mc / BLOCK_SIZE;
-    int _mr = mc % BLOCK_SIZE;
+    // int mp  = mc / BLOCK_SIZE;
+    // int _mr = mc % BLOCK_SIZE;
 
-    int i, j;
+    // int i, j;
 
-    for (i=0; i<mp; ++i) {
-        for (j=0; j<kc; ++j) {
-            for (int ii=0; ii<BLOCK_SIZE; ++ii) {
-                buffer[ii] = A[i*BLOCK_SIZE*LDA + ii + j*LDA];
+    // for (i=0; i<mp; ++i) {
+    //     for (j=0; j<kc; ++j) {
+    //         memcpy(buffer, A + i * BLOCK_SIZE * LDA + j * LDA, BLOCK_SIZE * sizeof(double));
+    //         buffer += BLOCK_SIZE;
+    //     }
+    // }
+
+    int m_inc, k_inc;
+
+    for (int m = 0; m < M;) {
+        m_inc = min(BLOCK_SIZE, M - m);
+        for (int k = 0; k < K;) {
+            k_inc = min(BLOCK_SIZE, K - k);
+            for (int i = 0; i < m_inc; ++i) {
+                buffer[i] = A[m + i*LDA + k*K];
             }
-            buffer += BLOCK_SIZE;
+            k += k_inc;
         }
+        m += m_inc;
     }
-    if (_mr > 0) {
-        for (j=0; j<kc; ++j) {
-            for (i=0; i<_mr; ++i) {
-                buffer[i] = A[(mp*BLOCK_SIZE+i) + j*LDA];
+
+    if (m_inc < BLOCK_SIZE) {
+        for (int k = 0; k < K; ++k) {
+            for (int m = m_inc; m < BLOCK_SIZE; ++m) {
+                buffer[m] = A[(M - m_inc + m) + k * LDA];
             }
-            for (i=_mr; i<BLOCK_SIZE; ++i) {
+
+            for (int i = m_inc; i < BLOCK_SIZE; ++i) {
                 buffer[i] = 0.0;
             }
+
             buffer += BLOCK_SIZE;
         }
     }
 }
 
-static void pack_B(int kc, int nc, const double *B, int LDB, double *buffer)
+static void pack_B(int K, int N, const double *B, int LDB, double *buffer)
 {
-    int np  = nc / BLOCK_SIZE;
-    int _nr = nc % BLOCK_SIZE;
+    int np  = N / BLOCK_SIZE;
+    int _nr = N % BLOCK_SIZE;
 
     int i, j;
 
-    for (j=0; j<np; ++j) {
-        for (i=0; i<kc; ++i) {
-            for (int jj=0; jj<BLOCK_SIZE; ++jj) {
-                buffer[jj] = B[i + (j*BLOCK_SIZE+jj)*LDB];
+    for (int n = 0; n < N;) {
+        n_inc = min(BLOCK_SIZE, N - n);
+
+        for (int k = 0; k < K;) {
+            k_inc = min(BLOCK_SIZE, K - k);
+
+            for (int i = 0; i < k_inc; ++i) {
+                for (int jj = 0; jj < BLOCK_SIZE; ++jj) {
+                    buffer[jj] = B[i + (j*BLOCK_SIZE+jj)*LDB];
+                }
+                buffer += BLOCK_SIZE;
             }
-            buffer += BLOCK_SIZE;
         }
     }
     if (_nr > 0) {
