@@ -17,8 +17,14 @@ def plot(data, out):
     for i, k in enumerate(label):
         dd[k] = xx[:, i+1]
 
+    # plot the data and the error bar
     for k, v in dd.items():
-        ax.plot(xx[:, 0], v, label=k, marker='o')
+        if k.endswith('_stderr'):
+            continue
+
+        # get the color of the line
+        l = ax.plot(xx[:, 0], v, label=k, marker='')
+        ax.errorbar(xx[:, 0], v, yerr=dd[k + '_stderr'], fmt='none', ecolor=l[0].get_color(), capsize=2)
 
     #     # calculate the distribution of v
     #     m = numpy.mean(v)
@@ -48,10 +54,10 @@ def plot(data, out):
 
     ax.set_xlabel('L')
     ax.set_xlim(xx[:, 0].min(), xx[:, 0].max())
-    ax.set_ylim(0.0, 80.0)
+    ax.set_ylim(0.0, 20.0)
     ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
     fig.tight_layout()
-    fig.savefig(out, bbox_inches='tight')
+    fig.savefig(out, bbox_inches='tight', pad_inches=0.0, dpi=300)
 
 if __name__ == "__main__":
     plot(sys.argv[1], sys.argv[2])

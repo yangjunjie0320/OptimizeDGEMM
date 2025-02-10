@@ -22,17 +22,27 @@ for line in log.split('\n'):
         if current_l not in data:
             data[current_l] = {}
     elif line.startswith('MM_REF'):  
-        data[current_l]['BLAS'] = float(line.split('GFLOPS = ')[1])
+        # extract gflops and std_err use regex
+        # example: `MM_REF t = 6.75e-06 sec, GFLOPS =   9.72 +/-   0.31`
+        m = line.split()
+        data[current_l]['BLAS'] = float(m[7])
+        data[current_l]['BLAS_stderr'] = float(m[9])
     elif line.startswith('MM_SOL'):
-        data[current_l][current_impl] = float(line.split('GFLOPS = ')[1])
+        if current_impl.endswith('.x'):
+            current_impl = current_impl[:-2]
 
-# Print the results
+        m = line.split()
+        data[current_l][current_impl] = float(m[7])
+        data[current_l][current_impl + '_stderr'] = float(m[9])
+
+# Print the results, add the std_err to the data
 impls = ['BLAS'] + sorted(set([impl for l in data.values() for impl in l if impl != 'BLAS']))
 
 # format the output
 lmax = max([len(impl) for impl in impls])
 title = ("# %6s, " % "L" + f"%{lmax}s, " * (len(impls))) % tuple(impls)
 
+# print the title
 with open(out_file, 'w') as f:
     f.write(title[:-2] + '\n')
     for l in sorted(data.keys()):

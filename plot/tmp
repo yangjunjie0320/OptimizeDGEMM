@@ -1,212 +1,162 @@
 
-Running naive-nkm.x with arguments 64 ...
-L = 64, N = 10
-MM_REF t = 6.77e-05 sec, GFLOPS =   9.48
-MM_SOL t = 4.56e-04 sec, GFLOPS =   1.15
-
-Running macro-kernel-nkm.x with arguments 64 ...
-L = 64, N = 10
-MM_REF t = 6.28e-05 sec, GFLOPS =   9.82
-MM_SOL t = 4.52e-04 sec, GFLOPS =   1.16
-
-Running macro-kernel-4x4.x with arguments 64 ...
-L = 64, N = 10
-MM_REF t = 2.76e-05 sec, GFLOPS =  19.18
-MM_SOL t = 1.13e-04 sec, GFLOPS =   4.64
-
-Running micro-kernel-4x4.x with arguments 64 ...
-L = 64, N = 10
-MM_REF t = 9.72e-05 sec, GFLOPS =   5.58
-MM_SOL t = 1.36e-04 sec, GFLOPS =   4.00
-
-Running naive-nkm.x with arguments 128 ...
-L = 128, N = 10
-MM_REF t = 2.98e-04 sec, GFLOPS =  14.63
-MM_SOL t = 2.39e-03 sec, GFLOPS =   1.83
-
-Running macro-kernel-nkm.x with arguments 128 ...
-L = 128, N = 10
-MM_REF t = 3.02e-04 sec, GFLOPS =  14.05
-MM_SOL t = 2.54e-03 sec, GFLOPS =   1.70
-
-Running macro-kernel-4x4.x with arguments 128 ...
-L = 128, N = 10
-MM_REF t = 5.62e-04 sec, GFLOPS =   8.98
-MM_SOL t = 1.15e-03 sec, GFLOPS =   3.86
-
 Running micro-kernel-4x4.x with arguments 128 ...
-L = 128, N = 10
-MM_REF t = 2.72e-04 sec, GFLOPS =  16.35
-MM_SOL t = 7.10e-04 sec, GFLOPS =   6.21
+L = 128, N = 4
+MM_REF t = 3.00e-04 sec, GFLOPS =  13.99 +/-   0.14
+MM_SOL t = 9.08e-04 sec, GFLOPS =   4.62 +/-   0.04
 
-Running naive-nkm.x with arguments 192 ...
-L = 192, N = 10
-MM_REF t = 6.73e-04 sec, GFLOPS =  22.31
-MM_SOL t = 6.65e-03 sec, GFLOPS =   2.13
-
-Running macro-kernel-nkm.x with arguments 192 ...
-L = 192, N = 10
-MM_REF t = 6.77e-04 sec, GFLOPS =  22.59
-MM_SOL t = 6.61e-03 sec, GFLOPS =   2.14
-
-Running macro-kernel-4x4.x with arguments 192 ...
-L = 192, N = 10
-MM_REF t = 5.93e-04 sec, GFLOPS =  23.97
-MM_SOL t = 1.67e-03 sec, GFLOPS =   8.46
-
-Running micro-kernel-4x4.x with arguments 192 ...
-L = 192, N = 10
-MM_REF t = 6.56e-04 sec, GFLOPS =  22.41
-MM_SOL t = 1.78e-03 sec, GFLOPS =   8.03
-
-Running naive-nkm.x with arguments 256 ...
-L = 256, N = 10
-MM_REF t = 1.30e-03 sec, GFLOPS =  25.97
-MM_SOL t = 1.66e-02 sec, GFLOPS =   2.03
-
-Running macro-kernel-nkm.x with arguments 256 ...
-L = 256, N = 10
-MM_REF t = 1.27e-03 sec, GFLOPS =  26.33
-MM_SOL t = 1.62e-02 sec, GFLOPS =   2.07
-
-Running macro-kernel-4x4.x with arguments 256 ...
-L = 256, N = 10
-MM_REF t = 1.25e-03 sec, GFLOPS =  26.88
-MM_SOL t = 4.20e-03 sec, GFLOPS =   7.99
+Running macro-kernel-160-micro-4x4.x with arguments 128 ...
+L = 128, N = 4
+MM_REF t = 2.58e-04 sec, GFLOPS =  17.49 +/-   6.60
+MM_SOL t = 6.18e-04 sec, GFLOPS =   6.78 +/-   0.01
 
 Running micro-kernel-4x4.x with arguments 256 ...
-L = 256, N = 10
-MM_REF t = 1.97e-03 sec, GFLOPS =  18.60
-MM_SOL t = 5.09e-03 sec, GFLOPS =   6.78
+L = 256, N = 4
+MM_REF t = 1.24e-03 sec, GFLOPS =  27.08 +/-   0.25
+MM_SOL t = 4.15e-03 sec, GFLOPS =   8.08 +/-   0.00
 
-Running naive-nkm.x with arguments 320 ...
-L = 320, N = 10
-MM_REF t = 2.31e-03 sec, GFLOPS =  28.39
-MM_SOL t = 3.10e-02 sec, GFLOPS =   2.11
-
-Running macro-kernel-nkm.x with arguments 320 ...
-L = 320, N = 10
-MM_REF t = 2.33e-03 sec, GFLOPS =  28.13
-MM_SOL t = 3.14e-02 sec, GFLOPS =   2.09
-
-Running macro-kernel-4x4.x with arguments 320 ...
-L = 320, N = 10
-MM_REF t = 2.29e-03 sec, GFLOPS =  28.67
-MM_SOL t = 8.15e-03 sec, GFLOPS =   8.04
-
-Running micro-kernel-4x4.x with arguments 320 ...
-L = 320, N = 10
-MM_REF t = 2.23e-03 sec, GFLOPS =  29.45
-MM_SOL t = 8.12e-03 sec, GFLOPS =   8.07
-
-Running naive-nkm.x with arguments 384 ...
-L = 384, N = 10
-MM_REF t = 3.75e-03 sec, GFLOPS =  30.20
-MM_SOL t = 5.35e-02 sec, GFLOPS =   2.12
-
-Running macro-kernel-nkm.x with arguments 384 ...
-L = 384, N = 10
-MM_REF t = 3.59e-03 sec, GFLOPS =  31.75
-MM_SOL t = 5.66e-02 sec, GFLOPS =   2.00
-
-Running macro-kernel-4x4.x with arguments 384 ...
-L = 384, N = 10
-MM_REF t = 3.65e-03 sec, GFLOPS =  31.33
-MM_SOL t = 1.44e-02 sec, GFLOPS =   7.87
+Running macro-kernel-160-micro-4x4.x with arguments 256 ...
+L = 256, N = 4
+MM_REF t = 1.25e-03 sec, GFLOPS =  26.91 +/-   0.07
+MM_SOL t = 4.13e-03 sec, GFLOPS =   8.12 +/-   0.00
 
 Running micro-kernel-4x4.x with arguments 384 ...
-L = 384, N = 10
-MM_REF t = 3.55e-03 sec, GFLOPS =  31.88
-MM_SOL t = 1.42e-02 sec, GFLOPS =   7.96
+L = 384, N = 4
+MM_REF t = 3.51e-03 sec, GFLOPS =  32.22 +/-   0.26
+MM_SOL t = 1.44e-02 sec, GFLOPS =   7.89 +/-   0.03
 
-Running naive-nkm.x with arguments 448 ...
-L = 448, N = 10
-MM_REF t = 5.43e-03 sec, GFLOPS =  33.11
-MM_SOL t = 8.58e-02 sec, GFLOPS =   2.10
-
-Running macro-kernel-nkm.x with arguments 448 ...
-L = 448, N = 10
-MM_REF t = 5.50e-03 sec, GFLOPS =  32.74
-MM_SOL t = 8.68e-02 sec, GFLOPS =   2.07
-
-Running macro-kernel-4x4.x with arguments 448 ...
-L = 448, N = 10
-MM_REF t = 5.46e-03 sec, GFLOPS =  32.97
-MM_SOL t = 2.25e-02 sec, GFLOPS =   7.98
-
-Running micro-kernel-4x4.x with arguments 448 ...
-L = 448, N = 10
-MM_REF t = 5.23e-03 sec, GFLOPS =  34.38
-MM_SOL t = 2.31e-02 sec, GFLOPS =   7.77
-
-Running naive-nkm.x with arguments 512 ...
-L = 512, N = 10
-MM_REF t = 8.41e-03 sec, GFLOPS =  32.09
-MM_SOL t = 1.34e-01 sec, GFLOPS =   2.01
-
-Running macro-kernel-nkm.x with arguments 512 ...
-L = 512, N = 10
-MM_REF t = 8.30e-03 sec, GFLOPS =  32.33
-MM_SOL t = 1.30e-01 sec, GFLOPS =   2.07
-
-Running macro-kernel-4x4.x with arguments 512 ...
-L = 512, N = 10
-MM_REF t = 7.87e-03 sec, GFLOPS =  34.14
-MM_SOL t = 4.14e-02 sec, GFLOPS =   6.50
+Running macro-kernel-160-micro-4x4.x with arguments 384 ...
+L = 384, N = 4
+MM_REF t = 3.76e-03 sec, GFLOPS =  30.08 +/-   0.19
+MM_SOL t = 1.44e-02 sec, GFLOPS =   7.86 +/-   0.01
 
 Running micro-kernel-4x4.x with arguments 512 ...
-L = 512, N = 10
-MM_REF t = 7.83e-03 sec, GFLOPS =  34.37
-MM_SOL t = 5.86e-02 sec, GFLOPS =   4.58
+L = 512, N = 4
+MM_REF t = 7.81e-03 sec, GFLOPS =  34.40 +/-   0.51
+MM_SOL t = 6.88e-02 sec, GFLOPS =   3.91 +/-   0.21
 
-Running naive-nkm.x with arguments 576 ...
-L = 576, N = 10
-MM_REF t = 1.13e-02 sec, GFLOPS =  33.97
-MM_SOL t = 1.79e-01 sec, GFLOPS =   2.13
-
-Running macro-kernel-nkm.x with arguments 576 ...
-L = 576, N = 10
-MM_REF t = 1.06e-02 sec, GFLOPS =  36.19
-MM_SOL t = 1.85e-01 sec, GFLOPS =   2.07
-
-Running macro-kernel-4x4.x with arguments 576 ...
-L = 576, N = 10
-MM_REF t = 1.10e-02 sec, GFLOPS =  34.67
-MM_SOL t = 4.79e-02 sec, GFLOPS =   7.99
-
-Running micro-kernel-4x4.x with arguments 576 ...
-L = 576, N = 10
-MM_REF t = 1.05e-02 sec, GFLOPS =  36.47
-MM_SOL t = 4.78e-02 sec, GFLOPS =   8.00
-
-Running naive-nkm.x with arguments 640 ...
-L = 640, N = 10
-MM_REF t = 1.44e-02 sec, GFLOPS =  36.44
-MM_SOL t = 2.60e-01 sec, GFLOPS =   2.02
-
-Running macro-kernel-nkm.x with arguments 640 ...
-L = 640, N = 10
-MM_REF t = 1.41e-02 sec, GFLOPS =  37.32
-MM_SOL t = 2.66e-01 sec, GFLOPS =   1.97
-
-Running macro-kernel-4x4.x with arguments 640 ...
-L = 640, N = 10
-MM_REF t = 1.32e-02 sec, GFLOPS =  39.90
-MM_SOL t = 6.61e-02 sec, GFLOPS =   7.94
+Running macro-kernel-160-micro-4x4.x with arguments 512 ...
+L = 512, N = 4
+MM_REF t = 8.10e-03 sec, GFLOPS =  33.14 +/-   0.52
+MM_SOL t = 3.67e-02 sec, GFLOPS =   7.31 +/-   0.08
 
 Running micro-kernel-4x4.x with arguments 640 ...
-L = 640, N = 10
-MM_REF t = 1.32e-02 sec, GFLOPS =  39.74
-MM_SOL t = 6.87e-02 sec, GFLOPS =   7.66
+L = 640, N = 4
+MM_REF t = 1.39e-02 sec, GFLOPS =  37.82 +/-   0.85
+MM_SOL t = 6.65e-02 sec, GFLOPS =   7.88 +/-   0.16
 
-Running naive-nkm.x with arguments 704 ...
-L = 704, N = 10
-MM_REF t = 1.78e-02 sec, GFLOPS =  39.22
-MM_SOL t = 3.41e-01 sec, GFLOPS =   2.04
+Running macro-kernel-160-micro-4x4.x with arguments 640 ...
+L = 640, N = 4
+MM_REF t = 1.48e-02 sec, GFLOPS =  35.33 +/-   0.98
+MM_SOL t = 6.48e-02 sec, GFLOPS =   8.09 +/-   0.02
 
-Running macro-kernel-nkm.x with arguments 704 ...
-L = 704, N = 10
-MM_REF t = 1.79e-02 sec, GFLOPS =  39.08
-MM_SOL t = 3.39e-01 sec, GFLOPS =   2.06
+Running micro-kernel-4x4.x with arguments 768 ...
+L = 768, N = 4
+MM_REF t = 2.31e-02 sec, GFLOPS =  39.16 +/-   0.74
+MM_SOL t = 1.92e-01 sec, GFLOPS =   4.71 +/-   0.23
 
-Running macro-kernel-4x4.x with arguments 704 ...
+Running macro-kernel-160-micro-4x4.x with arguments 768 ...
+L = 768, N = 4
+MM_REF t = 2.41e-02 sec, GFLOPS =  37.73 +/-   2.16
+MM_SOL t = 1.15e-01 sec, GFLOPS =   7.89 +/-   0.00
+
+Running micro-kernel-4x4.x with arguments 896 ...
+L = 896, N = 4
+MM_REF t = 3.37e-02 sec, GFLOPS =  42.68 +/-   0.26
+MM_SOL t = 1.76e-01 sec, GFLOPS =   8.18 +/-   0.16
+
+Running macro-kernel-160-micro-4x4.x with arguments 896 ...
+L = 896, N = 4
+MM_REF t = 3.29e-02 sec, GFLOPS =  43.82 +/-   2.11
+MM_SOL t = 1.75e-01 sec, GFLOPS =   8.20 +/-   0.01
+
+Running micro-kernel-4x4.x with arguments 1024 ...
+L = 1024, N = 4
+MM_REF t = 3.36e-02 sec, GFLOPS =  63.89 +/-   0.56
+MM_SOL t = 3.46e-01 sec, GFLOPS =   6.20 +/-   0.02
+
+Running macro-kernel-160-micro-4x4.x with arguments 1024 ...
+L = 1024, N = 4
+MM_REF t = 4.88e-02 sec, GFLOPS =  43.97 +/-   1.04
+MM_SOL t = 3.31e-01 sec, GFLOPS =   6.50 +/-   0.34
+
+Running micro-kernel-4x4.x with arguments 1152 ...
+L = 1152, N = 4
+MM_REF t = 7.47e-02 sec, GFLOPS =  41.17 +/-   4.52
+MM_SOL t = 4.74e-01 sec, GFLOPS =   6.59 +/-   1.31
+
+Running macro-kernel-160-micro-4x4.x with arguments 1152 ...
+L = 1152, N = 4
+MM_REF t = 6.68e-02 sec, GFLOPS =  45.78 +/-   0.02
+MM_SOL t = 3.70e-01 sec, GFLOPS =   8.25 +/-   0.01
+
+Running micro-kernel-4x4.x with arguments 1280 ...
+L = 1280, N = 4
+MM_REF t = 8.36e-02 sec, GFLOPS =  51.79 +/-  13.02
+MM_SOL t = 7.67e-01 sec, GFLOPS =   5.57 +/-   1.06
+
+Running macro-kernel-160-micro-4x4.x with arguments 1280 ...
+L = 1280, N = 4
+MM_REF t = 6.52e-02 sec, GFLOPS =  64.38 +/-   0.88
+MM_SOL t = 3.31e-01 sec, GFLOPS =  12.68 +/-   0.06
+
+Running micro-kernel-4x4.x with arguments 1408 ...
+L = 1408, N = 4
+MM_REF t = 1.10e-01 sec, GFLOPS =  52.35 +/-  12.06
+MM_SOL t = 9.94e-01 sec, GFLOPS =   5.73 +/-   1.15
+
+Running macro-kernel-160-micro-4x4.x with arguments 1408 ...
+L = 1408, N = 4
+MM_REF t = 1.23e-01 sec, GFLOPS =  45.51 +/-   1.13
+MM_SOL t = 5.84e-01 sec, GFLOPS =   9.78 +/-   2.07
+
+Running micro-kernel-4x4.x with arguments 1536 ...
+L = 1536, N = 4
+MM_REF t = 1.63e-01 sec, GFLOPS =  44.56 +/-   0.57
+MM_SOL t = 1.61e+00 sec, GFLOPS =   4.50 +/-   0.04
+
+Running macro-kernel-160-micro-4x4.x with arguments 1536 ...
+L = 1536, N = 4
+MM_REF t = 1.39e-01 sec, GFLOPS =  53.13 +/-  10.50
+MM_SOL t = 7.59e-01 sec, GFLOPS =   9.75 +/-   1.96
+
+Running micro-kernel-4x4.x with arguments 1664 ...
+L = 1664, N = 4
+MM_REF t = 1.46e-01 sec, GFLOPS =  63.20 +/-   3.93
+MM_SOL t = 1.57e+00 sec, GFLOPS =   5.89 +/-   0.06
+
+Running macro-kernel-160-micro-4x4.x with arguments 1664 ...
+L = 1664, N = 4
+MM_REF t = 1.98e-01 sec, GFLOPS =  46.60 +/-   0.47
+MM_SOL t = 9.64e-01 sec, GFLOPS =   9.76 +/-   2.01
+
+Running micro-kernel-4x4.x with arguments 1792 ...
+L = 1792, N = 4
+MM_REF t = 1.80e-01 sec, GFLOPS =  63.79 +/-   1.54
+MM_SOL t = 1.86e+00 sec, GFLOPS =   6.19 +/-   0.05
+
+Running macro-kernel-160-micro-4x4.x with arguments 1792 ...
+L = 1792, N = 4
+MM_REF t = 2.14e-01 sec, GFLOPS =  55.77 +/-  15.25
+MM_SOL t = 1.02e+00 sec, GFLOPS =  11.43 +/-   1.67
+
+Running micro-kernel-4x4.x with arguments 1920 ...
+L = 1920, N = 4
+MM_REF t = 2.15e-01 sec, GFLOPS =  65.74 +/-   0.88
+MM_SOL t = 2.59e+00 sec, GFLOPS =   5.47 +/-   0.00
+
+Running macro-kernel-160-micro-4x4.x with arguments 1920 ...
+L = 1920, N = 4
+MM_REF t = 2.13e-01 sec, GFLOPS =  66.61 +/-   0.35
+MM_SOL t = 1.13e+00 sec, GFLOPS =  12.55 +/-   0.07
+
+Running micro-kernel-4x4.x with arguments 2048 ...
+L = 2048, N = 4
+MM_REF t = 2.56e-01 sec, GFLOPS =  67.06 +/-   0.10
+MM_SOL t = 3.28e+00 sec, GFLOPS =   5.23 +/-   0.05
+
+Running macro-kernel-160-micro-4x4.x with arguments 2048 ...
+L = 2048, N = 4
+MM_REF t = 2.60e-01 sec, GFLOPS =  65.97 +/-   1.00
+MM_SOL t = 2.83e+00 sec, GFLOPS =   6.07 +/-   0.02
+
+Running micro-kernel-4x4.x with arguments 2176 ...

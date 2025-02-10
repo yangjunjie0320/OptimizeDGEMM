@@ -19,19 +19,20 @@ opt_flags="-O2"
 cmake -DCMAKE_CXX_FLAGS="$opt_flags" -DCMAKE_C_FLAGS="$opt_flags" ..
 make VERBOSE=1 -j16; cd -
 
-ff=("naive-nkm.x" "macro-kernel-nkm.x" "macro-kernel-4x4.x" "micro-kernel-4x4.x")
+# ff=("naive-nkm.x" "macro-kernel-nkm.x" "macro-kernel-4x4.x" "micro-kernel-4x4.x")
+ff=("micro-kernel-4x4.x" "macro-kernel-160-micro-4x4.x")
 
 cd $PREFIX/build/; echo "" > $PREFIX/plot/tmp; pwd
 for i in $(seq 1 32); do
     echo ""
-    export l=$(($i * 64))
+    export l=$(($i * 128))
     echo "L = $l"
 
     for f in ${ff[@]}; do
         # echo "Running $f with arguments $l ..."
         echo "Running $f with arguments $l ..." >> $PREFIX/plot/tmp
         tail -n 1 $PREFIX/plot/tmp
-        ./$f "$l" "10" >> $PREFIX/plot/tmp
+        ./$f "$l" "4" >> $PREFIX/plot/tmp
         tail -n 1 $PREFIX/plot/tmp
         echo "" >> $PREFIX/plot/tmp
     done
@@ -41,3 +42,4 @@ cd -
 
 python $PREFIX/plot/collect.py $PREFIX/plot/tmp $PREFIX/plot/out.log
 python $PREFIX/plot/plot.py $PREFIX/plot/out.log $PREFIX/plot/out.png
+

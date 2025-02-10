@@ -122,7 +122,7 @@ int main(int argc, char* argv[]) {
 
     auto gg0 = gflops(tt0, L);
     // assert (deviation(gg0) / average(gg0) < 0.2);
-    printf("MM_REF t = %6.2e sec, GFLOPS = %6.2f\n", average(tt0), average(gg0));
+    printf("MM_REF t = %6.2e sec, GFLOPS = %6.2f +/- %6.2f\n", average(tt0), average(gg0), deviation(gg0));
 
     std::sort(tt1.begin(), tt1.end());
     tt1.erase(tt1.begin());
@@ -130,7 +130,7 @@ int main(int argc, char* argv[]) {
 
     auto gg1 = gflops(tt1, L);
     // assert (deviation(gg1) / average(gg1) < 0.1);
-    printf("MM_SOL t = %6.2e sec, GFLOPS = %6.2f\n", average(tt1), average(gg1));
+    printf("MM_SOL t = %6.2e sec, GFLOPS = %6.2f +/- %6.2f\n", average(tt1), average(gg1), deviation(gg1));
 
     return 0;
 }

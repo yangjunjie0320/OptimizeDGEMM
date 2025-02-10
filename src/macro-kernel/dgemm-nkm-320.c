@@ -12,9 +12,9 @@ void macro_kernel(int M, int N, int K, double *restrict A, int LDA, double *rest
     }
 }
 
-#define M_BLOCK_SIZE 256
-#define N_BLOCK_SIZE 256
-#define K_BLOCK_SIZE 256
+#define M_BLOCK_SIZE 320
+#define N_BLOCK_SIZE 320
+#define K_BLOCK_SIZE 320
 
 void dgemm(int M, int N, int K, double *restrict A, double *restrict B, double *restrict C)
 {
