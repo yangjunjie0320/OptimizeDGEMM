@@ -1,9 +1,10 @@
 #include <stdio.h>
-#include <chrono>
-#include <cstdlib>
+#include <time.h>
+
 #include <vector>
 #include <numeric>
 #include <iostream>
+
 #include <Eigen/Dense>
 typedef Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColMajor> DoubleMatrix;
 
@@ -27,12 +28,12 @@ std::tuple<DoubleMatrix, double> mm_sol(const DoubleMatrix& ma, const DoubleMatr
     double* pb = (double*) mb.data();
     double* pc = (double*) mc.data();
     
-    auto t1 = std::chrono::high_resolution_clock::now();
+    auto t1 = clock();
     dgemm(ma.rows(), ma.cols(), mb.cols(), pa, pb, pc);
     // mc += ma * mb;
-    auto t2 = std::chrono::high_resolution_clock::now();
+    auto t2 = clock();
 
-    return std::make_tuple(mc, calculate_time_difference(t1, t2));
+    return std::make_tuple(mc, (t2 - t1) / CLOCKS_PER_SEC);
 }
 
 std::tuple<DoubleMatrix, double> mm_ref(const DoubleMatrix &ma, const DoubleMatrix &mb)
@@ -44,12 +45,12 @@ std::tuple<DoubleMatrix, double> mm_ref(const DoubleMatrix &ma, const DoubleMatr
     double* pb = (double*) mb.data();
     double* pc = (double*) mc.data();
     
-    auto t1 = std::chrono::high_resolution_clock::now();
+    auto t1 = clock();
     // dgemm_blas(ma.rows(), ma.cols(), mb.cols(), pa, pb, pc);
     mc += ma * mb;
-    auto t2 = std::chrono::high_resolution_clock::now();
+    auto t2 = clock();
 
-    return std::make_tuple(mc, calculate_time_difference(t1, t2));
+    return std::make_tuple(mc, (t2 - t1) / CLOCKS_PER_SEC);
 }
 
 std::vector<double> gflops(const std::vector<double> &tt, const int s) {
@@ -91,10 +92,9 @@ int main(int argc, char* argv[]) {
 
     int L = std::stoi(argv[1]);
     int N = std::stoi(argv[2]);
+    
     assert(L % 4 == 0);
     printf("L = %d, N = %d\n", L, N);
-
-    double eps = std::numeric_limits<double>::epsilon();
 
     for (int i = 0; i < N; i++) {
         DoubleMatrix A;
