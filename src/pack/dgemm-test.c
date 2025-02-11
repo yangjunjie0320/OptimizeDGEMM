@@ -14,103 +14,7 @@ static double _A[MC*KC];
 static double _B[KC*NC];
 static double _C[MR*NR];
 
-//
-//  Packing complete panels from A (i.e. without padding)
-//
-static void
-pack_MRxk(int k, const double *A, int incRowA, int incColA,
-          double *buffer)
-{
-    int i, j;
 
-    for (j=0; j<k; ++j) {
-        for (i=0; i<MR; ++i) {
-            buffer[i] = A[i*incRowA];
-        }
-        buffer += MR;
-        A      += incColA;
-    }
-}
-
-//
-//  Packing panels from A with padding if required
-//
-static void
-pack_A(int mc, int kc, const double *A, int incRowA, int incColA,
-       double *buffer)
-{
-    int mp  = mc / MR;
-    int _mr = mc % MR;
-
-    int i, j;
-
-    for (i=0; i<mp; ++i) {
-        pack_MRxk(kc, A, incRowA, incColA, buffer);
-        buffer += kc*MR;
-        A      += MR*incRowA;
-    }
-    if (_mr>0) {
-        for (j=0; j<kc; ++j) {
-            for (i=0; i<_mr; ++i) {
-                buffer[i] = A[i*incRowA];
-            }
-            for (i=_mr; i<MR; ++i) {
-                buffer[i] = 0.0;
-            }
-            buffer += MR;
-            A      += incColA;
-        }
-    }
-}
-
-//
-//  Packing complete panels from B (i.e. without padding)
-//
-static void
-pack_kxNR(int k, const double *B, int incRowB, int incColB,
-          double *buffer)
-{
-    int i, j;
-
-    for (i=0; i<k; ++i) {
-        for (j=0; j<NR; ++j) {
-            buffer[j] = B[j*incColB];
-        }
-        buffer += NR;
-        B      += incRowB;
-    }
-}
-
-//
-//  Packing panels from B with padding if required
-//
-static void
-pack_B(int kc, int nc, const double *B, int incRowB, int incColB,
-       double *buffer)
-{
-    int np  = nc / NR;
-    int _nr = nc % NR;
-
-    int i, j;
-
-    for (j=0; j<np; ++j) {
-        pack_kxNR(kc, B, incRowB, incColB, buffer);
-        buffer += kc*NR;
-        B      += NR*incColB;
-    }
-    if (_nr>0) {
-        for (i=0; i<kc; ++i) {
-            for (j=0; j<_nr; ++j) {
-                buffer[j] = B[j*incColB];
-            }
-            for (j=_nr; j<NR; ++j) {
-                buffer[j] = 0.0;
-            }
-            buffer += NR;
-            B      += incRowB;
-        }
-    }
-}
 
 //
 //  Micro kernel for multiplying panels from A and B.
@@ -280,6 +184,104 @@ dgemm_macro_kernel(int     mc,
                 dgeaxpy(mr, nr, 1.0, _C, 1, MR,
                         &C[i*MR*incRowC+j*NR*incColC], incRowC, incColC);
             }
+        }
+    }
+}
+
+//
+//  Packing complete panels from A (i.e. without padding)
+//
+static void
+pack_MRxk(int k, const double *A, int incRowA, int incColA,
+          double *buffer)
+{
+    int i, j;
+
+    for (j=0; j<k; ++j) {
+        for (i=0; i<MR; ++i) {
+            buffer[i] = A[i*incRowA];
+        }
+        buffer += MR;
+        A      += incColA;
+    }
+}
+
+//
+//  Packing panels from A with padding if required
+//
+static void
+pack_A(int mc, int kc, const double *A, int incRowA, int incColA,
+       double *buffer)
+{
+    int mp  = mc / MR;
+    int _mr = mc % MR;
+
+    int i, j;
+
+    for (i=0; i<mp; ++i) {
+        pack_MRxk(kc, A, incRowA, incColA, buffer);
+        buffer += kc*MR;
+        A      += MR*incRowA;
+    }
+    if (_mr>0) {
+        for (j=0; j<kc; ++j) {
+            for (i=0; i<_mr; ++i) {
+                buffer[i] = A[i*incRowA];
+            }
+            for (i=_mr; i<MR; ++i) {
+                buffer[i] = 0.0;
+            }
+            buffer += MR;
+            A      += incColA;
+        }
+    }
+}
+
+//
+//  Packing complete panels from B (i.e. without padding)
+//
+static void
+pack_kxNR(int k, const double *B, int incRowB, int incColB,
+          double *buffer)
+{
+    int i, j;
+
+    for (i=0; i<k; ++i) {
+        for (j=0; j<NR; ++j) {
+            buffer[j] = B[j*incColB];
+        }
+        buffer += NR;
+        B      += incRowB;
+    }
+}
+
+//
+//  Packing panels from B with padding if required
+//
+static void
+pack_B(int kc, int nc, const double *B, int incRowB, int incColB,
+       double *buffer)
+{
+    int np  = nc / NR;
+    int _nr = nc % NR;
+
+    int i, j;
+
+    for (j=0; j<np; ++j) {
+        pack_kxNR(kc, B, incRowB, incColB, buffer);
+        buffer += kc*NR;
+        B      += NR*incColB;
+    }
+    if (_nr>0) {
+        for (i=0; i<kc; ++i) {
+            for (j=0; j<_nr; ++j) {
+                buffer[j] = B[j*incColB];
+            }
+            for (j=_nr; j<NR; ++j) {
+                buffer[j] = 0.0;
+            }
+            buffer += NR;
+            B      += incRowB;
         }
     }
 }

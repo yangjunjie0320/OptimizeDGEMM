@@ -25,7 +25,7 @@ ff=("naive-nkm.x" "pack-test.x" "pack-1.x")
 cd $PREFIX/build/; echo "" > $PREFIX/plot/tmp; pwd
 for i in $(seq 1 20); do
     echo ""
-    export l=$(($i * 64))
+    export l=$(($i * 8))
     echo "L = $l"
 
     for f in ${ff[@]}; do
