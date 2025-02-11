@@ -23,7 +23,6 @@ static void pack_A(int M, int K, const double *A, int LDA, double *buffer)
                 buffer[m] = A[m + k * LDA];
             }
             buffer += M_MICRO_SIZE;
-            // A += LDA;
         }
         A += M_MICRO_SIZE; // Move to next block of rows
     }
@@ -61,9 +60,8 @@ static void pack_B(int K, int N, const double *B, int LDB, double *buffer)
                 buffer[n] = B[k + n * LDB];
             }
             buffer += N_MICRO_SIZE;
-            // B += 1;
         }
-        B += N_MICRO_SIZE; // Move to next block of columns
+        B += LDB * N_MICRO_SIZE; // Move to next block of columns
     }
     
     // Handle remaining columns with padding
@@ -71,7 +69,7 @@ static void pack_B(int K, int N, const double *B, int LDB, double *buffer)
         for (int k = 0; k < K; ++k) {
             // Copy actual elements
             for (int n = 0; n < NR; ++n) {
-                buffer[n] = B[n * LDB];
+                buffer[n] = B[k + n * LDB];
             }
             // Pad with zeros
             for (int n = NR; n < N_MICRO_SIZE; ++n) {
