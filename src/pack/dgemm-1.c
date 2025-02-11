@@ -3,24 +3,32 @@
 #define M_MACRO_SIZE  384
 #define K_MACRO_SIZE  384
 #define N_MACRO_SIZE  4096
+const int MC = M_MACRO_SIZE;
+const int NC = N_MACRO_SIZE;
+const int KC = K_MACRO_SIZE;
 
 #define M_MICRO_SIZE  4
 #define N_MICRO_SIZE  4
+const int MR = M_MICRO_SIZE;
+const int NR = N_MICRO_SIZE;
 
 #define min(a, b) ((a) < (b) ? (a) : (b))
 
+//
+//  Packing complete panels from A (i.e. without padding)
+//
 static void
-pack_MRxk(int k, const double *A, int LDA,
+pack_MRxk(int k, const double *A, int incRowA, int incColA,
           double *buffer)
 {
     int i, j;
 
     for (j=0; j<k; ++j) {
-        for (i=0; i<M_MICRO_SIZE; ++i) {
-            buffer[i] = A[i*1];
+        for (i=0; i<MR; ++i) {
+            buffer[i] = A[i*incRowA];
         }
-        buffer += M_MICRO_SIZE;
-        A      += LDA;
+        buffer += MR;
+        A      += incColA;
     }
 }
 
@@ -28,48 +36,55 @@ pack_MRxk(int k, const double *A, int LDA,
 //  Packing panels from A with padding if required
 //
 static void
-pack_A(int mc, int kc, const double *A, int LDA,
+_pack_A(int mc, int kc, const double *A, int incRowA, int incColA,
        double *buffer)
 {
-    int mp  = mc / M_MICRO_SIZE;
-    int _mr = mc % M_MICRO_SIZE;
+    int mp  = mc / MR;
+    int _mr = mc % MR;
 
     int i, j;
 
     for (i=0; i<mp; ++i) {
-        pack_MRxk(kc, A, 1, LDA, buffer);
-        buffer += kc*M_MICRO_SIZE;
-        A      += M_MICRO_SIZE*1;
+        pack_MRxk(kc, A, incRowA, incColA, buffer);
+        buffer += kc*MR;
+        A      += MR*incRowA;
     }
     if (_mr>0) {
         for (j=0; j<kc; ++j) {
             for (i=0; i<_mr; ++i) {
-                buffer[i] = A[i*1];
+                buffer[i] = A[i*incRowA];
             }
-            for (i=_mr; i<M_MICRO_SIZE; ++i) {
+            for (i=_mr; i<MR; ++i) {
                 buffer[i] = 0.0;
             }
-            buffer += M_MICRO_SIZE;
-            A      += LDA;
+            buffer += MR;
+            A      += incColA;
         }
     }
+}
+
+static void
+pack_A(int mc, int kc, const double *A, int LDA,
+       double *buffer)
+{
+    _pack_A(mc, kc, A, 1, LDA, buffer);
 }
 
 //
 //  Packing complete panels from B (i.e. without padding)
 //
 static void
-pack_kxNR(int k, const double *B, int LDB,
+pack_kxNR(int k, const double *B, int incRowB, int incColB,
           double *buffer)
 {
     int i, j;
 
     for (i=0; i<k; ++i) {
-        for (j=0; j<N_MICRO_SIZE; ++j) {
-            buffer[j] = B[j*LDB];
+        for (j=0; j<NR; ++j) {
+            buffer[j] = B[j*incColB];
         }
-        buffer += N_MICRO_SIZE;
-        B      += 1;
+        buffer += NR;
+        B      += incRowB;
     }
 }
 
@@ -77,56 +92,105 @@ pack_kxNR(int k, const double *B, int LDB,
 //  Packing panels from B with padding if required
 //
 static void
-pack_B(int kc, int nc, const double *B, int LDB,
-       double *buffer)
+_pack_B(int kc, int nc, const double *B, int incRowB, int incColB,
+        double *buffer)
 {
-    int np  = nc / N_MICRO_SIZE;
-    int _nr = nc % N_MICRO_SIZE;
+    int np  = nc / NR;
+    int _nr = nc % NR;
 
     int i, j;
 
     for (j=0; j<np; ++j) {
-        pack_kxNR(kc, B, 1, LDB, buffer);
-        buffer += kc*N_MICRO_SIZE;
-        B      += N_MICRO_SIZE*LDB;
+        pack_kxNR(kc, B, incRowB, incColB, buffer);
+        buffer += kc*NR;
+        B      += NR*incColB;
     }
     if (_nr>0) {
         for (i=0; i<kc; ++i) {
             for (j=0; j<_nr; ++j) {
-                buffer[j] = B[j*LDB];
+                buffer[j] = B[j*incColB];
             }
-            for (j=_nr; j<N_MICRO_SIZE; ++j) {
+            for (j=_nr; j<NR; ++j) {
                 buffer[j] = 0.0;
             }
-            buffer += N_MICRO_SIZE;
-            B      += 1;
+            buffer += NR;
+            B      += incRowB;
+        }
+    }
+}
+
+static void
+pack_B(int kc, int nc, const double *B, int LDB,
+       double *buffer)
+{
+    _pack_B(kc, nc, B, 1, LDB, buffer);
+}
+
+static void
+_micro_kernel(int kc,
+              double alpha, const double *A, const double *B,
+              double beta,
+              double *C, int incRowC, int incColC)
+{
+    double AB[MR*NR];
+
+    int i, j, l;
+
+//
+//  Compute AB = A*B
+//
+    for (l=0; l<MR*NR; ++l) {
+        AB[l] = 0;
+    }
+    for (l=0; l<kc; ++l) {
+        for (j=0; j<NR; ++j) {
+            for (i=0; i<MR; ++i) {
+                AB[i+j*MR] += A[i]*B[j];
+            }
+        }
+        A += MR;
+        B += NR;
+    }
+
+//
+//  Update C <- beta*C
+//
+    if (beta==0.0) {
+        for (j=0; j<NR; ++j) {
+            for (i=0; i<MR; ++i) {
+                C[i*incRowC+j*incColC] = 0.0;
+            }
+        }
+    } else if (beta!=1.0) {
+        for (j=0; j<NR; ++j) {
+            for (i=0; i<MR; ++i) {
+                C[i*incRowC+j*incColC] *= beta;
+            }
+        }
+    }
+
+//
+//  Update C <- C + alpha*AB (note: the case alpha==0.0 was already treated in
+//                                  the above layer dgemm_nn)
+//
+    if (alpha==1.0) {
+        for (j=0; j<NR; ++j) {
+            for (i=0; i<MR; ++i) {
+                C[i*incRowC+j*incColC] += AB[i+j*MR];
+            }
+        }
+    } else {
+        for (j=0; j<NR; ++j) {
+            for (i=0; i<MR; ++i) {
+                C[i*incRowC+j*incColC] += alpha*AB[i+j*MR];
+            }
         }
     }
 }
 
 static void micro_kernel(int M, int N, int K, double *A, int LDA, double *B, int LDB, double *C, int LDC)
 {
-    double AB[M_MICRO_SIZE * N_MICRO_SIZE];
-
-    for (int mn = 0; mn < M_MICRO_SIZE * N_MICRO_SIZE; ++mn) {
-        AB[mn] = 0.0;
-    }
-
-    for (int k = 0; k < K; ++k) {
-        for (int n = 0; n < N_MICRO_SIZE; ++n) {
-            for (int m = 0; m < M_MICRO_SIZE; ++m) {
-                AB[m + n * M_MICRO_SIZE] += A[m] * B[n];
-            }
-        }
-        A += M_MICRO_SIZE;
-        B += N_MICRO_SIZE;
-    }
-
-    for (int n = 0; n < N_MICRO_SIZE; ++n) {
-        for (int m = 0; m < M_MICRO_SIZE; ++m) {
-            C[m + n * LDC] += AB[m + n * M_MICRO_SIZE];
-        }
-    }
+    _micro_kernel(K, 1.0, A, B, 0.0, C, 1, LDC);
 }
 
 static void macro_kernel(int M, int N, int K, double *A, int LDA, double *B, int LDB, double *C, int LDC)
