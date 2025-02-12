@@ -88,11 +88,6 @@ static void pack_B(int K, int N, const double *B, int LDB, double *buffer)
 //  Micro kernel for multiplying panels from A and B.
 static void micro_kernel(int M, int N, int K, double* A, int LDA, double* B, int LDB, double* C, int LDC)
 {
-    int incRowC = 1;
-    int incColC = LDC;
-    double alpha = 1.0;
-    double beta = 1.0;
-
     double AB[M_MICRO_SIZE * N_MICRO_SIZE];
 
     #pragma unroll M_MICRO_SIZE * N_MICRO_SIZE
@@ -129,10 +124,6 @@ static void micro_kernel(int M, int N, int K, double* A, int LDA, double* B, int
 //  Macro Kernel for the multiplication of blocks of A and B.
 static void macro_kernel(int M, int N, int K, double* A, int LDA, double* B, int LDB, double* C, int LDC)
 {
-    double alpha = 1.0;
-    double beta = 1.0;
-    int incRowC = 1;
-
     int MP = (M+M_MICRO_SIZE-1) / M_MICRO_SIZE;
     int NP = (N+N_MICRO_SIZE-1) / N_MICRO_SIZE;
 
