@@ -11,13 +11,15 @@ static void pack_A(int M, int K, const double *A, int LDA, double *buffer)
 {
     int MP = M / M_MICRO_SIZE;  // Number of complete MR x kc blocks
     int MR = M % M_MICRO_SIZE; // Remaining rows
-
     int m, mp, k;
 
     // Pack complete MR x kc blocks
     for (mp = 0; mp < MP; ++mp) {
+
         // Pack one MR x kc block
         for (k = 0; k < K; ++k) {
+
+            #pragma unroll M_MICRO_SIZE
             for (int m = 0; m < M_MICRO_SIZE; ++m) {
                 buffer[m] = A[m];
             }
@@ -48,12 +50,15 @@ static void pack_B(int K, int N, const double *B, int LDB, double *buffer)
 {
     int NP = N / N_MICRO_SIZE;  // Number of complete kc x NR blocks
     int NR = N % N_MICRO_SIZE; // Remaining columns
-    int k, np, n;
+    int n, np, k;
 
     // Pack complete kc x NR blocks
     for (np = 0; np < NP; ++np) {
+        
         // Pack one kc x NR block
         for (k = 0; k < K; ++k) {
+
+            #pragma unroll N_MICRO_SIZE
             for (int n = 0; n < N_MICRO_SIZE; ++n) {
                 buffer[n] = B[n * LDB];
             }
@@ -80,14 +85,7 @@ static void pack_B(int K, int N, const double *B, int LDB, double *buffer)
     }
 }
 
-//
 //  Micro kernel for multiplying panels from A and B.
-//
-// static void
-// micro_kernel(int kc,
-//              double alpha, const double *A, const double *B,
-//              double beta,
-//              double *C, int incRowC, int incColC)
 static void micro_kernel(int M, int N, int K, double* A, int LDA, double* B, int LDB, double* C, int LDC)
 {
     int incRowC = 1;
@@ -97,16 +95,18 @@ static void micro_kernel(int M, int N, int K, double* A, int LDA, double* B, int
 
     double AB[M_MICRO_SIZE * N_MICRO_SIZE];
 
-    int i, j, l;
-
+    #pragma unroll M_MICRO_SIZE * N_MICRO_SIZE
     for (int mn = 0; mn < M_MICRO_SIZE * N_MICRO_SIZE; ++mn) {
         AB[mn] = 0;
     }
 
     for (int k = 0; k < K; ++k) {
+
+        #pragma unroll N_MICRO_SIZE
         for (int n = 0; n < N_MICRO_SIZE; ++n) {
             double bkn = B[n + k * N_MICRO_SIZE];
 
+            #pragma unroll M_MICRO_SIZE 
             for (int m = 0; m < M_MICRO_SIZE; ++m) {
                 double amk = A[m + k * M_MICRO_SIZE];
 
@@ -116,17 +116,17 @@ static void micro_kernel(int M, int N, int K, double* A, int LDA, double* B, int
         }
     }
 
+    #pragma unroll N_MICRO_SIZE
     for (int n = 0; n < N_MICRO_SIZE; ++n) {
+
+        #pragma unroll M_MICRO_SIZE
         for (int m = 0; m < M_MICRO_SIZE; ++m) {
             C[m + n * LDC] += AB[m + n * M_MICRO_SIZE];
         }
     }
 }
 
-//
-//  Macro Kernel for the multiplication of blocks of A and B.  We assume that
-//  these blocks were previously packed to buffers _A and _B.
-//
+//  Macro Kernel for the multiplication of blocks of A and B.
 static void macro_kernel(int M, int N, int K, double* A, int LDA, double* B, int LDB, double* C, int LDC)
 {
     double alpha = 1.0;
