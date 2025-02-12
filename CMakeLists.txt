@@ -36,17 +36,10 @@ foreach(f IN LISTS SOURCES)
     get_filename_component(d ${d} NAME)
     get_filename_component(b ${f} NAME_WE)
     string(REGEX REPLACE "^dgemm-" "" b ${b})
-    message(STATUS "preparing ${d}-${b}.x")
+    message(STATUS "preparing ${b}.x")
 
     # use the dirname-basename as the executable name
-    add_executable(${d}-${b}.x src/main.cxx ${f})
-    target_compile_options(${d}-${b}.x PRIVATE)
-    target_link_libraries(${d}-${b}.x dgemm-blas)
-    # add_custom_command(
-    #     OUTPUT ${CMAKE_BINARY_DIR}/${d}-${b}.s
-    #     COMMAND ${CMAKE_C_COMPILER} -mfma -Og -march=native -S -fverbose-asm -o ${CMAKE_BINARY_DIR}/${d}-${b}.s ${f}
-    #     DEPENDS ${f}
-    #     COMMENT "Generating assembly for ${f}"
-    # )
-    # add_custom_target(${d}-${b}.s ALL DEPENDS ${CMAKE_BINARY_DIR}/${d}-${b}.s)
+    add_executable(${b}.x src/main.cxx ${f})
+    target_compile_options(${b}.x PRIVATE)
+    target_link_libraries(${b}.x dgemm-blas)
 endforeach()
