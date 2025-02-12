@@ -1,4 +1,7 @@
-extern void dgemm_(char*, char*, int*, int*, int*, double*, double*, int*, double*, int*, double*, double*, int*);
+extern void dgemm_(const char*, const char*, const int*, const int*, const int*, 
+                  const double*, const double*, const int*, 
+                  const double*, const int*, 
+                  double*, double*, const int*);
 
 void dgemm_blas(const int m, const int n, const int k, const double* a, const double* b, double* c)
 {
@@ -14,11 +17,10 @@ void dgemm_blas(const int m, const int n, const int k, const double* a, const do
     dgemm_(
         &transa,  // transa
         &transb,  // transb
-        &m, &n, &k,
+        (int*) &m, (int*) &n, (int*) &k,
         &alpha,
-        a, &lda,
-        b, &ldb,
-        &beta,
-        c, &ldc
+        (double*) a, &lda,
+        (double*) b, &ldb,
+        &beta, c, &ldc
     );
 }

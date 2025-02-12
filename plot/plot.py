@@ -54,7 +54,7 @@ def plot(data, out):
 
     ax.set_xlabel('L')
     ax.set_xlim(xx[:, 0].min(), xx[:, 0].max())
-    ax.set_ylim(0.0, 30.0)
+    ax.set_ylim(0.0, 45.0)
     ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
     fig.tight_layout()
     fig.savefig(out, bbox_inches='tight', pad_inches=0.0, dpi=300)

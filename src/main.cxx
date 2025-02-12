@@ -51,8 +51,8 @@ std::tuple<DoubleMatrix, double> mm_ref(const DoubleMatrix &ma, const DoubleMatr
     gettimeofday(&tv0, NULL);
     double t0 = tv0.tv_sec + tv0.tv_usec * 1e-6;
 
-    mc += ma * mb;
-    // dgemm_blas(ma.rows(), ma.cols(), mb.cols(), pa, pb, pc);
+    // mc += ma * mb;
+    dgemm_blas(ma.rows(), ma.cols(), mb.cols(), pa, pb, pc);
 
     gettimeofday(&tv1, NULL);
     double t1 = tv1.tv_sec + tv1.tv_usec * 1e-6;
