@@ -19,8 +19,7 @@ opt_flags="-Ofast -march=native -msse3 -mfpmath=sse -fomit-frame-pointer"
 cmake -DCMAKE_CXX_FLAGS="$opt_flags" -DCMAKE_C_FLAGS="$opt_flags" ..
 make VERBOSE=1 -j16; cd -
 
-# ff=("naive-nkm.x") #  "macro-kernel-nkm.x" "macro-kernel-4x4.x" "micro-kernel-4x4.x")
-ff=("naive-nkm.x" "naive-knm.x" "naive-mnk.x" "pack-1.x")
+ff=("naive-nkm.x" "naive-knm.x" "naive-mnk.x" "pack.x")
 
 cd $PREFIX/build/; echo "" > $PREFIX/plot/tmp; pwd
 for i in $(seq 1 32); do

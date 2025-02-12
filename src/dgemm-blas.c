@@ -10,6 +10,7 @@ void dgemm_blas(const int m, const int n, const int k, const double* a, const do
     int lda = m;
     int ldb = k;
     int ldc = m;
+
     dgemm_(
         &transa,  // transa
         &transb,  // transb
