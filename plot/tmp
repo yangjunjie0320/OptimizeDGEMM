@@ -1,1 +1,884 @@
 
+Running naive-nkm.x with arguments 32 ...
+L = 32, N = 4
+err = 2.66e-15
+err = 9.99e-16
+err = 1.55e-15
+err = 1.33e-15
+MM_REF t = 5.48e-06 sec, GFLOPS =  12.04 +/-   1.48
+MM_SOL t = 1.36e-05 sec, GFLOPS =   4.83 +/-   0.24
+
+Running naive-knm.x with arguments 32 ...
+L = 32, N = 4
+err = 2.66e-15
+err = 9.99e-16
+err = 1.55e-15
+err = 1.33e-15
+MM_REF t = 4.53e-06 sec, GFLOPS =  14.63 +/-   2.18
+MM_SOL t = 1.45e-05 sec, GFLOPS =   4.51 +/-   0.21
+
+Running naive-mnk.x with arguments 32 ...
+L = 32, N = 4
+err = 2.22e-15
+err = 3.55e-15
+err = 2.66e-15
+err = 2.22e-15
+MM_REF t = 5.48e-06 sec, GFLOPS =  12.04 +/-   1.48
+MM_SOL t = 3.30e-05 sec, GFLOPS =   1.98 +/-   0.01
+
+Running pack-1.x with arguments 32 ...
+L = 32, N = 4
+err = 2.66e-15
+err = 9.99e-16
+err = 1.55e-15
+err = 1.33e-15
+MM_REF t = 5.96e-06 sec, GFLOPS =  11.00 +/-   0.00
+MM_SOL t = 3.96e-05 sec, GFLOPS =   1.66 +/-   0.03
+
+Running naive-nkm.x with arguments 64 ...
+L = 64, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 3.24e-05 sec, GFLOPS =  16.17 +/-   0.34
+MM_SOL t = 1.00e-04 sec, GFLOPS =   5.22 +/-   0.04
+
+Running naive-knm.x with arguments 64 ...
+L = 64, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 8.01e-05 sec, GFLOPS =   9.57 +/-   7.62
+MM_SOL t = 1.44e-04 sec, GFLOPS =   3.79 +/-   1.08
+
+Running naive-mnk.x with arguments 64 ...
+L = 64, N = 4
+err = 5.33e-15
+err = 5.33e-15
+err = 7.11e-15
+err = 4.44e-15
+MM_REF t = 8.34e-05 sec, GFLOPS =   6.28 +/-   0.05
+MM_SOL t = 2.58e-04 sec, GFLOPS =   2.03 +/-   0.02
+
+Running pack-1.x with arguments 64 ...
+L = 64, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.24e-04 sec, GFLOPS =   4.23 +/-   0.00
+MM_SOL t = 2.03e-04 sec, GFLOPS =   2.59 +/-   0.01
+
+Running naive-nkm.x with arguments 96 ...
+L = 96, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.60e-04 sec, GFLOPS =  11.07 +/-   0.59
+MM_SOL t = 3.48e-04 sec, GFLOPS =   5.08 +/-   0.01
+
+Running naive-knm.x with arguments 96 ...
+L = 96, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.44e-04 sec, GFLOPS =  12.39 +/-   1.57
+MM_SOL t = 4.69e-04 sec, GFLOPS =   4.02 +/-   1.42
+
+Running naive-mnk.x with arguments 96 ...
+L = 96, N = 4
+err = 1.24e-14
+err = 1.07e-14
+err = 1.07e-14
+err = 1.24e-14
+MM_REF t = 1.89e-04 sec, GFLOPS =   9.37 +/-   0.56
+MM_SOL t = 9.75e-04 sec, GFLOPS =   1.81 +/-   0.00
+
+Running pack-1.x with arguments 96 ...
+L = 96, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.44e-04 sec, GFLOPS =  12.32 +/-   0.84
+MM_SOL t = 3.11e-04 sec, GFLOPS =   5.69 +/-   0.00
+
+Running naive-nkm.x with arguments 128 ...
+L = 128, N = 4
+err = 8.88e-15
+err = 8.88e-15
+err = 8.88e-15
+err = 1.24e-14
+MM_REF t = 3.24e-04 sec, GFLOPS =  12.95 +/-   0.23
+MM_SOL t = 7.98e-04 sec, GFLOPS =   5.27 +/-   0.34
+
+Running naive-knm.x with arguments 128 ...
+L = 128, N = 4
+err = 8.88e-15
+err = 8.88e-15
+err = 8.88e-15
+err = 1.24e-14
+MM_REF t = 2.16e-04 sec, GFLOPS =  19.52 +/-   1.47
+MM_SOL t = 5.66e-04 sec, GFLOPS =   7.42 +/-   0.01
+
+Running naive-mnk.x with arguments 128 ...
+L = 128, N = 4
+err = 1.15e-14
+err = 1.24e-14
+err = 1.07e-14
+err = 1.24e-14
+MM_REF t = 2.44e-04 sec, GFLOPS =  17.26 +/-   1.61
+MM_SOL t = 3.79e-03 sec, GFLOPS =   1.11 +/-   0.12
+
+Running pack-1.x with arguments 128 ...
+L = 128, N = 4
+err = 8.88e-15
+err = 8.88e-15
+err = 8.88e-15
+err = 1.24e-14
+MM_REF t = 3.06e-04 sec, GFLOPS =  13.72 +/-   0.51
+MM_SOL t = 7.40e-04 sec, GFLOPS =   5.67 +/-   0.02
+
+Running naive-nkm.x with arguments 160 ...
+L = 160, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 3.86e-04 sec, GFLOPS =  21.20 +/-   0.19
+MM_SOL t = 8.67e-04 sec, GFLOPS =   9.45 +/-   0.12
+
+Running naive-knm.x with arguments 160 ...
+L = 160, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 5.03e-04 sec, GFLOPS =  16.91 +/-   4.63
+MM_SOL t = 1.55e-03 sec, GFLOPS =   5.46 +/-   1.38
+
+Running naive-mnk.x with arguments 160 ...
+L = 160, N = 4
+err = 1.60e-14
+err = 1.42e-14
+err = 1.78e-14
+err = 1.78e-14
+MM_REF t = 4.43e-04 sec, GFLOPS =  18.51 +/-   0.44
+MM_SOL t = 3.45e-03 sec, GFLOPS =   2.37 +/-   0.09
+
+Running pack-1.x with arguments 160 ...
+L = 160, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 6.03e-04 sec, GFLOPS =  13.58 +/-   0.06
+MM_SOL t = 1.18e-03 sec, GFLOPS =   7.12 +/-   1.64
+
+Running naive-nkm.x with arguments 192 ...
+L = 192, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 8.01e-04 sec, GFLOPS =  18.23 +/-   4.55
+MM_SOL t = 1.72e-03 sec, GFLOPS =   8.48 +/-   2.00
+
+Running naive-knm.x with arguments 192 ...
+L = 192, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 6.92e-04 sec, GFLOPS =  20.46 +/-   0.71
+MM_SOL t = 2.15e-03 sec, GFLOPS =   6.57 +/-   0.03
+
+Running naive-mnk.x with arguments 192 ...
+L = 192, N = 4
+err = 1.95e-14
+err = 1.95e-14
+err = 1.95e-14
+err = 2.13e-14
+MM_REF t = 5.63e-04 sec, GFLOPS =  25.15 +/-   0.06
+MM_SOL t = 9.80e-03 sec, GFLOPS =   1.44 +/-   0.01
+
+Running pack-1.x with arguments 192 ...
+L = 192, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 5.92e-04 sec, GFLOPS =  23.91 +/-   0.05
+MM_SOL t = 1.25e-03 sec, GFLOPS =  11.30 +/-   0.15
+
+Running naive-nkm.x with arguments 224 ...
+L = 224, N = 4
+err = 1.78e-14
+err = 2.13e-14
+err = 1.60e-14
+err = 1.42e-14
+MM_REF t = 1.07e-03 sec, GFLOPS =  21.64 +/-   5.08
+MM_SOL t = 2.03e-03 sec, GFLOPS =  11.10 +/-   0.65
+
+Running naive-knm.x with arguments 224 ...
+L = 224, N = 4
+err = 1.78e-14
+err = 2.13e-14
+err = 1.60e-14
+err = 1.42e-14
+MM_REF t = 1.19e-03 sec, GFLOPS =  18.88 +/-   0.03
+MM_SOL t = 3.88e-03 sec, GFLOPS =   5.79 +/-   0.18
+
+Running naive-mnk.x with arguments 224 ...
+L = 224, N = 4
+err = 2.49e-14
+err = 2.49e-14
+err = 2.66e-14
+err = 2.84e-14
+MM_REF t = 8.63e-04 sec, GFLOPS =  26.05 +/-   0.13
+MM_SOL t = 1.33e-02 sec, GFLOPS =   1.70 +/-   0.03
+
+Running pack-1.x with arguments 224 ...
+L = 224, N = 4
+err = 1.78e-14
+err = 2.13e-14
+err = 1.60e-14
+err = 1.42e-14
+MM_REF t = 9.01e-04 sec, GFLOPS =  24.95 +/-   0.04
+MM_SOL t = 2.03e-03 sec, GFLOPS =  11.08 +/-   0.41
+
+Running naive-nkm.x with arguments 256 ...
+L = 256, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.23e-03 sec, GFLOPS =  27.20 +/-   0.05
+MM_SOL t = 3.37e-03 sec, GFLOPS =   9.95 +/-   0.02
+
+Running naive-knm.x with arguments 256 ...
+L = 256, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.24e-03 sec, GFLOPS =  27.00 +/-   0.49
+MM_SOL t = 4.13e-03 sec, GFLOPS =   8.13 +/-   0.06
+
+Running naive-mnk.x with arguments 256 ...
+L = 256, N = 4
+err = 2.84e-14
+err = 2.84e-14
+err = 2.49e-14
+err = 2.66e-14
+MM_REF t = 1.24e-03 sec, GFLOPS =  27.02 +/-   0.03
+MM_SOL t = 2.20e-02 sec, GFLOPS =   1.53 +/-   0.03
+
+Running pack-1.x with arguments 256 ...
+L = 256, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.30e-03 sec, GFLOPS =  25.77 +/-   0.17
+MM_SOL t = 3.25e-03 sec, GFLOPS =  10.34 +/-   0.04
+
+Running naive-nkm.x with arguments 288 ...
+L = 288, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.67e-03 sec, GFLOPS =  28.62 +/-   0.02
+MM_SOL t = 3.93e-03 sec, GFLOPS =  12.15 +/-   0.08
+
+Running naive-knm.x with arguments 288 ...
+L = 288, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.67e-03 sec, GFLOPS =  28.68 +/-   0.13
+MM_SOL t = 5.79e-03 sec, GFLOPS =   8.25 +/-   0.00
+
+Running naive-mnk.x with arguments 288 ...
+L = 288, N = 4
+err = 3.91e-14
+err = 3.02e-14
+err = 3.20e-14
+err = 3.20e-14
+MM_REF t = 1.67e-03 sec, GFLOPS =  28.57 +/-   0.13
+MM_SOL t = 3.13e-02 sec, GFLOPS =   1.53 +/-   0.02
+
+Running pack-1.x with arguments 288 ...
+L = 288, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.73e-03 sec, GFLOPS =  27.60 +/-   0.09
+MM_SOL t = 4.07e-03 sec, GFLOPS =  11.74 +/-   0.03
+
+Running naive-nkm.x with arguments 320 ...
+L = 320, N = 4
+err = 2.31e-14
+err = 3.55e-14
+err = 2.66e-14
+err = 2.49e-14
+MM_REF t = 2.23e-03 sec, GFLOPS =  29.44 +/-   0.02
+MM_SOL t = 5.59e-03 sec, GFLOPS =  11.73 +/-   0.02
+
+Running naive-knm.x with arguments 320 ...
+L = 320, N = 4
+err = 2.31e-14
+err = 3.55e-14
+err = 2.66e-14
+err = 2.49e-14
+MM_REF t = 2.32e-03 sec, GFLOPS =  28.22 +/-   0.46
+MM_SOL t = 8.25e-03 sec, GFLOPS =   7.95 +/-   0.09
+
+Running naive-mnk.x with arguments 320 ...
+L = 320, N = 4
+err = 3.55e-14
+err = 3.91e-14
+err = 4.09e-14
+err = 3.55e-14
+MM_REF t = 2.21e-03 sec, GFLOPS =  29.59 +/-   0.12
+MM_SOL t = 4.41e-02 sec, GFLOPS =   1.49 +/-   0.02
+
+Running pack-1.x with arguments 320 ...
+L = 320, N = 4
+err = 2.31e-14
+err = 3.55e-14
+err = 2.66e-14
+err = 2.49e-14
+MM_REF t = 2.27e-03 sec, GFLOPS =  28.88 +/-   0.04
+MM_SOL t = 5.43e-03 sec, GFLOPS =  12.06 +/-   0.13
+
+Running naive-nkm.x with arguments 352 ...
+L = 352, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 2.76e-03 sec, GFLOPS =  31.58 +/-   0.04
+MM_SOL t = 7.42e-03 sec, GFLOPS =  11.75 +/-   0.04
+
+Running naive-knm.x with arguments 352 ...
+L = 352, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 2.75e-03 sec, GFLOPS =  31.68 +/-   0.08
+MM_SOL t = 1.07e-02 sec, GFLOPS =   8.14 +/-   0.13
+
+Running naive-mnk.x with arguments 352 ...
+L = 352, N = 4
+err = 3.91e-14
+err = 4.62e-14
+err = 3.91e-14
+err = 6.39e-14
+MM_REF t = 2.76e-03 sec, GFLOPS =  31.58 +/-   0.22
+MM_SOL t = 5.86e-02 sec, GFLOPS =   1.49 +/-   0.01
+
+Running pack-1.x with arguments 352 ...
+L = 352, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 2.79e-03 sec, GFLOPS =  31.28 +/-   0.33
+MM_SOL t = 7.19e-03 sec, GFLOPS =  12.13 +/-   0.01
+
+Running naive-nkm.x with arguments 384 ...
+L = 384, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 3.41e-03 sec, GFLOPS =  33.20 +/-   0.06
+MM_SOL t = 1.05e-02 sec, GFLOPS =  10.76 +/-   0.23
+
+Running naive-knm.x with arguments 384 ...
+L = 384, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 3.41e-03 sec, GFLOPS =  33.19 +/-   0.14
+MM_SOL t = 1.47e-02 sec, GFLOPS =   7.69 +/-   0.10
+
+Running naive-mnk.x with arguments 384 ...
+L = 384, N = 4
+err = 7.11e-14
+err = 4.97e-14
+err = 5.68e-14
+err = 5.51e-14
+MM_REF t = 3.50e-03 sec, GFLOPS =  32.35 +/-   0.42
+MM_SOL t = 7.98e-02 sec, GFLOPS =   1.42 +/-   0.00
+
+Running pack-1.x with arguments 384 ...
+L = 384, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 3.50e-03 sec, GFLOPS =  32.37 +/-   0.53
+MM_SOL t = 9.24e-03 sec, GFLOPS =  12.26 +/-   0.10
+
+Running naive-nkm.x with arguments 416 ...
+L = 416, N = 4
+err = 3.38e-14
+err = 3.38e-14
+err = 4.09e-14
+err = 4.26e-14
+MM_REF t = 4.30e-03 sec, GFLOPS =  33.50 +/-   0.19
+MM_SOL t = 1.48e-02 sec, GFLOPS =   9.73 +/-   0.16
+
+Running naive-knm.x with arguments 416 ...
+L = 416, N = 4
+err = 3.38e-14
+err = 3.38e-14
+err = 4.09e-14
+err = 4.26e-14
+MM_REF t = 4.42e-03 sec, GFLOPS =  32.61 +/-   0.68
+MM_SOL t = 2.14e-02 sec, GFLOPS =   6.74 +/-   0.00
+
+Running naive-mnk.x with arguments 416 ...
+L = 416, N = 4
+err = 5.33e-14
+err = 4.62e-14
+err = 5.15e-14
+err = 5.33e-14
+MM_REF t = 5.01e-03 sec, GFLOPS =  29.16 +/-   4.78
+MM_SOL t = 1.04e-01 sec, GFLOPS =   1.39 +/-   0.02
+
+Running pack-1.x with arguments 416 ...
+L = 416, N = 4
+err = 2.84e-14
+err = 3.38e-14
+err = 3.91e-14
+err = 4.26e-14
+MM_REF t = 4.40e-03 sec, GFLOPS =  32.74 +/-   0.58
+MM_SOL t = 1.13e-02 sec, GFLOPS =  12.73 +/-   0.22
+
+Running naive-nkm.x with arguments 448 ...
+L = 448, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 5.26e-03 sec, GFLOPS =  34.20 +/-   0.01
+MM_SOL t = 2.17e-02 sec, GFLOPS =   8.30 +/-   0.05
+
+Running naive-knm.x with arguments 448 ...
+L = 448, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 5.18e-03 sec, GFLOPS =  34.73 +/-   0.15
+MM_SOL t = 2.85e-02 sec, GFLOPS =   6.30 +/-   0.01
+
+Running naive-mnk.x with arguments 448 ...
+L = 448, N = 4
+err = 5.68e-14
+err = 6.39e-14
+err = 6.04e-14
+err = 4.97e-14
+MM_REF t = 5.21e-03 sec, GFLOPS =  34.51 +/-   0.05
+MM_SOL t = 1.28e-01 sec, GFLOPS =   1.40 +/-   0.00
+
+Running pack-1.x with arguments 448 ...
+L = 448, N = 4
+err = 2.84e-14
+err = 3.20e-14
+err = 2.84e-14
+err = 3.20e-14
+MM_REF t = 5.27e-03 sec, GFLOPS =  34.14 +/-   0.03
+MM_SOL t = 1.40e-02 sec, GFLOPS =  12.81 +/-   0.07
+
+Running naive-nkm.x with arguments 480 ...
+L = 480, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 6.22e-03 sec, GFLOPS =  35.56 +/-   0.09
+MM_SOL t = 3.06e-02 sec, GFLOPS =   7.22 +/-   0.08
+
+Running naive-knm.x with arguments 480 ...
+L = 480, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 6.17e-03 sec, GFLOPS =  35.82 +/-   0.10
+MM_SOL t = 3.66e-02 sec, GFLOPS =   6.05 +/-   0.01
+
+Running naive-mnk.x with arguments 480 ...
+L = 480, N = 4
+err = 7.46e-14
+err = 5.68e-14
+err = 7.11e-14
+err = 6.04e-14
+MM_REF t = 6.25e-03 sec, GFLOPS =  35.38 +/-   0.00
+MM_SOL t = 1.59e-01 sec, GFLOPS =   1.39 +/-   0.00
+
+Running pack-1.x with arguments 480 ...
+L = 480, N = 4
+err = 3.55e-14
+err = 3.55e-14
+err = 3.55e-14
+err = 3.55e-14
+MM_REF t = 6.21e-03 sec, GFLOPS =  35.61 +/-   1.35
+MM_SOL t = 1.71e-02 sec, GFLOPS =  12.91 +/-   0.05
+
+Running naive-nkm.x with arguments 512 ...
+L = 512, N = 4
+err = 3.55e-14
+err = 4.62e-14
+err = 3.91e-14
+err = 4.62e-14
+MM_REF t = 7.63e-03 sec, GFLOPS =  35.17 +/-   0.36
+MM_SOL t = 3.97e-02 sec, GFLOPS =   6.75 +/-   0.01
+
+Running naive-knm.x with arguments 512 ...
+L = 512, N = 4
+err = 3.55e-14
+err = 4.62e-14
+err = 3.91e-14
+err = 4.62e-14
+MM_REF t = 7.58e-03 sec, GFLOPS =  35.41 +/-   0.36
+MM_SOL t = 4.78e-02 sec, GFLOPS =   5.62 +/-   0.01
+
+Running naive-mnk.x with arguments 512 ...
+L = 512, N = 4
+err = 6.75e-14
+err = 7.11e-14
+err = 8.17e-14
+err = 6.39e-14
+MM_REF t = 7.79e-03 sec, GFLOPS =  34.46 +/-   0.22
+MM_SOL t = 4.90e-01 sec, GFLOPS =   0.55 +/-   0.04
+
+Running pack-1.x with arguments 512 ...
+L = 512, N = 4
+err = 3.91e-14
+err = 4.26e-14
+err = 4.62e-14
+err = 5.33e-14
+MM_REF t = 5.37e-03 sec, GFLOPS =  49.97 +/-   1.34
+MM_SOL t = 1.36e-02 sec, GFLOPS =  19.75 +/-   0.02
+
+Running naive-nkm.x with arguments 544 ...
+L = 544, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 9.21e-03 sec, GFLOPS =  34.96 +/-   0.24
+MM_SOL t = 4.57e-02 sec, GFLOPS =   7.05 +/-   0.13
+
+Running naive-knm.x with arguments 544 ...
+L = 544, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 8.77e-03 sec, GFLOPS =  36.70 +/-   0.02
+MM_SOL t = 5.49e-02 sec, GFLOPS =   5.86 +/-   0.01
+
+Running naive-mnk.x with arguments 544 ...
+L = 544, N = 4
+err = 7.46e-14
+err = 7.64e-14
+err = 7.82e-14
+err = 8.88e-14
+MM_REF t = 8.23e-03 sec, GFLOPS =  39.15 +/-   0.44
+MM_SOL t = 2.31e-01 sec, GFLOPS =   1.39 +/-   0.00
+
+Running pack-1.x with arguments 544 ...
+L = 544, N = 4
+err = 6.39e-14
+err = 5.51e-14
+err = 5.33e-14
+err = 4.80e-14
+MM_REF t = 8.87e-03 sec, GFLOPS =  36.31 +/-   1.10
+MM_SOL t = 2.43e-02 sec, GFLOPS =  13.26 +/-   0.09
+
+Running naive-nkm.x with arguments 576 ...
+L = 576, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 8.93e-03 sec, GFLOPS =  42.79 +/-   0.00
+MM_SOL t = 5.66e-02 sec, GFLOPS =   6.75 +/-   0.02
+
+Running naive-knm.x with arguments 576 ...
+L = 576, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 9.41e-03 sec, GFLOPS =  40.61 +/-   0.13
+MM_SOL t = 6.70e-02 sec, GFLOPS =   5.71 +/-   0.01
+
+Running naive-mnk.x with arguments 576 ...
+L = 576, N = 4
+err = 7.82e-14
+err = 7.46e-14
+err = 7.46e-14
+err = 7.11e-14
+MM_REF t = 9.27e-03 sec, GFLOPS =  41.25 +/-   0.01
+MM_SOL t = 2.88e-01 sec, GFLOPS =   1.32 +/-   0.00
+
+Running pack-1.x with arguments 576 ...
+L = 576, N = 4
+err = 5.33e-14
+err = 5.68e-14
+err = 5.33e-14
+err = 5.33e-14
+MM_REF t = 6.78e-03 sec, GFLOPS =  56.35 +/-   0.77
+MM_SOL t = 1.89e-02 sec, GFLOPS =  20.21 +/-   0.14
+
+Running naive-nkm.x with arguments 608 ...
+L = 608, N = 4
+err = 5.15e-14
+err = 5.68e-14
+err = 5.33e-14
+err = 4.97e-14
+MM_REF t = 1.11e-02 sec, GFLOPS =  40.65 +/-   0.19
+MM_SOL t = 6.46e-02 sec, GFLOPS =   6.95 +/-   0.01
+
+Running naive-knm.x with arguments 608 ...
+L = 608, N = 4
+err = 5.15e-14
+err = 5.68e-14
+err = 5.33e-14
+err = 4.97e-14
+MM_REF t = 1.11e-02 sec, GFLOPS =  40.48 +/-   0.31
+MM_SOL t = 7.76e-02 sec, GFLOPS =   5.80 +/-   0.00
+
+Running naive-mnk.x with arguments 608 ...
+L = 608, N = 4
+err = 8.53e-14
+err = 9.24e-14
+err = 8.53e-14
+err = 9.24e-14
+MM_REF t = 8.99e-03 sec, GFLOPS =  50.00 +/-   0.35
+MM_SOL t = 2.08e-01 sec, GFLOPS =   2.16 +/-   0.10
+
+Running pack-1.x with arguments 608 ...
+L = 608, N = 4
+err = 6.04e-14
+err = 5.68e-14
+err = 6.39e-14
+err = 6.39e-14
+MM_REF t = 1.14e-02 sec, GFLOPS =  39.37 +/-   0.90
+MM_SOL t = 3.38e-02 sec, GFLOPS =  13.31 +/-   0.10
+
+Running naive-nkm.x with arguments 640 ...
+L = 640, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.28e-02 sec, GFLOPS =  40.93 +/-   0.23
+MM_SOL t = 7.74e-02 sec, GFLOPS =   6.78 +/-   0.01
+
+Running naive-knm.x with arguments 640 ...
+L = 640, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.29e-02 sec, GFLOPS =  40.61 +/-   0.20
+MM_SOL t = 9.01e-02 sec, GFLOPS =   5.82 +/-   0.00
+
+Running naive-mnk.x with arguments 640 ...
+L = 640, N = 4
+err = 8.17e-14
+err = 9.24e-14
+err = 9.24e-14
+err = 8.53e-14
+MM_REF t = 1.35e-02 sec, GFLOPS =  38.97 +/-   0.00
+MM_SOL t = 3.89e-01 sec, GFLOPS =   1.35 +/-   0.00
+
+Running pack-1.x with arguments 640 ...
+L = 640, N = 4
+err = 6.39e-14
+err = 6.04e-14
+err = 6.39e-14
+err = 6.75e-14
+MM_REF t = 1.31e-02 sec, GFLOPS =  39.96 +/-   0.48
+MM_SOL t = 3.95e-02 sec, GFLOPS =  13.27 +/-   0.10
+
+Running naive-nkm.x with arguments 672 ...
+L = 672, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.56e-02 sec, GFLOPS =  39.02 +/-   0.69
+MM_SOL t = 8.95e-02 sec, GFLOPS =   6.78 +/-   0.00
+
+Running naive-knm.x with arguments 672 ...
+L = 672, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.47e-02 sec, GFLOPS =  41.27 +/-   0.23
+MM_SOL t = 1.06e-01 sec, GFLOPS =   5.72 +/-   0.01
+
+Running naive-mnk.x with arguments 672 ...
+L = 672, N = 4
+err = 9.95e-14
+err = 9.24e-14
+err = 8.17e-14
+err = 8.88e-14
+MM_REF t = 1.47e-02 sec, GFLOPS =  41.32 +/-   0.23
+MM_SOL t = 4.53e-01 sec, GFLOPS =   1.34 +/-   0.00
+
+Running pack-1.x with arguments 672 ...
+L = 672, N = 4
+err = 8.17e-14
+err = 7.11e-14
+err = 7.11e-14
+err = 7.46e-14
+MM_REF t = 1.44e-02 sec, GFLOPS =  42.18 +/-   0.10
+MM_SOL t = 4.59e-02 sec, GFLOPS =  13.22 +/-   0.15
+
+Running naive-nkm.x with arguments 704 ...
+L = 704, N = 4
+err = 6.39e-14
+err = 6.22e-14
+err = 5.68e-14
+err = 5.68e-14
+MM_REF t = 1.66e-02 sec, GFLOPS =  42.08 +/-   0.90
+MM_SOL t = 1.01e-01 sec, GFLOPS =   6.91 +/-   0.00
+
+Running naive-knm.x with arguments 704 ...
+L = 704, N = 4
+err = 6.39e-14
+err = 6.22e-14
+err = 5.68e-14
+err = 5.68e-14
+MM_REF t = 1.62e-02 sec, GFLOPS =  42.96 +/-   0.14
+MM_SOL t = 1.20e-01 sec, GFLOPS =   5.81 +/-   0.01
+
+Running naive-mnk.x with arguments 704 ...
+L = 704, N = 4
+err = 9.95e-14
+err = 9.24e-14
+err = 1.03e-13
+err = 9.59e-14
+MM_REF t = 1.45e-02 sec, GFLOPS =  49.43 +/-  10.85
+MM_SOL t = 3.97e-01 sec, GFLOPS =   1.81 +/-   0.44
+
+Running pack-1.x with arguments 704 ...
+L = 704, N = 4
+err = 7.82e-14
+err = 7.11e-14
+err = 8.53e-14
+err = 7.11e-14
+MM_REF t = 1.66e-02 sec, GFLOPS =  42.00 +/-   0.50
+MM_SOL t = 5.18e-02 sec, GFLOPS =  13.48 +/-   0.00
+
+Running naive-nkm.x with arguments 736 ...
+L = 736, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.92e-02 sec, GFLOPS =  41.51 +/-   0.16
+MM_SOL t = 1.14e-01 sec, GFLOPS =   6.98 +/-   0.00
+
+Running naive-knm.x with arguments 736 ...
+L = 736, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.96e-02 sec, GFLOPS =  40.68 +/-   0.44
+MM_SOL t = 1.37e-01 sec, GFLOPS =   5.84 +/-   0.02
+
+Running naive-mnk.x with arguments 736 ...
+L = 736, N = 4
+err = 1.07e-13
+err = 9.59e-14
+err = 9.06e-14
+err = 8.88e-14
+MM_REF t = 1.95e-02 sec, GFLOPS =  40.89 +/-   0.84
+MM_SOL t = 5.93e-01 sec, GFLOPS =   1.35 +/-   0.00
+
+Running pack-1.x with arguments 736 ...
+L = 736, N = 4
+err = 9.59e-14
+err = 8.53e-14
+err = 8.17e-14
+err = 8.53e-14
+MM_REF t = 1.31e-02 sec, GFLOPS =  61.10 +/-   1.23
+MM_SOL t = 3.85e-02 sec, GFLOPS =  20.72 +/-   0.00
+
+Running naive-nkm.x with arguments 768 ...
+L = 768, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 1.54e-02 sec, GFLOPS =  58.86 +/-   0.37
+MM_SOL t = 1.08e-01 sec, GFLOPS =   8.38 +/-   0.00
+
+Running naive-knm.x with arguments 768 ...
+L = 768, N = 4
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+err = 0.00e+00
+MM_REF t = 2.16e-02 sec, GFLOPS =  41.86 +/-   0.13
+MM_SOL t = 1.60e-01 sec, GFLOPS =   5.65 +/-   0.01
+
+Running naive-mnk.x with arguments 768 ...
+L = 768, N = 4
+err = 1.46e-13
+err = 1.07e-13
+err = 1.14e-13
+err = 1.21e-13
+MM_REF t = 1.83e-02 sec, GFLOPS =  50.85 +/-  11.53
+MM_SOL t = 1.16e+00 sec, GFLOPS =   0.78 +/-   0.06
+
+Running pack-1.x with arguments 768 ...
+L = 768, N = 4
+err = 8.53e-14
+err = 7.82e-14
+err = 8.53e-14
+err = 7.82e-14
+MM_REF t = 2.11e-02 sec, GFLOPS =  42.86 +/-   0.71
+MM_SOL t = 6.71e-02 sec, GFLOPS =  13.49 +/-   0.04
+
+Running naive-nkm.x with arguments 800 ...
+L = 800, N = 4
+err = 6.04e-14
+err = 5.51e-14
+err = 7.11e-14
+err = 9.59e-14
+MM_REF t = 2.42e-02 sec, GFLOPS =  42.24 +/-   0.89
+MM_SOL t = 1.57e-01 sec, GFLOPS =   6.53 +/-   0.00
+
+Running naive-knm.x with arguments 800 ...
+L = 800, N = 4
+err = 6.04e-14
+err = 5.51e-14
+err = 7.11e-14
+err = 9.59e-14
+MM_REF t = 2.43e-02 sec, GFLOPS =  42.15 +/-   0.13
+MM_SOL t = 1.86e-01 sec, GFLOPS =   5.50 +/-   0.01
+
+Running naive-mnk.x with arguments 800 ...

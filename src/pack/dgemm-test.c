@@ -362,5 +362,5 @@ void dgemm(int M, int N, int K, double *A, double *B, double *C) {
     // int 1 = 1;
     // int LDC = LDC;
 
-    dgemm_nn(M, N, K, 1.0, A, 1, LDA, B, 1, LDB, 0.0, C, 1, LDC);
+    dgemm_nn(M, N, K, 1.0, A, 1, LDA, B, 1, LDB, 1.0, C, 1, LDC);
 }

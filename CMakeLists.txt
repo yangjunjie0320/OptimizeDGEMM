@@ -40,7 +40,7 @@ foreach(f IN LISTS SOURCES)
 
     # use the dirname-basename as the executable name
     add_executable(${d}-${b}.x src/main.cxx ${f})
-    target_compile_options(${d}-${b}.x PRIVATE -fomit-frame-pointer)
+    target_compile_options(${d}-${b}.x PRIVATE)
     target_link_libraries(${d}-${b}.x dgemm-blas)
     # add_custom_command(
     #     OUTPUT ${CMAKE_BINARY_DIR}/${d}-${b}.s

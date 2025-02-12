@@ -1,74 +1,81 @@
 #include <stdlib.h>
-
+#include <assert.h>
 #define M_MACRO_SIZE  384
 #define K_MACRO_SIZE  384
-#define N_MACRO_SIZE  4096
+#define N_MACRO_SIZE  2048
 
 #define M_MICRO_SIZE  4
 #define N_MICRO_SIZE  4
 
 static void pack_A(int M, int K, const double *A, int LDA, double *buffer)
 {
-    int MP = M / M_MICRO_SIZE;
-    int MR = M % M_MICRO_SIZE;
+    int MP = M / M_MICRO_SIZE;  // Number of complete MR x kc blocks
+    int MR = M % M_MICRO_SIZE; // Remaining rows
 
-    // Pack complete M_MICRO_SIZE x kc blocks
-    for (int mp = 0; mp < MP; ++mp) {
-        // Pack one M_MICRO_SIZE x kc block
-        for (int k = 0; k < K; ++k) {
+    int m, mp, k;
+
+    // Pack complete MR x kc blocks
+    for (mp = 0; mp < MP; ++mp) {
+        // Pack one MR x kc block
+        for (k = 0; k < K; ++k) {
             for (int m = 0; m < M_MICRO_SIZE; ++m) {
-                buffer[m] = A[m + k * LDA];
+                buffer[m] = A[m];
             }
             buffer += M_MICRO_SIZE;
+            A += LDA;
         }
-        A += M_MICRO_SIZE; // Move to next block of rows
+        A = A - K * LDA + M_MICRO_SIZE; // Move to next block of rows
     }
     
     // Handle remaining rows with padding
     if (MR > 0) {
-        for (int k = 0; k < K; ++k) {
+        for (k = 0; k < K; ++k) {
             // Copy actual elements
-            for (int m = 0; m < MR; ++m) {
-                buffer[m] = A[m + k * LDA];
+            for (m = 0; m < MR; ++m) {
+                buffer[m] = A[m];
             }
             // Pad with zeros
-            for (int m = MR; m < M_MICRO_SIZE; ++m) {
+            for (m = MR; m < M_MICRO_SIZE; ++m) {
                 buffer[m] = 0.0;
             }
             buffer += M_MICRO_SIZE;
+            A += LDA;
         }
     }
 }
 
 static void pack_B(int K, int N, const double *B, int LDB, double *buffer)
 {
-    int NP = N / N_MICRO_SIZE;
-    int NR = N % N_MICRO_SIZE;
+    int NP = N / N_MICRO_SIZE;  // Number of complete kc x NR blocks
+    int NR = N % N_MICRO_SIZE; // Remaining columns
+    int k, np, n;
 
-    // Pack complete kc x N_MICRO_SIZE blocks
-    for (int np = 0; np < NP; ++np) {
-        // Pack one kc x N_MICRO_SIZE block
-        for (int k = 0; k < K; ++k) {
+    // Pack complete kc x NR blocks
+    for (np = 0; np < NP; ++np) {
+        // Pack one kc x NR block
+        for (k = 0; k < K; ++k) {
             for (int n = 0; n < N_MICRO_SIZE; ++n) {
-                buffer[n] = B[k + n * LDB];
+                buffer[n] = B[n * LDB];
             }
             buffer += N_MICRO_SIZE;
+            B += 1;
         }
-        B += LDB * N_MICRO_SIZE; // Move to next block of columns
+        B = B - K + N_MICRO_SIZE * LDB; // Move to next block of columns
     }
     
     // Handle remaining columns with padding
     if (NR > 0) {
-        for (int k = 0; k < K; ++k) {
+        for (k = 0; k < K; ++k) {
             // Copy actual elements
-            for (int n = 0; n < NR; ++n) {
-                buffer[n] = B[k + n * LDB];
+            for (n = 0; n < NR; ++n) {
+                buffer[n] = B[n * LDB];
             }
             // Pad with zeros
-            for (int n = NR; n < N_MICRO_SIZE; ++n) {
+            for (n = NR; n < N_MICRO_SIZE; ++n) {
                 buffer[n] = 0.0;
             }
             buffer += N_MICRO_SIZE;
+            B += 1;
         }
     }
 }
@@ -76,64 +83,42 @@ static void pack_B(int K, int N, const double *B, int LDB, double *buffer)
 //
 //  Micro kernel for multiplying panels from A and B.
 //
-static void
-dgemm_micro_kernel(int kc,
-                   double alpha, const double *A, const double *B,
-                   double beta,
-                   double *C, int incRowC, int incColC)
+// static void
+// micro_kernel(int kc,
+//              double alpha, const double *A, const double *B,
+//              double beta,
+//              double *C, int incRowC, int incColC)
+static void micro_kernel(int M, int N, int K, double* A, int LDA, double* B, int LDB, double* C, int LDC)
 {
-    double AB[M_MICRO_SIZE*N_MICRO_SIZE];
+    int incRowC = 1;
+    int incColC = LDC;
+    double alpha = 1.0;
+    double beta = 1.0;
+
+    double AB[M_MICRO_SIZE * N_MICRO_SIZE];
 
     int i, j, l;
 
-//
-//  Compute AB = A*B
-//
-    for (l=0; l<M_MICRO_SIZE*N_MICRO_SIZE; ++l) {
-        AB[l] = 0;
-    }
-    for (l=0; l<kc; ++l) {
-        for (j=0; j<N_MICRO_SIZE; ++j) {
-            for (i=0; i<M_MICRO_SIZE; ++i) {
-                AB[i+j*M_MICRO_SIZE] += A[i]*B[j];
-            }
-        }
-        A += M_MICRO_SIZE;
-        B += N_MICRO_SIZE;
+    for (int mn = 0; mn < M_MICRO_SIZE * N_MICRO_SIZE; ++mn) {
+        AB[mn] = 0;
     }
 
-//
-//  Update C <- beta*C
-//
-    if (beta==0.0) {
-        for (j=0; j<N_MICRO_SIZE; ++j) {
-            for (i=0; i<M_MICRO_SIZE; ++i) {
-                C[i*incRowC+j*incColC] = 0.0;
-            }
-        }
-    } else if (beta!=1.0) {
-        for (j=0; j<N_MICRO_SIZE; ++j) {
-            for (i=0; i<M_MICRO_SIZE; ++i) {
-                C[i*incRowC+j*incColC] *= beta;
+    for (int k = 0; k < K; ++k) {
+        for (int n = 0; n < N_MICRO_SIZE; ++n) {
+            double bkn = B[n + k * N_MICRO_SIZE];
+
+            for (int m = 0; m < M_MICRO_SIZE; ++m) {
+                double amk = A[m + k * M_MICRO_SIZE];
+
+                int mn = m + n * M_MICRO_SIZE;
+                AB[mn] += amk * bkn;
             }
         }
     }
 
-//
-//  Update C <- C + alpha*AB (note: the case alpha==0.0 was already treated in
-//                                  the above layer dgemm_nn)
-//
-    if (alpha==1.0) {
-        for (j=0; j<N_MICRO_SIZE; ++j) {
-            for (i=0; i<M_MICRO_SIZE; ++i) {
-                C[i*incRowC+j*incColC] += AB[i+j*M_MICRO_SIZE];
-            }
-        }
-    } else {
-        for (j=0; j<N_MICRO_SIZE; ++j) {
-            for (i=0; i<M_MICRO_SIZE; ++i) {
-                C[i*incRowC+j*incColC] += alpha*AB[i+j*M_MICRO_SIZE];
-            }
+    for (int n = 0; n < N_MICRO_SIZE; ++n) {
+        for (int m = 0; m < M_MICRO_SIZE; ++m) {
+            C[m + n * LDC] += AB[m + n * M_MICRO_SIZE];
         }
     }
 }
@@ -142,38 +127,32 @@ dgemm_micro_kernel(int kc,
 //  Macro Kernel for the multiplication of blocks of A and B.  We assume that
 //  these blocks were previously packed to buffers _A and _B.
 //
-static void
-dgemm_macro_kernel(int     mc,
-                   int     nc,
-                   int     kc,
-                   double  alpha,
-                   double  beta,
-                   double  *A,
-                   double  *B,
-                   double  *C,
-                   int     incRowC,
-                   int     incColC)
+static void macro_kernel(int M, int N, int K, double* A, int LDA, double* B, int LDB, double* C, int LDC)
 {
-    int mp = (mc+M_MICRO_SIZE-1) / M_MICRO_SIZE;
-    int np = (nc+N_MICRO_SIZE-1) / N_MICRO_SIZE;
+    double alpha = 1.0;
+    double beta = 1.0;
+    int incRowC = 1;
 
-    int _mr = mc % M_MICRO_SIZE;
-    int _nr = nc % N_MICRO_SIZE;
+    int MP = (M+M_MICRO_SIZE-1) / M_MICRO_SIZE;
+    int NP = (N+N_MICRO_SIZE-1) / N_MICRO_SIZE;
 
-    int mr, nr;
-    int i, j;
+    int MR = M % M_MICRO_SIZE;
+    int NR = N % N_MICRO_SIZE;
 
-    for (j=0; j<np; ++j) {
-        nr    = (j!=np-1 || _nr==0) ? N_MICRO_SIZE : _nr;
+    for (int np = 0; np < NP; ++np) {
+        int nr = (np != NP - 1 || NR == 0) ? N_MICRO_SIZE : NR;
+        int n = np * N_MICRO_SIZE;
 
-        for (i=0; i<mp; ++i) {
-            mr    = (i!=mp-1 || _mr==0) ? M_MICRO_SIZE : _mr;
+        for (int mp = 0; mp < MP; ++mp) {
+            int mr = (mp != MP - 1 || MR == 0) ? M_MICRO_SIZE : MR;
+            int m = mp * M_MICRO_SIZE;
+
+            double* A0 = A + m * K;
+            double* B0 = B + n * K;
+            double* C0 = C + m + n * LDC;
 
             assert(mr == M_MICRO_SIZE && nr == N_MICRO_SIZE);
-            dgemm_micro_kernel(kc, alpha, &A[i*kc*M_MICRO_SIZE], &B[j*kc*N_MICRO_SIZE],
-                                beta,
-                                &C[i*M_MICRO_SIZE*incRowC+j*N_MICRO_SIZE*incColC],
-                                incRowC, incColC);
+            micro_kernel(mr, nr, K, A0, LDA, B0, LDB, C0, LDC);
         }
     }
 }
@@ -214,12 +193,11 @@ void dgemm(int M, int N, int K, const double* A, const double* B, double* C)
                 pack_A(mr, kr, A0, LDA, A1);
 
                 double* C0 = C + m + n * LDC;
-                dgemm_macro_kernel(
+                macro_kernel(
                     mr, nr, kr,
-                    1.0, 0.0,
-                    A1, B1,
-                    C + m + n * LDC,
-                    1, LDC
+                    A1, LDA,
+                    B1, LDB,
+                    C0, LDC
                 );
             }
         }
