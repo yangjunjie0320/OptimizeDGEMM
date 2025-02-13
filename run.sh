@@ -15,11 +15,11 @@ export PREFIX=$(pwd);
 rm -rf $PREFIX/build/; mkdir $PREFIX/build/; cd $PREFIX/build/;
 echo "CONDA_PREFIX: $CONDA_PREFIX"
 
-opt_flags="-O2 -march=native -msse3 -mfpmath=sse -fomit-frame-pointer"
+opt_flags="-Ofast -march=native -msse3 -mfpmath=sse"
 cmake -DCMAKE_CXX_FLAGS="$opt_flags" -DCMAKE_C_FLAGS="$opt_flags" ..
 make VERBOSE=1 -j16; cd -
 
-ff=("4x4.x" "sse-naive.x" "sse-unroll.x" "sse-new.x" "avx2.x")
+ff=("4x4.x" "sse.x" "avx2.x")
 
 cd $PREFIX/build/; echo "" > $PREFIX/plot/tmp; pwd
 for i in $(seq 1 32); do

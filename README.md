@@ -25,7 +25,10 @@ There are few versions of the pure C version:
 - `naive-knm`: the naive triple-loop implementation, with `K-N-M` order.
 - `naive-nkm`: the naive triple-loop implementation, with `N-K-M` order.
 
-Out of these, `naive-nkm` is the most efficient one.
+Out of these, `naive-nkm` is the most efficient one. The pure C code is then optimized
+with blocking technique. It is easy to see that the performance is further improved.
+By using `valgrind` to profile the time cost of the code, `micro_kernel` is the most time-consuming part.
+The following part of the note will show how to use `SSE` and `AVX2` instructions to further improve the performance.
 
 
 ## Usage
